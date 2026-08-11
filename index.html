@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScaleNova | Business Operating System for Growing Indian MSMEs</title>
+<meta name="description" content="ScaleNova Private Limited provides a unified Business Operating System (CRM, ERP, HR, Finance) for Indian MSMEs. Book a Live Demo today. One platform for every business need.">
+<meta name="keywords" content="ScaleNova, ScaleNova Private Limited, Business Operating System, Indian MSME SaaS, CRM India, ERP MSME, Process Automation">
+<meta name="author" content="ScaleNova Private Limited">
+<meta name="robots" content="index, follow">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://scalenovasystems.com">
+
+<!-- OpenGraph / Social Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scalenovasystems.com">
+<meta property="og:title" content="ScaleNova | One platform for every business need">
+<meta property="og:description" content="Unified Business Operating System & SaaS Automation for Indian MSMEs. Target Launch: 15 August 2026.">
+<meta property="og:image" content="https://scalenovasystems.com/assets/og-image.png">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ScaleNova | One platform for every business need">
+<meta name="twitter:description" content="Unified Business Operating System & SaaS Automation for Indian MSMEs. Target Launch: 15 August 2026.">
+<meta name="twitter:image" content="https://scalenovasystems.com/assets/og-image.png">
+
+<!-- Inline Favicon (Official ScaleNova SVG Monogram) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cdefs%3E%3ClinearGradient id='snGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300F0FF'/%3E%3Cstop offset='45%25' stop-color='%234682B4'/%3E%3Cstop offset='100%25' stop-color='%237F00FF'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M140 120 C80 120, 60 190, 110 240 L280 410 C320 450, 390 410, 420 330 L450 140 C455 110, 425 90, 400 110 L330 180 C310 200, 270 190, 270 160 L270 140 C270 80, 200 120, 140 120 Z' fill='url(%23snGrad)'/%3E%3C/svg%3E">
+
+<!-- Google Fonts & FontAwesome CDN -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f5f0ff',
+          100: '#ebdfff',
+          200: '#d6bfff',
+          500: '#7F00FF', /* Primary Purple */
+          600: '#6600cc',
+          700: '#4682B4', /* Primary Blue */
+          800: '#2c5a80',
+          900: '#0B0F19', /* Deep Space */
+          950: '#030712'
+        }
+      },
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<!-- Structured Schema.org Data (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ScaleNova Private Limited",
+  "alternateName": "ScaleNova",
+  "url": "https://scalenovasystems.com",
+  "logo": "https://scalenovasystems.com/assets/logo.png",
+  "email": "info@scalenovasystems.com",
+  "telephone": "+91-79937-74994",
+  "vatID": "37ABUCS4883M1Z5",
+  "description": "ScaleNova Private Limited provides a unified Business Operating System (CRM, ERP, HR, Finance) for Indian MSMEs.",
+  "foundingDate": "2026-08-15"
+}
+</script>
+
+<style>
+:root {
+  --purple-glow: #7F00FF;
+  --blue-glow: #4682B4;
+  --cyan-glow: #00F0FF;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Design Tokens & Reusable Component System */
+.sn-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03);
+  border-radius: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.dark .sn-card {
+  background-color: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.sn-card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+.sn-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(127, 0, 255, 0.4);
+  box-shadow: 0 16px 32px -10px rgba(127, 0, 255, 0.15), 0 0 20px rgba(70, 130, 180, 0.1);
+}
+
+.sn-gradient-text {
+  background: linear-gradient(135deg, #7F00FF 0%, #38BDF8 60%, #4682B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sn-gradient-bg {
+  background: linear-gradient(135deg, #7F00FF 0%, #4682B4 100%);
+}
+
+.sn-btn-primary {
+  background: linear-gradient(135deg, #7F00FF 0%, #4682B4 100%);
+  color: #ffffff;
+  font-weight: 800;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 20px -4px rgba(127, 0, 255, 0.3);
+}
+.sn-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(127, 0, 255, 0.45);
+}
+
+/* Protruding Most Popular Card Glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 25px rgba(127, 0, 255, 0.25); }
+  50% { box-shadow: 0 0 45px rgba(127, 0, 255, 0.5), 0 0 20px rgba(56, 189, 248, 0.3); }
+}
+.glow-protrude {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* FAQ Accordion Item Window Styles */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active {
+  border-color: rgba(127, 0, 255, 0.5) !important;
+  background: rgba(245, 240, 255, 0.7) !important;
+}
+.dark .faq-item.active {
+  background: rgba(30, 27, 75, 0.4) !important;
+  border-color: rgba(127, 0, 255, 0.6) !important;
+}
+.faq-item.active .faq-content {
+  max-height: 300px;
+  opacity: 1;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+  color: #7F00FF;
+}
+
+/* Floating Input Label Animations */
+.floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+  transform: translateY(-24px) scale(0.85);
+  color: #7F00FF;
+  font-weight: 700;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #030712; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #7F00FF; }
+</style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+<!-- TOP LAUNCH ANNOUNCEMENT BAR -->
+<div class="relative z-30 bg-gradient-to-r from-brand-900 via-brand-500 to-brand-900 border-b border-brand-500/30 px-4 py-2 text-center text-white text-xs font-semibold tracking-wide flex justify-center items-center space-x-2 shadow-sm">
+  <span class="px-2 py-0.5 rounded-md bg-amber-400 text-slate-950 text-[10px] font-black uppercase tracking-wider">OFFICIAL LAUNCH</span>
+  <span>Target Launch: 15 August 2026 — Unified Business Operating System for Indian MSMEs</span>
+</div>
+
+<!-- STICKY GLASSMORPHISM NAVBAR -->
+<nav class="sticky top-0 z-40 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md px-4 md:px-8 py-3.5 flex justify-between items-center transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/60" aria-label="Main Navigation">
+  
+  <!-- ScaleNova Official Logo -->
+  <a href="#hero" class="flex items-center space-x-3 group" aria-label="ScaleNova Home">
+    <div class="w-9 h-9 rounded-xl sn-gradient-bg flex items-center justify-center text-white shadow-md shadow-brand-500/30 group-hover:scale-105 transition-transform">
+      <!-- Official Monogram S-N Arrow SVG Icon -->
+      <svg class="w-5 h-5 fill-current text-white" viewBox="0 0 500 500" aria-hidden="true">
+        <path d="M140 120 C80 120, 60 190, 110 240 L280 410 C320 450, 390 410, 420 330 L450 140 C455 110, 425 90, 400 110 L330 180 C310 200, 270 190, 270 160 L270 140 C270 80, 200 120, 140 120 Z"/>
+      </svg>
+    </div>
+    <div class="flex flex-col">
+      <span class="text-lg font-black tracking-tight sn-gradient-text leading-none">ScaleNova</span>
+      <span class="text-[8px] font-extrabold tracking-widest text-slate-500 dark:text-slate-400 uppercase mt-0.5">BUSINESS OS</span>
+    </div>
+  </a>
+
+  <!-- Desktop Navigation Links -->
+  <div class="hidden lg:flex items-center space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
+    <a href="#hero" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-home text-xs opacity-70" aria-hidden="true"></i>
+      <span>Home</span>
+    </a>
+    <a href="#solutions" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-layer-group text-xs opacity-70" aria-hidden="true"></i>
+      <span>Solutions</span>
+    </a>
+    <a href="#pricing" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-tags text-xs opacity-70" aria-hidden="true"></i>
+      <span>OS Plans</span>
+    </a>
+    <a href="#careers" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-briefcase text-xs opacity-70" aria-hidden="true"></i>
+      <span>Careers</span>
+    </a>
+    <a href="#faqs" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-circle-question text-xs opacity-70" aria-hidden="true"></i>
+      <span>FAQs</span>
+    </a>
+    <a href="#contact" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-headset text-xs opacity-70" aria-hidden="true"></i>
+      <span>Contact</span>
+    </a>
+  </div>
+
+  <!-- Actions (Theme Toggle & Primary CTA & Hamburger) -->
+  <div class="flex items-center space-x-3">
+    
+    <!-- Theme Toggle -->
+    <button id="themeToggle" onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Toggle Theme Mode">
+      <i class="fas fa-sun text-xs" aria-hidden="true"></i>
+    </button>
+
+    <!-- OFFICIAL PRIMARY CTA: Book a Live Demo -->
+    <button onclick="openDemoModal()" class="hidden sm:inline-flex px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2">
+      <i class="fas fa-calendar-check" aria-hidden="true"></i>
+      <span>Book a Live Demo</span>
+    </button>
+
+    <!-- Mobile Hamburger Button -->
+    <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Open Mobile Navigation Menu">
+      <i class="fas fa-bars text-sm" aria-hidden="true"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- SLIDING MOBILE SIDE-PANEL MENU -->
+<div id="mobileSidebarOverlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+<div id="mobileSidebar" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white dark:bg-slate-900 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-6 border-l border-slate-200 dark:border-slate-800">
+  <div class="space-y-6">
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-2">
+        <div class="w-7 h-7 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-cubes" aria-hidden="true"></i>
+        </div>
+        <span class="text-sm font-black sn-gradient-text">ScaleNova</span>
+      </div>
+      <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-slate-800 dark:hover:text-slate-200" aria-label="Close Menu">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+    
+    <nav class="flex flex-col space-y-2 font-bold text-xs text-slate-800 dark:text-slate-200">
+      <a href="#hero" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-home text-brand-500 w-5" aria-hidden="true"></i><span>Home</span></a>
+      <a href="#solutions" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-layer-group text-brand-500 w-5" aria-hidden="true"></i><span>Solutions</span></a>
+      <a href="#pricing" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-tags text-brand-500 w-5" aria-hidden="true"></i><span>OS Plans</span></a>
+      <a href="#careers" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-briefcase text-brand-500 w-5" aria-hidden="true"></i><span>Careers</span></a>
+      <a href="#faqs" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-circle-question text-brand-500 w-5" aria-hidden="true"></i><span>FAQs</span></a>
+      <a href="#contact" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-headset text-brand-500 w-5" aria-hidden="true"></i><span>Contact</span></a>
+    </nav>
+  </div>
+
+  <button onclick="toggleMobileSidebar(); openDemoModal();" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+    <i class="fas fa-calendar-check" aria-hidden="true"></i>
+    <span>Book a Live Demo</span>
+  </button>
+</div>
+
+<!-- MAIN CONTENT AREA -->
+<main class="flex-grow" id="main-content">
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="relative pt-12 md:pt-20 pb-16 md:pb-24 px-4 md:px-8 overflow-hidden bg-gradient-to-b from-slate-50/80 via-white to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950">
+    
+    <!-- Subtle Abstract Brand Ambient Background Glow -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      
+      <!-- Hero Text -->
+      <div class="space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800">
+          <i class="fas fa-shield-alt text-brand-500" aria-hidden="true"></i>
+          <span>Enterprise Cloud Operating Platform — Launch 15 August 2026</span>
+        </div>
+
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] text-slate-900 dark:text-white">
+            ScaleNova
+          </h1>
+          <!-- OFFICIAL TAGLINE -->
+          <p class="text-xl sm:text-2xl font-extrabold sn-gradient-text tracking-tight mt-2.5">
+            One platform for every business need
+          </p>
+        </div>
+
+        <p class="text-slate-600 dark:text-slate-300 text-sm md:text-base font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
+          Replace fragmented tools with a centralized CRM, ERP, and automation platform for Indian MSMEs. Operate smarter, faster, and more efficiently on the cloud.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+          <!-- OFFICIAL PRIMARY CTA -->
+          <button onclick="openDemoModal()" class="w-full sm:w-auto px-8 py-4 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            <span>Book a Live Demo</span>
+          </button>
+          <a href="#pricing" class="w-full sm:w-auto px-7 py-4 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
+            <i class="fas fa-th-large text-brand-500" aria-hidden="true"></i>
+            <span>Explore OS Plans</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Clean Architectural Visual Bento Card -->
+      <div class="relative">
+        <div class="sn-card sn-card-hover p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-xl relative overflow-hidden">
+          
+          <div class="flex items-center justify-between pb-6 mb-6 border-b border-slate-200 dark:border-slate-800">
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-xl sn-gradient-bg flex items-center justify-center text-white text-lg shadow-md">
+                <i class="fas fa-server" aria-hidden="true"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-sm text-slate-900 dark:text-white">Central OS Server Pipeline</h3>
+                <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase">ISO 27001 Certified Indian Cloud Data Center</span>
+              </div>
+            </div>
+            <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center space-x-1">
+              <i class="fas fa-circle text-[7px] text-emerald-500 animate-pulse mr-1" aria-hidden="true"></i>
+              <span>SYSTEM ONLINE</span>
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between text-xs font-extrabold mb-1">
+                <span class="text-slate-700 dark:text-slate-300"><i class="fas fa-database mr-1.5 text-brand-500" aria-hidden="true"></i>Central Database Uptime</span>
+                <span class="text-brand-600 dark:text-brand-400">99.99%</span>
+              </div>
+              <div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full sn-gradient-bg rounded-full w-full"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-extrabold mb-1">
+                <span class="text-slate-700 dark:text-slate-300"><i class="fas fa-cloud mr-1.5 text-brand-700" aria-hidden="true"></i>Cloud Sync Pipeline</span>
+                <span class="text-brand-600 dark:text-brand-400">&lt; 2ms</span>
+              </div>
+              <div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full sn-gradient-bg rounded-full w-[95%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-extrabold mb-1">
+                <span class="text-slate-700 dark:text-slate-300"><i class="fas fa-shield-alt mr-1.5 text-emerald-500" aria-hidden="true"></i>Security &amp; Compliance</span>
+                <span class="text-emerald-600 dark:text-emerald-400">AES-256 Encrypted</span>
+              </div>
+              <div class="h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                <div class="h-full bg-emerald-500 rounded-full w-full"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-3 text-center">
+            <div class="bg-slate-50 dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+              <span class="block text-lg font-black sn-gradient-text">100%</span>
+              <span class="text-[9px] font-bold text-slate-500 dark:text-slate-400 uppercase">Data Control</span>
+            </div>
+            <div class="bg-slate-50 dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200 dark:border-slate-800">
+              <span class="block text-lg font-black sn-gradient-text">Cloud Native</span>
+              <span class="block text-[9px] font-bold text-slate-500 dark:text-slate-400 uppercase">Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. SOLUTIONS SECTION -->
+  <section id="solutions" class="py-16 md:py-24 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          <i class="fas fa-layer-group mr-1.5" aria-hidden="true"></i>Integrated Platform
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+          Why ScaleNova Business OS?
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium leading-relaxed">
+          Indian MSMEs suffer from duplicate data entry and manual work across fragmented tools. ScaleNova unifies CRM, ERP, HR, Projects, Sales, and Finance into one seamless operating environment.
+        </p>
+      </div>
+
+      <!-- Bento Grid with Hover Gradient Border System -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-database" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Centralized CRM &amp; Database</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Eliminate duplicate records. Manage all customer leads, contact interactions, and sales pipelines in a single secure workspace.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-brand-700/10 text-brand-700 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-chart-pie" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">ERP &amp; Financial Tracking</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Monitor inventory, purchasing, invoicing, and real-time business cashflows without needing multi-vendor software subscriptions.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-users-gear" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">HR &amp; Employee Management</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Track employee attendance, manage staff leave schedules, and run team performance metrics cleanly within your OS.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-cloud" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Cloud Native Security</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Enterprise-grade TLS 1.3 encryption and access controls ensure your private business records are 100% safe and accessible anywhere.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-list-check" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Project Planning &amp; Tasks</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Assign project milestones, track task completion timelines, and coordinate team workflows smoothly without friction.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-4">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl shadow-inner">
+            <i class="fas fa-chart-line" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-lg font-black text-slate-900 dark:text-white">Executive BI Dashboards</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+            Get high-level visual business intelligence reports to make data-driven decisions that expand your MSME revenue.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. OS PLANS (PRICING SECTION) -->
+  <section id="pricing" class="py-16 md:py-24 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          <i class="fas fa-tags mr-1.5" aria-hidden="true"></i>Transparent OS Subscriptions
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+          ScaleNova OS Plans
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium">
+          Simple monthly plans designed to scale with your business growth.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-4">
+        
+        <!-- CARD 1: CORE OS -->
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+              Startups &amp; Consultants
+            </span>
+            <h3 class="text-2xl font-black text-slate-900 dark:text-white">Core OS</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Target: Startups, Small Businesses, Consultants</p>
+            
+            <div class="py-4 border-y border-slate-200 dark:border-slate-800">
+              <span class="text-3xl font-black text-slate-900 dark:text-white">₹4,899</span>
+              <span class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / Month</span>
+            </div>
+
+            <ul class="space-y-3 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Centralized Business Workspace &amp; Dashboard</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>CRM, Lead &amp; Contact Management System</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Standard Business Workflow Configuration &amp; Support</span></li>
+            </ul>
+          </div>
+
+          <button onclick="openDemoModal()" class="w-full py-3.5 rounded-xl text-xs font-extrabold text-center text-brand-700 dark:text-brand-300 border-2 border-brand-500/40 hover:border-brand-500 hover:bg-brand-50 dark:hover:bg-slate-800 transition-all">
+            Book a Live Demo
+          </button>
+        </div>
+
+        <!-- CARD 2: GROWTH OS (PROTRUDES SLIGHTLY - MOST POPULAR) -->
+        <div class="sn-card border-2 border-brand-500 glow-protrude relative p-6 md:p-8 space-y-6 flex flex-col justify-between transform lg:-translate-y-3">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase sn-gradient-bg text-white shadow-lg whitespace-nowrap">
+            <i class="fas fa-star mr-1" aria-hidden="true"></i> MOST POPULAR
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300">
+              Growing SMEs &amp; Agencies
+            </span>
+            <h3 class="text-2xl font-black sn-gradient-text">Growth OS</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Target: Growing Businesses, SMEs, Agencies</p>
+            
+            <div class="py-4 border-y border-brand-200/50 dark:border-slate-800">
+              <span class="text-3xl font-black text-slate-900 dark:text-white">₹13,699</span>
+              <span class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / Month</span>
+            </div>
+
+            <ul class="space-y-3 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Includes Everything in Core OS</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>HR, Employee &amp; Attendance Management</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Project Planning &amp; Task Collaboration</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Inventory, Stock &amp; Basic Finance Tracking</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Advanced Automations &amp; API Integrations</span></li>
+            </ul>
+          </div>
+
+          <button onclick="openDemoModal()" class="w-full py-3.5 rounded-xl text-xs sn-btn-primary">
+            Book a Live Demo
+          </button>
+        </div>
+
+        <!-- CARD 3: ELITE OS (REMOVED MULTI-BRANCH FEATURE AS REQUIRED) -->
+        <div class="sn-card sn-card-hover p-6 md:p-8 space-y-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <span class="px-3 py-1 rounded-lg text-[10px] font-black tracking-wider uppercase bg-slate-900 text-white dark:bg-slate-700">
+              Enterprises &amp; Large MSMEs
+            </span>
+            <h3 class="text-2xl font-black text-slate-900 dark:text-white">Elite OS</h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Target: Large Businesses &amp; Growing Enterprises</p>
+            
+            <div class="py-4 border-y border-slate-200 dark:border-slate-800">
+              <span class="text-3xl font-black text-slate-900 dark:text-white">₹35,799</span>
+              <span class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / Month</span>
+            </div>
+
+            <!-- Features (Strictly 6 lines - Multi-Branch feature removed per Rule 11) -->
+            <ul class="space-y-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Includes Everything in Growth OS</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Complete ERP (Finance, Purchasing, Sales)</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Custom Modules &amp; Business-Specific Workflows</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Executive Business Intelligence Dashboards</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Enterprise Branding &amp; Dedicated Implementation</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2.5 text-xs" aria-hidden="true"></i><span>Dedicated Priority Technical Account Support</span></li>
+            </ul>
+          </div>
+
+          <button onclick="openDemoModal()" class="w-full py-3.5 rounded-xl text-xs font-extrabold text-center text-slate-800 dark:text-slate-200 border-2 border-slate-700 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-all">
+            Book a Live Demo
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. CAREERS SECTION -->
+  <section id="careers" class="py-16 md:py-24 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/20">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          <i class="fas fa-briefcase mr-1.5" aria-hidden="true"></i>Join ScaleNova Team
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+          Build Systems That Help Businesses Work Better
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium leading-relaxed">
+          ScaleNova is building practical business technology for growing companies. We value ownership, continuous learning, remote collaboration, and meaningful work.
+        </p>
+      </div>
+
+      <!-- Perks & Culture Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <div class="sn-card sn-card-hover p-5 space-y-2.5">
+          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg">
+            <i class="fas fa-laptop-house" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-sm font-extrabold text-slate-900 dark:text-white">Flexible Work</h3>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+            Work with flexibility and focus on outcomes rather than unnecessary office routines.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-5 space-y-2.5">
+          <div class="w-10 h-10 rounded-xl bg-brand-700/10 text-brand-700 flex items-center justify-center text-lg">
+            <i class="fas fa-globe" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-sm font-extrabold text-slate-900 dark:text-white">Remote-First</h3>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+            Work remotely with structured communication, documentation, and clear ownership.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-5 space-y-2.5">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
+            <i class="fas fa-seedling" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-sm font-extrabold text-slate-900 dark:text-white">Ownership &amp; Growth</h3>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+            Take responsibility for meaningful projects and grow into larger roles as your contribution develops.
+          </p>
+        </div>
+
+        <div class="sn-card sn-card-hover p-5 space-y-2.5">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-lg">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+          </div>
+          <h3 class="text-sm font-extrabold text-slate-900 dark:text-white">Continuous Training</h3>
+          <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">
+            Weekly knowledge sessions and monthly development programs to improve technical and professional capability.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Open Full-Time Positions -->
+      <div class="space-y-6 pt-4">
+        <h3 class="text-xl font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3 flex items-center justify-between">
+          <span>Full-Time Remote Roles</span>
+          <span class="text-xs font-bold text-brand-500">2 Positions Open</span>
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Role 1: Business Development Executive -->
+          <div class="sn-card sn-card-hover p-6 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="text-lg font-black text-slate-900 dark:text-white">Business Development Executive</h4>
+                  <span class="text-[10px] font-bold text-brand-500 uppercase tracking-wider">Remote — Full Time</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/50">Sales &amp; Business</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Drive lead generation, prospect research, demo coordination, and client communication for Indian MSME automation pipelines.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <p><strong>Responsibilities:</strong> Lead research, business outreach, demo scheduling, CRM management, follow-ups.</p>
+                <p><strong>Requirements:</strong> Strong communication, business development mindset, professional written communication skills.</p>
+              </div>
+            </div>
+            <button onclick="openCareerAppModal('Business Development Executive')" class="w-full py-3 rounded-xl text-xs sn-btn-primary">
+              Apply Now
+            </button>
+          </div>
+
+          <!-- Role 2: Frappe / Full-Stack Developer -->
+          <div class="sn-card sn-card-hover p-6 space-y-4 flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="text-lg font-black text-slate-900 dark:text-white">Frappe / Full-Stack Developer</h4>
+                  <span class="text-[10px] font-bold text-brand-500 uppercase tracking-wider">Remote — Full Time</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-full text-[10px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/50">Engineering</span>
+              </div>
+              <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Architect Frappe application workflows, Python/JS backend services, custom ERP modules, and RESTful API integrations.
+              </p>
+              <div class="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 font-medium">
+                <p><strong>Responsibilities:</strong> Application development, workflow automation, API integration, database optimization, deployment.</p>
+                <p><strong>Requirements:</strong> Web development fundamentals (Python, JS, SQL, Git), API knowledge, problem-solving mindset.</p>
+              </div>
+            </div>
+            <button onclick="openCareerAppModal('Frappe / Full-Stack Developer')" class="w-full py-3 rounded-xl text-xs sn-btn-primary">
+              Apply Now
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Internship Opportunities -->
+      <div class="space-y-6 pt-4">
+        <h3 class="text-xl font-black text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3 flex items-center justify-between">
+          <span>Internship Opportunities</span>
+          <span class="text-xs font-bold text-emerald-500">4 Internships Open (Remote)</span>
+        </h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <div class="sn-card sn-card-hover p-5 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase">Sales &amp; Research</span>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Business Development Intern</h4>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">Focus: Lead research, market analysis, outreach, CRM data entry, sales support.</p>
+            </div>
+            <button onclick="openCareerAppModal('Business Development Intern')" class="w-full py-2 rounded-xl text-xs font-extrabold text-brand-700 dark:text-brand-300 border border-brand-500/40 hover:bg-brand-50 transition">Apply</button>
+          </div>
+
+          <div class="sn-card sn-card-hover p-5 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase">Growth &amp; Content</span>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Marketing &amp; Content Intern</h4>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">Focus: Social media, content creation, brand communication, campaign research.</p>
+            </div>
+            <button onclick="openCareerAppModal('Marketing & Content Intern')" class="w-full py-2 rounded-xl text-xs font-extrabold text-brand-700 dark:text-brand-300 border border-brand-500/40 hover:bg-brand-50 transition">Apply</button>
+          </div>
+
+          <div class="sn-card sn-card-hover p-5 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase">Tech &amp; Code</span>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Software / Frappe Intern</h4>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">Focus: Web development, Python, JavaScript, API testing, debugging, workflows.</p>
+            </div>
+            <button onclick="openCareerAppModal('Software / Frappe Development Intern')" class="w-full py-2 rounded-xl text-xs font-extrabold text-brand-700 dark:text-brand-300 border border-brand-500/40 hover:bg-brand-50 transition">Apply</button>
+          </div>
+
+          <div class="sn-card sn-card-hover p-5 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2">
+              <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase">Client Success</span>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Operations &amp; Success Intern</h4>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">Focus: Client onboarding support, documentation, process research, workflow mapping.</p>
+            </div>
+            <button onclick="openCareerAppModal('Operations & Customer Success Intern')" class="w-full py-2 rounded-xl text-xs font-extrabold text-brand-700 dark:text-brand-300 border border-brand-500/40 hover:bg-brand-50 transition">Apply</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. FAQS SECTION -->
+  <section id="faqs" class="py-16 md:py-24 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto space-y-12">
+      
+      <div class="text-center space-y-3">
+        <span class="px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          <i class="fas fa-circle-question mr-1.5" aria-hidden="true"></i>General Enquiries &amp; Information
+        </span>
+        <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium">
+          Key answers regarding implementation, data safety, and system capabilities.
+        </p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <div class="faq-item sn-card p-5 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center space-x-4">
+            <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">What is ScaleNova Business OS and how does it help Indian MSMEs?</h3>
+            <i class="fas fa-chevron-down faq-icon text-brand-500 transition-transform duration-300" aria-hidden="true"></i>
+          </div>
+          <div class="faq-content mt-3">
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-3">
+              ScaleNova Business OS is a single, centralized operating platform built specifically for Indian MSMEs (clinics, real estate, agencies, consultants). It replaces fragmented third-party tools by combining CRM lead management, ERP inventory, employee attendance, and invoicing into one unified cloud dashboard.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item sn-card p-5 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center space-x-4">
+            <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">How fast can our business be onboarded and operational?</h3>
+            <i class="fas fa-chevron-down faq-icon text-brand-500 transition-transform duration-300" aria-hidden="true"></i>
+          </div>
+          <div class="faq-content mt-3">
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-3">
+              Most MSME setups are completely configured, tested, and operational within 3 to 5 business days. Our engineering team handles all the initial workflow setups, data migration, and staff training sessions.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item sn-card p-5 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center space-x-4">
+            <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">Can we upgrade or adjust our OS plan as our team expands?</h3>
+            <i class="fas fa-chevron-down faq-icon text-brand-500 transition-transform duration-300" aria-hidden="true"></i>
+          </div>
+          <div class="faq-content mt-3">
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-3">
+              Yes. You can start on the Core OS plan and seamlessly upgrade to Growth OS or Elite OS as your branch locations, headcount, or customer volume increases, without any system downtime.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item sn-card p-5 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center space-x-4">
+            <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">Is our customer and financial data completely secure and private?</h3>
+            <i class="fas fa-chevron-down faq-icon text-brand-500 transition-transform duration-300" aria-hidden="true"></i>
+          </div>
+          <div class="faq-content mt-3">
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-3">
+              100%. You maintain full ownership of all data. ScaleNova enforces enterprise-grade TLS encryption in transit and AES-256 at rest, stored securely across Indian ISO/IEC certified cloud datacenters in compliance with the Digital Personal Data Protection Act 2023.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item sn-card p-5 cursor-pointer" onclick="toggleFaq(this)">
+          <div class="flex justify-between items-center space-x-4">
+            <h3 class="font-extrabold text-sm md:text-base text-slate-900 dark:text-white">What technical support and training are included with each plan?</h3>
+            <i class="fas fa-chevron-down faq-icon text-brand-500 transition-transform duration-300" aria-hidden="true"></i>
+          </div>
+          <div class="faq-content mt-3">
+            <p class="text-xs md:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-t border-slate-200 dark:border-slate-800 pt-3">
+              Every plan includes a live onboarding session, direct email support (info@scalenovasystems.com), and routine cloud system updates. Elite OS subscribers additionally receive a dedicated priority technical account manager.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. CONTACT SECTION (NO PHONE NUMBER IN DIRECT CONNECTION WINDOW PER RULE 3) -->
+  <section id="contact" class="py-16 md:py-24 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      
+      <!-- Direct Connection Window (STRICTLY NO PHONE NUMBER DISPLAYED HERE PER RULE 3) -->
+      <div class="space-y-8 text-center lg:text-left">
+        <div class="space-y-3">
+          <span class="px-3.5 py-1.5 rounded-full text-xs font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+            <i class="fas fa-headset mr-1.5" aria-hidden="true"></i>Direct Connection
+          </span>
+          <h2 class="text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+            Deploy ScaleNova OS Today
+          </h2>
+          <p class="text-slate-600 dark:text-slate-400 text-xs md:text-sm font-medium leading-relaxed max-w-md mx-auto lg:mx-0">
+            Schedule a customized demonstration or reach out directly to our engineering team. We'll show you how ScaleNova unifies your business operations.
+          </p>
+        </div>
+
+        <div class="space-y-4 max-w-md mx-auto lg:mx-0 text-left">
+          <!-- Official Email ONLY (Phone number strictly removed from this window) -->
+          <div class="sn-card p-4 flex items-center space-x-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div>
+              <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Official Email</span>
+              <a href="mailto:info@scalenovasystems.com" class="text-sm font-extrabold text-slate-900 dark:text-white hover:text-brand-500 transition">info@scalenovasystems.com</a>
+            </div>
+          </div>
+
+          <div class="sn-card p-5 space-y-3 bg-gradient-to-br from-brand-50/60 to-white dark:from-slate-900 dark:to-slate-900 border-brand-200/50">
+            <div class="flex items-center space-x-2 text-brand-600 dark:text-brand-400 text-xs font-extrabold">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              <span>Live Demonstration Booking</span>
+            </div>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Request a 1-on-1 walkthrough tailored to your MSME workflow (CRM, Inventory, Billing, HR).
+            </p>
+            <button onclick="openDemoModal()" class="w-full py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+              <i class="fas fa-play text-[10px]" aria-hidden="true"></i>
+              <span>Book a Live Demo</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Professional Lead Capture Form -->
+      <div class="sn-card p-6 md:p-8 space-y-6">
+        <div class="text-center space-y-1">
+          <h3 class="text-xl font-black text-slate-900 dark:text-white">Book a Live Demo</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Fill in your business details for a customized consultation.</p>
+        </div>
+
+        <form id="leadCaptureForm" onsubmit="handleLeadSubmit(event)" class="space-y-4">
+          
+          <div class="relative">
+            <input type="text" id="nameInput" placeholder=" " required class="floating-input w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+            <label for="nameInput" class="floating-label absolute left-4 top-3 text-xs font-medium text-slate-400 pointer-events-none transition-all duration-200">Full Name *</label>
+          </div>
+
+          <div class="relative">
+            <input type="text" id="businessInput" placeholder=" " required class="floating-input w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+            <label for="businessInput" class="floating-label absolute left-4 top-3 text-xs font-medium text-slate-400 pointer-events-none transition-all duration-200">Company / Business Name *</label>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="relative">
+              <input type="email" id="emailInput" placeholder=" " required class="floating-input w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+              <label for="emailInput" class="floating-label absolute left-4 top-3 text-xs font-medium text-slate-400 pointer-events-none transition-all duration-200">Work Email *</label>
+            </div>
+            <div class="relative">
+              <input type="tel" id="phoneInput" placeholder=" " required class="floating-input w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+              <label for="phoneInput" class="floating-label absolute left-4 top-3 text-xs font-medium text-slate-400 pointer-events-none transition-all duration-200">Phone Number *</label>
+            </div>
+          </div>
+
+          <!-- Comprehensive Indian MSME Business Categories Dropdown -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <select id="industryInput" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+                <option value="" disabled selected>Business Type / Industry *</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Trading & Distribution">Trading &amp; Distribution</option>
+                <option value="Retail">Retail</option>
+                <option value="Wholesale">Wholesale</option>
+                <option value="E-commerce">E-commerce</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="IT & Software">IT &amp; Software</option>
+                <option value="Consulting">Consulting</option>
+                <option value="Digital Agency">Digital Agency</option>
+                <option value="Marketing Agency">Marketing Agency</option>
+                <option value="Construction">Construction</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Architecture & Interior Design">Architecture &amp; Interior Design</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Logistics & Transportation">Logistics &amp; Transportation</option>
+                <option value="Import & Export">Import &amp; Export</option>
+                <option value="Healthcare">Healthcare &amp; Clinics</option>
+                <option value="Education & Training">Education &amp; Training</option>
+                <option value="Hospitality">Hospitality</option>
+                <option value="Restaurants & Food Services">Restaurants &amp; Food Services</option>
+                <option value="Automotive">Automotive</option>
+                <option value="Agriculture & Agribusiness">Agriculture &amp; Agribusiness</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Legal Services">Legal Services</option>
+                <option value="HR & Recruitment">HR &amp; Recruitment</option>
+                <option value="Media & Creative">Media &amp; Creative</option>
+                <option value="Pharmaceuticals">Pharmaceuticals</option>
+                <option value="FMCG">FMCG</option>
+                <option value="D2C Brand">D2C Brand</option>
+                <option value="Other">Other MSME</option>
+              </select>
+            </div>
+
+            <div>
+              <select id="teamSizeInput" required class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+                <option value="" disabled selected>Team Size / Employees *</option>
+                <option value="1-10">1 – 10 Employees</option>
+                <option value="11-50">11 – 50 Employees</option>
+                <option value="51-200">51 – 200 Employees</option>
+                <option value="201-500">201 – 500 Employees</option>
+                <option value="500+">500+ Employees</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <select id="contactPrefInput" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+                <option value="WhatsApp" selected>Preferred Contact: WhatsApp</option>
+                <option value="Phone Call">Preferred Contact: Phone Call</option>
+                <option value="Email">Preferred Contact: Email</option>
+              </select>
+            </div>
+
+            <div>
+              <select id="challengeInput" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all">
+                <option value="Lead Management" selected>Primary Need: CRM &amp; Lead Tracking</option>
+                <option value="Billing & ERP">Primary Need: ERP &amp; Financials</option>
+                <option value="Employee HR">Primary Need: HR &amp; Attendance</option>
+                <option value="Full Automation">Primary Need: Full OS Automation</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <textarea id="messageInput" rows="3" placeholder="Specific business requirements or notes (Optional)" class="w-full px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"></textarea>
+          </div>
+
+          <button type="submit" id="submitLeadBtn" class="w-full py-4 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            <span>Book a Live Demo</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- 7. FOOTER SECTION WITH GSTIN COMPLIANCE & LEGAL LINKS -->
+<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-12 px-4 md:px-8 mt-auto">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+    
+    <!-- Column 1: ScaleNova Branding -->
+    <div class="space-y-3">
+      <div class="flex flex-col">
+        <span class="text-lg font-black tracking-tight sn-gradient-text">SCALENOVA PRIVATE LIMITED</span>
+        <span class="text-[10px] font-extrabold tracking-wide text-slate-400 uppercase mt-0.5">One platform for every business need</span>
+      </div>
+      <p class="text-xs text-slate-400 font-medium leading-relaxed">
+        Replacing fragmented tools with unified automated systems built on the cloud ecosystem for MSMEs across India. Target Launch: 15 August 2026.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Navigation -->
+    <div>
+      <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-3">Quick Navigation</h4>
+      <ul class="space-y-2 text-xs font-bold text-slate-400">
+        <li><a href="#hero" class="hover:text-brand-400 transition">Home</a></li>
+        <li><a href="#solutions" class="hover:text-brand-400 transition">Solutions</a></li>
+        <li><a href="#pricing" class="hover:text-brand-400 transition">OS Plans</a></li>
+        <li><a href="#careers" class="hover:text-brand-400 transition">Careers &amp; Openings</a></li>
+        <li><a href="#faqs" class="hover:text-brand-400 transition">FAQs</a></li>
+        <li><a href="#contact" class="hover:text-brand-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Legal Compliance Modals -->
+    <div>
+      <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-3">Company Compliance</h4>
+      <ul class="space-y-2 text-xs font-bold text-slate-400">
+        <li><button onclick="openModal('privacyModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Privacy Policy</button></li>
+        <li><button onclick="openModal('termsModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Terms &amp; Conditions</button></li>
+        <li><button onclick="openModal('refundModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Refund &amp; Cancellation Policy</button></li>
+        <li><button onclick="openModal('careersModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Careers &amp; Culture</button></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Corporate Contact with GSTIN -->
+    <div>
+      <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-3">Corporate Contact</h4>
+      <div class="text-xs text-slate-400 font-medium leading-relaxed space-y-1">
+        <p class="strong text-slate-200 font-bold">ScaleNova Private Limited</p>
+        <p>Email: <a href="mailto:info@scalenovasystems.com" class="hover:text-brand-400 transition">info@scalenovasystems.com</a></p>
+        <p>Phone: <a href="tel:+917993774994" class="hover:text-brand-400 transition">+91 79937 74994</a></p>
+        <!-- GSTIN Displayed Cleanly & Compactly Per Rule 4 -->
+        <p class="text-[11px] font-semibold text-slate-400 pt-1">GSTIN: <span class="text-slate-300 font-bold">37ABUCS4883M1Z5</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-7xl mx-auto border-t border-slate-800 pt-6 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-500 gap-3 text-center md:text-left">
+    <span>&copy; 2026 ScaleNova Private Limited. All Rights Reserved. Target Launch: 15 August 2026.</span>
+    <span>Internal Draft Policies — Subject to final legal review prior to launch.</span>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP FAB BUTTON -->
+<a href="https://wa.me/917993774994?text=Hi%20ScaleNova%20Team%2C%20I%20would%20like%20to%20Book%20a%20Live%20Demo" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Book a Live Demo on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- ---------------------------------------------------------------------- -->
+<!-- INTERNAL SPA COMPLIANCE MODAL WINDOWS & ERROR/CAREER POPUPS -->
+<!-- ---------------------------------------------------------------------- -->
+
+<!-- 1. PRIVACY POLICY MODAL -->
+<div id="privacyModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-labelledby="privacyTitle" aria-modal="true">
+  <div class="sn-card max-w-2xl w-full max-h-[85vh] p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-between overflow-hidden">
+    
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-user-shield" aria-hidden="true"></i>
+        </div>
+        <h3 id="privacyTitle" class="text-lg font-black text-slate-900 dark:text-white">Privacy Policy</h3>
+      </div>
+      <button onclick="closeModal('privacyModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" aria-label="Close Modal">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-4 space-y-4 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2">
+      <p class="text-[10px] text-amber-600 dark:text-amber-400 font-extrabold uppercase bg-amber-500/10 p-2 rounded-lg border border-amber-500/20">
+        Notice: First-draft privacy policy prepared for 15 August 2026 commercial launch. Internal legal review required before public deployment.
+      </p>
+      <p><strong>Effective Date:</strong> 15 August 2026 | <strong>ScaleNova Private Limited</strong></p>
+      
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">1. Scope &amp; Information Collection</h4>
+      <p>ScaleNova Private Limited ("ScaleNova", "We", "Our") respects your privacy. We collect information voluntarily provided during demo bookings, account setup, and communications (including Name, Business Name, Email, Phone Number, and Industry details).</p>
+      
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">2. 100% Data Ownership &amp; Usage</h4>
+      <p>You remain the sole owner of all customer databases, inventory records, and financial ledgers uploaded to your ScaleNova Business OS instance. We do not sell, lease, or monetize your data to third parties.</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">3. Security Measures &amp; DPDP Act Compliance</h4>
+      <p>All data is encrypted in transit using TLS 1.3 and at rest using AES-256 within Indian ISO/IEC 27001 certified cloud datacenters, conforming to the Digital Personal Data Protection Act 2023.</p>
+    </div>
+
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-right">
+      <button onclick="closeModal('privacyModal')" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary">Close Policy</button>
+    </div>
+  </div>
+</div>
+
+<!-- 2. TERMS & CONDITIONS MODAL -->
+<div id="termsModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-labelledby="termsTitle" aria-modal="true">
+  <div class="sn-card max-w-2xl w-full max-h-[85vh] p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-between overflow-hidden">
+    
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-file-contract" aria-hidden="true"></i>
+        </div>
+        <h3 id="termsTitle" class="text-lg font-black text-slate-900 dark:text-white">Terms &amp; Conditions</h3>
+      </div>
+      <button onclick="closeModal('termsModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" aria-label="Close Modal">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-4 space-y-4 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2">
+      <p><strong>Master SaaS Agreement</strong> | ScaleNova Private Limited</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">1. Subscription Terms</h4>
+      <p>ScaleNova OS is provided as a monthly cloud SaaS subscription. Plans (Core OS, Growth OS, Elite OS) are billed monthly plus applicable GST (GSTIN: 37ABUCS4883M1Z5).</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">2. Service Uptime SLA</h4>
+      <p>We commit to maintaining a target 99.99% cloud uptime. Scheduled maintenance is conducted during off-peak hours with prior notification.</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">3. Jurisdiction</h4>
+      <p>This agreement is governed by the laws of India. Disputes shall be subject to exclusive jurisdiction in Indian courts.</p>
+    </div>
+
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-right">
+      <button onclick="closeModal('termsModal')" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary">I Understand</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3. REFUND & CANCELLATION POLICY MODAL -->
+<div id="refundModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-labelledby="refundTitle" aria-modal="true">
+  <div class="sn-card max-w-2xl w-full max-h-[85vh] p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-between overflow-hidden">
+    
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-hand-holding-dollar" aria-hidden="true"></i>
+        </div>
+        <h3 id="refundTitle" class="text-lg font-black text-slate-900 dark:text-white">Refund &amp; Cancellation Policy</h3>
+      </div>
+      <button onclick="closeModal('refundModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" aria-label="Close Modal">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="overflow-y-auto py-4 space-y-4 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2">
+      <p><strong>Commercial Billing Policy</strong> | ScaleNova Private Limited</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">1. Subscription Cancellations</h4>
+      <p>Subscribers may cancel their monthly SaaS subscription at any time prior to the next billing cycle by submitting a request to info@scalenovasystems.com.</p>
+
+      <h4 class="font-extrabold text-sm text-slate-900 dark:text-white pt-2">2. Refund Eligibility &amp; Onboarding Fees</h4>
+      <p>Dedicated setup and custom implementation engineering fees are non-refundable once deployment work has commenced. Duplicate payments or billing errors will be refunded in full within 5-7 business days to the original payment source.</p>
+    </div>
+
+    <div class="pt-4 border-t border-slate-200 dark:border-slate-800 text-right">
+      <button onclick="closeModal('refundModal')" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary">Close Policy</button>
+    </div>
+  </div>
+</div>
+
+<!-- 4. CAREER APPLICATION MODAL (WITH SECURE RESUME UPLOAD VALIDATION) -->
+<div id="careerAppModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-labelledby="careerTitle" aria-modal="true">
+  <div class="sn-card max-w-xl w-full max-h-[90vh] p-6 md:p-8 border border-slate-200 dark:border-slate-800 shadow-2xl flex flex-col justify-between overflow-hidden">
+    
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        </div>
+        <div>
+          <h3 id="careerTitle" class="text-base font-black text-slate-900 dark:text-white">Apply for Position</h3>
+          <span id="targetRoleBadge" class="text-[10px] font-bold text-brand-500 uppercase">General Application</span>
+        </div>
+      </div>
+      <button onclick="closeModal('careerAppModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white" aria-label="Close Modal">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <form id="careerForm" onsubmit="handleCareerSubmit(event)" class="overflow-y-auto py-4 space-y-3.5 pr-1">
+      <input type="hidden" id="appRoleInput" value="General Application">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Full Name *</label>
+          <input type="text" id="appFullName" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Email Address *</label>
+          <input type="email" id="appEmail" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Phone Number *</label>
+          <input type="tel" id="appPhone" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Current Location *</label>
+          <input type="text" id="appLocation" required placeholder="e.g. Remote / Vijayawada" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Preference *</label>
+          <select id="appPref" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <option value="Full Time" selected>Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Internship">Internship</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Years of Experience *</label>
+          <input type="text" id="appExp" required placeholder="e.g. 0-1 yrs / Fresher" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">LinkedIn Profile</label>
+          <input type="url" id="appLinkedin" placeholder="https://linkedin.com/in/username" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Portfolio / GitHub URL</label>
+          <input type="url" id="appGithub" placeholder="https://github.com/username" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <!-- Secure Resume Upload Field -->
+      <div>
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Upload Resume (PDF, DOC, DOCX — Max 5 MB) *</label>
+        <input type="file" id="appResume" accept=".pdf,.doc,.docx" required onchange="validateFile(this)" class="w-full text-xs text-slate-500 file:mr-3 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-extrabold file:bg-brand-50 file:text-brand-700 dark:file:bg-slate-800 dark:file:text-brand-300 hover:file:bg-brand-100">
+        <span id="fileError" class="text-[10px] text-red-500 font-bold hidden block mt-1"></span>
+      </div>
+
+      <div>
+        <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Short Introduction / Key Skills *</label>
+        <textarea id="appIntro" rows="2" required placeholder="Briefly describe your relevant skills and interest..." class="w-full px-3 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+      </div>
+
+      <div class="flex items-center space-x-2 pt-1">
+        <input type="checkbox" id="appConsent" required class="rounded text-brand-500 focus:ring-brand-500">
+        <label for="appConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I consent to ScaleNova processing my candidate application data securely.</label>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-end space-x-3">
+        <button type="button" onclick="closeModal('careerAppModal')" class="px-4 py-2.5 rounded-xl text-xs font-bold text-slate-500">Cancel</button>
+        <button type="submit" id="submitCareerBtn" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- 5. BRANDED FAILURE / ERROR STATE MODAL -->
+<div id="errorModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true">
+  <div class="sn-card max-w-md w-full p-6 text-center space-y-4 border-2 border-red-500/40 shadow-2xl">
+    <div class="w-12 h-12 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl mx-auto">
+      <i class="fas fa-triangle-exclamation" aria-hidden="true"></i>
+    </div>
+    <h3 class="text-lg font-black text-slate-900 dark:text-white">Something Went Wrong</h3>
+    <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">We couldn't submit your request right now. Please try again in a moment or email us directly.</p>
+    <div class="flex space-x-3 pt-2">
+      <button onclick="closeModal('errorModal')" class="w-full py-2.5 rounded-xl text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">Try Again</button>
+      <a href="mailto:info@scalenovasystems.com" class="w-full py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- 6. BRANDED OFFLINE STATE MODAL -->
+<div id="offlineModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true">
+  <div class="sn-card max-w-md w-full p-6 text-center space-y-4 border-2 border-amber-500/40 shadow-2xl">
+    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl mx-auto">
+      <i class="fas fa-wifi" aria-hidden="true"></i>
+    </div>
+    <h3 class="text-lg font-black text-slate-900 dark:text-white">You're Offline</h3>
+    <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">It looks like your internet connection is unavailable. Please reconnect and try again.</p>
+    <button onclick="closeModal('offlineModal'); window.location.reload();" class="w-full py-2.5 rounded-xl text-xs sn-btn-primary">Try Again</button>
+  </div>
+</div>
+
+<!-- 7. BRANDED SUCCESS STATE MODAL -->
+<div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" role="dialog" aria-modal="true">
+  <div class="sn-card max-w-md w-full p-6 text-center space-y-4 border-2 border-emerald-500/40 shadow-2xl">
+    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl mx-auto">
+      <i class="fas fa-circle-check" aria-hidden="true"></i>
+    </div>
+    <h3 class="text-lg font-black text-slate-900 dark:text-white">Demo Request Confirmed</h3>
+    <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">Thank you! Your request for a live ScaleNova OS demo has been received. Our solutions engineer will contact you within 2 hours.</p>
+    <button onclick="closeModal('successModal')" class="w-full py-2.5 rounded-xl text-xs sn-btn-primary">Done</button>
+  </div>
+</div>
+
+<!-- JAVASCRIPT LOGIC ENGINE -->
+<script>
+// Toggle Theme Mode
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.querySelector('#themeToggle i');
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark');
+    localStorage.setItem('theme', 'light');
+    if (icon) icon.className = 'fas fa-moon text-xs';
+  } else {
+    html.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+    if (icon) icon.className = 'fas fa-sun text-xs';
+  }
+}
+
+// Initialize Theme
+if (localStorage.theme === 'light') {
+  document.documentElement.classList.remove('dark');
+  const icon = document.querySelector('#themeToggle i');
+  if (icon) icon.className = 'fas fa-moon text-xs';
+} else {
+  document.documentElement.classList.add('dark');
+  const icon = document.querySelector('#themeToggle i');
+  if (icon) icon.className = 'fas fa-sun text-xs';
+}
+
+// Mobile Sidebar Drawer Toggle
+function toggleMobileSidebar() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('mobileSidebarOverlay');
+  if (sidebar.classList.contains('translate-x-full')) {
+    sidebar.classList.remove('translate-x-full');
+    overlay.classList.remove('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = 'hidden';
+  } else {
+    sidebar.classList.add('translate-x-full');
+    overlay.classList.add('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = '';
+  }
+}
+
+// FAQ Accordion Toggle
+function toggleFaq(clickedItem) {
+  const allFaqs = document.querySelectorAll('.faq-item');
+  const isActive = clickedItem.classList.contains('active');
+  allFaqs.forEach(item => item.classList.remove('active'));
+  if (!isActive) clickedItem.classList.add('active');
+}
+
+// Internal SPA Modal Handlers
+function openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    document.body.style.overflow = '';
+  }
+}
+
+// Book a Live Demo Trigger
+function openDemoModal() {
+  const contactSec = document.getElementById('contact');
+  if (contactSec) {
+    contactSec.scrollIntoView({ behavior: 'smooth' });
+    const nameInp = document.getElementById('nameInput');
+    if (nameInp) setTimeout(() => nameInp.focus(), 600);
+  }
+}
+
+// Open Career Application Modal with Target Role
+function openCareerAppModal(roleName) {
+  const badge = document.getElementById('targetRoleBadge');
+  const inp = document.getElementById('appRoleInput');
+  if (badge) badge.textContent = roleName;
+  if (inp) inp.value = roleName;
+  openModal('careerAppModal');
+}
+
+// Client-Side Secure File Upload Validation (Rule 24)
+function validateFile(input) {
+  const errSpan = document.getElementById('fileError');
+  if (!input.files || !input.files[0]) return;
+  const file = input.files[0];
+  const maxBytes = 5 * 1024 * 1024; // 5 MB
+  const validTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+
+  if (file.size > maxBytes) {
+    errSpan.textContent = 'File size exceeds 5 MB limit.';
+    errSpan.classList.remove('hidden');
+    input.value = '';
+    return;
+  }
+  if (!validTypes.includes(file.type) && !file.name.match(/\.(pdf|doc|docx)$/i)) {
+    errSpan.textContent = 'Invalid file type. Only PDF, DOC, and DOCX allowed.';
+    errSpan.classList.remove('hidden');
+    input.value = '';
+    return;
+  }
+  errSpan.classList.add('hidden');
+}
+
+// Handle Lead Capture Form Submission
+function handleLeadSubmit(e) {
+  e.preventDefault();
+  if (!navigator.onLine) {
+    openModal('offlineModal');
+    return;
+  }
+  const btn = document.getElementById('submitLeadBtn');
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = origText;
+    document.getElementById('leadCaptureForm').reset();
+    openModal('successModal');
+  }, 1000);
+}
+
+// Handle Career Form Submission
+function handleCareerSubmit(e) {
+  e.preventDefault();
+  if (!navigator.onLine) {
+    openModal('offlineModal');
+    return;
+  }
+  const btn = document.getElementById('submitCareerBtn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+
+  setTimeout(() => {
+    btn.disabled = false;
+    btn.innerHTML = 'Submit Application';
+    closeModal('careerAppModal');
+    document.getElementById('careerForm').reset();
+    alert('Application Submitted Successfully! Our talent acquisition team will review your application.');
+  }, 1000);
+}
+
+// ESC Key Listener for Accessibility Modal Close
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    ['privacyModal', 'termsModal', 'refundModal', 'careerAppModal', 'errorModal', 'offlineModal', 'successModal'].forEach(closeModal);
+  }
+});
+
+// Offline Detector Listener
+window.addEventListener('offline', () => openModal('offlineModal'));
+</script>
+
+</body>
+</html>
