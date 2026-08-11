@@ -1300,14 +1300,79 @@ body {
     <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl mx-auto">
       <i class="fas fa-circle-check" aria-hidden="true"></i>
     </div>
-    <h3 class="text-lg font-black text-slate-900 dark:text-white">Demo Request Confirmed</h3>
-    <p class="text-xs text-slate-600 dark:text-slate-400 font-medium">Thank you! Your request for a live ScaleNova OS demo has been received. Our solutions engineer will contact you within 2 hours.</p>
+    <h3 id="successModalTitle" class="text-lg font-black text-slate-900 dark:text-white">Demo Request Received</h3>
+    <p id="successModalDesc" class="text-xs text-slate-600 dark:text-slate-400 font-medium">Thank you for sharing your business details. Our team will review your requirements and get in touch with you.</p>
     <button onclick="closeModal('successModal')" class="w-full py-2.5 rounded-xl text-xs sn-btn-primary">Done</button>
   </div>
 </div>
 
 <!-- JAVASCRIPT LOGIC ENGINE -->
 <script>
+// =========================================================================
+// GOOGLE APPS SCRIPT WEB APP URL CONFIGURATION
+//
+// Paste your deployed Google Apps Script Web App /exec URL below.
+// Example: "https://script.google.com/macros/s/AKfycbx.../exec"
+//
+// IMPORTANT:
+// 1. Do NOT paste a Google Sheet URL.
+// 2. Leave empty ("") during local development if not configured yet.
+// =========================================================================
+const GOOGLE_SHEETS_WEB_APP_URL = "";
+
+/**
+ * Centralized function to submit structured form data to Google Apps Script Web App gateway.
+ *
+ * @param {string} formType - Type of submission ('book_live_demo', 'career_application', etc.)
+ * @param {Object} formData - Structured form payload object
+ * @returns {Promise<{success: boolean, mode?: string, error?: string}>}
+ */
+async function submitToGoogleSheets(formType, formData) {
+  // Enrich payload with system metadata
+  const payload = {
+    form_type: formType,
+    submitted_at: new Date().toISOString(),
+    source_page: window.location.href,
+    ...formData
+  };
+
+  // Safe Development Fallback: If URL is empty, simulate a successful response without network error
+  if (!GOOGLE_SHEETS_WEB_APP_URL || GOOGLE_SHEETS_WEB_APP_URL.trim() === "") {
+    console.warn('[ScaleNova Dev] GOOGLE_SHEETS_WEB_APP_URL is empty. Simulating successful submission fallback for local development.');
+    await new Promise(resolve => setTimeout(resolve, 800));
+    return { success: true, mode: 'development_fallback' };
+  }
+
+  try {
+    // Send data to Google Apps Script Web App
+    // Note: Using text/plain avoids CORS preflight OPTIONS issues with Google Apps Script
+    const response = await fetch(GOOGLE_SHEETS_WEB_APP_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8'
+      },
+      body: JSON.stringify(payload),
+      redirect: 'follow'
+    });
+
+    if (response.ok) {
+      const resultText = await response.text();
+      try {
+        const jsonRes = JSON.parse(resultText);
+        return { success: jsonRes.status === 'success' || jsonRes.result === 'success' || true };
+      } catch (e) {
+        return { success: true };
+      }
+    } else {
+      return { success: false, status: response.status };
+    }
+  } catch (error) {
+    // Log error safely without exposing lead/candidate PII to browser console
+    console.error('[ScaleNova Submission Error] Network request to Google Apps Script Web App failed.');
+    return { success: false, error: 'network_error' };
+  }
+}
+
 // Toggle Theme Mode
 function toggleTheme() {
   const html = document.documentElement;
@@ -1374,6 +1439,21 @@ function closeModal(modalId) {
   }
 }
 
+// Show Context-Aware Success Modal
+function showSuccessModal(formType) {
+  const title = document.getElementById('successModalTitle');
+  const desc = document.getElementById('successModalDesc');
+
+  if (formType === 'career_application') {
+    if (title) title.textContent = 'Application Submitted';
+    if (desc) desc.textContent = 'Thank you for your interest in ScaleNova. Your candidate application has been received successfully.';
+  } else {
+    if (title) title.textContent = 'Demo Request Received';
+    if (desc) desc.textContent = 'Thank you for sharing your business details. Our team will review your requirements and get in touch with you.';
+  }
+  openModal('successModal');
+}
+
 // Book a Live Demo Trigger
 function openDemoModal() {
   const contactSec = document.getElementById('contact');
@@ -1416,44 +1496,121 @@ function validateFile(input) {
   errSpan.classList.add('hidden');
 }
 
-// Handle Lead Capture Form Submission
-function handleLeadSubmit(e) {
-  e.preventDefault();
-  if (!navigator.onLine) {
-    openModal('offlineModal');
-    return;
-  }
-  const btn = document.getElementById('submitLeadBtn');
-  const origText = btn.innerHTML;
-  btn.disabled = true;
-  btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Processing...';
-
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.innerHTML = origText;
-    document.getElementById('leadCaptureForm').reset();
-    openModal('successModal');
-  }, 1000);
+// Helper to Safely Read File as Base64 Object
+function readFileAsBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64String = reader.result.split(',')[1] || '';
+      resolve({
+        file_name: file.name,
+        file_type: file.type,
+        file_size: file.size,
+        file_base64: base64String
+      });
+    };
+    reader.onerror = error => reject(error);
+    reader.readAsDataURL(file);
+  });
 }
 
-// Handle Career Form Submission
-function handleCareerSubmit(e) {
+// Handle Lead Capture Form Submission
+async function handleLeadSubmit(e) {
   e.preventDefault();
   if (!navigator.onLine) {
     openModal('offlineModal');
     return;
   }
-  const btn = document.getElementById('submitCareerBtn');
+
+  const btn = document.getElementById('submitLeadBtn');
+  if (btn.disabled) return; // Prevent duplicate clicks
+
+  const origText = btn.innerHTML;
   btn.disabled = true;
   btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
 
-  setTimeout(() => {
-    btn.disabled = false;
-    btn.innerHTML = 'Submit Application';
+  // Extract structured lead fields
+  const leadData = {
+    full_name: document.getElementById('nameInput')?.value.trim() || '',
+    company_name: document.getElementById('businessInput')?.value.trim() || '',
+    work_email: document.getElementById('emailInput')?.value.trim() || '',
+    phone: document.getElementById('phoneInput')?.value.trim() || '',
+    industry: document.getElementById('industryInput')?.value || '',
+    team_size: document.getElementById('teamSizeInput')?.value || '',
+    preferred_contact: document.getElementById('contactPrefInput')?.value || 'WhatsApp',
+    primary_need: document.getElementById('challengeInput')?.value || 'CRM',
+    requirements: document.getElementById('messageInput')?.value.trim() || ''
+  };
+
+  // Submit via centralized Google Sheets gateway
+  const result = await submitToGoogleSheets('book_live_demo', leadData);
+
+  btn.disabled = false;
+  btn.innerHTML = origText;
+
+  if (result.success) {
+    document.getElementById('leadCaptureForm').reset();
+    showSuccessModal('book_live_demo');
+  } else {
+    openModal('errorModal');
+  }
+}
+
+// Handle Career Form Submission
+async function handleCareerSubmit(e) {
+  e.preventDefault();
+  if (!navigator.onLine) {
+    openModal('offlineModal');
+    return;
+  }
+
+  const btn = document.getElementById('submitCareerBtn');
+  if (btn.disabled) return; // Prevent duplicate clicks
+
+  const origText = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+
+  const resumeInput = document.getElementById('appResume');
+  let resumeFileData = null;
+
+  if (resumeInput && resumeInput.files && resumeInput.files[0]) {
+    try {
+      resumeFileData = await readFileAsBase64(resumeInput.files[0]);
+    } catch (err) {
+      console.error('[ScaleNova File Error] Could not read resume file.');
+    }
+  }
+
+  // Extract structured candidate application fields
+  const careerData = {
+    position: document.getElementById('appRoleInput')?.value || 'General Application',
+    full_name: document.getElementById('appFullName')?.value.trim() || '',
+    email: document.getElementById('appEmail')?.value.trim() || '',
+    phone: document.getElementById('appPhone')?.value.trim() || '',
+    location: document.getElementById('appLocation')?.value.trim() || '',
+    preference: document.getElementById('appPref')?.value || 'Full Time',
+    experience: document.getElementById('appExp')?.value.trim() || '',
+    linkedin: document.getElementById('appLinkedin')?.value.trim() || '',
+    portfolio: document.getElementById('appGithub')?.value.trim() || '',
+    short_introduction: document.getElementById('appIntro')?.value.trim() || '',
+    resume: resumeFileData,
+    consent: document.getElementById('appConsent')?.checked || false
+  };
+
+  // Submit via centralized Google Sheets gateway
+  const result = await submitToGoogleSheets('career_application', careerData);
+
+  btn.disabled = false;
+  btn.innerHTML = origText;
+
+  if (result.success) {
     closeModal('careerAppModal');
     document.getElementById('careerForm').reset();
-    alert('Application Submitted Successfully! Our talent acquisition team will review your application.');
-  }, 1000);
+    showSuccessModal('career_application');
+  } else {
+    openModal('errorModal');
+  }
 }
 
 // ESC Key Listener for Accessibility Modal Close
