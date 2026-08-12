@@ -999,8 +999,8 @@ body {
 </main>
 
 <!-- 7. FOOTER SECTION WITH CORPORATE DETAILS & GSTIN -->
-<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-12 px-4 md:px-8 mt-auto">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-10 md:py-12 px-4 md:px-8 mt-auto">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 md:mb-12">
     
     <!-- Column 1: ScaleNova Branding -->
     <div class="space-y-3">
@@ -1025,20 +1025,19 @@ body {
         <li><a href="#hero" class="hover:text-brand-400 transition">Home</a></li>
         <li><a href="#solutions" class="hover:text-brand-400 transition">Solutions</a></li>
         <li><a href="#pricing" class="hover:text-brand-400 transition">OS Plans</a></li>
-        <li><a href="#careers" class="hover:text-brand-400 transition">Careers &amp; Openings</a></li>
+        <li><a href="#careers" class="hover:text-brand-400 transition">Careers</a></li>
         <li><a href="#faqs" class="hover:text-brand-400 transition">FAQs</a></li>
         <li><a href="#contact" class="hover:text-brand-400 transition">Contact</a></li>
       </ul>
     </div>
 
-    <!-- Column 3: Legal Compliance Modals -->
+    <!-- Column 3: Company Compliance (Only Legal Links) -->
     <div>
       <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-3">Company Compliance</h4>
       <ul class="space-y-2 text-xs font-bold text-slate-400">
         <li><button onclick="openModal('privacyModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Privacy Policy</button></li>
         <li><button onclick="openModal('termsModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Terms &amp; Conditions</button></li>
         <li><button onclick="openModal('refundModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Refund &amp; Cancellation Policy</button></li>
-        <li><button onclick="openModal('careersModal')" class="hover:text-brand-400 transition text-left focus:outline-none">Careers &amp; Culture</button></li>
       </ul>
     </div>
 
@@ -1046,10 +1045,9 @@ body {
     <div>
       <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-3">Corporate Contact</h4>
       <div class="text-xs text-slate-400 font-medium leading-relaxed space-y-1">
-        <p class="strong text-slate-200 font-bold">ScaleNova Private Limited</p>
-        <p>Email: <a href="mailto:info@scalenovasystems.com" class="hover:text-brand-400 transition">info@scalenovasystems.com</a></p>
+        <p class="text-slate-200 font-bold">ScaleNova Private Limited</p>
+        <p class="break-all">Email: <a href="mailto:info@scalenovasystems.com" class="hover:text-brand-400 transition">info@scalenovasystems.com</a></p>
         <p>Phone: <a href="tel:+917993774994" class="hover:text-brand-400 transition">+91 79937 74994</a></p>
-        <!-- GSTIN Displayed Cleanly & Compactly -->
         <p class="text-[11px] font-semibold text-slate-400 pt-1">GSTIN: <span class="text-slate-300 font-bold">37ABUCS4883M1Z5</span></p>
       </div>
     </div>
@@ -1061,8 +1059,8 @@ body {
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP FAB BUTTON -->
-<a href="https://wa.me/917993774994?text=Hi%20ScaleNova%20Team%2C%20I%20would%20like%20to%20Book%20a%20Live%20Demo" target="_blank" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Book a Live Demo on WhatsApp">
+<!-- FLOATING WHATSAPP FAB BUTTON (WITH PREFILLED ENQUIRY MESSAGE) -->
+<a href="https://wa.me/917993774994?text=Hi%2C%20I%20would%20like%20to%20connect%20with%20ScaleNova%20to%20learn%20more%20about%20your%20business%20solutions." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Connect on WhatsApp">
   <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
