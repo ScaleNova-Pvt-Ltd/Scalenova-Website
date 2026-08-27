@@ -1,0 +1,47 @@
+name: Deploy ScaleNova Website to OrangeHost
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: Production Deploy to public_html
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout Repository Source
+        uses: actions/checkout@v4
+
+      - name: 🔍 Validate JavaScript Syntax
+        run: |
+          node -c js/config.js
+          node -c js/features-data.js
+          node -c js/plans-data.js
+          node -c js/careers-data.js
+          node -c js/affiliate-data.js
+          node -c js/blog-data.js
+          node -c js/pricing.js
+          node -c js/modal-engine.js
+          node -c js/forms-service.js
+          node -c js/3d-hero.js
+          node -c js/app.js
+          echo "All JavaScript modules verified successfully."
+
+      - name: 🚀 Sync Files to OrangeHost public_html via SFTP / FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.ORANGEHOST_FTP_SERVER }}
+          username: ${{ secrets.ORANGEHOST_FTP_USERNAME }}
+          password: ${{ secrets.ORANGEHOST_FTP_PASSWORD }}
+          port: ${{ secrets.ORANGEHOST_FTP_PORT || 21 }}
+          protocol: ${{ secrets.ORANGEHOST_FTP_PROTOCOL || 'ftps' }}
+          local-dir: ./
+          server-dir: /public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/docs/**
+            **/README.md
+            **/.gitignore
