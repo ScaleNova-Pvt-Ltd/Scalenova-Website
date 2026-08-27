@@ -346,17 +346,17 @@ tailwind.config = {
           <div class="pricing-toggle-wrapper" id="billingToggleWrapper" role="group" aria-label="Billing frequency selection">
             
             <!-- Monthly Button -->
-            <button type="button" id="billingLabelMonthly" class="pricing-toggle-label active" onclick="ScaleNovaPricing.setBillingCycle('monthly')" aria-pressed="true" aria-label="Select Monthly Billing">
+            <button type="button" id="billingLabelMonthly" class="pricing-toggle-label active" aria-pressed="true" aria-label="Select Monthly Billing">
               Monthly
             </button>
 
             <!-- Toggle Switch with aria-checked -->
-            <button type="button" id="billingSwitchBtn" role="switch" aria-checked="false" aria-label="Switch between monthly and annual billing" class="pricing-switch-btn" onclick="ScaleNovaPricing.toggleBillingCycle()">
+            <button type="button" id="billingSwitchBtn" role="switch" aria-checked="false" aria-label="Switch between monthly and annual billing" class="pricing-switch-btn">
               <span class="pricing-switch-thumb" aria-hidden="true"></span>
             </button>
 
             <!-- Annual Button with Save 2 Months badge -->
-            <button type="button" id="billingLabelYearly" class="pricing-toggle-label" onclick="ScaleNovaPricing.setBillingCycle('yearly')" aria-pressed="false" aria-label="Select Annual Billing">
+            <button type="button" id="billingLabelYearly" class="pricing-toggle-label" aria-pressed="false" aria-label="Select Annual Billing">
               <span>Annual</span>
               <span class="discount-badge">Save 2 Months</span>
             </button>
@@ -384,9 +384,10 @@ tailwind.config = {
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Startups &amp; Lean Sales Teams</p>
             
             <div class="py-3 border-y border-brand-200/60 dark:border-slate-800">
-              <div class="flex items-baseline gap-1">
+              <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
                 <span id="price-core" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white transition-all duration-200">₹3,299</span>
-                <span id="subtext-core" class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / month</span>
+                <span id="subtext-core" class="text-xs font-extrabold text-slate-500 dark:text-slate-400 transition-colors duration-200"> + GST / month</span>
+                <span id="savings-core" style="display: none;" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 whitespace-nowrap uppercase tracking-wider transition-all duration-200">Save ₹6,598</span>
               </div>
               <p id="billing-note-core" class="text-[10px] sm:text-[11px] text-slate-400 mt-1 font-medium">Billed monthly. Cancel anytime.</p>
             </div>
@@ -427,9 +428,10 @@ tailwind.config = {
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Scaling MSMEs &amp; Multi-Team Operations</p>
             
             <div class="py-3 border-y border-brand-200/50 dark:border-slate-800">
-              <div class="flex items-baseline gap-1">
+              <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
                 <span id="price-growth" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white transition-all duration-200">₹11,999</span>
-                <span id="subtext-growth" class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / month</span>
+                <span id="subtext-growth" class="text-xs font-extrabold text-slate-500 dark:text-slate-400 transition-colors duration-200"> + GST / month</span>
+                <span id="savings-growth" style="display: none;" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 whitespace-nowrap uppercase tracking-wider transition-all duration-200">Save ₹23,998</span>
               </div>
               <p id="billing-note-growth" class="text-[10px] sm:text-[11px] text-slate-400 mt-1 font-medium">Billed monthly. Cancel anytime.</p>
             </div>
@@ -467,9 +469,10 @@ tailwind.config = {
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Multi-Branch Enterprises</p>
             
             <div class="py-3 border-y border-slate-200 dark:border-slate-800">
-              <div class="flex items-baseline gap-1">
+              <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
                 <span id="price-elite" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white transition-all duration-200">₹24,599</span>
-                <span id="subtext-elite" class="text-xs font-extrabold text-slate-500 dark:text-slate-400"> + GST / month</span>
+                <span id="subtext-elite" class="text-xs font-extrabold text-slate-500 dark:text-slate-400 transition-colors duration-200"> + GST / month</span>
+                <span id="savings-elite" style="display: none;" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 whitespace-nowrap uppercase tracking-wider transition-all duration-200">Save ₹49,198</span>
               </div>
               <p id="billing-note-elite" class="text-[10px] sm:text-[11px] text-slate-400 mt-1 font-medium">Billed monthly. Cancel anytime.</p>
             </div>

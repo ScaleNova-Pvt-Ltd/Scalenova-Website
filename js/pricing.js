@@ -2,7 +2,7 @@
  * ScaleNova Reactive Pricing Toggle Engine
  * 
  * Manages monthly vs. annual billing calculations, smooth state transitions,
- * and DOM updates with clear 2-months-free discount communication.
+ * green highlighted annual pricing, and computed ₹ savings badges.
  */
 const ScaleNovaPricing = (function() {
   let currentBillingCycle = 'monthly'; // 'monthly' | 'yearly'
@@ -14,6 +14,7 @@ const ScaleNovaPricing = (function() {
       annualMonthlyEquiv: 2749,
       elementIdPrice: 'price-core',
       elementIdSubtext: 'subtext-core',
+      elementIdSavings: 'savings-core',
       elementIdBillingNote: 'billing-note-core'
     },
     growth: {
@@ -22,6 +23,7 @@ const ScaleNovaPricing = (function() {
       annualMonthlyEquiv: 9999,
       elementIdPrice: 'price-growth',
       elementIdSubtext: 'subtext-growth',
+      elementIdSavings: 'savings-growth',
       elementIdBillingNote: 'billing-note-growth'
     },
     elite: {
@@ -30,6 +32,7 @@ const ScaleNovaPricing = (function() {
       annualMonthlyEquiv: 20499,
       elementIdPrice: 'price-elite',
       elementIdSubtext: 'subtext-elite',
+      elementIdSavings: 'savings-elite',
       elementIdBillingNote: 'billing-note-elite'
     }
   };
@@ -41,13 +44,12 @@ const ScaleNovaPricing = (function() {
   function setBillingCycle(cycle) {
     if (cycle !== 'monthly' && cycle !== 'yearly' && cycle !== 'annual') return;
     currentBillingCycle = (cycle === 'annual' || cycle === 'yearly') ? 'yearly' : 'monthly';
+    const isAnnual = currentBillingCycle === 'yearly';
 
-    // Update Toggle Controls
+    // 1. Update Switch Button UI
     const switchBtn = document.getElementById('billingSwitchBtn');
     const monthlyLabel = document.getElementById('billingLabelMonthly');
     const yearlyLabel = document.getElementById('billingLabelYearly');
-
-    const isAnnual = currentBillingCycle === 'yearly';
 
     if (switchBtn) {
       switchBtn.setAttribute('aria-checked', isAnnual ? 'true' : 'false');
@@ -72,27 +74,45 @@ const ScaleNovaPricing = (function() {
       }
     }
 
-    // Update Plan Prices in DOM with smooth transition
+    // 2. Update Plan Prices in DOM with smooth fade/slide transition
     Object.keys(plans).forEach(planKey => {
       const plan = plans[planKey];
       const priceElem = document.getElementById(plan.elementIdPrice);
       const subtextElem = document.getElementById(plan.elementIdSubtext);
+      const savingsElem = document.getElementById(plan.elementIdSavings);
       const noteElem = document.getElementById(plan.elementIdBillingNote);
 
       if (priceElem) {
         priceElem.style.opacity = '0';
-        priceElem.style.transform = 'translateY(-2px)';
-        
+        priceElem.style.transform = 'translateY(-3px)';
+        if (savingsElem) savingsElem.style.opacity = '0';
+
         setTimeout(() => {
-          if (currentBillingCycle === 'monthly') {
+          if (!isAnnual) {
+            // MONTHLY STATE
             priceElem.textContent = formatRupees(plan.monthly);
+            priceElem.classList.remove('price-annual-green');
             if (subtextElem) subtextElem.textContent = ' + GST / month';
+            if (savingsElem) {
+              savingsElem.style.display = 'none';
+            }
             if (noteElem) noteElem.textContent = 'Billed monthly. Cancel anytime.';
           } else {
+            // ANNUAL STATE
+            const totalMonthlySpend = plan.monthly * 12;
+            const savingsAmount = totalMonthlySpend - plan.annual;
+            
             priceElem.textContent = formatRupees(plan.annual);
+            priceElem.classList.add('price-annual-green');
             if (subtextElem) subtextElem.textContent = ' + GST / year';
-            if (noteElem) noteElem.textContent = `Billed annually (Save 2 Months: ${formatRupees(plan.annualMonthlyEquiv)}/mo equivalent)`;
+            if (savingsElem) {
+              savingsElem.textContent = `Save ${formatRupees(savingsAmount)}`;
+              savingsElem.style.display = 'inline-flex';
+              savingsElem.style.opacity = '1';
+            }
+            if (noteElem) noteElem.textContent = `Billed annually at ${formatRupees(plan.annual)} + GST (Save 2 Months)`;
           }
+
           priceElem.style.opacity = '1';
           priceElem.style.transform = 'translateY(0)';
         }, 120);
@@ -104,13 +124,21 @@ const ScaleNovaPricing = (function() {
     setBillingCycle(currentBillingCycle === 'monthly' ? 'yearly' : 'monthly');
   }
 
+  let isInitialized = false;
+
   function init() {
+    if (isInitialized) return;
+    isInitialized = true;
+
     const switchBtn = document.getElementById('billingSwitchBtn');
     const monthlyLabel = document.getElementById('billingLabelMonthly');
     const yearlyLabel = document.getElementById('billingLabelYearly');
 
     if (switchBtn) {
-      switchBtn.addEventListener('click', toggleBillingCycle);
+      switchBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleBillingCycle();
+      });
       switchBtn.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -120,13 +148,19 @@ const ScaleNovaPricing = (function() {
     }
 
     if (monthlyLabel) {
-      monthlyLabel.addEventListener('click', () => setBillingCycle('monthly'));
+      monthlyLabel.addEventListener('click', (e) => {
+        e.preventDefault();
+        setBillingCycle('monthly');
+      });
     }
     if (yearlyLabel) {
-      yearlyLabel.addEventListener('click', () => setBillingCycle('yearly'));
+      yearlyLabel.addEventListener('click', (e) => {
+        e.preventDefault();
+        setBillingCycle('yearly');
+      });
     }
 
-    // Set initial default state
+    // Initialize in default monthly state
     setBillingCycle('monthly');
   }
 
