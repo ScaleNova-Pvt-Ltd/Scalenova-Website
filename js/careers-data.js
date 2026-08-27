@@ -1,5 +1,5 @@
 /**
- * ScaleNova Careers Portal Dataset (Simplified & Concise)
+ * ScaleNova Careers Portal Dataset (Platform-Neutral & Clean)
  * 
  * Defines company culture, remote working principles, perks,
  * 2 Full-Time Roles, and 4 Internship Roles with realistic Indian market compensation.
@@ -20,17 +20,17 @@ const SCALENOVA_CAREERS = {
     {
       icon: "fas fa-book-open",
       title: "Continuous Learning",
-      detail: "Build practical skills across SaaS, ERP, AI, and enterprise business technology."
+      detail: "Build practical skills across SaaS, cloud systems, AI, and modern business technology."
     },
     {
       icon: "fas fa-rocket",
       title: "Direct Ownership",
-      detail: "Take end-to-end responsibility for real customer-facing features and projects."
+      detail: "Take end-to-end responsibility for real customer-facing features and products."
     },
     {
       icon: "fas fa-seedling",
       title: "Team Growth",
-      detail: "Develop your career and technical craftsmanship as ScaleNova expands."
+      detail: "Develop your career and engineering craftsmanship as ScaleNova expands."
     }
   ],
 
@@ -45,32 +45,34 @@ const SCALENOVA_CAREERS = {
 
   roles: [
     {
-      id: "frappe-erpnext-developer",
-      title: "Frappe / ERPNext Developer",
+      id: "full-stack-developer",
+      title: "Full-Stack Software Developer",
       category: "Full-Time",
       department: "Engineering",
       location: "Remote (India)",
       experience: "1–3 Years",
       compensationRange: "₹4.0L – ₹7.0L / year",
-      compensationNote: "Based on Python/Frappe proficiency, problem-solving, and code review.",
-      overview: "Develop and scale core CRM, ERP, inventory, and billing modules on Frappe Framework and Python.",
+      compensationNote: "Based on full-stack web capabilities, problem-solving, and code evaluation.",
+      overview: "Build and improve scalable web applications and business technology products used by growing companies.",
       responsibilities: [
-        "Develop custom Frappe DocTypes, server scripts, client scripts, and REST APIs.",
-        "Design and optimize relational MariaDB database schemas and analytical queries.",
-        "Integrate external webhooks (WhatsApp API, payment gateways, GST portals).",
-        "Write clean, well-tested code and participate in code reviews."
+        "Develop and maintain scalable web applications and business platform features.",
+        "Build reliable product modules, workflow automations, and data services.",
+        "Design and optimize relational database schemas and REST APIs.",
+        "Improve application performance, responsiveness, and code quality.",
+        "Collaborate across product, design, and business teams to turn requirements into practical software."
       ],
       requiredSkills: [
-        "Proficiency with Frappe Framework, Python, and JavaScript.",
-        "Strong relational database (MariaDB / MySQL) and SQL query skills.",
-        "Experience building and consuming RESTful APIs.",
-        "Familiarity with Git and Linux / Docker environments."
+        "Proficiency with JavaScript, HTML5, and CSS3.",
+        "Strong backend development and RESTful API architecture experience.",
+        "Relational database design and query optimization (SQL).",
+        "Version control with Git and collaborative development workflows.",
+        "Strong problem-solving and structured debugging skills."
       ],
       niceToHave: [
-        "Experience with Vue 3 / Tailwind CSS.",
-        "Understanding of Indian GST, invoicing, or inventory workflows."
+        "Experience building B2B SaaS, CRM, or business workflow software.",
+        "Understanding of cloud deployment, web security, or third-party API integrations."
       ],
-      whatYouLearn: "Master multi-tenant SaaS architecture, cloud scaling, and enterprise ERP engineering.",
+      whatYouLearn: "Master modern SaaS architecture, business workflow automation, and high-scale cloud platforms.",
       workMode: "100% Remote (India)"
     },
     {
@@ -96,15 +98,15 @@ const SCALENOVA_CAREERS = {
         "Strong pipeline discipline and consultative selling skills."
       ],
       niceToHave: [
-        "Experience selling CRM, ERP, or billing software to Indian MSMEs.",
+        "Experience selling business software, CRM, or billing solutions to Indian MSMEs.",
         "Network in manufacturing, trading, or distribution sectors."
       ],
       whatYouLearn: "Master consultative B2B sales, SaaS deal negotiation, and revenue growth strategies.",
       workMode: "Remote-first with optional travel for select client meetings"
     },
     {
-      id: "frappe-dev-intern",
-      title: "Frappe / ERPNext Development Intern",
+      id: "software-dev-intern",
+      title: "Software Development Intern",
       category: "Internship",
       department: "Engineering",
       location: "Remote (India)",
@@ -112,17 +114,18 @@ const SCALENOVA_CAREERS = {
       experience: "Fresher / CS Student",
       compensationRange: "Stipend (Subject to approval) / PPO",
       compensationNote: "Hands-on engineering with mentorship and Pre-Placement Offer (PPO) opportunity.",
-      overview: "Build real SaaS features and custom DocTypes using Frappe Framework, Python, and SQL.",
+      overview: "Work with the product team to build, test, and improve web applications and business technology solutions.",
       responsibilities: [
-        "Build custom DocTypes, reports, and scripts for business workflows.",
-        "Write unit tests and optimize database queries under senior mentorship."
+        "Build, test, and improve web application components and business workflow logic.",
+        "Write clean, modular code, integrate APIs, and assist in database queries under mentorship."
       ],
       requiredSkills: [
-        "Foundations in Python, JavaScript, HTML, and CSS.",
-        "Basic understanding of SQL databases and Git."
+        "Foundations in HTML, CSS, JavaScript, and programming fundamentals.",
+        "Basic understanding of REST APIs, databases, and Git version control.",
+        "Strong curiosity, problem-solving mindset, and eagerness to learn."
       ],
-      niceToHave: ["Familiarity with Frappe Framework or ERPNext."],
-      whatYouLearn: "Production enterprise backend engineering with Python and Frappe.",
+      niceToHave: ["Familiarity with backend web frameworks or relational SQL databases."],
+      whatYouLearn: "Production full-stack development, SaaS architecture, and professional engineering workflows.",
       workMode: "100% Remote (India)"
     },
     {
