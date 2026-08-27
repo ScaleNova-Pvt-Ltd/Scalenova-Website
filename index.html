@@ -301,15 +301,6 @@ tailwind.config = {
 
     </div>
 
-    <!-- 1.1 VALUE PROPOSITION BANNER -->
-    <div class="max-w-4xl mx-auto mt-10 sm:mt-14 text-center p-4 sm:p-6 rounded-2xl bg-slate-100/60 dark:bg-slate-900/50 border border-slate-200/80 dark:border-slate-800/60">
-      <h2 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">One platform. Connected operations. Less manual work.</h2>
-      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium mt-1 leading-relaxed max-w-2xl mx-auto">
-        Bring customer leads, inventory, invoices, tasks, and team attendance into a single operating environment.
-      </p>
-    </div>
-  </section>
-
   <!-- 2. WHY SCALENOVA / SIX FEATURES — SHORTENED SECTION (EXACTLY ONE CTA) -->
   <section id="solutions" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/20">
     <div class="max-w-7xl mx-auto space-y-8 sm:space-y-10">
@@ -373,13 +364,12 @@ tailwind.config = {
         <div class="sn-card sn-card-hover p-5 sm:p-7 space-y-5 flex flex-col justify-between bg-gradient-to-b from-brand-50/60 via-white to-white dark:from-brand-950/30 dark:via-slate-900 dark:to-slate-900 border border-brand-200/80 dark:border-brand-500/30 shadow-md">
           <div class="space-y-3.5">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-100/80 dark:bg-slate-800 text-brand-800 dark:text-brand-300">
-                Starter
-              </span>
-              <button onclick="ScaleNovaModals.openPlanDetail('core')" class="text-[11px] font-bold text-brand-600 dark:text-brand-400 hover:underline">Full Details →</button>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Core OS</h3>
+              <button onclick="ScaleNovaModals.openPlanDetail('core')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Core OS Details">
+                <span>ⓘ View Details</span>
+              </button>
             </div>
             
-            <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Core OS</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Startups &amp; Lean Sales Teams</p>
             
             <div class="py-3 border-y border-brand-200/60 dark:border-slate-800">
@@ -417,13 +407,12 @@ tailwind.config = {
 
           <div class="space-y-3.5 pt-1">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-lg text-[10px] font-black tracking-wider uppercase bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300">
-                Scaling MSMEs
-              </span>
-              <button onclick="ScaleNovaModals.openPlanDetail('growth')" class="text-[11px] font-bold text-brand-600 dark:text-brand-400 hover:underline">Full Details →</button>
+              <h3 class="text-xl sm:text-2xl font-black sn-gradient-text">Growth OS</h3>
+              <button onclick="ScaleNovaModals.openPlanDetail('growth')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Growth OS Details">
+                <span>ⓘ View Details</span>
+              </button>
             </div>
 
-            <h3 class="text-xl sm:text-2xl font-black sn-gradient-text">Growth OS</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Scaling MSMEs &amp; Multi-Team Operations</p>
             
             <div class="py-3 border-y border-brand-200/50 dark:border-slate-800">
@@ -458,13 +447,12 @@ tailwind.config = {
         <div class="sn-card sn-card-hover p-5 sm:p-7 space-y-5 flex flex-col justify-between bg-gradient-to-b from-slate-100/80 via-white to-white dark:from-slate-900/90 dark:via-slate-900 dark:to-slate-950 border border-slate-300 dark:border-slate-700 shadow-md">
           <div class="space-y-3.5">
             <div class="flex items-center justify-between">
-              <span class="px-2.5 py-0.5 rounded-lg text-[10px] font-black tracking-wider uppercase bg-slate-900 text-white dark:bg-slate-700">
-                Enterprise OS
-              </span>
-              <button onclick="ScaleNovaModals.openPlanDetail('elite')" class="text-[11px] font-bold text-brand-600 dark:text-brand-400 hover:underline">Full Details →</button>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Elite OS</h3>
+              <button onclick="ScaleNovaModals.openPlanDetail('elite')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Elite OS Details">
+                <span>ⓘ View Details</span>
+              </button>
             </div>
 
-            <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Elite OS</h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Multi-Branch Enterprises</p>
             
             <div class="py-3 border-y border-slate-200 dark:border-slate-800">
@@ -589,7 +577,6 @@ tailwind.config = {
             <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
               <i class="fas fa-handshake mr-1"></i>Partner Network
             </span>
-            <span class="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">Monthly Net-30</span>
           </div>
 
           <h3 class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 dark:text-white">
@@ -600,32 +587,39 @@ tailwind.config = {
             Earn 20% recurring revenue share with no revenue cap.
           </p>
 
-          <!-- Compact Benefit Badges -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
-            <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
-              <span class="block text-[11px] font-black text-emerald-600 dark:text-emerald-400 leading-none">20%</span>
-              <span class="text-[9px] font-bold text-slate-500 uppercase">Recurring</span>
+          <div class="space-y-3 max-w-sm mx-auto lg:mx-0">
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 text-left">
+              <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fas fa-phone-volume"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Direct Inquiries</span>
+                <a href="tel:+917801049178" class="block text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition">+91 7801049178</a>
+              </div>
             </div>
-            <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
-              <span class="block text-[11px] font-black text-slate-900 dark:text-white leading-none">NO CAP</span>
-              <span class="text-[9px] font-bold text-slate-500 uppercase">Eligible</span>
-            </div>
-            <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
-              <span class="block text-[11px] font-black text-slate-900 dark:text-white leading-none">SUPPORT</span>
-              <span class="text-[9px] font-bold text-slate-500 uppercase">Materials</span>
-            </div>
-            <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center">
-              <span class="block text-[11px] font-black text-slate-900 dark:text-white leading-none">TRAINING</span>
-              <span class="text-[9px] font-bold text-slate-500 uppercase">Guidance</span>
+
+            <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 text-left">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-sm flex-shrink-0">
+                <i class="fas fa-envelope-open-text"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Official Email</span>
+                <a href="mailto:info@scalenovasys.com" class="block text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition">info@scalenovasys.com</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="pt-2 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
-          <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">For CAs, Consultants &amp; Agencies</span>
-          <button onclick="ScaleNovaModals.openAffiliatePage()" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5" aria-label="View Partner Programme">
-            <span>View Partner Programme →</span>
-          </button>
+        <div class="pt-1 flex items-center justify-center lg:justify-start space-x-3">
+          <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-brand-500 hover:text-white text-slate-600 dark:text-slate-400 flex items-center justify-center transition-all hover:scale-105" aria-label="ScaleNova LinkedIn">
+            <i class="fab fa-linkedin-in text-sm"></i>
+          </a>
+          <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white text-slate-600 dark:text-slate-400 flex items-center justify-center transition-colors" aria-label="ScaleNova Instagram">
+            <i class="fab fa-instagram text-sm"></i>
+          </a>
+          <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%20team%2C%20I%20would%20like%20to%20connect%20with%20ScaleNova%20to%20learn%20more%20about%20your%20business%20solutions." target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-emerald-500 hover:text-white text-slate-600 dark:text-slate-400 flex items-center justify-center transition-colors" aria-label="ScaleNova WhatsApp">
+            <i class="fab fa-whatsapp text-sm"></i>
+          </a>
         </div>
       </div>
 
@@ -650,115 +644,79 @@ tailwind.config = {
           </p>
         </div>
 
-        <div class="space-y-3 max-w-md mx-auto lg:mx-0 text-left">
-          
-          <!-- Official Phone Connection -->
-          <div class="sn-card p-3.5 sm:p-4 flex items-center space-x-3.5">
-            <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base">
-              <i class="fas fa-phone" aria-hidden="true"></i>
+        <div class="space-y-3 max-w-sm mx-auto lg:mx-0">
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 text-left">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-sm flex-shrink-0">
+              <i class="fas fa-phone-volume"></i>
             </div>
             <div>
-              <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Official Number</span>
-              <a href="tel:+917801049178" class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white hover:text-brand-500 transition">+91 7801049178</a>
+              <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Direct Inquiries</span>
+              <a href="tel:+917801049178" class="block text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition">+91 7801049178</a>
             </div>
           </div>
 
-          <!-- Official Email Connection -->
-          <div class="sn-card p-3.5 sm:p-4 flex items-center space-x-3.5">
-            <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
+          <div class="p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 text-left">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-sm flex-shrink-0">
+              <i class="fas fa-envelope-open-text"></i>
             </div>
             <div>
-              <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Official Email</span>
-              <a href="mailto:info@scalenovasys.com" class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white hover:text-brand-500 transition">info@scalenovasys.com</a>
+              <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Official Email</span>
+              <a href="mailto:info@scalenovasys.com" class="block text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition">info@scalenovasys.com</a>
             </div>
           </div>
-
-          <!-- WhatsApp Direct Conversion CTA -->
-          <div class="sn-card p-3.5 sm:p-4 flex items-center justify-between">
-            <div class="flex items-center space-x-3.5">
-              <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg">
-                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-              </div>
-              <div>
-                <span class="block text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">WhatsApp</span>
-                <span class="text-xs font-extrabold text-slate-900 dark:text-white">Chat with Team</span>
-              </div>
-            </div>
-            <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%20team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500 text-white hover:bg-emerald-600 transition flex items-center gap-1">
-              <span>Chat</span>
-              <i class="fas fa-arrow-right text-[9px]"></i>
-            </a>
-          </div>
-
         </div>
       </div>
 
-      <!-- Clean Demo Request Form with In-Place Confirmation Container -->
-      <div class="sn-card p-5 sm:p-7 space-y-5 shadow-xl" id="demoFormContainer">
-        <div class="text-center space-y-0.5">
-          <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Book a Live Demo</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Connect with an engineer for a customized walkthrough.</p>
-        </div>
+      <!-- Demo Request Form -->
+      <div class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl rounded-2xl">
+        <h3 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white mb-1">
+          Request a Platform Demo
+        </h3>
+        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mb-5">
+          Fill out the details below and our team will prepare a customized walkthrough.
+        </p>
 
-        <form id="leadCaptureForm" onsubmit="ScaleNovaForms.handleDemoSubmit(event)" class="space-y-3.5">
-          
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="floating-group">
-              <input type="text" id="nameInput" placeholder=" " required class="floating-input">
-              <label for="nameInput" class="floating-label">Full Name *</label>
+        <form id="contactDemoForm" onsubmit="ScaleNovaForms.handleDemoSubmit(event)" class="space-y-3.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            <div>
+              <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Full Name *</label>
+              <input type="text" id="demoFullName" required placeholder="Full Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
             </div>
-            <div class="floating-group">
-              <input type="text" id="businessInput" placeholder=" " required class="floating-input">
-              <label for="businessInput" class="floating-label">Company / Business Name *</label>
+            <div>
+              <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Business Name *</label>
+              <input type="text" id="demoBusinessName" required placeholder="Company or Firm Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="floating-group">
-              <input type="email" id="emailInput" placeholder=" " required class="floating-input">
-              <label for="emailInput" class="floating-label">Work Email *</label>
-            </div>
-            <div class="floating-group">
-              <input type="tel" id="phoneInput" placeholder=" " required class="floating-input">
-              <label for="phoneInput" class="floating-label">Phone / WhatsApp *</label>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             <div>
-              <select id="industryInput" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                <option value="" disabled selected>Industry Sector *</option>
-                <option value="Manufacturing">Manufacturing &amp; Engineering</option>
-                <option value="Trading & Distribution">Trading &amp; Wholesale Distribution</option>
-                <option value="Retail & E-commerce">Retail &amp; Multi-outlet Stores</option>
-                <option value="Professional Services">Professional &amp; Consulting Services</option>
-                <option value="IT & Technology">IT, Software &amp; Tech Services</option>
-                <option value="Construction & Real Estate">Construction, Real Estate &amp; Projects</option>
-                <option value="Healthcare & Pharma">Healthcare, Pharma &amp; Medical Supplies</option>
-                <option value="Logistics & Transport">Logistics, Supply Chain &amp; Fleet</option>
-                <option value="Hospitality & Food">Hospitality, FMCG &amp; Food Services</option>
-                <option value="Other">Other Business Sector</option>
-              </select>
+              <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Work Email *</label>
+              <input type="email" id="demoEmail" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
             </div>
-
             <div>
-              <select id="primaryInterestInput" required class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-semibold text-slate-700 dark:text-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                <option value="Unified Business OS" selected>Primary Need: Full Business OS</option>
-                <option value="CRM & Lead Management">Primary Need: CRM &amp; Sales Pipeline</option>
-                <option value="ERP & Inventory Tracking">Primary Need: ERP &amp; Inventory Billing</option>
-                <option value="HR & Attendance">Primary Need: HR &amp; Employee Attendance</option>
-                <option value="Projects & Tasks">Primary Need: Project &amp; Task Planning</option>
-              </select>
+              <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Phone / WhatsApp *</label>
+              <input type="tel" id="demoPhone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
             </div>
           </div>
 
           <div>
-            <textarea id="messageInput" rows="2" placeholder="Briefly describe your current operational bottlenecks (Optional)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+            <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Primary Operational Requirement</label>
+            <select id="demoRequirement" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+              <option value="All-in-One Business OS" selected>All-in-One Business OS (CRM + ERP + HR + Finance)</option>
+              <option value="CRM & Lead Management">CRM &amp; Sales Pipeline</option>
+              <option value="ERP & Inventory Management">ERP &amp; Inventory Management</option>
+              <option value="HR & Team Attendance">HR &amp; Team Attendance</option>
+              <option value="Executive BI & Multi-Branch">Executive BI &amp; Multi-Branch</option>
+            </select>
           </div>
 
-          <button type="submit" id="submitDemoBtn" class="w-full py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
-            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+          <div class="pt-1 flex items-center space-x-2">
+            <input type="checkbox" id="demoConsent" required class="rounded text-brand-500 focus:ring-brand-500">
+            <label for="demoConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to receive a personalized demo invitation and platform details.</label>
+          </div>
+
+          <button type="submit" id="submitDemoBtn" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2 mt-2">
+            <i class="fas fa-calendar-check text-xs"></i>
             <span>Schedule Walkthrough</span>
           </button>
         </form>
@@ -769,89 +727,51 @@ tailwind.config = {
 
 </main>
 
-<!-- FOOTER WITH DEEP CONTENT NAVIGATION, SOCIAL LINKS, LEGAL MODALS, AND GSTIN -->
-<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-10 px-4 md:px-8 mt-auto">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+<!-- COMPACT, PREMIUM FOOTER -->
+<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-8 px-4 md:px-8 mt-auto">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-800/80 text-center md:text-left">
     
-    <!-- Column 1: ScaleNova Branding & Socials -->
-    <div class="space-y-3">
-      <div class="flex items-center space-x-2.5">
+    <!-- Brand Info -->
+    <div class="space-y-1">
+      <div class="flex items-center justify-center md:justify-start space-x-2">
         <img src="assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent border-none shadow-none" onerror="this.onerror=null; this.src='files/Logo (1).jpg';">
-        <div class="flex flex-col">
-          <span class="text-sm font-black tracking-tight sn-gradient-text">SCALENOVA PRIVATE LIMITED</span>
-          <span class="text-[8px] font-extrabold tracking-wide text-slate-400 uppercase mt-0.5">One platform for every business need</span>
-        </div>
+        <span class="text-sm font-black tracking-tight sn-gradient-text">ScaleNova</span>
       </div>
-      <p class="text-xs text-slate-400 font-medium leading-relaxed">
-        Unified business operating system for growing businesses and Indian MSMEs.
+      <p class="text-xs text-slate-400 font-medium">
+        Business Operating System for growing businesses.
       </p>
-      
-      <!-- Official Social Media Destinations (LinkedIn & Official Instagram) -->
-      <div class="flex items-center space-x-2.5 pt-1">
-        <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on LinkedIn">
-          <i class="fab fa-linkedin-in text-xs"></i>
-        </a>
-        <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white text-slate-400 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on Instagram">
-          <i class="fab fa-instagram text-xs"></i>
-        </a>
-      </div>
     </div>
 
-    <!-- Column 2: Solutions & Modules -->
-    <div>
-      <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-2.5">Modules &amp; Solutions</h4>
-      <ul class="space-y-1.5 text-xs font-semibold text-slate-400">
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('crm')" class="hover:text-brand-400 transition text-left">Centralized CRM</button></li>
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('erp')" class="hover:text-brand-400 transition text-left">ERP &amp; Inventory</button></li>
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('hr')" class="hover:text-brand-400 transition text-left">HR &amp; Attendance</button></li>
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('security')" class="hover:text-brand-400 transition text-left">Cloud Security</button></li>
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('projects')" class="hover:text-brand-400 transition text-left">Project Planning</button></li>
-        <li><button onclick="ScaleNovaModals.openFeatureDetail('bi')" class="hover:text-brand-400 transition text-left">Executive BI</button></li>
-      </ul>
+    <!-- Quick Links Navigation -->
+    <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-slate-400">
+      <a href="#solutions" class="hover:text-white transition">Features</a>
+      <a href="#pricing" class="hover:text-white transition">Plans</a>
+      <button onclick="ScaleNovaModals.openBlogAllArticles()" class="hover:text-white transition">Blog</button>
+      <button onclick="ScaleNovaModals.openCareersPage()" class="hover:text-white transition">Careers</button>
+      <button onclick="ScaleNovaModals.openAffiliatePage()" class="hover:text-white transition">Affiliate</button>
+      <a href="#contact" class="hover:text-white transition">Contact</a>
+      <button onclick="ScaleNovaModals.open('privacyModal')" class="hover:text-white transition">Privacy</button>
+      <button onclick="ScaleNovaModals.open('termsModal')" class="hover:text-white transition">Terms</button>
+      <button onclick="ScaleNovaModals.open('refundModal')" class="hover:text-white transition">Refunds</button>
     </div>
 
-    <!-- Column 3: Platform & Legal -->
-    <div>
-      <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-2.5">Platform &amp; Legal</h4>
-      <ul class="space-y-1.5 text-xs font-semibold text-slate-400">
-        <li><a href="#pricing" class="hover:text-brand-400 transition">OS Plans &amp; Pricing</a></li>
-        <li><button onclick="ScaleNovaModals.openBlogAllArticles()" class="hover:text-brand-400 transition text-left">Blog &amp; Insights</button></li>
-        <li><button onclick="ScaleNovaModals.openCareersPage()" class="hover:text-brand-400 transition text-left">Careers Portal</button></li>
-        <li><button onclick="ScaleNovaModals.openAffiliatePage()" class="hover:text-brand-400 transition text-left">Affiliate Programme</button></li>
-        <li><button onclick="ScaleNovaModals.open('privacyModal')" class="hover:text-brand-400 transition text-left">Privacy Policy</button></li>
-        <li><button onclick="ScaleNovaModals.open('termsModal')" class="hover:text-brand-400 transition text-left">Terms &amp; Conditions</button></li>
-        <li><button onclick="ScaleNovaModals.open('refundModal')" class="hover:text-brand-400 transition text-left">Refund Policy</button></li>
-      </ul>
+    <!-- Icon-First Social Connect -->
+    <div class="flex items-center space-x-2.5">
+      <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on LinkedIn">
+        <i class="fab fa-linkedin-in text-xs"></i>
+      </a>
+      <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white text-slate-400 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on Instagram">
+        <i class="fab fa-instagram text-xs"></i>
+      </a>
+      <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%20team%2C%20I%20would%20like%20to%20connect%20with%20ScaleNova%20to%20learn%20more%20about%20your%20business%20solutions." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova WhatsApp">
+        <i class="fab fa-whatsapp text-xs"></i>
+      </a>
     </div>
-
-    <!-- Column 4: Contact & Registration -->
-    <div class="space-y-3">
-      <div>
-        <h4 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 mb-1.5">Contact</h4>
-        <div class="text-xs text-slate-400 font-medium leading-relaxed space-y-1">
-          <p>Email: <a href="mailto:info@scalenovasys.com" class="hover:text-brand-400 transition">info@scalenovasys.com</a></p>
-          <p>Phone: <a href="tel:+917801049178" class="hover:text-brand-400 transition">+91 7801049178</a></p>
-          <p class="text-[11px] font-semibold text-slate-400">GSTIN: <span class="text-slate-300 font-bold">37ABUCS4883M1Z5</span></p>
-        </div>
-      </div>
-
-      <!-- Newsletter Subscription Box -->
-      <div class="pt-2 border-t border-slate-800">
-        <h5 class="text-[10px] font-bold text-slate-400 uppercase mb-1.5">Subscribe to MSME Digest</h5>
-        <form onsubmit="ScaleNovaForms.handleNewsletterSubmit(event)" class="flex gap-2">
-          <input type="email" required placeholder="name@company.com" class="w-full px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white focus:ring-1 focus:ring-brand-500 focus:outline-none">
-          <button type="submit" class="px-3 py-1.5 rounded-xl text-xs sn-btn-primary flex-shrink-0" aria-label="Subscribe to Newsletter">
-            <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-
   </div>
 
-  <div class="max-w-7xl mx-auto border-t border-slate-800 pt-5 flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-500 gap-2 text-center md:text-left">
+  <div class="max-w-7xl mx-auto pt-4 flex flex-col sm:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-500 gap-2 text-center sm:text-left">
     <span>&copy; 2026 ScaleNova Private Limited. All Rights Reserved.</span>
-    <span>One platform for every business need.</span>
+    <span>GSTIN: 37ABUCS4883M1Z5</span>
   </div>
 </footer>
 
@@ -873,8 +793,8 @@ tailwind.config = {
   </div>
 </div>
 
-<!-- 2. INDIVIDUAL ROLE DETAIL SPA PAGE OVERLAY -->
-<div id="roleDetailModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('roleDetailModal')" role="dialog" aria-modal="true" aria-label="Role Details">
+<!-- 2. INDIVIDUAL CAREER ROLE DETAIL SPA OVERLAY -->
+<div id="roleDetailModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('roleDetailModal')" role="dialog" aria-modal="true" aria-label="Job Role Details">
   <div class="sn-spa-panel max-w-4xl">
     <div id="roleDetailContent" class="overflow-y-auto flex-grow">
       <!-- Dynamically rendered by ScaleNovaModals.openRoleDetail() -->
@@ -883,7 +803,7 @@ tailwind.config = {
 </div>
 
 <!-- 3. FULL AFFILIATE PROGRAMME SPA PAGE OVERLAY -->
-<div id="affiliateFullModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('affiliateFullModal')" role="dialog" aria-modal="true" aria-label="Affiliate Programme">
+<div id="affiliateFullModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('affiliateFullModal')" role="dialog" aria-modal="true" aria-label="Partner Programme">
   <div class="sn-spa-panel">
     <div id="affiliateFullContent" class="overflow-y-auto flex-grow">
       <!-- Dynamically rendered by ScaleNovaModals.openAffiliatePage() -->
@@ -891,8 +811,8 @@ tailwind.config = {
   </div>
 </div>
 
-<!-- 4. FULL SCALENOVA INSIGHTS (ALL 8 ARTICLES) SPA PAGE OVERLAY -->
-<div id="blogAllModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('blogAllModal')" role="dialog" aria-modal="true" aria-label="ScaleNova Insights">
+<!-- 4. FULL BLOG ALL ARTICLES SPA PAGE OVERLAY -->
+<div id="blogAllModal" class="sn-spa-backdrop" onclick="if(event.target===this)ScaleNovaModals.close('blogAllModal')" role="dialog" aria-modal="true" aria-label="All Blog Articles">
   <div class="sn-spa-panel">
     <div id="blogAllContent" class="overflow-y-auto flex-grow">
       <!-- Dynamically rendered by ScaleNovaModals.openBlogAllArticles() -->
@@ -940,8 +860,8 @@ tailwind.config = {
           <span id="targetRoleBadge" class="text-[10px] font-bold text-brand-500 uppercase">General Application</span>
         </div>
       </div>
-      <button onclick="ScaleNovaModals.close('careerAppModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Modal">
-        <i class="fas fa-times text-xs"></i>
+      <button onclick="ScaleNovaModals.close('careerAppModal')" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800" aria-label="Close Modal">
+        Close
       </button>
     </div>
 
@@ -1029,7 +949,7 @@ tailwind.config = {
         <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs"><i class="fas fa-user-shield"></i></div>
         <h3 id="privacyTitle" class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Privacy Policy</h3>
       </div>
-      <button onclick="ScaleNovaModals.close('privacyModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Modal"><i class="fas fa-times text-xs"></i></button>
+      <button onclick="ScaleNovaModals.close('privacyModal')" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800" aria-label="Close Modal">Close</button>
     </div>
     <div class="overflow-y-auto py-3.5 space-y-3.5 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2 max-h-[60vh]">
       <p><strong>ScaleNova Private Limited</strong> | Official Privacy Policy</p>
@@ -1053,7 +973,7 @@ tailwind.config = {
         <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs"><i class="fas fa-file-contract"></i></div>
         <h3 id="termsTitle" class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Terms &amp; Conditions</h3>
       </div>
-      <button onclick="ScaleNovaModals.close('termsModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Modal"><i class="fas fa-times text-xs"></i></button>
+      <button onclick="ScaleNovaModals.close('termsModal')" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800" aria-label="Close Modal">Close</button>
     </div>
     <div class="overflow-y-auto py-3.5 space-y-3.5 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2 max-h-[60vh]">
       <p><strong>Master SaaS Agreement</strong> | ScaleNova Private Limited</p>
@@ -1077,7 +997,7 @@ tailwind.config = {
         <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs"><i class="fas fa-hand-holding-dollar"></i></div>
         <h3 id="refundTitle" class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Refund &amp; Cancellation Policy</h3>
       </div>
-      <button onclick="ScaleNovaModals.close('refundModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Modal"><i class="fas fa-times text-xs"></i></button>
+      <button onclick="ScaleNovaModals.close('refundModal')" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800" aria-label="Close Modal">Close</button>
     </div>
     <div class="overflow-y-auto py-3.5 space-y-3.5 text-xs font-medium text-slate-700 dark:text-slate-300 leading-relaxed pr-2 max-h-[60vh]">
       <p><strong>Commercial Billing Policy</strong> | ScaleNova Private Limited</p>

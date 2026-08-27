@@ -2,11 +2,11 @@
  * ScaleNova Advanced SPA View & Modal Engine with Browser History Routing
  * 
  * Manages full-page SPA views for:
- * 1. Simplified, Clean Careers Portal & Individual Role Deep-Dives
- * 2. Simplified, Visual Affiliate Programme Page with 4-Step Process & Expandable Terms
+ * 1. Careers Portal & Individual Role Deep-Dives
+ * 2. Visual Affiliate Programme Page
  * 3. ScaleNova Insights (All 8 Articles) & Full Article Reader
- * 4. Centered Feature & OS Plan Modals
- * 5. Hash Routing with Browser Back/Forward & Dynamic SEO Metadata
+ * 4. Feature & OS Plan Modals
+ * 5. Hash Routing with Unified Back/Forward Top Bar (No 'X' Close Buttons)
  */
 const ScaleNovaModals = (function() {
   let lastFocusedElement = null;
@@ -66,13 +66,17 @@ const ScaleNovaModals = (function() {
     }
   }
 
-  // Helper for back navigation
-  function goBackOrClose(fallbackModalId) {
+  // Navigation helpers for SPA top bar
+  function goBack(fallbackModalId) {
     if (window.history.length > 1) {
       window.history.back();
     } else {
       close(fallbackModalId);
     }
+  }
+
+  function goForward() {
+    window.history.forward();
   }
 
   /* ==========================================================================
@@ -95,26 +99,31 @@ const ScaleNovaModals = (function() {
     const internshipRoles = roles.filter(r => r.category === 'Internship');
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
-        
-        <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <button onclick="ScaleNovaModals.close('careersModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('careersModal')" class="sn-spa-nav-btn" aria-label="Go Back">
             <i class="fas fa-arrow-left text-xs"></i>
-            <span>← Back to Home</span>
           </button>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-              Careers Portal
-            </span>
-            <button onclick="ScaleNovaModals.close('careersModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition" aria-label="Close Careers">
-              <i class="fas fa-times text-xs"></i>
-            </button>
-          </div>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / <strong class="text-slate-900 dark:text-white">Careers</strong>
+          </span>
         </div>
+        
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+            6 Openings
+          </span>
+        </div>
+      </div>
 
-        <!-- Careers Hero (Short & Punchy) -->
-        <div class="text-center space-y-3 max-w-2xl mx-auto pt-1">
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-7">
+        
+        <!-- Careers Hero -->
+        <div class="text-center space-y-2.5 max-w-2xl mx-auto pt-1">
           <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
             <i class="fas fa-rocket mr-1 text-brand-500"></i>Join ScaleNova
           </span>
@@ -135,20 +144,22 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- Why ScaleNova / 4 Compact Pillars -->
+        <!-- 4 Compact Pillars (Icon Left + Heading Right) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           ${pillars.map(p => `
             <div class="sn-card p-4 space-y-1.5 bg-white dark:bg-slate-900">
-              <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-sm">
-                <i class="${p.icon}"></i>
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-sm flex-shrink-0">
+                  <i class="${p.icon}"></i>
+                </div>
+                <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${p.title}</h3>
               </div>
-              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${p.title}</h3>
               <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${p.detail}</p>
             </div>
           `).join('')}
         </div>
 
-        <!-- Perks & Benefits (Compact Cards) -->
+        <!-- Perks & Benefits -->
         <div class="space-y-3">
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Perks &amp; Culture</h3>
@@ -169,7 +180,7 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Open Full-Time Roles (2) -->
-        <div id="open-roles" class="space-y-4 pt-2">
+        <div id="open-roles" class="space-y-3.5 pt-1">
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <div>
               <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Full-Time (2)</span>
@@ -211,8 +222,8 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- 4 Internship Roles (Compact Grid) -->
-        <div class="space-y-4 pt-2">
+        <!-- 4 Internship Roles -->
+        <div class="space-y-3.5 pt-1">
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <div>
               <span class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Internships (4)</span>
@@ -278,19 +289,27 @@ const ScaleNovaModals = (function() {
     document.title = `${role.title} | Careers at ScaleNova`;
 
     container.innerHTML = `
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('roleDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
+            <i class="fas fa-arrow-left text-xs"></i>
+          </button>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / Careers / <strong class="text-slate-900 dark:text-white">${role.title}</strong>
+          </span>
+        </div>
+        
+        <button onclick="ScaleNovaModals.openCareerApp('${role.title}')" class="px-3 py-1 rounded-xl text-xs sn-btn-primary">
+          Apply Now
+        </button>
+      </div>
+
       <div class="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 space-y-6">
         
-        <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareersPage();" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Careers">
-            <i class="fas fa-arrow-left text-xs"></i>
-            <span>← Back to Careers</span>
-          </button>
-          <button onclick="ScaleNovaModals.close('roleDetailModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 transition" aria-label="Close Role View">
-            <i class="fas fa-times text-xs"></i>
-          </button>
-        </div>
-
         <!-- Role Header -->
         <div class="space-y-2">
           <div class="flex flex-wrap items-center gap-2 text-xs">
@@ -352,8 +371,8 @@ const ScaleNovaModals = (function() {
 
         <!-- Bottom Action CTA -->
         <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareersPage();" class="text-xs font-bold text-slate-500 hover:underline">← Other Roles</button>
-          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareerApp('${role.title}');" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('roleDetailModal')" class="text-xs font-bold text-slate-500 hover:underline">← Back to Careers</button>
+          <button onclick="ScaleNovaModals.openCareerApp('${role.title}');" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center gap-2">
             <i class="fas fa-paper-plane text-[10px]"></i>
             <span>Apply for This Role</span>
           </button>
@@ -388,26 +407,29 @@ const ScaleNovaModals = (function() {
     const aff = SCALENOVA_AFFILIATE;
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
-        
-        <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <button onclick="ScaleNovaModals.close('affiliateFullModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('affiliateFullModal')" class="sn-spa-nav-btn" aria-label="Go Back">
             <i class="fas fa-arrow-left text-xs"></i>
-            <span>← Back to Home</span>
           </button>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
-              20% Recurring Share
-            </span>
-            <button onclick="ScaleNovaModals.close('affiliateFullModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition" aria-label="Close Affiliate">
-              <i class="fas fa-times text-xs"></i>
-            </button>
-          </div>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / <strong class="text-slate-900 dark:text-white">Partner Network</strong>
+          </span>
         </div>
+        
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
+          20% Recurring
+        </span>
+      </div>
 
-        <!-- Affiliate Hero (Immediate Core Message) -->
-        <div class="text-center space-y-3 max-w-2xl mx-auto pt-1">
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-7">
+        
+        <!-- Affiliate Hero -->
+        <div class="text-center space-y-2.5 max-w-2xl mx-auto pt-1">
           <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
             <i class="fas fa-handshake mr-1"></i>Partner Network
           </span>
@@ -458,17 +480,19 @@ const ScaleNovaModals = (function() {
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             ${aff.benefits.map(b => `
               <div class="sn-card p-4 space-y-1.5">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm">
-                  <i class="${b.icon}"></i>
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm flex-shrink-0">
+                    <i class="${b.icon}"></i>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-slate-900 dark:text-white">${b.title}</h4>
                 </div>
-                <h4 class="text-xs font-extrabold text-slate-900 dark:text-white">${b.title}</h4>
                 <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${b.desc}</p>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Who Can Join (6 Compact Cards) -->
+        <!-- Who Can Join -->
         <div class="space-y-3">
           <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Who Can Join</h3>
@@ -497,7 +521,7 @@ const ScaleNovaModals = (function() {
 
           <div class="space-y-2 text-xs">
             ${aff.terms.map(t => `
-              <details class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group cursor-pointer">
+              <details class="sn-accordion p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group cursor-pointer">
                 <summary class="font-bold text-slate-900 dark:text-white flex items-center justify-between select-none">
                   <span>${t.title}</span>
                   <i class="fas fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform"></i>
@@ -555,7 +579,7 @@ const ScaleNovaModals = (function() {
 
               <div class="flex items-center space-x-2 pt-1">
                 <input type="checkbox" id="affiliateConsent" required class="rounded text-emerald-500 focus:ring-emerald-500">
-                <label for="affiliateConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to ScaleNova's Affiliate terms (20% net recurring revenue share, monthly Net-30 payout).</label>
+                <label for="affiliateConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to ScaleNova's Affiliate terms (20% net recurring revenue share).</label>
               </div>
 
               <div class="pt-2 text-center">
@@ -591,24 +615,27 @@ const ScaleNovaModals = (function() {
       : SCALENOVA_BLOGS.filter(b => b.category.toLowerCase().includes(selectedCategory.toLowerCase()) || selectedCategory.toLowerCase().includes(b.category.toLowerCase()));
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
-        
-        <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <button onclick="ScaleNovaModals.close('blogAllModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('blogAllModal')" class="sn-spa-nav-btn" aria-label="Go Back">
             <i class="fas fa-arrow-left text-xs"></i>
-            <span>← Back to Home</span>
           </button>
-          <div class="flex items-center gap-2">
-            <span class="px-3 py-1 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-              ${SCALENOVA_BLOGS.length} Articles
-            </span>
-            <button onclick="ScaleNovaModals.close('blogAllModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 transition" aria-label="Close Blog">
-              <i class="fas fa-times text-xs"></i>
-            </button>
-          </div>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / <strong class="text-slate-900 dark:text-white">Blog &amp; Insights</strong>
+          </span>
         </div>
+        
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          ${SCALENOVA_BLOGS.length} Articles
+        </span>
+      </div>
 
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-7">
+        
         <!-- Blog Hero -->
         <div class="text-center space-y-2 max-w-2xl mx-auto pt-1">
           <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 uppercase tracking-wider">
@@ -634,7 +661,7 @@ const ScaleNovaModals = (function() {
         <!-- All 8 Articles Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 pt-1">
           ${filteredBlogs.map(blog => `
-            <article class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.close('blogAllModal'); ScaleNovaModals.openBlogArticle('${blog.id}');" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){ScaleNovaModals.close('blogAllModal');ScaleNovaModals.openBlogArticle('${blog.id}');}" aria-label="Read ${blog.title}">
+            <article class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.openBlogArticle('${blog.id}');" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){ScaleNovaModals.openBlogArticle('${blog.id}');}" aria-label="Read ${blog.title}">
               <div class="space-y-2.5">
                 <div class="flex items-center justify-between text-xs">
                   <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
@@ -694,19 +721,30 @@ const ScaleNovaModals = (function() {
     const relatedBlogs = SCALENOVA_BLOGS.filter(b => b.id !== blog.id).slice(0, 2);
 
     contentContainer.innerHTML = `
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('blogArticleModal')" class="sn-spa-nav-btn" aria-label="Go Back">
+            <i class="fas fa-arrow-left text-xs"></i>
+          </button>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / Blog / <strong class="text-slate-900 dark:text-white">${blog.category}</strong>
+          </span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+          <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + window.location.href)}" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-emerald-500 text-white font-bold text-[11px] flex items-center gap-1 hover:bg-emerald-600 transition" aria-label="Share on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>Share</span>
+          </a>
+        </div>
+      </div>
+
       <div class="p-4 sm:p-6 md:p-8 space-y-6 max-w-3xl mx-auto">
         
-        <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openBlogAllArticles();" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Articles">
-            <i class="fas fa-arrow-left text-xs"></i>
-            <span>← Back to Articles</span>
-          </button>
-          <button onclick="ScaleNovaModals.close('blogArticleModal')" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Close Article">
-            <i class="fas fa-times text-xs"></i>
-          </button>
-        </div>
-
         <!-- Article Header -->
         <div class="space-y-2">
           <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
@@ -793,19 +831,38 @@ const ScaleNovaModals = (function() {
     modal.dataset.hash = `feature/${feature.slug}`;
 
     contentContainer.innerHTML = `
-      <div class="p-5 sm:p-7 space-y-5">
-        <!-- Sticky Header with Prominent Close Button -->
-        <div class="flex items-start justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <div class="space-y-1 pr-3">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-              <i class="${feature.icon}"></i> ${feature.badge}
-            </span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.title}</h2>
-            <p class="text-xs sm:text-sm font-semibold text-brand-600 dark:text-brand-400">${feature.fullDetails.headline}</p>
-          </div>
-          <button onclick="ScaleNovaModals.close('featureDetailModal')" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Feature Details">
-            <i class="fas fa-times text-sm"></i>
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('featureDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
+            <i class="fas fa-arrow-left text-xs"></i>
           </button>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / Features / <strong class="text-slate-900 dark:text-white">${feature.title}</strong>
+          </span>
+        </div>
+        
+        <button onclick="ScaleNovaModals.close('featureDetailModal'); ScaleNovaModals.openDemoModal();" class="px-3 py-1 rounded-xl text-xs sn-btn-primary">
+          Book a Demo
+        </button>
+      </div>
+
+      <div class="p-5 sm:p-7 space-y-5">
+        <!-- Feature Header -->
+        <div class="space-y-1">
+          <div class="flex items-center gap-2.5">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="${feature.icon}"></i>
+            </div>
+            <div>
+              <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">${feature.badge}</span>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.title}</h2>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">${feature.fullDetails.headline}</p>
         </div>
 
         <!-- Overview: What It Does & How It Works -->
@@ -905,22 +962,33 @@ const ScaleNovaModals = (function() {
     modal.dataset.hash = `plan/${plan.id}`;
 
     contentContainer.innerHTML = `
+      <!-- Unified Compact SPA Top Navigation Bar -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-2">
+          <button onclick="ScaleNovaModals.goBack('planDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
+            <i class="fas fa-arrow-left text-xs"></i>
+          </button>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right text-xs"></i>
+          </button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
+            Home / Plans / <strong class="text-slate-900 dark:text-white">${plan.name}</strong>
+          </span>
+        </div>
+        
+        <button onclick="ScaleNovaModals.close('planDetailModal'); ScaleNovaModals.openDemoModal();" class="px-3 py-1 rounded-xl text-xs sn-btn-primary">
+          Book a Demo
+        </button>
+      </div>
+
       <div class="p-5 sm:p-7 space-y-5">
         <!-- Header -->
-        <div class="flex items-start justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
-          <div class="space-y-1 pr-3">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-              ${plan.badge}
-            </span>
-            <div class="flex items-baseline gap-2">
-              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${plan.name}</h2>
-              <span class="text-sm sm:text-base font-black text-brand-600 dark:text-brand-400">${plan.monthlyPriceFormatted} <span class="text-[10px] font-normal text-slate-500">+ GST / mo</span></span>
-            </div>
-            <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">${plan.headline}</p>
+        <div class="space-y-1">
+          <div class="flex items-baseline gap-2">
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${plan.name}</h2>
+            <span class="text-sm sm:text-base font-black text-brand-600 dark:text-brand-400">${plan.monthlyPriceFormatted} <span class="text-[10px] font-normal text-slate-500">+ GST / mo</span></span>
           </div>
-          <button onclick="ScaleNovaModals.close('planDetailModal')" class="w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Close Plan Details">
-            <i class="fas fa-times text-sm"></i>
-          </button>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">${plan.headline}</p>
         </div>
 
         <!-- Target Business Profile -->
@@ -1065,7 +1133,8 @@ const ScaleNovaModals = (function() {
     init,
     open,
     close,
-    goBackOrClose,
+    goBack,
+    goForward,
     openCareersPage,
     openRoleDetail,
     openCareerApp,

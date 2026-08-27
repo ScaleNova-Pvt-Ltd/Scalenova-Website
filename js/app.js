@@ -55,24 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // 3. Render 6 Concise Feature Cards with EXACTLY ONE CTA (View Details)
+  // 3. Render 6 Concise Feature Cards (Icon-Left + Heading-Right Space-Optimized Layout)
   const featuresContainer = document.getElementById('featuresGridContainer');
   if (featuresContainer && typeof SCALENOVA_FEATURES !== 'undefined') {
     featuresContainer.innerHTML = SCALENOVA_FEATURES.map(f => `
-      <div class="sn-card sn-card-hover p-5 sm:p-6 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.openFeatureDetail('${f.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('${f.id}')" aria-label="View ${f.title} Details">
-        <div class="space-y-3">
-          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg group-hover:scale-110 transition-transform">
-            <i class="${f.icon}"></i>
+      <div class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.openFeatureDetail('${f.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('${f.id}')" aria-label="View ${f.title} Details">
+        <div class="space-y-2.5">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base flex-shrink-0 group-hover:scale-105 transition-transform">
+              <i class="${f.icon}"></i>
+            </div>
+            <h3 class="font-black text-sm sm:text-base text-slate-900 dark:text-white tracking-tight leading-snug">${f.title}</h3>
           </div>
-
-          <h3 class="font-black text-base sm:text-lg text-slate-900 dark:text-white tracking-tight">${f.title}</h3>
           
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
             ${f.shortSummary}
           </p>
         </div>
 
-        <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-brand-600 dark:text-brand-400 group-hover:text-brand-500 transition-colors">
+        <div class="pt-3 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-brand-600 dark:text-brand-400 group-hover:text-brand-500 transition-colors">
           <span>View Details</span>
           <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
         </div>
