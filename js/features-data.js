@@ -1,7 +1,7 @@
 /**
  * ScaleNova 6 Core Business Features Deep-Dive Dataset
  * 
- * Defines comprehensive interactive data for modal/drawer expanded views.
+ * Defines concise homepage summaries and comprehensive interactive data for drawer views.
  */
 const SCALENOVA_FEATURES = [
   {
@@ -9,6 +9,7 @@ const SCALENOVA_FEATURES = [
     slug: "centralized-crm-database",
     title: "Centralized CRM & Database",
     shortTitle: "CRM & Database",
+    shortSummary: "Manage leads, customers, interactions, and sales workflows in one connected workspace.",
     icon: "fas fa-database",
     badge: "Customer Growth Engine",
     color: "brand",
@@ -51,6 +52,7 @@ const SCALENOVA_FEATURES = [
     slug: "erp-financial-tracking",
     title: "ERP & Financial Tracking",
     shortTitle: "ERP & Financials",
+    shortSummary: "Connect inventory, purchasing, invoicing, and key business operations.",
     icon: "fas fa-chart-pie",
     badge: "Connected Operations",
     color: "blue",
@@ -93,6 +95,7 @@ const SCALENOVA_FEATURES = [
     slug: "hr-employee-management",
     title: "HR & Employee Management",
     shortTitle: "HR & Workforce",
+    shortSummary: "Manage employees, attendance, leave, and team workflows more efficiently.",
     icon: "fas fa-users-gear",
     badge: "Workforce Efficiency",
     color: "emerald",
@@ -135,6 +138,7 @@ const SCALENOVA_FEATURES = [
     slug: "cloud-based-security",
     title: "Cloud-Based Security",
     shortTitle: "Cloud Security",
+    shortSummary: "Protect business information with controlled access and managed cloud infrastructure.",
     icon: "fas fa-shield-halved",
     badge: "Data Governance",
     color: "cyan",
@@ -177,6 +181,7 @@ const SCALENOVA_FEATURES = [
     slug: "project-planning-tasks",
     title: "Project Planning & Tasks",
     shortTitle: "Projects & Tasks",
+    shortSummary: "Plan work, assign tasks, track milestones, and keep teams aligned.",
     icon: "fas fa-list-check",
     badge: "Execution Clarity",
     color: "purple",
@@ -219,6 +224,7 @@ const SCALENOVA_FEATURES = [
     slug: "executive-bi-dashboards",
     title: "Executive BI Dashboards",
     shortTitle: "Executive BI",
+    shortSummary: "Turn business data into useful dashboards and insights for better decisions.",
     icon: "fas fa-chart-line",
     badge: "Decision Intelligence",
     color: "amber",

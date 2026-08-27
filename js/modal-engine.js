@@ -1,8 +1,8 @@
 /**
- * ScaleNova Accessible Modal & Drawer Engine with URL Hash Routing
+ * ScaleNova Accessible Modal & Drawer Engine with URL Hash Routing (Refined)
  * 
- * Supports deep-linking, browser history navigation (back/forward), keyboard accessibility (Escape, focus trapping),
- * and dynamic template rendering for Features, Plans, Blogs, Careers, Affiliate, and Legal modals.
+ * Manages deep-linking, browser history navigation (back/forward), keyboard accessibility (Escape, focus trapping),
+ * and responsive template rendering for Features, Plans, Blogs, Careers, Affiliate, and Legal modals.
  */
 const ScaleNovaModals = (function() {
   let lastFocusedElement = null;
@@ -48,12 +48,10 @@ const ScaleNovaModals = (function() {
       activeModalId = null;
 
       if (restoreHash && window.location.hash) {
-        // Clean URL hash without reload
         history.pushState('', document.title, window.location.pathname + window.location.search);
       }
     }
 
-    // Restore focus to trigger element
     if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
       lastFocusedElement.focus();
     }
@@ -71,101 +69,97 @@ const ScaleNovaModals = (function() {
     drawer.dataset.hash = `feature/${feature.slug}`;
 
     contentContainer.innerHTML = `
-      <div class="p-6 md:p-8 space-y-8">
+      <div class="p-5 sm:p-8 space-y-6">
         <!-- Header -->
-        <div class="flex items-start justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
-          <div class="space-y-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+        <div class="flex items-start justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="space-y-1.5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
               <i class="${feature.icon}"></i> ${feature.badge}
             </span>
-            <h2 class="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight">${feature.title}</h2>
-            <p class="text-xs md:text-sm font-semibold text-brand-600 dark:text-brand-400">${feature.fullDetails.headline}</p>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.title}</h2>
+            <p class="text-xs sm:text-sm font-semibold text-brand-600 dark:text-brand-400">${feature.fullDetails.headline}</p>
           </div>
-          <button onclick="ScaleNovaModals.close('featureDetailDrawer')" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Close Feature Details">
-            <i class="fas fa-times text-sm"></i>
+          <button onclick="ScaleNovaModals.close('featureDetailDrawer')" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition flex-shrink-0" aria-label="Close Drawer">
+            <i class="fas fa-times text-xs"></i>
           </button>
         </div>
 
         <!-- What It Does & How It Works -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="sn-card p-5 space-y-2">
-            <h4 class="text-xs font-black uppercase tracking-wider text-slate-400">What It Does</h4>
-            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whatItDoes}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sn-card p-4 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whatItDoes}</p>
           </div>
-          <div class="sn-card p-5 space-y-2">
-            <h4 class="text-xs font-black uppercase tracking-wider text-slate-400">How It Works</h4>
-            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.howItWorks}</p>
+          <div class="sn-card p-4 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400">How It Works</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.howItWorks}</p>
           </div>
         </div>
 
-        <!-- Operational Problems Solved -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+        <!-- Problems Solved -->
+        <div class="space-y-2.5">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
             <i class="fas fa-triangle-exclamation text-amber-500"></i> Common Business Problems Solved
           </h3>
-          <div class="grid grid-cols-1 gap-2.5">
+          <div class="grid grid-cols-1 gap-2">
             ${feature.fullDetails.problemsSolved.map(prob => `
-              <div class="flex items-start gap-3 p-3 rounded-xl bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-xmark text-red-500 mt-0.5"></i>
+              <div class="flex items-start gap-2.5 p-3 rounded-xl bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 text-xs font-medium text-slate-700 dark:text-slate-300">
+                <i class="fas fa-xmark text-red-500 mt-0.5 text-[11px]"></i>
                 <span>${prob}</span>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Main Operational Benefits -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+        <!-- Key Benefits -->
+        <div class="space-y-2.5">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
             <i class="fas fa-circle-check text-emerald-500"></i> Key Operational Benefits
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             ${feature.fullDetails.mainBenefits.map(benefit => `
-              <div class="flex items-start gap-2.5 p-3.5 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-check text-emerald-500 mt-0.5"></i>
+              <div class="flex items-start gap-2 p-3 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
+                <i class="fas fa-check text-emerald-500 mt-0.5 text-[11px]"></i>
                 <span>${benefit}</span>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Automation & MSME Scaling Impact -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="sn-card p-5 space-y-3 bg-gradient-to-br from-brand-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
-            <h4 class="text-xs font-black uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
-              <i class="fas fa-bolt"></i> Automation Opportunities
+        <!-- Automation & Scaling Impact -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sn-card p-4 space-y-2 bg-gradient-to-br from-brand-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
+              <i class="fas fa-bolt"></i> Automation Triggers
             </h4>
-            <ul class="space-y-2 text-xs text-slate-600 dark:text-slate-300 font-medium">
+            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 font-medium">
               ${feature.fullDetails.automationOpportunities.map(auto => `
-                <li class="flex items-start gap-2">
-                  <i class="fas fa-arrow-right text-[10px] text-brand-500 mt-1"></i>
+                <li class="flex items-start gap-1.5">
+                  <i class="fas fa-arrow-right text-[9px] text-brand-500 mt-1"></i>
                   <span>${auto}</span>
                 </li>
               `).join('')}
             </ul>
           </div>
 
-          <div class="sn-card p-5 space-y-3 bg-gradient-to-br from-blue-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
-            <h4 class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
+          <div class="sn-card p-4 space-y-2 bg-gradient-to-br from-blue-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
               <i class="fas fa-chart-line"></i> How It Scales an MSME
             </h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.msmeScalingImpact}</p>
-            <div class="pt-2 border-t border-slate-200 dark:border-slate-800 text-[11px] text-slate-500 dark:text-slate-400">
-              <strong>Example:</strong> ${feature.fullDetails.exampleWorkflow}
+            <div class="pt-1.5 border-t border-slate-200 dark:border-slate-800 text-[10px] text-slate-500 dark:text-slate-400">
+              <strong>Workflow:</strong> ${feature.fullDetails.exampleWorkflow}
             </div>
           </div>
         </div>
 
         <!-- CTA Footer -->
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left">
-            <span>Ready to see this feature live in action?</span>
-          </div>
-          <div class="flex items-center gap-3 w-full sm:w-auto">
-            <button onclick="ScaleNovaModals.close('featureDetailDrawer'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
-              <i class="fas fa-play text-[10px]"></i>
-              <span>Book a Live Demo</span>
-            </button>
-          </div>
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left font-medium">Ready to see this feature live?</span>
+          <button onclick="ScaleNovaModals.close('featureDetailDrawer'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-play text-[10px]"></i>
+            <span>Book a Demo</span>
+          </button>
         </div>
       </div>
     `;
@@ -185,60 +179,60 @@ const ScaleNovaModals = (function() {
     drawer.dataset.hash = `plan/${plan.id}`;
 
     contentContainer.innerHTML = `
-      <div class="p-6 md:p-8 space-y-8">
+      <div class="p-5 sm:p-8 space-y-6">
         <!-- Header -->
-        <div class="flex items-start justify-between pb-6 border-b border-slate-200 dark:border-slate-800">
-          <div class="space-y-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+        <div class="flex items-start justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="space-y-1.5">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
               ${plan.badge}
             </span>
-            <div class="flex items-baseline gap-3">
-              <h2 class="text-3xl font-black text-slate-900 dark:text-white tracking-tight">${plan.name}</h2>
-              <span class="text-lg font-black text-brand-600 dark:text-brand-400">${plan.monthlyPriceFormatted} <span class="text-xs font-normal text-slate-500">+ GST / mo</span></span>
+            <div class="flex items-baseline gap-2.5">
+              <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">${plan.name}</h2>
+              <span class="text-base font-black text-brand-600 dark:text-brand-400">${plan.monthlyPriceFormatted} <span class="text-[10px] font-normal text-slate-500">+ GST / mo</span></span>
             </div>
-            <p class="text-xs md:text-sm font-semibold text-slate-600 dark:text-slate-400">${plan.headline}</p>
+            <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">${plan.headline}</p>
           </div>
-          <button onclick="ScaleNovaModals.close('planDetailDrawer')" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Close Plan Details">
-            <i class="fas fa-times text-sm"></i>
+          <button onclick="ScaleNovaModals.close('planDetailDrawer')" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition flex-shrink-0" aria-label="Close Drawer">
+            <i class="fas fa-times text-xs"></i>
           </button>
         </div>
 
-        <!-- Target Audience & User Capacity -->
-        <div class="sn-card p-5 space-y-2 bg-gradient-to-r from-brand-50/40 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
+        <!-- Target Business Profile -->
+        <div class="sn-card p-4 space-y-1.5 bg-gradient-to-r from-brand-50/40 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
           <div class="flex items-center justify-between">
-            <h4 class="text-xs font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Target Business Profile</h4>
-            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">${plan.userCapacity}</span>
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Target Business Profile</h4>
+            <span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">${plan.userCapacity}</span>
           </div>
-          <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${plan.targetAudience}</p>
+          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${plan.targetAudience}</p>
         </div>
 
-        <!-- Main Included Functions -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+        <!-- Included Functions -->
+        <div class="space-y-2.5">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
             <i class="fas fa-layer-group text-brand-500"></i> Main Included Functions
           </h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             ${plan.mainIncludedFunctions.map(func => `
-              <div class="flex items-start gap-2.5 p-3 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-check text-emerald-500 mt-0.5"></i>
+              <div class="flex items-start gap-2 p-2.5 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
+                <i class="fas fa-check text-emerald-500 mt-0.5 text-[11px]"></i>
                 <span>${func}</span>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Expected Setup Journey -->
-        <div class="space-y-3">
-          <h3 class="text-sm font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
-            <i class="fas fa-route text-blue-500"></i> Expected Onboarding Journey
+        <!-- Onboarding Roadmap -->
+        <div class="space-y-2.5">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-route text-blue-500"></i> Expected Setup Journey
           </h3>
-          <div class="space-y-3">
+          <div class="space-y-2">
             ${plan.setupJourney.map((step, idx) => `
-              <div class="flex items-start gap-3.5 p-4 rounded-xl sn-card">
-                <div class="w-7 h-7 rounded-lg sn-gradient-bg text-white font-black text-xs flex items-center justify-center flex-shrink-0">
+              <div class="flex items-start gap-3 p-3 rounded-xl sn-card">
+                <div class="w-6 h-6 rounded-lg sn-gradient-bg text-white font-black text-[11px] flex items-center justify-center flex-shrink-0">
                   ${idx + 1}
                 </div>
-                <div class="space-y-1">
+                <div class="space-y-0.5">
                   <h4 class="text-xs font-extrabold text-slate-900 dark:text-white">${step.step}</h4>
                   <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${step.detail}</p>
                 </div>
@@ -247,16 +241,16 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- Training & Support Boundary -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="sn-card p-5 space-y-2">
-            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
+        <!-- Training & Support -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sn-card p-4 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
               <i class="fas fa-graduation-cap"></i> Training Included
             </h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${plan.trainingIncluded}</p>
           </div>
-          <div class="sn-card p-5 space-y-2">
-            <h4 class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
+          <div class="sn-card p-4 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1">
               <i class="fas fa-headset"></i> Support Scope
             </h4>
             <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${plan.supportIncluded}</p>
@@ -264,19 +258,17 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Upgrade Path -->
-        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-1 text-xs">
-          <h4 class="font-bold text-slate-900 dark:text-white">Seamless Scaling & Upgrade Path</h4>
+        <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 space-y-0.5 text-xs">
+          <h4 class="font-bold text-slate-900 dark:text-white">Seamless Scaling &amp; Upgrade Path</h4>
           <p class="text-slate-600 dark:text-slate-400 leading-relaxed">${plan.upgradePath}</p>
         </div>
 
         <!-- CTA Footer -->
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div class="text-xs text-slate-500 dark:text-slate-400">
-            <span>Annual option: 12 months for the price of 10</span>
-          </div>
-          <button onclick="ScaleNovaModals.close('planDetailDrawer'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Annual option: 12 months for price of 10</span>
+          <button onclick="ScaleNovaModals.close('planDetailDrawer'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
             <i class="fas fa-calendar-check"></i>
-            <span>${plan.ctaText}</span>
+            <span>Book a Demo</span>
           </button>
         </div>
       </div>
@@ -296,7 +288,6 @@ const ScaleNovaModals = (function() {
 
     modal.dataset.hash = `blog/${blog.slug}`;
 
-    // Convert markdown content to clean HTML
     let htmlContent = blog.content
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^#### (.*$)/gim, '<h4>$1</h4>')
@@ -305,26 +296,26 @@ const ScaleNovaModals = (function() {
       .replace(/^(\*|\-) (.*$)/gim, '<li>$2</li>')
       .replace(/```([\s\S]*?)```/gim, '<pre><code>$1</code></pre>')
       .replace(/\n\n/gim, '</p><p>')
-      .replace(/---/gim, '<hr class="my-6 border-slate-200 dark:border-slate-800">');
+      .replace(/---/gim, '<hr class="my-4 border-slate-200 dark:border-slate-800">');
 
     htmlContent = `<p>${htmlContent}</p>`;
 
     contentContainer.innerHTML = `
-      <div class="p-6 md:p-10 space-y-8 max-w-3xl mx-auto">
+      <div class="p-5 sm:p-8 space-y-6 max-w-3xl mx-auto">
         <!-- Article Header -->
-        <div class="space-y-4 pb-6 border-b border-slate-200 dark:border-slate-800">
+        <div class="space-y-3 pb-4 border-b border-slate-200 dark:border-slate-800">
           <div class="flex items-center justify-between">
-            <span class="px-3 py-1 rounded-full text-xs font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
               <i class="${blog.icon} mr-1"></i> ${blog.category}
             </span>
-            <button onclick="ScaleNovaModals.close('blogArticleModal')" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Close Article">
+            <button onclick="ScaleNovaModals.close('blogArticleModal')" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center transition" aria-label="Close Article">
               <i class="fas fa-times text-xs"></i>
             </button>
           </div>
 
-          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">${blog.title}</h1>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">${blog.title}</h1>
 
-          <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500 dark:text-slate-400 font-medium">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400 font-medium">
             <span><i class="fas fa-user-circle mr-1"></i> ${blog.author}</span>
             <span>•</span>
             <span><i class="fas fa-calendar mr-1"></i> ${blog.publishDate}</span>
@@ -338,24 +329,24 @@ const ScaleNovaModals = (function() {
           ${htmlContent}
         </div>
 
-        <!-- Share & Author Bio -->
-        <div class="pt-8 border-t border-slate-200 dark:border-slate-800 space-y-6">
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <div class="space-y-1 text-center sm:text-left">
-              <h4 class="text-sm font-black text-slate-900 dark:text-white">Transform Your Business Operations</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400">Discover how ScaleNova Business OS unifies CRM, ERP, and automation for your team.</p>
+        <!-- Share & Demo CTA -->
+        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-4">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+            <div class="space-y-0.5 text-center sm:text-left">
+              <h4 class="text-xs font-black text-slate-900 dark:text-white">Simplify Your Business Operations</h4>
+              <p class="text-[11px] text-slate-600 dark:text-slate-400">Discover how ScaleNova Business OS unifies CRM, ERP, and operations.</p>
             </div>
-            <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openDemoModal();" class="px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex-shrink-0">
-              Book a Live Demo
+            <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openDemoModal();" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex-shrink-0">
+              Book a Demo
             </button>
           </div>
 
           <div class="flex items-center justify-between text-xs text-slate-500">
-            <span>Published by ScaleNova Engineering &amp; Operations</span>
-            <div class="flex items-center gap-3">
-              <span class="font-bold">Share:</span>
-              <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + window.location.href)}" target="_blank" rel="noopener" class="text-emerald-500 hover:scale-110 transition" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp text-lg"></i></a>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener" class="text-blue-500 hover:scale-110 transition" aria-label="Share on LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
+            <span>Published by ScaleNova Desk</span>
+            <div class="flex items-center gap-2.5">
+              <span class="font-bold text-[11px]">Share:</span>
+              <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + window.location.href)}" target="_blank" rel="noopener" class="text-emerald-500 hover:scale-110 transition" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp text-base"></i></a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener" class="text-blue-500 hover:scale-110 transition" aria-label="Share on LinkedIn"><i class="fab fa-linkedin text-base"></i></a>
             </div>
           </div>
         </div>
@@ -406,25 +397,24 @@ const ScaleNovaModals = (function() {
     } else if (hash.startsWith('blog/')) {
       const slug = hash.replace('blog/', '');
       openBlogArticle(slug);
-    } else if (hash === 'careers-apply') {
+    } else if (hash === 'careers' || hash === 'careers-apply') {
       openCareerModal();
-    } else if (hash === 'affiliate-apply') {
+    } else if (hash === 'affiliate' || hash === 'affiliate-apply') {
       openAffiliateModal();
+    } else if (hash === 'demo') {
+      openDemoModal();
     }
   }
 
   // Initialize Global Listeners
   function init() {
-    // Escape Key Listener
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && activeModalId) {
         close(activeModalId);
       }
     });
 
-    // Hash change listener
     window.addEventListener('hashchange', handleHashChange);
-    // Initial hash check on page load
     setTimeout(handleHashChange, 250);
   }
 
