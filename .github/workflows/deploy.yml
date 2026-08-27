@@ -4,17 +4,49 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  web-deploy:
-    name: Production Deploy to public_html
+  validate-and-deploy:
+    name: Validate & Deploy to OrangeHost
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Checkout Repository Source
         uses: actions/checkout@v4
 
-      - name: 🔍 Validate JavaScript Syntax
+      - name: 🔍 Step 1: Verify Essential Website Files Exist
         run: |
+          echo "Checking essential production files..."
+          REQUIRED_FILES=(
+            "index.html"
+            "css/style.css"
+            "css/components.css"
+            "js/config.js"
+            "js/features-data.js"
+            "js/plans-data.js"
+            "js/careers-data.js"
+            "js/affiliate-data.js"
+            "js/blog-data.js"
+            "js/pricing.js"
+            "js/modal-engine.js"
+            "js/forms-service.js"
+            "js/3d-hero.js"
+            "js/app.js"
+            "sitemap.xml"
+            "robots.txt"
+          )
+          for file in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "::error file=$file::Missing required production file: $file"
+              exit 1
+            fi
+            echo "  ✓ $file"
+          done
+          echo "All essential files present."
+
+      - name: 🧪 Step 2: Validate JavaScript Syntax
+        run: |
+          echo "Validating JavaScript syntax across all modules..."
           node -c js/config.js
           node -c js/features-data.js
           node -c js/plans-data.js
@@ -26,18 +58,42 @@ jobs:
           node -c js/forms-service.js
           node -c js/3d-hero.js
           node -c js/app.js
-          echo "All JavaScript modules verified successfully."
+          echo "All JavaScript modules verified with 0 syntax errors."
 
-      - name: 🚀 Sync Files to OrangeHost public_html via SFTP / FTP
+      - name: 🔗 Step 3: Verify Asset References in index.html
+        run: |
+          echo "Verifying local script and stylesheet links in index.html..."
+          for asset in $(grep -oE '(href|src)="[^"]+"' index.html | cut -d'"' -f2 | grep -v '^http' | grep -v '^#' | grep -v '^mailto:' | grep -v '^tel:'); do
+            if [ ! -f "$asset" ] && [ ! -d "$asset" ]; then
+              echo "::warning file=index.html::Referenced asset '$asset' not found locally."
+            else
+              echo "  ✓ Linked asset exists: $asset"
+            fi
+          done
+
+      - name: 🛡️ Step 4: Check GitHub Secrets Configuration
+        id: check-secrets
+        run: |
+          if [ -z "${{ secrets.ORANGEHOST_FTP_SERVER }}" ]; then
+            echo "::error title=Configuration Required::GitHub Secret 'ORANGEHOST_FTP_SERVER' is empty or not set. Please add it in repository Settings -> Secrets and variables -> Actions."
+            echo "secrets_configured=false" >> $GITHUB_OUTPUT
+            exit 1
+          else
+            echo "secrets_configured=true" >> $GITHUB_OUTPUT
+            echo "✓ Deployment secrets verified."
+          fi
+
+      - name: 🚀 Step 5: Sync to OrangeHost public_html (FTPS / FTP)
+        if: steps.check-secrets.outputs.secrets_configured == 'true'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.ORANGEHOST_FTP_SERVER }}
           username: ${{ secrets.ORANGEHOST_FTP_USERNAME }}
           password: ${{ secrets.ORANGEHOST_FTP_PASSWORD }}
-          port: ${{ secrets.ORANGEHOST_FTP_PORT || 21 }}
+          port: ${{ secrets.ORANGEHOST_FTP_PORT || '21' }}
           protocol: ${{ secrets.ORANGEHOST_FTP_PROTOCOL || 'ftps' }}
           local-dir: ./
-          server-dir: /public_html/
+          server-dir: ${{ secrets.ORANGEHOST_SERVER_DIR || 'public_html/' }}
           exclude: |
             **/.git*
             **/.git*/**

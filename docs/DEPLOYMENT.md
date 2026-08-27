@@ -9,14 +9,16 @@ This document explains the automated deployment architecture connecting the **Gi
 ```
 [Developer / AI Agent]
          │
-         ▼  (git push)
+         ▼  (git push origin main)
 [GitHub Repository (main branch)]
          │
          ▼  (Triggers GitHub Actions)
 [.github/workflows/deploy.yml]
-    ├── 1. Code checkout
-    ├── 2. Syntax & module validation
-    └── 3. Automated FTP/SFTP Sync
+    ├── Step 1: Verify Essential Website Files Exist
+    ├── Step 2: Validate JavaScript Syntax Across All Modules (node -c)
+    ├── Step 3: Verify Asset References in index.html
+    ├── Step 4: Check GitHub Secrets Configuration
+    └── Step 5: Sync Files to OrangeHost public_html (FTPS/FTP)
          │
          ▼
 [OrangeHost Production Server]
@@ -31,61 +33,63 @@ This document explains the automated deployment architecture connecting the **Gi
 To enable automated deployments, navigate to your GitHub Repository:
 **Settings → Secrets and variables → Actions → New repository secret**
 
-Add the following 4 secrets:
+Configure the following secrets using the credentials obtained from your OrangeHost account or cPanel:
 
-| Secret Name | Description | Example Value |
-| :--- | :--- | :--- |
-| `ORANGEHOST_FTP_SERVER` | OrangeHost FTP Hostname / Server IP | `ftp.scalenovasystems.com` or `cpanelXX.orangehost.com` |
-| `ORANGEHOST_FTP_USERNAME` | cPanel / FTP Account Username | `deploy@scalenovasystems.com` |
-| `ORANGEHOST_FTP_PASSWORD` | FTP Account Password | *(Your strong secret password)* |
-| `ORANGEHOST_FTP_PORT` | FTP Port (Default: 21 for FTPS, 22 for SFTP) | `21` |
-| `ORANGEHOST_FTP_PROTOCOL` | Connection Security (`ftps` or `sftp`) | `ftps` |
+| Secret Name | Description | Where to Find in OrangeHost / cPanel | Example Value |
+| :--- | :--- | :--- | :--- |
+| `ORANGEHOST_FTP_SERVER` | FTP Hostname / IP address | OrangeHost Welcome Email or cPanel **FTP Accounts** | `ftp.scalenovasystems.com` or `cpanelXX.orangehost.com` |
+| `ORANGEHOST_FTP_USERNAME` | FTP Account Username | cPanel **FTP Accounts** (e.g. `deployer@scalenovasystems.com` or main cPanel user) | `deployer@scalenovasystems.com` |
+| `ORANGEHOST_FTP_PASSWORD` | FTP Account Password | Created when creating the FTP Account in cPanel | *(Your secure password)* |
+| `ORANGEHOST_FTP_PORT` *(Optional)* | FTP Connection Port | Default is `21` for FTPS | `21` |
+| `ORANGEHOST_FTP_PROTOCOL` *(Optional)* | Transfer Protocol | Default is `ftps` (FTPS with TLS/SSL) | `ftps` |
+| `ORANGEHOST_SERVER_DIR` *(Optional)* | Remote Server Directory | Default is `public_html/` (or `./` if FTP user root is already set to `public_html`) | `public_html/` or `./` |
 
-> [!SECURITY NOTE]
-> Never commit passwords or FTP credentials directly into code or config files. GitHub Secrets keep your production credentials encrypted.
+> [!SECURITY NOTICE]
+> Never hardcode or commit FTP passwords, hostnames, or credentials directly into code or documentation. GitHub Secrets keep your production credentials encrypted.
 
 ---
 
-## 3. Creating a Dedicated Deployment FTP Account in cPanel
+## 3. How to Create a Dedicated Deployment FTP Account in cPanel
 
 1. Log in to your **OrangeHost cPanel**.
-2. Navigate to **Files → FTP Accounts**.
-3. Create a new account:
-   - **Login**: `deployer`
+2. Go to **Files → FTP Accounts**.
+3. Under **Add FTP Account**:
+   - **Log in**: `deployer`
    - **Domain**: `scalenovasystems.com`
-   - **Password**: Generate a strong random password.
-   - **Directory**: Set strictly to `public_html` (or `public_html/subfolder` if testing in a staging directory).
+   - **Password**: Generate a strong, secure password (copy this).
+   - **Directory**: 
+     - If you set directory to `public_html`, set secret `ORANGEHOST_SERVER_DIR` to `./`.
+     - If directory defaults to `/home/username/public_html`, set secret `ORANGEHOST_SERVER_DIR` to `public_html/`.
 4. Click **Create FTP Account**.
-5. Copy the credentials into the GitHub Secrets configured above.
+5. Add the **Server**, **Username**, and **Password** into GitHub Secrets.
 
 ---
 
-## 4. Branch Strategy & Safe Deployment Workflow
+## 4. Pre-Deployment Validation
 
-* **`main` Branch**: Production branch. Any push or merged PR immediately triggers the GitHub Action to sync files into `public_html/`.
-* **Feature Branches** (`feature/blog-update`, `feature/pricing-change`): Use feature branches for ongoing development. Test locally before creating a Pull Request to `main`.
-
----
-
-## 5. Rollback Strategy
-
-If a faulty change is accidentally deployed to production:
-1. Revert the commit on GitHub:
-   ```bash
-   git revert HEAD
-   git push origin main
-   ```
-2. GitHub Actions will automatically re-run and restore the previous stable build to `public_html` within 45 seconds.
+Before attempting to sync files via FTP, GitHub Actions automatically executes:
+1. **File Verification**: Ensures `index.html`, CSS, JS modules, `sitemap.xml`, and `robots.txt` are present.
+2. **Syntax Compilation**: Compiles all 11 JavaScript modules via `node -c` to ensure zero runtime syntax breaks.
+3. **Link Verification**: Checks that all local stylesheets and scripts referenced in `index.html` resolve to actual files.
+4. **Secret Guarding**: Checks that `ORANGEHOST_FTP_SERVER` is defined before attempting to connect.
 
 ---
 
-## 6. Local Testing Before Deployment
+## 5. Excluded Development Artifacts
 
-To preview the website locally on your computer:
-* **Option 1 (Python)**:
-  ```bash
-  python3 -m http.server 8000
-  ```
-  Open `http://localhost:8000` in your browser.
-* **Option 2 (VS Code / IDE)**:
-  Use "Live Server" extension on `index.html`.
+The deployment step explicitly excludes non-production files from being synced to `public_html`:
+- `.git/` & `.gitignore`
+- `.github/` workflows
+- `docs/` documentation
+- `README.md`
+
+---
+
+## 6. Rollback Strategy
+
+If a change needs to be reverted:
+```bash
+git revert HEAD
+git push origin main
+```
+GitHub Actions will automatically validate the previous commit and restore the stable files to `public_html` within ~45 seconds.
