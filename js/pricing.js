@@ -1,7 +1,7 @@
 /**
  * ScaleNova Reactive Pricing Toggle Engine
  * 
- * Manages monthly vs. yearly billing calculations, smooth state transitions,
+ * Manages monthly vs. annual billing calculations, smooth state transitions,
  * and DOM updates with clear 2-months-free discount communication.
  */
 const ScaleNovaPricing = (function() {
@@ -10,7 +10,7 @@ const ScaleNovaPricing = (function() {
   const plans = {
     core: {
       monthly: 3299,
-      annual: 32990, // 3,299 * 10
+      annual: 32990, // 3,299 * 10 (Save 2 months)
       annualMonthlyEquiv: 2749,
       elementIdPrice: 'price-core',
       elementIdSubtext: 'subtext-core',
@@ -18,7 +18,7 @@ const ScaleNovaPricing = (function() {
     },
     growth: {
       monthly: 11999,
-      annual: 119990, // 11,999 * 10
+      annual: 119990, // 11,999 * 10 (Save 2 months)
       annualMonthlyEquiv: 9999,
       elementIdPrice: 'price-growth',
       elementIdSubtext: 'subtext-growth',
@@ -26,7 +26,7 @@ const ScaleNovaPricing = (function() {
     },
     elite: {
       monthly: 24599,
-      annual: 245990, // 24,599 * 10
+      annual: 245990, // 24,599 * 10 (Save 2 months)
       annualMonthlyEquiv: 20499,
       elementIdPrice: 'price-elite',
       elementIdSubtext: 'subtext-elite',
@@ -39,28 +39,40 @@ const ScaleNovaPricing = (function() {
   }
 
   function setBillingCycle(cycle) {
-    if (cycle !== 'monthly' && cycle !== 'yearly') return;
-    currentBillingCycle = cycle;
+    if (cycle !== 'monthly' && cycle !== 'yearly' && cycle !== 'annual') return;
+    currentBillingCycle = (cycle === 'annual' || cycle === 'yearly') ? 'yearly' : 'monthly';
 
-    // Update Toggle Button UI
-    const monthlyBtn = document.getElementById('billingToggleMonthly');
-    const yearlyBtn = document.getElementById('billingToggleYearly');
+    // Update Toggle Controls
+    const switchBtn = document.getElementById('billingSwitchBtn');
+    const monthlyLabel = document.getElementById('billingLabelMonthly');
+    const yearlyLabel = document.getElementById('billingLabelYearly');
 
-    if (monthlyBtn && yearlyBtn) {
-      if (cycle === 'monthly') {
-        monthlyBtn.classList.add('active');
-        yearlyBtn.classList.remove('active');
-        monthlyBtn.setAttribute('aria-pressed', 'true');
-        yearlyBtn.setAttribute('aria-pressed', 'false');
+    const isAnnual = currentBillingCycle === 'yearly';
+
+    if (switchBtn) {
+      switchBtn.setAttribute('aria-checked', isAnnual ? 'true' : 'false');
+      if (isAnnual) {
+        switchBtn.classList.add('active');
       } else {
-        yearlyBtn.classList.add('active');
-        monthlyBtn.classList.remove('active');
-        yearlyBtn.setAttribute('aria-pressed', 'true');
-        monthlyBtn.setAttribute('aria-pressed', 'false');
+        switchBtn.classList.remove('active');
       }
     }
 
-    // Update Plan Prices in DOM
+    if (monthlyLabel && yearlyLabel) {
+      if (isAnnual) {
+        yearlyLabel.classList.add('active');
+        monthlyLabel.classList.remove('active');
+        yearlyLabel.setAttribute('aria-pressed', 'true');
+        monthlyLabel.setAttribute('aria-pressed', 'false');
+      } else {
+        monthlyLabel.classList.add('active');
+        yearlyLabel.classList.remove('active');
+        monthlyLabel.setAttribute('aria-pressed', 'true');
+        yearlyLabel.setAttribute('aria-pressed', 'false');
+      }
+    }
+
+    // Update Plan Prices in DOM with smooth transition
     Object.keys(plans).forEach(planKey => {
       const plan = plans[planKey];
       const priceElem = document.getElementById(plan.elementIdPrice);
@@ -68,45 +80,60 @@ const ScaleNovaPricing = (function() {
       const noteElem = document.getElementById(plan.elementIdBillingNote);
 
       if (priceElem) {
-        // Animate text change
         priceElem.style.opacity = '0';
-        priceElem.style.transform = 'translateY(-4px)';
+        priceElem.style.transform = 'translateY(-2px)';
         
         setTimeout(() => {
-          if (cycle === 'monthly') {
+          if (currentBillingCycle === 'monthly') {
             priceElem.textContent = formatRupees(plan.monthly);
             if (subtextElem) subtextElem.textContent = ' + GST / month';
             if (noteElem) noteElem.textContent = 'Billed monthly. Cancel anytime.';
           } else {
-            priceElem.textContent = formatRupees(plan.annualMonthlyEquiv);
-            if (subtextElem) subtextElem.textContent = ' / mo (+ GST)';
-            if (noteElem) noteElem.textContent = `Billed annually at ${formatRupees(plan.annual)} + GST (Save 2 Months)`;
+            priceElem.textContent = formatRupees(plan.annual);
+            if (subtextElem) subtextElem.textContent = ' + GST / year';
+            if (noteElem) noteElem.textContent = `Billed annually (Save 2 Months: ${formatRupees(plan.annualMonthlyEquiv)}/mo equivalent)`;
           }
           priceElem.style.opacity = '1';
           priceElem.style.transform = 'translateY(0)';
-        }, 150);
+        }, 120);
       }
     });
   }
 
+  function toggleBillingCycle() {
+    setBillingCycle(currentBillingCycle === 'monthly' ? 'yearly' : 'monthly');
+  }
+
   function init() {
-    const monthlyBtn = document.getElementById('billingToggleMonthly');
-    const yearlyBtn = document.getElementById('billingToggleYearly');
+    const switchBtn = document.getElementById('billingSwitchBtn');
+    const monthlyLabel = document.getElementById('billingLabelMonthly');
+    const yearlyLabel = document.getElementById('billingLabelYearly');
 
-    if (monthlyBtn) {
-      monthlyBtn.addEventListener('click', () => setBillingCycle('monthly'));
-    }
-    if (yearlyBtn) {
-      yearlyBtn.addEventListener('click', () => setBillingCycle('yearly'));
+    if (switchBtn) {
+      switchBtn.addEventListener('click', toggleBillingCycle);
+      switchBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleBillingCycle();
+        }
+      });
     }
 
-    // Initial render
+    if (monthlyLabel) {
+      monthlyLabel.addEventListener('click', () => setBillingCycle('monthly'));
+    }
+    if (yearlyLabel) {
+      yearlyLabel.addEventListener('click', () => setBillingCycle('yearly'));
+    }
+
+    // Set initial default state
     setBillingCycle('monthly');
   }
 
   return {
     init,
     setBillingCycle,
+    toggleBillingCycle,
     getBillingCycle: () => currentBillingCycle
   };
 })();
