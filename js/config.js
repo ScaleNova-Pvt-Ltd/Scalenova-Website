@@ -27,8 +27,8 @@ const SCALENOVA_CONFIG = {
   },
 
   social: {
-    // Official public LinkedIn company URL
-    linkedin: "https://www.linkedin.com/company/scalenovasystems",
+    // Official ScaleNova LinkedIn Company Page
+    linkedin: "https://www.linkedin.com/company/scalenovasys/",
     // Official Instagram profile
     instagram: "https://www.instagram.com/scalenovasys/"
   },

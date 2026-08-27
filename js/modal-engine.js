@@ -2,9 +2,9 @@
  * ScaleNova Advanced SPA View & Modal Engine with Browser History Routing
  * 
  * Manages full-page SPA views for:
- * 1. Complete Careers Portal & Individual Role Deep-Dives
- * 2. Complete Affiliate Programme Page with 4-Step Process & Terms
- * 3. Complete ScaleNova Insights (All 8 Articles) & Full Article Reader
+ * 1. Simplified, Clean Careers Portal & Individual Role Deep-Dives
+ * 2. Simplified, Visual Affiliate Programme Page with 4-Step Process & Expandable Terms
+ * 3. ScaleNova Insights (All 8 Articles) & Full Article Reader
  * 4. Centered Feature & OS Plan Modals
  * 5. Hash Routing with Browser Back/Forward & Dynamic SEO Metadata
  */
@@ -76,7 +76,7 @@ const ScaleNovaModals = (function() {
   }
 
   /* ==========================================================================
-     1. COMPLETE CAREERS PORTAL SPA VIEW
+     1. CLEAN & CONCISE CAREERS PORTAL SPA VIEW
      ========================================================================== */
   function openCareersPage() {
     const modal = document.getElementById('careersModal');
@@ -87,7 +87,7 @@ const ScaleNovaModals = (function() {
     document.title = 'Careers at ScaleNova | Build Connected Business Technology';
 
     const culture = SCALENOVA_CAREERS.culture;
-    const remote = SCALENOVA_CAREERS.remoteWorking;
+    const pillars = SCALENOVA_CAREERS.pillars;
     const perks = SCALENOVA_CAREERS.perks;
     const roles = SCALENOVA_CAREERS.roles;
 
@@ -95,10 +95,10 @@ const ScaleNovaModals = (function() {
     const internshipRoles = roles.filter(r => r.category === 'Internship');
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-10 space-y-10">
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
         
         <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
           <button onclick="ScaleNovaModals.close('careersModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
             <i class="fas fa-arrow-left text-xs"></i>
             <span>← Back to Home</span>
@@ -113,141 +113,92 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- Careers Hero -->
-        <div class="text-center space-y-4 max-w-3xl mx-auto pt-2">
-          <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+        <!-- Careers Hero (Short & Punchy) -->
+        <div class="text-center space-y-3 max-w-2xl mx-auto pt-1">
+          <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
             <i class="fas fa-rocket mr-1 text-brand-500"></i>Join ScaleNova
           </span>
-          <h1 class="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
-            Build the Future of Connected Business Operations.
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+            ${culture.headline}
           </h1>
-          <p class="text-xs sm:text-sm md:text-base font-medium text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            ${culture.subheadline} Help build unified software for thousands of growing businesses and Indian MSMEs.
+          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-relaxed">
+            ${culture.subheadline}
           </p>
-          <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <a href="#open-roles" class="px-6 py-3 rounded-xl text-xs sn-btn-primary inline-flex items-center gap-2">
-              <i class="fas fa-briefcase"></i>
+          <div class="pt-1 flex items-center justify-center gap-3">
+            <a href="#open-roles" class="px-5 py-2.5 rounded-xl text-xs sn-btn-primary inline-flex items-center gap-2">
+              <i class="fas fa-briefcase text-[10px]"></i>
               <span>View Open Roles</span>
             </a>
-            <button onclick="ScaleNovaModals.openCareerApp('General Application')" class="px-5 py-3 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <button onclick="ScaleNovaModals.openCareerApp('General Application')" class="px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
               General Application
             </button>
           </div>
         </div>
 
-        <!-- Remote Working Section -->
-        <div class="sn-card p-6 sm:p-8 space-y-6 bg-gradient-to-r from-brand-50/40 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900 border border-brand-200/60 dark:border-slate-800">
-          <div class="space-y-1.5 text-center sm:text-left">
-            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Work Culture</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">${remote.title}</h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${remote.description}</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            ${remote.principles.map(p => `
-              <div class="sn-card p-4 space-y-1.5 bg-white dark:bg-slate-900/80">
-                <div class="flex items-center gap-2 text-brand-600 dark:text-brand-400">
-                  <i class="${p.icon} text-sm"></i>
-                  <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${p.title}</h3>
-                </div>
-                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-medium">${p.detail}</p>
+        <!-- Why ScaleNova / 4 Compact Pillars -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          ${pillars.map(p => `
+            <div class="sn-card p-4 space-y-1.5 bg-white dark:bg-slate-900">
+              <div class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-sm">
+                <i class="${p.icon}"></i>
               </div>
-            `).join('')}
-          </div>
+              <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${p.title}</h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${p.detail}</p>
+            </div>
+          `).join('')}
         </div>
 
-        <!-- Perks & Benefits -->
-        <div class="space-y-6">
-          <div class="text-center space-y-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Perks &amp; Growth</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Why You'll Love Building With Us</h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto">
-              We provide the autonomy, tooling, and mentorship you need to do the best work of your career.
-            </p>
+        <!-- Perks & Benefits (Compact Cards) -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Perks &amp; Culture</h3>
+            <span class="text-[11px] text-slate-400 font-medium">Built for high autonomy</span>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
             ${perks.map(perk => `
-              <div class="sn-card p-4 sm:p-5 space-y-2">
-                <div class="w-9 h-9 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base">
+              <div class="sn-card p-3 space-y-1 text-center">
+                <div class="w-7 h-7 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-xs mx-auto">
                   <i class="${perk.icon}"></i>
                 </div>
-                <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${perk.title}</h3>
-                <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${perk.desc}</p>
+                <h4 class="text-[11px] font-bold text-slate-900 dark:text-white">${perk.title}</h4>
+                <p class="text-[10px] text-slate-500 leading-tight">${perk.desc}</p>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Open Roles Section -->
-        <div id="open-roles" class="space-y-6 pt-4">
-          <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
+        <!-- Open Full-Time Roles (2) -->
+        <div id="open-roles" class="space-y-4 pt-2">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
             <div>
-              <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Current Opportunities</span>
-              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Open Full-Time Positions (2)</h2>
+              <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Full-Time (2)</span>
+              <h2 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Open Full-Time Positions</h2>
             </div>
-            <span class="text-xs text-slate-500 font-medium">100% Remote across India</span>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-            ${fullTimeRoles.map(role => `
-              <div class="sn-card sn-card-hover p-5 sm:p-6 space-y-4 flex flex-col justify-between border-2 border-brand-500/20">
-                <div class="space-y-2.5">
-                  <div class="flex items-center justify-between gap-2">
-                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase">
-                      ${role.department}
-                    </span>
-                    <span class="text-xs font-bold text-slate-500 dark:text-slate-400"><i class="fas fa-location-dot mr-1"></i>${role.location}</span>
-                  </div>
-
-                  <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">${role.title}</h3>
-                  <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${role.overview}</p>
-
-                  <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
-                    <span class="block text-[10px] font-bold text-slate-400 uppercase">Expected Compensation</span>
-                    <span class="font-extrabold text-slate-900 dark:text-white text-xs sm:text-sm">${role.compensationRange}</span>
-                  </div>
-                </div>
-
-                <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
-                  <button onclick="ScaleNovaModals.openRoleDetail('${role.id}')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline">
-                    View Role Details →
-                  </button>
-                  <button onclick="ScaleNovaModals.openCareerApp('${role.title}')" class="px-4 py-2 rounded-xl text-xs sn-btn-primary">
-                    Apply Now
-                  </button>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- 4 Internships Section -->
-        <div class="space-y-6 pt-4">
-          <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
-            <div>
-              <span class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Early Career &amp; Students</span>
-              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Internship Opportunities (4)</h2>
-            </div>
-            <span class="text-xs text-slate-500 font-medium">3–6 Months Duration • Mentorship &amp; PPO</span>
+            <span class="text-xs text-slate-400 font-medium">100% Remote (India)</span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            ${internshipRoles.map(role => `
-              <div class="sn-card sn-card-hover p-5 space-y-3.5 flex flex-col justify-between">
+            ${fullTimeRoles.map(role => `
+              <div class="sn-card sn-card-hover p-4 sm:p-5 space-y-3 flex flex-col justify-between border-2 border-brand-500/20">
                 <div class="space-y-2">
-                  <div class="flex items-center justify-between gap-2">
-                    <span class="px-2 py-0.5 rounded-full text-[9px] font-black bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-blue-300 border border-blue-200/60 dark:border-slate-700 uppercase">
-                      ${role.duration}
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="px-2 py-0.5 rounded-full text-[9px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 uppercase">
+                      ${role.department}
                     </span>
-                    <span class="text-[11px] font-bold text-slate-400"><i class="fas fa-laptop mr-1"></i>Remote</span>
+                    <span class="text-[11px] font-bold text-slate-400">${role.location}</span>
                   </div>
 
                   <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-white">${role.title}</h3>
                   <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${role.overview}</p>
+
+                  <div class="p-2 rounded-lg bg-slate-50 dark:bg-slate-900/60 text-xs">
+                    <span class="block text-[9px] font-bold text-slate-400 uppercase">Compensation</span>
+                    <span class="font-extrabold text-slate-900 dark:text-white text-xs">${role.compensationRange}</span>
+                  </div>
                 </div>
 
-                <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-2">
+                <div class="pt-2.5 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                   <button onclick="ScaleNovaModals.openRoleDetail('${role.id}')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline">
                     View Details →
                   </button>
@@ -260,14 +211,49 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- General Application CTA Footer -->
-        <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900 to-slate-950 text-white text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-800">
-          <div class="space-y-1">
-            <h3 class="text-lg sm:text-xl font-black">Don't see an exact match for your skills?</h3>
-            <p class="text-xs text-slate-300 font-medium">We're always looking for exceptional engineers, growth hackers, and designers. Submit a general application.</p>
+        <!-- 4 Internship Roles (Compact Grid) -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <div>
+              <span class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Internships (4)</span>
+              <h2 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Internship Opportunities</h2>
+            </div>
+            <span class="text-xs text-slate-400 font-medium">3–6 Months • Mentorship &amp; PPO</span>
           </div>
-          <button onclick="ScaleNovaModals.openCareerApp('General Application')" class="px-6 py-3 rounded-xl text-xs sn-btn-primary flex-shrink-0">
-            Submit General Profile
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            ${internshipRoles.map(role => `
+              <div class="sn-card sn-card-hover p-3.5 space-y-2.5 flex flex-col justify-between">
+                <div class="space-y-1.5">
+                  <div class="flex items-center justify-between text-[10px]">
+                    <span class="font-black text-blue-600 dark:text-blue-400 uppercase">${role.duration}</span>
+                    <span class="text-slate-400">Remote</span>
+                  </div>
+                  <h4 class="text-xs sm:text-sm font-black text-slate-900 dark:text-white leading-snug">${role.title}</h4>
+                  <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium line-clamp-2">${role.overview}</p>
+                </div>
+
+                <div class="pt-2 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                  <button onclick="ScaleNovaModals.openRoleDetail('${role.id}')" class="text-[11px] font-bold text-brand-600 dark:text-brand-400 hover:underline">
+                    Details →
+                  </button>
+                  <button onclick="ScaleNovaModals.openCareerApp('${role.title}')" class="px-2.5 py-1 rounded-lg text-[10px] sn-btn-primary">
+                    Apply
+                  </button>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- General Application Box -->
+        <div class="p-4 sm:p-5 rounded-xl bg-slate-100 dark:bg-slate-900 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-3 border border-slate-200 dark:border-slate-800">
+          <div class="space-y-0.5">
+            <h3 class="text-xs sm:text-sm font-black text-slate-900 dark:text-white">Don't see an exact match?</h3>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium">We're always open to meeting talented developers, designers, and growth specialists.</p>
+          </div>
+          <button onclick="ScaleNovaModals.openCareerApp('General Application')" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex-shrink-0">
+            General Application
           </button>
         </div>
 
@@ -292,10 +278,10 @@ const ScaleNovaModals = (function() {
     document.title = `${role.title} | Careers at ScaleNova`;
 
     container.innerHTML = `
-      <div class="max-w-4xl mx-auto p-4 sm:p-6 md:p-8 space-y-6">
+      <div class="max-w-3xl mx-auto p-4 sm:p-6 md:p-8 space-y-6">
         
         <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
           <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareersPage();" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Careers">
             <i class="fas fa-arrow-left text-xs"></i>
             <span>← Back to Careers</span>
@@ -306,81 +292,68 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Role Header -->
-        <div class="space-y-3">
+        <div class="space-y-2">
           <div class="flex flex-wrap items-center gap-2 text-xs">
-            <span class="px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
               ${role.category}
             </span>
-            <span class="px-3 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
               ${role.department}
             </span>
             <span class="text-slate-400">•</span>
-            <span class="text-slate-500 font-medium"><i class="fas fa-globe mr-1"></i>${role.location}</span>
+            <span class="text-slate-500 font-medium">${role.location}</span>
           </div>
 
-          <h1 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">${role.title}</h1>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight">${role.title}</h1>
           <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-relaxed">${role.overview}</p>
         </div>
 
-        <!-- Compensation & Work Mode Banner -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-xs">
-          <div class="space-y-0.5">
-            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Compensation Range</span>
-            <p class="font-black text-sm text-slate-900 dark:text-white">${role.compensationRange}</p>
-            <p class="text-[11px] text-slate-500">${role.compensationNote}</p>
+        <!-- Compensation Banner -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800 text-xs">
+          <div>
+            <span class="text-[9px] font-bold text-slate-400 uppercase">Compensation</span>
+            <p class="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">${role.compensationRange}</p>
+            <p class="text-[10px] text-slate-500">${role.compensationNote}</p>
           </div>
-          <div class="space-y-0.5">
-            <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Work Mode &amp; Experience</span>
-            <p class="font-black text-sm text-slate-900 dark:text-white">${role.workMode}</p>
-            <p class="text-[11px] text-slate-500">Required: ${role.experience || role.duration}</p>
+          <div>
+            <span class="text-[9px] font-bold text-slate-400 uppercase">Work Mode</span>
+            <p class="font-extrabold text-xs sm:text-sm text-slate-900 dark:text-white">${role.workMode}</p>
+            <p class="text-[10px] text-slate-500">Experience: ${role.experience || role.duration}</p>
           </div>
         </div>
 
         <!-- Responsibilities -->
-        <div class="space-y-2.5">
-          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-list-check text-brand-500"></i> Key Responsibilities
-          </h3>
-          <div class="grid grid-cols-1 gap-2">
+        <div class="space-y-2">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Responsibilities</h3>
+          <div class="grid grid-cols-1 gap-1.5">
             ${role.responsibilities.map(resp => `
-              <div class="flex items-start gap-2.5 p-3 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-check text-emerald-500 mt-0.5 text-xs"></i>
-                <span class="leading-relaxed">${resp}</span>
+              <div class="flex items-start gap-2 p-2 rounded-lg sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
+                <i class="fas fa-check text-emerald-500 mt-0.5 text-[11px]"></i>
+                <span>${resp}</span>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Required Skills & Nice to Have -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="sn-card p-4 space-y-2">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1.5">
-              <i class="fas fa-code"></i> Required Skills
-            </h4>
-            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 font-medium">
-              ${role.requiredSkills.map(sk => `
-                <li class="flex items-start gap-1.5"><i class="fas fa-arrow-right text-[9px] text-brand-500 mt-1"></i><span>${sk}</span></li>
-              `).join('')}
+        <!-- Skills -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="sn-card p-3.5 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Required Skills</h4>
+            <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-300 font-medium">
+              ${role.requiredSkills.map(sk => `<li class="flex items-start gap-1.5"><i class="fas fa-arrow-right text-[8px] text-brand-500 mt-1"></i><span>${sk}</span></li>`).join('')}
             </ul>
           </div>
 
-          <div class="sn-card p-4 space-y-2">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1.5">
-              <i class="fas fa-star"></i> Nice to Have / What You'll Learn
-            </h4>
-            <ul class="space-y-1.5 text-xs text-slate-600 dark:text-slate-300 font-medium">
-              ${(role.niceToHave || []).map(nth => `
-                <li class="flex items-start gap-1.5"><i class="fas fa-plus text-[9px] text-blue-500 mt-1"></i><span>${nth}</span></li>
-              `).join('')}
-              <li class="pt-1 text-[11px] text-slate-500"><strong>Learning:</strong> ${role.whatYouLearn}</li>
-            </ul>
+          <div class="sn-card p-3.5 space-y-1.5">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">Learning &amp; Growth</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${role.whatYouLearn}</p>
           </div>
         </div>
 
         <!-- Bottom Action CTA -->
-        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span class="text-xs text-slate-500 font-medium">Ready to build with ScaleNova?</span>
-          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareerApp('${role.title}');" class="w-full sm:w-auto px-8 py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+        <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareersPage();" class="text-xs font-bold text-slate-500 hover:underline">← Other Roles</button>
+          <button onclick="ScaleNovaModals.close('roleDetailModal'); ScaleNovaModals.openCareerApp('${role.title}');" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center gap-2">
             <i class="fas fa-paper-plane text-[10px]"></i>
             <span>Apply for This Role</span>
           </button>
@@ -394,7 +367,6 @@ const ScaleNovaModals = (function() {
 
   // Open Career Candidate Application Form
   function openCareerApp(roleTitle = "General Application") {
-    const modal = document.getElementById('careerAppModal');
     const targetBadge = document.getElementById('targetRoleBadge');
     const roleInput = document.getElementById('appRoleInput');
     if (targetBadge) targetBadge.textContent = roleTitle;
@@ -403,7 +375,7 @@ const ScaleNovaModals = (function() {
   }
 
   /* ==========================================================================
-     3. COMPLETE AFFILIATE PROGRAMME SPA VIEW
+     3. CLEAN & VISUAL AFFILIATE PROGRAMME SPA VIEW
      ========================================================================== */
   function openAffiliatePage() {
     const modal = document.getElementById('affiliateFullModal');
@@ -416,10 +388,10 @@ const ScaleNovaModals = (function() {
     const aff = SCALENOVA_AFFILIATE;
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-10 space-y-10">
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
         
         <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
           <button onclick="ScaleNovaModals.close('affiliateFullModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
             <i class="fas fa-arrow-left text-xs"></i>
             <span>← Back to Home</span>
@@ -434,162 +406,137 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- Affiliate Hero -->
-        <div class="text-center space-y-4 max-w-3xl mx-auto pt-2">
-          <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">
-            <i class="fas fa-handshake mr-1"></i>ScaleNova Partner Network
+        <!-- Affiliate Hero (Immediate Core Message) -->
+        <div class="text-center space-y-3 max-w-2xl mx-auto pt-1">
+          <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
+            <i class="fas fa-handshake mr-1"></i>Partner Network
           </span>
-          <h1 class="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
             ${aff.overview.headline}
           </h1>
-          <p class="text-xs sm:text-sm md:text-base font-medium text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
+          <p class="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-300 leading-relaxed">
             ${aff.overview.subheadline}
           </p>
-          <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <a href="#affiliate-apply-form" class="px-6 py-3 rounded-xl text-xs sn-btn-primary inline-flex items-center gap-2">
-              <i class="fas fa-user-plus"></i>
+          <div class="pt-1 flex items-center justify-center gap-3">
+            <a href="#affiliate-apply-form" class="px-5 py-2.5 rounded-xl text-xs sn-btn-primary inline-flex items-center gap-2">
+              <i class="fas fa-user-plus text-[10px]"></i>
               <span>Become a Partner</span>
             </a>
-            <a href="#how-it-works-section" class="px-5 py-3 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+            <a href="#how-it-works-section" class="px-4 py-2.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
               How It Works
             </a>
           </div>
         </div>
 
         <!-- 4-Step Process Section -->
-        <div id="how-it-works-section" class="space-y-6 pt-4">
-          <div class="text-center space-y-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Step-by-Step</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">How the Partner Programme Works</h2>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto">
-              A simple, frictionless process designed for business consultants, advisors, and agencies.
-            </p>
+        <div id="how-it-works-section" class="space-y-3 pt-1">
+          <div class="text-center space-y-1">
+            <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Simple 4-Step Process</span>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">How It Works</h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             ${aff.howItWorks.map(step => `
-              <div class="sn-card p-4 sm:p-5 space-y-2 relative">
-                <div class="w-8 h-8 rounded-lg sn-gradient-bg text-white font-black text-xs flex items-center justify-center mb-1">
-                  ${step.stepNumber}
+              <div class="sn-card p-4 space-y-1.5 text-center sm:text-left">
+                <div class="w-7 h-7 rounded-lg sn-gradient-bg text-white font-black text-xs flex items-center justify-center mx-auto sm:mx-0">
+                  ${step.step}
                 </div>
                 <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${step.title}</h3>
-                <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${step.detail}</p>
+                <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${step.detail}</p>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Who Can Partner Section -->
-        <div class="space-y-6">
-          <div class="text-center space-y-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Partner Ecosystem</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Who Can Join the Network</h2>
+        <!-- Partner Benefits (4 Compact Cards) -->
+        <div class="space-y-3">
+          <div class="text-center space-y-1">
+            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Why Partner</span>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Partner Benefits</h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            ${aff.benefits.map(b => `
+              <div class="sn-card p-4 space-y-1.5">
+                <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm">
+                  <i class="${b.icon}"></i>
+                </div>
+                <h4 class="text-xs font-extrabold text-slate-900 dark:text-white">${b.title}</h4>
+                <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${b.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Who Can Join (6 Compact Cards) -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-2">
+            <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Who Can Join</h3>
+            <span class="text-[11px] text-slate-400 font-medium">Consultants, CAs, Agencies &amp; Advisors</span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
             ${aff.whoCanJoin.map(w => `
-              <div class="sn-card p-4 space-y-2">
-                <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base">
+              <div class="sn-card p-3 space-y-1 text-center">
+                <div class="w-7 h-7 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-xs mx-auto">
                   <i class="${w.icon}"></i>
                 </div>
-                <h3 class="text-xs sm:text-sm font-extrabold text-slate-900 dark:text-white">${w.title}</h3>
-                <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${w.desc}</p>
+                <h4 class="text-[11px] font-bold text-slate-900 dark:text-white">${w.title}</h4>
+                <p class="text-[10px] text-slate-500 leading-tight">${w.desc}</p>
               </div>
             `).join('')}
           </div>
         </div>
 
-        <!-- Partner Support & Training -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <!-- Support -->
-          <div class="sn-card p-5 sm:p-6 space-y-4">
-            <div class="space-y-1">
-              <span class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Dedicated Support</span>
-              <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">${aff.partnerSupport.title}</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${aff.partnerSupport.description}</p>
-            </div>
-            <div class="space-y-2.5">
-              ${aff.partnerSupport.pillars.map(pill => `
-                <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
-                  <i class="${pill.icon} text-emerald-500 mt-1 text-xs"></i>
-                  <div>
-                    <h4 class="font-extrabold text-slate-900 dark:text-white">${pill.title}</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">${pill.detail}</p>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
+        <!-- Programme Terms & Conditions (Expandable Clean Accordions) -->
+        <div class="sn-card p-4 sm:p-6 space-y-3 bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+          <div class="space-y-0.5">
+            <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Transparency</span>
+            <h3 class="text-sm sm:text-base font-black text-slate-900 dark:text-white">Programme Terms &amp; Policies</h3>
           </div>
 
-          <!-- Training -->
-          <div class="sn-card p-5 sm:p-6 space-y-4">
-            <div class="space-y-1">
-              <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Partner Onboarding</span>
-              <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">${aff.partnerTraining.title}</h3>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">${aff.partnerTraining.description}</p>
-            </div>
-            <div class="space-y-2.5">
-              ${aff.partnerTraining.modules.map(mod => `
-                <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
-                  <div class="w-5 h-5 rounded-md bg-brand-500/10 text-brand-500 font-black text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">
-                    ${mod.step.slice(-1)}
-                  </div>
-                  <div>
-                    <h4 class="font-extrabold text-slate-900 dark:text-white">${mod.title}</h4>
-                    <p class="text-[11px] text-slate-500 leading-relaxed">${mod.detail}</p>
-                  </div>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-        </div>
-
-        <!-- Programme Terms & Conditions Section -->
-        <div class="sn-card p-5 sm:p-7 space-y-4 bg-slate-50/70 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-          <div class="space-y-1">
-            <span class="text-[10px] font-black uppercase tracking-wider text-slate-400">Programme Governance</span>
-            <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white">Partner Programme Terms &amp; Conditions</h3>
-            <p class="text-xs text-slate-500 font-medium">Clear, transparent rules governing referral attribution, recurring payouts, and fair play.</p>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            ${aff.programmeTerms.map(term => `
-              <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1">
-                <h4 class="font-extrabold text-slate-900 dark:text-white text-xs">${term.title}</h4>
-                <p class="text-[11px] text-slate-600 dark:text-slate-400 leading-relaxed">${term.detail}</p>
-              </div>
+          <div class="space-y-2 text-xs">
+            ${aff.terms.map(t => `
+              <details class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group cursor-pointer">
+                <summary class="font-bold text-slate-900 dark:text-white flex items-center justify-between select-none">
+                  <span>${t.title}</span>
+                  <i class="fas fa-chevron-down text-[10px] text-slate-400 group-open:rotate-180 transition-transform"></i>
+                </summary>
+                <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed pt-2 mt-1 border-t border-slate-100 dark:border-slate-800">
+                  ${t.detail}
+                </p>
+              </details>
             `).join('')}
           </div>
         </div>
 
-        <!-- In-Page Application Form Container -->
-        <div id="affiliate-apply-form" class="sn-card p-6 sm:p-8 space-y-5 border-2 border-emerald-500/30">
-          <div class="text-center space-y-1 max-w-md mx-auto">
-            <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 uppercase">Apply Now</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Become a ScaleNova Partner</h2>
-            <p class="text-xs text-slate-500 font-medium">Join our growing network of advisors and earn 20% recurring monthly revenue.</p>
+        <!-- In-Page Partner Application Form -->
+        <div id="affiliate-apply-form" class="sn-card p-5 sm:p-7 space-y-4 border-2 border-emerald-500/30">
+          <div class="text-center space-y-0.5 max-w-md mx-auto">
+            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Become a ScaleNova Partner</h2>
+            <p class="text-xs text-slate-500 font-medium">Earn 20% recurring monthly revenue share on referred subscriptions.</p>
           </div>
 
           <div id="affiliateFormContainer">
-            <form id="affiliateForm" onsubmit="ScaleNovaForms.handleAffiliateSubmit(event)" class="space-y-3.5 max-w-2xl mx-auto">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <form id="affiliateForm" onsubmit="ScaleNovaForms.handleAffiliateSubmit(event)" class="space-y-3 max-w-xl mx-auto">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <div>
-                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Full Name *</label>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Full Name *</label>
                   <input type="text" id="affiliateFullName" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Work Email Address *</label>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Work Email Address *</label>
                   <input type="email" id="affiliateEmail" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                 </div>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <div>
-                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Phone / WhatsApp *</label>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Phone / WhatsApp *</label>
                   <input type="tel" id="affiliatePhone" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                 </div>
                 <div>
-                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Partner Category *</label>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Partner Category *</label>
                   <select id="affiliateCategory" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                     <option value="Consultant" selected>Business Consultant / Advisor</option>
                     <option value="Chartered Accountant">Chartered Accountant / Tax Firm</option>
@@ -602,22 +549,17 @@ const ScaleNovaModals = (function() {
               </div>
 
               <div>
-                <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Company Name or LinkedIn Profile URL</label>
+                <label class="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Company or LinkedIn Profile URL</label>
                 <input type="text" id="affiliateCompany" placeholder="e.g. Acme Consulting / linkedin.com/in/..." class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-              </div>
-
-              <div>
-                <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Describe Your Business Network &amp; Client Base</label>
-                <textarea id="affiliateAudience" rows="2" placeholder="Tell us briefly about the types of businesses and industries you work with..." class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-emerald-500 focus:outline-none"></textarea>
               </div>
 
               <div class="flex items-center space-x-2 pt-1">
                 <input type="checkbox" id="affiliateConsent" required class="rounded text-emerald-500 focus:ring-emerald-500">
-                <label for="affiliateConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to the ScaleNova Partner Programme terms (20% net recurring revenue share, monthly Net-30 payout).</label>
+                <label for="affiliateConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to ScaleNova's Affiliate terms (20% net recurring revenue share, monthly Net-30 payout).</label>
               </div>
 
               <div class="pt-2 text-center">
-                <button type="submit" id="submitAffiliateBtn" class="w-full sm:w-auto px-8 py-3 rounded-xl text-xs sn-btn-primary">
+                <button type="submit" id="submitAffiliateBtn" class="w-full sm:w-auto px-7 py-2.5 rounded-xl text-xs sn-btn-primary">
                   Submit Partner Application
                 </button>
               </div>
@@ -649,10 +591,10 @@ const ScaleNovaModals = (function() {
       : SCALENOVA_BLOGS.filter(b => b.category.toLowerCase().includes(selectedCategory.toLowerCase()) || selectedCategory.toLowerCase().includes(b.category.toLowerCase()));
 
     container.innerHTML = `
-      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-10 space-y-8">
+      <div class="max-w-5xl mx-auto p-4 sm:p-6 md:p-8 space-y-8">
         
         <!-- Sticky Navigation Header -->
-        <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
           <button onclick="ScaleNovaModals.close('blogAllModal')" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition" aria-label="Back to Home">
             <i class="fas fa-arrow-left text-xs"></i>
             <span>← Back to Home</span>
@@ -668,37 +610,37 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Blog Hero -->
-        <div class="text-center space-y-3 max-w-3xl mx-auto pt-2">
-          <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+        <div class="text-center space-y-2 max-w-2xl mx-auto pt-1">
+          <span class="px-3 py-0.5 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 uppercase tracking-wider">
             <i class="fas fa-newspaper mr-1 text-brand-500"></i>ScaleNova Insights
           </span>
-          <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+          <h1 class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 dark:text-white">
             Practical Guides for Growing Indian MSMEs
           </h1>
-          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto">
-            Practical technology, automation, and operational strategies to help your business scale efficiently.
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium max-w-lg mx-auto">
+            Practical technology, automation, and operational strategies to help your business scale.
           </p>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center justify-center gap-2 pt-2">
+        <div class="flex flex-wrap items-center justify-center gap-1.5 pt-1">
           ${categories.map(cat => `
-            <button onclick="ScaleNovaModals.openBlogAllArticles('${cat}')" class="px-3.5 py-1.5 rounded-full text-xs font-bold transition ${cat === selectedCategory ? 'sn-gradient-bg text-white shadow-md' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'}">
+            <button onclick="ScaleNovaModals.openBlogAllArticles('${cat}')" class="px-3 py-1 rounded-full text-xs font-bold transition ${cat === selectedCategory ? 'sn-gradient-bg text-white shadow-sm' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'}">
               ${cat}
             </button>
           `).join('')}
         </div>
 
         <!-- All 8 Articles Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 pt-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 pt-1">
           ${filteredBlogs.map(blog => `
-            <article class="sn-card sn-card-hover p-5 sm:p-6 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.close('blogAllModal'); ScaleNovaModals.openBlogArticle('${blog.id}');" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){ScaleNovaModals.close('blogAllModal');ScaleNovaModals.openBlogArticle('${blog.id}');}" aria-label="Read ${blog.title}">
-              <div class="space-y-3">
+            <article class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group cursor-pointer" onclick="ScaleNovaModals.close('blogAllModal'); ScaleNovaModals.openBlogArticle('${blog.id}');" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){ScaleNovaModals.close('blogAllModal');ScaleNovaModals.openBlogArticle('${blog.id}');}" aria-label="Read ${blog.title}">
+              <div class="space-y-2.5">
                 <div class="flex items-center justify-between text-xs">
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
+                  <span class="px-2 py-0.5 rounded-full text-[9px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
                     <i class="${blog.icon} mr-1"></i> ${blog.category}
                   </span>
-                  <span class="text-slate-400 font-medium text-[11px]">${blog.readingTime}</span>
+                  <span class="text-slate-400 font-medium text-[10px]">${blog.readingTime}</span>
                 </div>
 
                 <h3 class="font-black text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors leading-snug">${blog.title}</h3>
@@ -708,7 +650,7 @@ const ScaleNovaModals = (function() {
                 </p>
               </div>
 
-              <div class="pt-3.5 mt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-brand-500 transition-colors">
+              <div class="pt-3 mt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-brand-500 transition-colors">
                 <span>Read Article</span>
                 <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
               </div>
@@ -752,7 +694,7 @@ const ScaleNovaModals = (function() {
     const relatedBlogs = SCALENOVA_BLOGS.filter(b => b.id !== blog.id).slice(0, 2);
 
     contentContainer.innerHTML = `
-      <div class="p-5 sm:p-7 md:p-10 space-y-6 max-w-3xl mx-auto">
+      <div class="p-4 sm:p-6 md:p-8 space-y-6 max-w-3xl mx-auto">
         
         <!-- Sticky Navigation Header -->
         <div class="flex items-center justify-between pb-3.5 border-b border-slate-200 dark:border-slate-800">
@@ -766,12 +708,12 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Article Header -->
-        <div class="space-y-2.5">
+        <div class="space-y-2">
           <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700">
             <i class="${blog.icon} mr-1"></i> ${blog.category}
           </span>
 
-          <h1 class="text-xl sm:text-3xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">${blog.title}</h1>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">${blog.title}</h1>
 
           <div class="flex flex-wrap items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400 font-medium">
             <span><i class="fas fa-user-circle mr-1"></i> ${blog.author}</span>
@@ -788,17 +730,17 @@ const ScaleNovaModals = (function() {
         </div>
 
         <!-- Related Articles & Social Sharing -->
-        <div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-5">
+        <div class="pt-5 border-t border-slate-200 dark:border-slate-800 space-y-4">
           
           <!-- Share Links -->
-          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
-            <span class="font-bold text-slate-700 dark:text-slate-300">Found this guide helpful? Share it:</span>
-            <div class="flex items-center gap-3">
-              <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + window.location.href)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-emerald-500 text-white font-bold flex items-center gap-1.5 hover:bg-emerald-600 transition" aria-label="Share on WhatsApp">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-xs">
+            <span class="font-bold text-slate-700 dark:text-slate-300">Share this guide:</span>
+            <div class="flex items-center gap-2.5">
+              <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(blog.title + ' ' + window.location.href)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-lg bg-emerald-500 text-white font-bold flex items-center gap-1.5 hover:bg-emerald-600 transition" aria-label="Share on WhatsApp">
                 <i class="fab fa-whatsapp"></i>
                 <span>WhatsApp</span>
               </a>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-blue-600 text-white font-bold flex items-center gap-1.5 hover:bg-blue-700 transition" aria-label="Share on LinkedIn">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-lg bg-blue-600 text-white font-bold flex items-center gap-1.5 hover:bg-blue-700 transition" aria-label="Share on LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
                 <span>LinkedIn</span>
               </a>
@@ -806,12 +748,12 @@ const ScaleNovaModals = (function() {
           </div>
 
           <!-- Related Reads -->
-          <div class="space-y-3">
+          <div class="space-y-2.5">
             <h4 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Related Reading</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
               ${relatedBlogs.map(r => `
-                <div class="sn-card p-3.5 space-y-1.5 cursor-pointer hover:border-brand-500/40 transition" onclick="ScaleNovaModals.openBlogArticle('${r.id}')">
-                  <span class="text-[10px] font-bold text-brand-600 dark:text-brand-400">${r.category}</span>
+                <div class="sn-card p-3 space-y-1 cursor-pointer hover:border-brand-500/40 transition" onclick="ScaleNovaModals.openBlogArticle('${r.id}')">
+                  <span class="text-[9px] font-bold text-brand-600 dark:text-brand-400">${r.category}</span>
                   <h5 class="text-xs font-bold text-slate-900 dark:text-white leading-snug line-clamp-2">${r.title}</h5>
                 </div>
               `).join('')}
@@ -819,12 +761,12 @@ const ScaleNovaModals = (function() {
           </div>
 
           <!-- Bottom Demo CTA -->
-          <div class="p-5 rounded-2xl bg-gradient-to-r from-brand-500/10 via-brand-500/5 to-transparent border border-brand-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="p-4 rounded-xl bg-gradient-to-r from-brand-500/10 via-brand-500/5 to-transparent border border-brand-500/20 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="space-y-0.5 text-center sm:text-left">
               <h4 class="text-xs sm:text-sm font-black text-slate-900 dark:text-white">Ready to Unify Your Business Operations?</h4>
               <p class="text-[11px] text-slate-600 dark:text-slate-400">Discover how ScaleNova unifies CRM, ERP, and operations into one connected system.</p>
             </div>
-            <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openDemoModal();" class="px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex-shrink-0">
+            <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openDemoModal();" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex-shrink-0">
               Book a Demo
             </button>
           </div>
