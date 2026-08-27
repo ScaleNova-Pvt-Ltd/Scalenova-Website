@@ -1,5 +1,5 @@
 /**
- * ScaleNova Main Application Bootstrap (Refined UX & Single-Action Cards)
+ * ScaleNova Main Application Bootstrap (SPA & Responsive Engine)
  * 
  * Manages theme switching, mobile drawer navigation, concise homepage rendering,
  * and deep-content SPA triggers.

@@ -69,14 +69,15 @@ html.dark .pricing-toggle-container {
 }
 
 /* --------------------------------------------------------------------------
-   2. Centered Modals & Responsive Popups (Mobile-First SPA Experience)
+   2. Full-Page SPA Overlays & Centered Modals (Mobile-First Experience)
    -------------------------------------------------------------------------- */
+.sn-spa-backdrop,
 .sn-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(3, 7, 18, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 100;
   display: flex;
   align-items: center;
@@ -85,19 +86,53 @@ html.dark .pricing-toggle-container {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
 }
 
 @media (min-width: 640px) {
+  .sn-spa-backdrop,
   .sn-modal-backdrop {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 }
 
+.sn-spa-backdrop.active,
 .sn-modal-backdrop.active {
   opacity: 1;
   pointer-events: auto;
 }
 
+/* Full-Page SPA Overlay Panel */
+.sn-spa-panel {
+  background-color: var(--sn-bg-page);
+  border: 1px solid var(--sn-border);
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 64rem;
+  min-height: calc(100vh - 1.5rem);
+  max-height: calc(100vh - 1.5rem);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6);
+  transform: translateY(12px) scale(0.98);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  margin: auto;
+}
+
+@media (min-width: 640px) {
+  .sn-spa-panel {
+    border-radius: 1.5rem;
+    min-height: calc(100vh - 3rem);
+    max-height: calc(100vh - 3rem);
+  }
+}
+
+.sn-spa-backdrop.active .sn-spa-panel {
+  transform: translateY(0) scale(1);
+}
+
+/* Centered Standard Modal Panel */
 .sn-modal-panel {
   background-color: var(--sn-bg-surface);
   border: 1px solid var(--sn-border);
@@ -111,6 +146,7 @@ html.dark .pricing-toggle-container {
   transform: scale(0.96) translateY(8px);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
+  margin: auto;
 }
 
 @media (min-width: 640px) {
@@ -122,58 +158,6 @@ html.dark .pricing-toggle-container {
 
 .sn-modal-backdrop.active .sn-modal-panel {
   transform: scale(1) translateY(0);
-}
-
-/* Slide-in Drawers (for secondary views) */
-.sn-drawer-backdrop {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(3, 7, 18, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  z-index: 100;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.sn-drawer-backdrop.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.sn-drawer-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 100%;
-  background-color: var(--sn-bg-page);
-  border-left: 1px solid var(--sn-border);
-  z-index: 101;
-  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.4);
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-@media (min-width: 768px) {
-  .sn-drawer-panel {
-    max-width: 44rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .sn-drawer-panel {
-    max-width: 48rem;
-  }
-}
-
-.sn-drawer-backdrop.active .sn-drawer-panel {
-  transform: translateX(0);
 }
 
 /* --------------------------------------------------------------------------
@@ -323,7 +307,7 @@ html.dark .pricing-toggle-container {
 }
 
 /* --------------------------------------------------------------------------
-   5. Interactive Toast Feedback
+   5. Interactive Toast Feedback & Animations
    -------------------------------------------------------------------------- */
 .sn-toast {
   position: fixed;
@@ -351,4 +335,19 @@ html.dark .pricing-toggle-container {
 .sn-toast.active {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

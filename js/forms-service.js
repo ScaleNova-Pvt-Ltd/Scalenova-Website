@@ -1,11 +1,14 @@
 /**
- * ScaleNova Centralized Forms Service & Backend Gateway
+ * ScaleNova Centralized Forms Service & Universal In-Place Confirmation System
  * 
- * Reusable, robust submission handler for:
+ * Reusable submission handlers for:
  * 1. Book Live Demo Request
  * 2. Career Candidate Application
  * 3. Affiliate Programme Registration
  * 4. Newsletter Subscription
+ * 
+ * Replaces form content in-place with a branded confirmation state upon success,
+ * manages button loading states, and handles network edge cases gracefully.
  */
 const ScaleNovaForms = (function() {
 
@@ -110,7 +113,30 @@ const ScaleNovaForms = (function() {
   }
 
   /**
-   * 1. Handle Simplified Book a Live Demo Form Submission
+   * Universal In-Place Confirmation Template Generator
+   */
+  function renderConfirmationState(title, message, returnLabel, returnCallbackName) {
+    return `
+      <div class="p-6 sm:p-8 text-center space-y-4 animate-fade-in-up bg-white dark:bg-slate-900 rounded-2xl border border-emerald-500/30 shadow-xl">
+        <div class="w-14 h-14 rounded-full bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 flex items-center justify-center text-2xl mx-auto shadow-inner">
+          <i class="fas fa-check"></i>
+        </div>
+        <div class="space-y-1.5 max-w-md mx-auto">
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${title}</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${message}</p>
+        </div>
+        <div class="pt-3">
+          <button onclick="${returnCallbackName}" class="px-6 py-2.5 rounded-xl text-xs sn-btn-primary inline-flex items-center gap-2">
+            <i class="fas fa-arrow-left text-[10px]"></i>
+            <span>${returnLabel}</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  /**
+   * 1. Handle Book a Live Demo Form Submission (In-Place Replacement)
    */
   async function handleDemoSubmit(e) {
     e.preventDefault();
@@ -120,14 +146,15 @@ const ScaleNovaForms = (function() {
       return;
     }
 
+    const form = document.getElementById('leadCaptureForm');
+    const container = document.getElementById('demoFormContainer') || form.parentElement;
     const btn = document.getElementById('submitDemoBtn');
     if (!btn || btn.disabled) return;
 
     const originalText = btn.innerHTML;
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Scheduling Demo...';
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Scheduling Walkthrough...';
 
-    // Simplified fields per Rule 15 (Removed Preferred Contact & Employee Size)
     const data = {
       fullName: document.getElementById('nameInput')?.value.trim() || '',
       companyName: document.getElementById('businessInput')?.value.trim() || '',
@@ -144,19 +171,25 @@ const ScaleNovaForms = (function() {
     btn.innerHTML = originalText;
 
     if (result.success) {
-      document.getElementById('leadCaptureForm')?.reset();
-      const successTitle = document.getElementById('successModalTitle');
-      const successDesc = document.getElementById('successModalDesc');
-      if (successTitle) successTitle.textContent = 'Live Demo Request Received';
-      if (successDesc) successDesc.textContent = 'Thank you for connecting with ScaleNova. Our engineering specialist will reach out within 1 business day to confirm your live walkthrough.';
-      ScaleNovaModals.open('successModal');
+      // Replace form in-place with confirmation state
+      const originalFormHtml = form.outerHTML;
+      window.__resetDemoForm = function() {
+        container.innerHTML = originalFormHtml;
+      };
+
+      container.innerHTML = renderConfirmationState(
+        'Walkthrough Request Received',
+        `Thank you, ${data.fullName}. We've received your inquiry for <strong>${data.companyName}</strong>. Our engineering team will review your business requirements and connect with you to confirm your live walkthrough.`,
+        'Submit Another Request',
+        'window.__resetDemoForm()'
+      );
     } else {
       ScaleNovaModals.open('errorModal');
     }
   }
 
   /**
-   * 2. Handle Career Application Submission
+   * 2. Handle Career Application Submission (In-Place Modal Replacement)
    */
   async function handleCareerSubmit(e) {
     e.preventDefault();
@@ -166,6 +199,8 @@ const ScaleNovaForms = (function() {
       return;
     }
 
+    const form = document.getElementById('careerForm');
+    const container = document.getElementById('careerFormContainer') || (form ? form.parentElement : null);
     const btn = document.getElementById('submitCareerBtn');
     if (!btn || btn.disabled) return;
 
@@ -184,9 +219,12 @@ const ScaleNovaForms = (function() {
       }
     }
 
+    const roleName = document.getElementById('appRoleInput')?.value || 'General Application';
+    const applicantName = document.getElementById('appFullName')?.value.trim() || '';
+
     const data = {
-      role: document.getElementById('appRoleInput')?.value || 'General Application',
-      fullName: document.getElementById('appFullName')?.value.trim() || '',
+      role: roleName,
+      fullName: applicantName,
       email: document.getElementById('appEmail')?.value.trim() || '',
       phone: document.getElementById('appPhone')?.value.trim() || '',
       location: document.getElementById('appLocation')?.value.trim() || '',
@@ -204,13 +242,15 @@ const ScaleNovaForms = (function() {
     btn.disabled = false;
     btn.innerHTML = originalText;
 
-    if (result.success) {
+    if (result.success && container) {
+      container.innerHTML = renderConfirmationState(
+        'Application Received!',
+        `Thank you for applying for <strong>${roleName}</strong>, ${applicantName}. We've received your profile and our team will review your qualifications. If your profile matches our requirements, we'll reach out to schedule an interview.`,
+        'Back to Careers',
+        "ScaleNovaModals.close('careerAppModal'); ScaleNovaModals.openCareersPage();"
+      );
+    } else if (result.success) {
       ScaleNovaModals.close('careerAppModal');
-      document.getElementById('careerForm')?.reset();
-      const successTitle = document.getElementById('successModalTitle');
-      const successDesc = document.getElementById('successModalDesc');
-      if (successTitle) successTitle.textContent = 'Application Submitted Successfully';
-      if (successDesc) successDesc.textContent = 'Thank you for your interest in joining ScaleNova. Our team will review your background and reach out to schedule an interview.';
       ScaleNovaModals.open('successModal');
     } else {
       ScaleNovaModals.open('errorModal');
@@ -218,7 +258,7 @@ const ScaleNovaForms = (function() {
   }
 
   /**
-   * 3. Handle Affiliate Programme Application
+   * 3. Handle Affiliate Programme Application (In-Place Replacement)
    */
   async function handleAffiliateSubmit(e) {
     e.preventDefault();
@@ -228,6 +268,8 @@ const ScaleNovaForms = (function() {
       return;
     }
 
+    const form = document.getElementById('affiliateForm');
+    const container = document.getElementById('affiliateFormContainer') || (form ? form.parentElement : null);
     const btn = document.getElementById('submitAffiliateBtn');
     if (!btn || btn.disabled) return;
 
@@ -235,8 +277,10 @@ const ScaleNovaForms = (function() {
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting Partner Application...';
 
+    const partnerName = document.getElementById('affiliateFullName')?.value.trim() || '';
+
     const data = {
-      fullName: document.getElementById('affiliateFullName')?.value.trim() || '',
+      fullName: partnerName,
       email: document.getElementById('affiliateEmail')?.value.trim() || '',
       phone: document.getElementById('affiliatePhone')?.value.trim() || '',
       partnerCategory: document.getElementById('affiliateCategory')?.value || 'Consultant',
@@ -250,13 +294,15 @@ const ScaleNovaForms = (function() {
     btn.disabled = false;
     btn.innerHTML = originalText;
 
-    if (result.success) {
+    if (result.success && container) {
+      container.innerHTML = renderConfirmationState(
+        'Partner Application Received!',
+        `Thank you for applying to the ScaleNova Partner Network, ${partnerName}. We've received your application and our partner operations team will verify your details and send your dedicated referral dashboard access.`,
+        'Back to Affiliate Programme',
+        "ScaleNovaModals.close('affiliateModal'); ScaleNovaModals.openAffiliatePage();"
+      );
+    } else if (result.success) {
       ScaleNovaModals.close('affiliateModal');
-      document.getElementById('affiliateForm')?.reset();
-      const successTitle = document.getElementById('successModalTitle');
-      const successDesc = document.getElementById('successModalDesc');
-      if (successTitle) successTitle.textContent = 'Partner Application Received';
-      if (successDesc) successDesc.textContent = 'Thank you for applying to the ScaleNova Partner Network. Our partner operations team will verify your details and send your dedicated referral dashboard access.';
       ScaleNovaModals.open('successModal');
     } else {
       ScaleNovaModals.open('errorModal');
@@ -264,7 +310,7 @@ const ScaleNovaForms = (function() {
   }
 
   /**
-   * 4. Handle Newsletter Subscription
+   * 4. Handle Newsletter Subscription (In-Place Toast & State)
    */
   async function handleNewsletterSubmit(e) {
     e.preventDefault();
@@ -290,7 +336,7 @@ const ScaleNovaForms = (function() {
       form.reset();
       showToast('Thank you for subscribing to ScaleNova MSME Insights!');
     } else {
-      showToast('Subscription failed. Please try again.');
+      showToast('Subscription failed. Please check connection.');
     }
   }
 
