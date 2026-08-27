@@ -81,44 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
   }
 
-  // 4. Render 3 Visual Blog Preview Cards on Homepage (Visual-First & Concise)
-  const blogContainer = document.getElementById('blogGridContainer');
-  if (blogContainer && typeof SCALENOVA_BLOGS !== 'undefined') {
-    const previewBlogs = SCALENOVA_BLOGS.slice(0, 3);
-    blogContainer.innerHTML = previewBlogs.map(b => `
-      <article class="sn-card sn-card-hover overflow-hidden flex flex-col justify-between group cursor-pointer border border-slate-200 dark:border-slate-800" onclick="ScaleNovaModals.openBlogArticle('${b.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openBlogArticle('${b.id}')" aria-label="Read ${b.title}">
-        
-        <!-- Visual Top Graphic Banner -->
-        <div class="h-28 sm:h-32 bg-gradient-to-tr from-brand-900/30 via-slate-900/40 to-brand-600/20 relative flex items-center justify-center overflow-hidden border-b border-slate-200 dark:border-slate-800">
-          <div class="absolute -right-4 -bottom-4 w-24 h-24 bg-brand-500/10 rounded-full blur-xl group-hover:scale-125 transition-transform duration-500"></div>
-          <div class="w-12 h-12 rounded-2xl bg-white/90 dark:bg-slate-800/90 shadow-md flex items-center justify-center text-brand-600 dark:text-brand-400 text-xl group-hover:scale-110 transition-transform">
-            <i class="${b.icon}"></i>
-          </div>
-          <span class="absolute top-2.5 right-2.5 px-2 py-0.5 rounded-full text-[9px] font-extrabold bg-slate-900/80 text-slate-300 backdrop-blur-sm">
-            ${b.readingTime}
-          </span>
-        </div>
-
-        <div class="p-4 sm:p-5 space-y-2 flex-grow flex flex-col justify-between">
-          <div class="space-y-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">
-              ${b.category}
-            </span>
-            <h3 class="font-black text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors leading-snug">
-              ${b.title}
-            </h3>
-          </div>
-
-          <div class="pt-3 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-bold text-slate-500 dark:text-slate-400 group-hover:text-brand-500 transition-colors">
-            <span>Read Article</span>
-            <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
-          </div>
-        </div>
-
-      </article>
-    `).join('');
-  }
-
-  // 5. Network Offline/Online Listener
+  // 4. Network Offline/Online Listener
   window.addEventListener('offline', () => ScaleNovaModals.open('offlineModal'));
 });

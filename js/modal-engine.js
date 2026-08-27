@@ -1065,16 +1065,195 @@ const ScaleNovaModals = (function() {
     open('planDetailModal');
   }
 
-  // Open Live Demo trigger
+  /* ==========================================================================
+     7. CONTACT & LIVE DEMO SPA VIEW
+     ========================================================================== */
+  function openContactPage(initialRequirement = 'All-in-One Business OS') {
+    const modal = document.getElementById('contactModal');
+    const container = document.getElementById('contactContent');
+    if (!modal || !container) return;
+
+    modal.dataset.hash = 'contact';
+    document.title = 'Contact ScaleNova | Connect With Our Team';
+
+    const phone = (typeof SCALENOVA_CONFIG !== 'undefined' && SCALENOVA_CONFIG.company && SCALENOVA_CONFIG.company.phone) ? SCALENOVA_CONFIG.company.phone : '+91 7801049178';
+    const email = (typeof SCALENOVA_CONFIG !== 'undefined' && SCALENOVA_CONFIG.company && SCALENOVA_CONFIG.company.email) ? SCALENOVA_CONFIG.company.email : 'info@scalenovasys.com';
+    const linkedin = (typeof SCALENOVA_CONFIG !== 'undefined' && SCALENOVA_CONFIG.social && SCALENOVA_CONFIG.social.linkedin) ? SCALENOVA_CONFIG.social.linkedin : 'https://www.linkedin.com/company/scalenovasys/';
+    const instagram = (typeof SCALENOVA_CONFIG !== 'undefined' && SCALENOVA_CONFIG.social && SCALENOVA_CONFIG.social.instagram) ? SCALENOVA_CONFIG.social.instagram : 'https://www.instagram.com/scalenovasys/';
+    const whatsappUrl = `https://wa.me/${phone.replace(/[^0-9]/g, '')}?text=Hi%20ScaleNova%20team%2C%20I%20would%20like%20to%20connect%20with%20ScaleNova%20to%20learn%20more%20about%20your%20business%20solutions.`;
+
+    container.innerHTML = `
+      <!-- SPA Top Navigation Bar (No X Button) -->
+      <div class="sn-spa-navbar">
+        <div class="flex items-center gap-1.5">
+          <button onclick="ScaleNovaModals.goBack('contactModal')" class="sn-spa-nav-btn" aria-label="Go Back">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+          <div class="sn-spa-breadcrumb">
+            <a href="#hero" onclick="ScaleNovaModals.close('contactModal')">Home</a>
+            <span class="sn-spa-breadcrumb-sep">/</span>
+            <span class="sn-spa-breadcrumb-current">Contact</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Contact Layout (Desktop: 2 Columns | Mobile: Stacked) -->
+      <div class="p-5 sm:p-8 md:p-10 max-w-6xl mx-auto space-y-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          
+          <!-- LEFT SIDE: CONTACT INFORMATION PANEL -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="space-y-2">
+              <span class="px-3 py-1 rounded-full text-[10px] font-black bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+                <i class="fas fa-headset mr-1"></i>Direct Connection
+              </span>
+              <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
+                Let's Connect
+              </h1>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
+                Have a question, need a demo, or want to discuss your business requirements? We're here to help.
+              </p>
+            </div>
+
+            <!-- Contact Cards -->
+            <div class="space-y-3">
+              <!-- Phone -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 group hover:border-brand-500 transition-colors shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-base flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <i class="fas fa-phone-volume"></i>
+                </div>
+                <div>
+                  <span class="block text-[10px] font-black uppercase tracking-wider text-slate-400">Phone</span>
+                  <a href="tel:${phone}" class="text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition" aria-label="Call ${phone}">${phone}</a>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center space-x-3.5 group hover:border-brand-500 transition-colors shadow-sm">
+                <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-base flex-shrink-0 group-hover:scale-105 transition-transform">
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+                <div>
+                  <span class="block text-[10px] font-black uppercase tracking-wider text-slate-400">Email</span>
+                  <a href="mailto:${email}" class="text-sm font-black text-slate-900 dark:text-white hover:text-brand-500 transition" aria-label="Email ${email}">${email}</a>
+                </div>
+              </div>
+
+              <!-- WhatsApp -->
+              <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between group hover:border-emerald-500 transition-colors shadow-sm">
+                <div class="flex items-center space-x-3.5">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i class="fab fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] font-black uppercase tracking-wider text-slate-400">WhatsApp</span>
+                    <span class="text-xs sm:text-sm font-black text-slate-900 dark:text-white">Message us directly</span>
+                  </div>
+                </div>
+                <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-500 text-white hover:bg-emerald-600 transition flex items-center gap-1.5 flex-shrink-0" aria-label="Message on WhatsApp">
+                  <span>Message</span>
+                  <i class="fas fa-arrow-right text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-2">
+              <span class="block text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2.5">Social</span>
+              <div class="flex items-center space-x-2.5">
+                <a href="${linkedin}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-white hover:bg-brand-500 hover:border-brand-500 transition-all flex items-center gap-2" aria-label="ScaleNova on LinkedIn">
+                  <i class="fab fa-linkedin-in text-xs"></i>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="${instagram}" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-white hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 transition-all flex items-center gap-2" aria-label="ScaleNova on Instagram">
+                  <i class="fab fa-instagram text-xs"></i>
+                  <span>Instagram</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: CONTACT & DEMO REQUEST FORM -->
+          <div class="lg:col-span-7">
+            <div class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xl rounded-2xl" id="contactFormContainer">
+              <div class="mb-5 space-y-1">
+                <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">
+                  Send a Message / Request Demo
+                </h2>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                  Fill out your details and our team will get back to you promptly.
+                </p>
+              </div>
+
+              <form id="contactForm" onsubmit="ScaleNovaForms.handleContactSubmit(event)" class="space-y-3.5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Full Name *</label>
+                    <input type="text" id="contactFullName" required placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Business Name *</label>
+                    <input type="text" id="contactBusinessName" required placeholder="Company or Firm Name" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  <div>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Work Email *</label>
+                    <input type="email" id="contactEmail" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                  </div>
+                  <div>
+                    <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Phone / WhatsApp *</label>
+                    <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Primary Operational Requirement</label>
+                  <select id="contactRequirement" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                    <option value="All-in-One Business OS" ${initialRequirement === 'All-in-One Business OS' || initialRequirement === 'demo' ? 'selected' : ''}>All-in-One Business OS (CRM + ERP + HR + Finance)</option>
+                    <option value="CRM & Sales Pipeline" ${initialRequirement === 'crm' ? 'selected' : ''}>CRM &amp; Sales Pipeline</option>
+                    <option value="ERP & Inventory Management" ${initialRequirement === 'erp' ? 'selected' : ''}>ERP &amp; Inventory Management</option>
+                    <option value="HR & Team Attendance" ${initialRequirement === 'hr' ? 'selected' : ''}>HR &amp; Team Attendance</option>
+                    <option value="Executive BI & Multi-Branch" ${initialRequirement === 'bi' ? 'selected' : ''}>Executive BI &amp; Multi-Branch</option>
+                    <option value="General Inquiry" ${initialRequirement === 'general' ? 'selected' : ''}>General Inquiry / Partnership</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Message / Specific Requirements (Optional)</label>
+                  <textarea id="contactMessage" rows="3" placeholder="Tell us about your team size, current tools, or specific workflows..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/60 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+                </div>
+
+                <div class="pt-1 flex items-center space-x-2">
+                  <input type="checkbox" id="contactConsent" required class="rounded text-brand-500 focus:ring-brand-500">
+                  <label for="contactConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I agree to receive a personalized response and platform details from ScaleNova.</label>
+                </div>
+
+                <button type="submit" id="submitContactBtn" class="w-full py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2 mt-2">
+                  <i class="fas fa-paper-plane text-xs"></i>
+                  <span>Send Message / Schedule Walkthrough</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+
+    open('contactModal');
+  }
+
+  // Open Live Demo trigger (opens Contact SPA page in demo mode)
   function openDemoModal() {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-      const nameInput = document.getElementById('nameInput');
-      if (nameInput) {
-        setTimeout(() => nameInput.focus(), 600);
-      }
-    }
+    openContactPage('demo');
   }
 
   /* ==========================================================================
@@ -1107,13 +1286,13 @@ const ScaleNovaModals = (function() {
       openBlogArticle(slug);
     } else if (hash.startsWith('feature/')) {
       const slug = hash.replace('feature/', '');
-      const feature = SCALENOVA_FEATURES.find(f => f.slug === slug || f.id === slug);
+      const feature = (typeof SCALENOVA_FEATURES !== 'undefined') ? SCALENOVA_FEATURES.find(f => f.slug === slug || f.id === slug) : null;
       if (feature) openFeatureDetail(feature.id);
     } else if (hash.startsWith('plan/')) {
       const planId = hash.replace('plan/', '');
       openPlanDetail(planId);
-    } else if (hash === 'demo') {
-      openDemoModal();
+    } else if (hash === 'contact' || hash === 'contact-us' || hash === 'demo') {
+      openContactPage(hash === 'demo' ? 'demo' : 'All-in-One Business OS');
     }
   }
 
@@ -1143,6 +1322,7 @@ const ScaleNovaModals = (function() {
     openBlogArticle,
     openFeatureDetail,
     openPlanDetail,
+    openContactPage,
     openDemoModal
   };
 })();
