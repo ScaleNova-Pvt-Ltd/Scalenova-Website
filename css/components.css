@@ -84,6 +84,7 @@
 }
 
 @media (min-width: 640px) {
+
   .sn-spa-backdrop,
   .sn-modal-backdrop {
     padding: 1.5rem;
