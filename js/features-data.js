@@ -1,7 +1,7 @@
 /**
  * ScaleNova 6 Core Business Features Deep-Dive Dataset
  * 
- * Defines concise homepage summaries and comprehensive interactive data for drawer views.
+ * Defines concise homepage card summaries and comprehensive interactive data for centered modal views.
  */
 const SCALENOVA_FEATURES = [
   {
@@ -9,16 +9,10 @@ const SCALENOVA_FEATURES = [
     slug: "centralized-crm-database",
     title: "Centralized CRM & Database",
     shortTitle: "CRM & Database",
-    shortSummary: "Manage leads, customers, interactions, and sales workflows in one connected workspace.",
+    shortSummary: "Unify leads, customer interactions, and sales pipelines in one workspace. Reduce duplicate records and keep every opportunity moving.",
     icon: "fas fa-database",
     badge: "Customer Growth Engine",
     color: "brand",
-    summary4Lines: [
-      "Unifies customer leads, communication history, and sales pipelines in one workspace.",
-      "Eliminates duplicate spreadsheets and ensures every lead gets timely follow-up.",
-      "Accelerates deal closing cycles through automated reminders and structured stages.",
-      "Enables Indian MSMEs to scale customer acquisition without losing lead context."
-    ],
     fullDetails: {
       headline: "Eliminate Duplicate Records and Accelerate Your Sales Pipeline",
       whatItDoes: "Centralizes every lead, prospect, customer interaction, deal stage, and follow-up history into one structured, searchable workspace across your entire sales and support teams.",
@@ -52,16 +46,10 @@ const SCALENOVA_FEATURES = [
     slug: "erp-financial-tracking",
     title: "ERP & Financial Tracking",
     shortTitle: "ERP & Financials",
-    shortSummary: "Connect inventory, purchasing, invoicing, and key business operations.",
+    shortSummary: "Connect inventory, purchasing, invoicing, and core operations in one ledger. Prevent stockouts and track receivables in real time.",
     icon: "fas fa-chart-pie",
     badge: "Connected Operations",
     color: "blue",
-    summary4Lines: [
-      "Connects inventory, purchasing, invoicing, and business transaction workflows.",
-      "Replaces multiple disconnected tools with a unified operational ledger.",
-      "Provides real-time visibility into stock levels, vendor orders, and receivable aging.",
-      "Helps MSMEs maintain healthy working capital and prevent stockouts or overbuying."
-    ],
     fullDetails: {
       headline: "Connect Inventory, Purchasing, and Invoicing in One Reliable System",
       whatItDoes: "Unifies inventory management, purchase orders, billing, and core financial transaction tracking so physical goods, supplier orders, and customer billing always stay in sync.",
@@ -95,16 +83,10 @@ const SCALENOVA_FEATURES = [
     slug: "hr-employee-management",
     title: "HR & Employee Management",
     shortTitle: "HR & Workforce",
-    shortSummary: "Manage employees, attendance, leave, and team workflows more efficiently.",
+    shortSummary: "Manage employee records, daily attendance, and leave approvals effortlessly. Standardize team coordination across branches.",
     icon: "fas fa-users-gear",
     badge: "Workforce Efficiency",
     color: "emerald",
-    summary4Lines: [
-      "Manages employee records, attendance records, leave approvals, and team roles.",
-      "Eliminates paper registers, biometric sync confusion, and manual leave calculations.",
-      "Standardizes internal employee requests and departmental coordination.",
-      "Frees business owners and managers from repetitive administrative tasks."
-    ],
     fullDetails: {
       headline: "Structured Team Operations, Attendance, and Leave Workflows",
       whatItDoes: "Provides a centralized digital workspace for staff records, daily attendance tracking, leave applications and approvals, department structures, and internal employee requests.",
@@ -138,16 +120,10 @@ const SCALENOVA_FEATURES = [
     slug: "cloud-based-security",
     title: "Cloud-Based Security",
     shortTitle: "Cloud Security",
-    shortSummary: "Protect business information with controlled access and managed cloud infrastructure.",
+    shortSummary: "Safeguard business data with role-based access control and encrypted cloud backups. Protect sensitive customer and profit information.",
     icon: "fas fa-shield-halved",
     badge: "Data Governance",
     color: "cyan",
-    summary4Lines: [
-      "Protects business information through role-based access control and encryption.",
-      "Ensures each team member only accesses data relevant to their specific role.",
-      "Maintains dependable cloud infrastructure with regular backups and updates.",
-      "Safeguards company data from device failures, accidental loss, and unauthorized access."
-    ],
     fullDetails: {
       headline: "Role-Based Access Controls and Dependable Cloud Infrastructure",
       whatItDoes: "Implements strict role-based access permissions, encrypted data transmission, managed cloud hosting, and continuous operational maintenance for your company's proprietary data.",
@@ -181,16 +157,10 @@ const SCALENOVA_FEATURES = [
     slug: "project-planning-tasks",
     title: "Project Planning & Tasks",
     shortTitle: "Projects & Tasks",
-    shortSummary: "Plan work, assign tasks, track milestones, and keep teams aligned.",
+    shortSummary: "Organize deliverables, assign task ownership, and track milestones on visual boards. Keep internal teams aligned to deliver on schedule.",
     icon: "fas fa-list-check",
     badge: "Execution Clarity",
     color: "purple",
-    summary4Lines: [
-      "Organizes client projects, team task assignments, timelines, and milestones.",
-      "Provides complete visibility into task progress and pending deliverables.",
-      "Reduces internal communication gaps and missed client commitments.",
-      "Helps businesses deliver services and production orders consistently on schedule."
-    ],
     fullDetails: {
       headline: "Plan Milestones, Assign Responsibilities, and Deliver on Schedule",
       whatItDoes: "Enables teams to coordinate complex client deliverables, manufacturing orders, field installations, and internal initiatives with clear ownership, due dates, and milestone tracking.",
@@ -224,16 +194,10 @@ const SCALENOVA_FEATURES = [
     slug: "executive-bi-dashboards",
     title: "Executive BI Dashboards",
     shortTitle: "Executive BI",
-    shortSummary: "Turn business data into useful dashboards and insights for better decisions.",
+    shortSummary: "Turn operational transactions into clear visual KPI dashboards. Monitor sales velocity and business health from anywhere.",
     icon: "fas fa-chart-line",
     badge: "Decision Intelligence",
     color: "amber",
-    summary4Lines: [
-      "Transforms daily operational data into visual, actionable business intelligence.",
-      "Enables business owners and leaders to monitor vital sales and operational KPIs.",
-      "Identifies pipeline bottlenecks, inventory turnover trends, and top performers.",
-      "Supports informed, data-driven decisions for sustainable business growth."
-    ],
     fullDetails: {
       headline: "Actionable Operational Visibility to Make More Informed Decisions",
       whatItDoes: "Aggregates real-time metrics across sales, inventory, projects, and workforce activity into visual executive dashboards, giving leadership clarity on business health at a glance.",

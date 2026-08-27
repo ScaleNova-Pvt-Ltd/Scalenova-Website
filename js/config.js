@@ -29,9 +29,8 @@ const SCALENOVA_CONFIG = {
   social: {
     // Official public LinkedIn company URL
     linkedin: "https://www.linkedin.com/company/scalenovasystems",
-    instagram: "https://www.instagram.com/scalenovasystems",
-    youtube: "https://www.youtube.com/@scalenovasystems",
-    twitter: "https://x.com/scalenovasys"
+    // Official Instagram profile
+    instagram: "https://www.instagram.com/scalenovasys/"
   },
 
   pricing: {
