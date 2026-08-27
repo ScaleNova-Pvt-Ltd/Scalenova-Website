@@ -1,0 +1,276 @@
+/* ==========================================================================
+   ScaleNova Components & Interactive UI Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Pricing Toggle Switch Component
+   -------------------------------------------------------------------------- */
+.pricing-toggle-container {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(241, 245, 249, 0.9);
+  border: 1px solid var(--sn-border);
+  padding: 0.25rem;
+  border-radius: 9999px;
+  position: relative;
+  user-select: none;
+}
+
+html.dark .pricing-toggle-container {
+  background-color: rgba(15, 23, 42, 0.8);
+}
+
+.pricing-toggle-btn {
+  padding: 0.5rem 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--sn-text-muted);
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.pricing-toggle-btn.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #7F00FF 0%, #4682B4 100%);
+  box-shadow: 0 4px 12px rgba(127, 0, 255, 0.3);
+}
+
+.discount-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   2. Modals & Detail Drawers (SPA Experience)
+   -------------------------------------------------------------------------- */
+.sn-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sn-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sn-modal-panel {
+  background-color: var(--sn-bg-surface);
+  border: 1px solid var(--sn-border);
+  border-radius: 1.5rem;
+  max-height: 90vh;
+  width: 100%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.96) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.sn-modal-backdrop.active .sn-modal-panel {
+  transform: scale(1) translateY(0);
+}
+
+/* Large SPA Detail Drawer (Right Slide-In) */
+.sn-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 7, 18, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.sn-drawer-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sn-drawer-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 46rem;
+  background-color: var(--sn-bg-page);
+  border-left: 1px solid var(--sn-border);
+  z-index: 101;
+  box-shadow: -10px 0 35px rgba(0, 0, 0, 0.4);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sn-drawer-backdrop.active .sn-drawer-panel {
+  transform: translateX(0);
+}
+
+/* --------------------------------------------------------------------------
+   3. Blog Reader & Typography Formatting
+   -------------------------------------------------------------------------- */
+.blog-content-body {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: var(--sn-text-secondary);
+}
+
+.blog-content-body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--sn-text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.blog-content-body h4 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--sn-brand-500);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-content-body p {
+  margin-bottom: 1rem;
+}
+
+.blog-content-body ul, .blog-content-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content-body li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content-body strong {
+  color: var(--sn-text-primary);
+  font-weight: 700;
+}
+
+.blog-content-body code {
+  background-color: var(--sn-bg-surface-alt);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  font-size: 0.8125rem;
+  font-family: var(--sn-font-mono);
+}
+
+.blog-content-body pre {
+  background-color: var(--sn-brand-900);
+  color: #38bdf8;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  margin: 1.25rem 0;
+  border: 1px solid var(--sn-border);
+}
+
+/* --------------------------------------------------------------------------
+   4. Floating Input Labels & Modern Form Elements
+   -------------------------------------------------------------------------- */
+.floating-group {
+  position: relative;
+}
+
+.floating-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--sn-border);
+  background-color: var(--sn-bg-surface);
+  color: var(--sn-text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.floating-input:focus {
+  border-color: var(--sn-brand-500);
+  box-shadow: 0 0 0 3px rgba(127, 0, 255, 0.15);
+}
+
+.floating-label {
+  position: absolute;
+  left: 1rem;
+  top: 0.875rem;
+  font-size: 0.875rem;
+  color: var(--sn-text-muted);
+  pointer-events: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.floating-input:focus ~ .floating-label,
+.floating-input:not(:placeholder-shown) ~ .floating-label {
+  transform: translateY(-1.5rem) scale(0.85);
+  transform-origin: left top;
+  color: var(--sn-brand-500);
+  font-weight: 700;
+  background-color: var(--sn-bg-page);
+  padding: 0 0.375rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Interactive Toast / Alert Feedback
+   -------------------------------------------------------------------------- */
+.sn-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background-color: var(--sn-brand-900);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 120;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sn-toast.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}

@@ -1,0 +1,209 @@
+/* ==========================================================================
+   ScaleNova Design System & Core Typography Tokens (Vanilla CSS)
+   ========================================================================== */
+
+:root {
+  /* Brand Color Tokens */
+  --sn-brand-50: #f5f0ff;
+  --sn-brand-100: #ebdfff;
+  --sn-brand-200: #d6bfff;
+  --sn-brand-300: #b88dff;
+  --sn-brand-400: #9b5cf6;
+  --sn-brand-500: #7F00FF; /* Primary ScaleNova Purple */
+  --sn-brand-600: #6600cc;
+  --sn-brand-700: #4682B4; /* Accent Steel Blue */
+  --sn-brand-800: #2c5a80;
+  --sn-brand-900: #0B0F19; /* Deep Space Slate */
+  --sn-brand-950: #030712;
+
+  /* Accent Glows */
+  --sn-cyan-glow: #00F0FF;
+  --sn-emerald: #10b981;
+  --sn-amber: #f59e0b;
+
+  /* Surface & Background Tokens - Light */
+  --sn-bg-page: #ffffff;
+  --sn-bg-surface: rgba(255, 255, 255, 0.92);
+  --sn-bg-surface-alt: #f8fafc;
+  --sn-border: rgba(226, 232, 240, 0.9);
+  --sn-border-focus: rgba(127, 0, 255, 0.4);
+  --sn-text-primary: #0f172a;
+  --sn-text-secondary: #475569;
+  --sn-text-muted: #64748b;
+  --sn-shadow-card: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  --sn-shadow-hover: 0 20px 40px -10px rgba(127, 0, 255, 0.12), 0 0 20px rgba(70, 130, 180, 0.08);
+
+  /* Typography */
+  --sn-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --sn-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Dark Mode Overrides */
+html.dark {
+  --sn-bg-page: #030712;
+  --sn-bg-surface: rgba(15, 23, 42, 0.85);
+  --sn-bg-surface-alt: rgba(11, 15, 25, 0.7);
+  --sn-border: rgba(255, 255, 255, 0.08);
+  --sn-border-focus: rgba(127, 0, 255, 0.5);
+  --sn-text-primary: #f8fafc;
+  --sn-text-secondary: #cbd5e1;
+  --sn-text-muted: #94a3b8;
+  --sn-shadow-card: 0 4px 25px -5px rgba(0, 0, 0, 0.4);
+  --sn-shadow-hover: 0 20px 40px -10px rgba(127, 0, 255, 0.25), 0 0 25px rgba(0, 240, 255, 0.1);
+}
+
+/* Base Document Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--sn-font-sans);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--sn-bg-page);
+  color: var(--sn-text-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Selection Color */
+::selection {
+  background-color: var(--sn-brand-500);
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--sn-bg-page);
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sn-brand-500);
+}
+
+/* Gradient Utility Tokens */
+.sn-gradient-text {
+  background: linear-gradient(135deg, #7F00FF 0%, #38BDF8 50%, #4682B4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sn-gradient-bg {
+  background: linear-gradient(135deg, #7F00FF 0%, #4682B4 100%);
+}
+
+.sn-gradient-border {
+  border-image: linear-gradient(135deg, #7F00FF, #38BDF8) 1;
+}
+
+/* Glow Keyframe Animations */
+@keyframes snGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(127, 0, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(127, 0, 255, 0.4), 0 0 15px rgba(56, 189, 248, 0.25);
+  }
+}
+
+.sn-glow-pulse {
+  animation: snGlowPulse 4s ease-in-out infinite;
+}
+
+/* Primary Button Design */
+.sn-btn-primary {
+  background: linear-gradient(135deg, #7F00FF 0%, #4682B4 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px -2px rgba(127, 0, 255, 0.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sn-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -2px rgba(127, 0, 255, 0.5);
+  filter: brightness(1.05);
+}
+
+.sn-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Button Design */
+.sn-btn-secondary {
+  background-color: transparent;
+  color: var(--sn-text-primary);
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--sn-border);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.sn-btn-secondary:hover {
+  background-color: var(--sn-bg-surface-alt);
+  border-color: var(--sn-brand-500);
+  transform: translateY(-2px);
+}
+
+/* Reusable Glassmorphism Card Token */
+.sn-card {
+  background-color: var(--sn-bg-surface);
+  border: 1px solid var(--sn-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--sn-shadow-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sn-card-hover {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.sn-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--sn-border-focus);
+  box-shadow: var(--sn-shadow-hover);
+}
+
+/* Accessibility: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
