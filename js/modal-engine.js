@@ -822,14 +822,19 @@ const ScaleNovaModals = (function() {
 
       <div class="p-5 sm:p-7 space-y-5">
         <!-- Feature Header -->
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
-            <i class="${feature.icon}"></i>
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
+              <i class="${feature.icon}"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.fullDetails.title}</h2>
+              <p class="text-xs sm:text-sm font-bold text-brand-600 dark:text-brand-400">${feature.fullDetails.subtitle}</p>
+            </div>
           </div>
-          <div>
-            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">${feature.badge}</span>
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.fullDetails.title}</h2>
-          </div>
+          <span class="inline-flex px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            ${feature.fullDetails.flowText || feature.flowLabel}
+          </span>
         </div>
 
         <!-- What It Does & Business Value Callouts -->
@@ -844,7 +849,7 @@ const ScaleNovaModals = (function() {
           </div>
         </div>
 
-        <!-- Key Capabilities (3-5 short bullets) -->
+        <!-- Key Capabilities -->
         <div class="space-y-2.5">
           <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
             <i class="fas fa-circle-check text-brand-500"></i> Key Capabilities
