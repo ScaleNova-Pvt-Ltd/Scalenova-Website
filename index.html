@@ -299,25 +299,25 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- 2. CORE CAPABILITIES (6 CONCISE CARDS) -->
+  <!-- 2. CANONICAL CONNECTED BUSINESS MODULES (SINGLE SOURCE OF TRUTH: EXACTLY 8 CARDS) -->
   <section id="solutions" class="py-12 sm:py-16 px-4 md:px-8 bg-slate-50/60 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-7xl mx-auto space-y-8 sm:space-y-10">
       
       <!-- Section Header -->
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-          <i class="fas fa-cubes mr-1" aria-hidden="true"></i>Core Capabilities
+          <i class="fas fa-cubes mr-1" aria-hidden="true"></i>Business Modules
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-          Why ScaleNova Business OS?
+          Connected Business Modules
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium leading-relaxed">
-          ScaleNova connects sales, operations, people, projects and business intelligence in one Business OS — giving your team one system to run the business.
+          Explore the core areas connected through ScaleNova Business OS.
         </p>
       </div>
 
-      <!-- Dynamic Features Grid Container (Rendered from js/features-data.js with single 'View Details' CTA) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6" id="featuresGridContainer">
+      <!-- Single Canonical 8-Card Grid Container (Rendered dynamically from js/features-data.js) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" id="featuresGridContainer">
         <!-- Rendered by js/app.js -->
       </div>
 
@@ -365,139 +365,6 @@ tailwind.config = {
             <i class="fas fa-laptop text-brand-500"></i>
             <span>ScaleNova Business OS Executive Dashboard</span>
           </div>
-          <span class="text-[9px] uppercase tracking-wider font-bold text-slate-400">Web &amp; Mobile Responsive</span>
-        </div>
-      </div>
-
-      <!-- CONNECTED BUSINESS MODULES SECTION (8 MODULES WITH DETAIL POPUP TRIGGERS) -->
-      <div class="space-y-4">
-        <div class="text-center max-w-2xl mx-auto space-y-1">
-          <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Connected Business Modules</h3>
-          <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Click any module to view key capabilities and operational workflows.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
-          <!-- 1. Executive Dashboard -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('executive')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('executive')" aria-label="View Executive Dashboard Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-chart-pie"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Executive Dashboard</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Revenue overview, sales velocity, outstanding receivables and core business KPIs.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-brand-600 dark:text-brand-400 group-hover:text-brand-500 transition-colors">
-              <span>View: Executive Summary</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 2. CRM & Sales -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('crm')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('crm')" aria-label="View CRM & Sales Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-database"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">CRM &amp; Sales</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Inbound lead capture, visual deal stages, contact histories and proposal management.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-500 transition-colors">
-              <span>Flow: Lead → Quote → Customer</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 3. Business Operations -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('erp')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('erp')" aria-label="View Business Operations Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-gears"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Business Operations</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Stock registers, vendor purchase orders, GST invoices and operational activity logs.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-emerald-600 dark:text-emerald-400 group-hover:text-emerald-500 transition-colors">
-              <span>Flow: Requisition → PO → Invoice</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 4. People Operations -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('hr')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('hr')" aria-label="View People Operations Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-users"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">People Operations</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Digital staff directories, attendance, leave applications and role permissions.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-purple-600 dark:text-purple-400 group-hover:text-purple-500 transition-colors">
-              <span>Flow: Attendance → Leaves → Staff</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 5. Projects & Tasks -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('projects')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('projects')" aria-label="View Projects & Tasks Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-list-check"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Projects &amp; Tasks</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Kanban milestone boards, task ownership, due-date tracking and deliverable management.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-amber-600 dark:text-amber-400 group-hover:text-amber-500 transition-colors">
-              <span>Flow: Plan → In Progress → Done</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 6. Finance Tracking -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('finance')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('finance')" aria-label="View Finance Tracking Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-receipt"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Finance Tracking</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Sales invoices, receivables ageing, expense tracking and operational cash-flow indicators.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-500 transition-colors">
-              <span>Flow: Billing → Receivables → Ledger</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 7. Business Intelligence -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('bi')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('bi')" aria-label="View Business Intelligence Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-chart-line"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Business Intelligence</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">KPI summaries, sales velocity charts, margin indicators and business trends.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-cyan-600 dark:text-cyan-400 group-hover:text-cyan-500 transition-colors">
-              <span>Views: Margin &amp; Velocity</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
-          <!-- 8. Mobile Access -->
-          <div class="sn-card sn-card-hover p-4 space-y-3 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 flex flex-col justify-between cursor-pointer group" onclick="ScaleNovaModals.openFeatureDetail('mobile')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('mobile')" aria-label="View Mobile Access Details">
-            <div class="space-y-2">
-              <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-xl bg-teal-500/10 text-teal-500 flex items-center justify-center text-xs flex-shrink-0 group-hover:scale-105 transition-transform"><i class="fas fa-mobile-screen-button"></i></div>
-                <h4 class="font-black text-xs sm:text-sm text-slate-900 dark:text-white">Mobile Access</h4>
-              </div>
-              <p class="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Responsive browser-based access for business owners to view KPIs and manage business activity on the go.</p>
-            </div>
-            <div class="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] font-bold text-teal-600 dark:text-teal-400 group-hover:text-teal-500 transition-colors">
-              <span>Access: Responsive Web UI</span>
-              <span class="flex items-center gap-1">View Details <i class="fas fa-arrow-right text-[8px] transform group-hover:translate-x-0.5 transition-transform"></i></span>
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -541,11 +408,11 @@ tailwind.config = {
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Missed sales follow-ups and lost customer histories</span>
+                <span>Missed sales follow-ups and lost customer records</span>
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Inconsistent social media, weak SEO, and no regular content</span>
+                <span>Unconnected stock, billing, and accounting records</span>
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
@@ -580,15 +447,15 @@ tailwind.config = {
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Connected ERP, inventory, accounts, HR, and payroll</span>
+                <span>Centralised customer history &amp; follow-up tracking</span>
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Managed SEO, social media, and digital presence</span>
+                <span>Integrated stock, billing, and accounting workflows</span>
               </li>
               <li class="flex items-center gap-2">
                 <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Real-time BI reporting + dedicated support contact</span>
+                <span>Executive summary dashboards &amp; managed onboarding support</span>
               </li>
             </ul>
           </div>
@@ -798,13 +665,13 @@ tailwind.config = {
       
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-          <i class="fas fa-quote-left mr-1" aria-hidden="true"></i>Operational Feedback
+          <i class="fas fa-quote-left mr-1" aria-hidden="true"></i>Customer Feedback
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
           What Business Owners Are Saying
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">
-          Verified operational feedback from MSME leaders using ScaleNova Business OS.
+          Operational feedback from MSME leaders using ScaleNova Business OS.
         </p>
       </div>
 

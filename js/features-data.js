@@ -1,7 +1,7 @@
 /**
- * ScaleNova 8 Connected Business Modules Deep-Dive Dataset
+ * ScaleNova 8 Connected Business Modules Single Source of Truth
  * 
- * Defines concise homepage card summaries and comprehensive interactive data for detail popup modals.
+ * Powers the canonical homepage module cards and interactive detail popup modals.
  */
 const SCALENOVA_FEATURES = [
   {
@@ -11,21 +11,18 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Executive Dashboard",
     shortSummary: "Revenue overview, sales velocity, outstanding receivables and core business KPIs.",
     icon: "fas fa-chart-pie",
-    badge: "Executive Summary",
-    flowLabel: "View: Executive Summary",
     color: "brand",
     fullDetails: {
       title: "Executive Dashboard",
-      subtitle: "See the business at a glance.",
-      whatItDoes: "Monitor key sales, finance, customer and operational indicators from one dashboard.",
-      businessValue: "Provides real-time executive visibility into company-wide performance without manual status calls.",
-      flowText: "Includes: Revenue • Sales • Receivables • KPIs",
+      subtitle: "See the important parts of your business in one place.",
+      whatItDoes: "Monitor key sales, revenue, receivables and operational indicators from a central dashboard.",
+      flowText: "View: Executive Summary",
       keyCapabilities: [
-        "Revenue & growth tracking",
-        "Sales velocity monitoring",
-        "Outstanding receivables aging",
-        "Key operational KPI cards",
-        "Real-time business health indicators"
+        "Revenue overview",
+        "Sales performance",
+        "Outstanding receivables",
+        "Business KPIs",
+        "Executive summaries"
       ]
     }
   },
@@ -36,21 +33,19 @@ const SCALENOVA_FEATURES = [
     shortTitle: "CRM & Sales",
     shortSummary: "Inbound lead capture, visual deal stages, contact histories and proposal management.",
     icon: "fas fa-database",
-    badge: "Sales & CRM",
-    flowLabel: "Flow: Lead → Quote → Customer",
     color: "blue",
     fullDetails: {
       title: "CRM & Sales",
-      subtitle: "Keep the sales pipeline organised.",
-      whatItDoes: "Capture leads, track opportunities, manage customer information and move deals through the sales process.",
-      businessValue: "Eliminates lost leads and gives your sales team one organized workspace for customer communication.",
+      subtitle: "Keep customer and sales activity organised.",
+      whatItDoes: "Capture leads, manage opportunities and follow the customer journey from enquiry to conversion.",
       flowText: "Flow: Lead → Quote → Customer",
       keyCapabilities: [
-        "Inbound lead capture forms",
-        "Visual deal pipeline stages",
-        "Centralized contact histories",
-        "Fast quotation generation",
-        "Follow-up task scheduling"
+        "Lead capture",
+        "Customer records",
+        "Deal stages",
+        "Contact history",
+        "Proposal management",
+        "Follow-up tracking"
       ]
     }
   },
@@ -61,21 +56,19 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Business Operations",
     shortSummary: "Stock registers, vendor purchase orders, GST invoices and operational activity logs.",
     icon: "fas fa-gears",
-    badge: "Operations & Logistics",
-    flowLabel: "Flow: Requisition → PO → Invoice",
     color: "emerald",
     fullDetails: {
       title: "Business Operations",
-      subtitle: "Keep daily operations connected.",
-      whatItDoes: "Manage purchasing, stock activity, invoices and operational records from one workspace.",
-      businessValue: "Prevents inventory stockouts, eliminates manual billing errors, and keeps purchases organized.",
+      subtitle: "Connect everyday operational activity in one workspace.",
+      whatItDoes: "Manage purchasing, stock, invoices and operational records.",
       flowText: "Flow: Requisition → PO → Invoice",
       keyCapabilities: [
-        "Real-time stock & inventory registers",
-        "Vendor purchase orders & requisitions",
-        "GST-compliant billing & challans",
-        "Supplier payment tracking",
-        "Operational activity audit logs"
+        "Stock management",
+        "Purchase requests",
+        "Vendor records",
+        "Purchase orders",
+        "GST invoices",
+        "Operational activity"
       ]
     }
   },
@@ -86,21 +79,18 @@ const SCALENOVA_FEATURES = [
     shortTitle: "People Operations",
     shortSummary: "Digital staff directories, attendance, leave applications and role permissions.",
     icon: "fas fa-users",
-    badge: "Workforce & HR",
-    flowLabel: "Flow: Attendance → Leaves → Staff",
     color: "purple",
     fullDetails: {
       title: "People Operations",
-      subtitle: "Keep employee information organised.",
-      whatItDoes: "Manage staff records, attendance, leave and role-based access.",
-      businessValue: "Standardizes team management and removes paper-based leave and attendance tracking.",
+      subtitle: "Keep employee information and routine people processes organised.",
+      whatItDoes: "Manage employee records, attendance, leave and access permissions.",
       flowText: "Flow: Attendance → Leaves → Staff",
       keyCapabilities: [
-        "Digital personnel directories",
-        "Daily shift attendance tracking",
-        "Leave applications & approvals",
-        "Granular role-based permissions",
-        "Employee onboarding records"
+        "Employee records",
+        "Attendance",
+        "Leave management",
+        "Staff information",
+        "Role permissions"
       ]
     }
   },
@@ -111,21 +101,19 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Projects & Tasks",
     shortSummary: "Kanban milestone boards, task ownership, due-date tracking and deliverable management.",
     icon: "fas fa-list-check",
-    badge: "Project Execution",
-    flowLabel: "Flow: Plan → In Progress → Done",
     color: "amber",
     fullDetails: {
       title: "Projects & Tasks",
-      subtitle: "Keep work moving.",
-      whatItDoes: "Assign tasks, track milestones and monitor deliverables across teams.",
-      businessValue: "Ensures projects deliver on time with clear accountability for every task.",
+      subtitle: "Keep work organised from planning to completion.",
+      whatItDoes: "Assign responsibilities, track milestones and monitor deliverables.",
       flowText: "Flow: Plan → In Progress → Done",
       keyCapabilities: [
-        "Visual Kanban task boards",
-        "Explicit task assignees & due dates",
-        "Milestone tracking for client projects",
-        "Task discussion & document attachments",
-        "Real-time delivery progress bars"
+        "Project planning",
+        "Task assignment",
+        "Kanban boards",
+        "Milestone tracking",
+        "Due dates",
+        "Deliverable monitoring"
       ]
     }
   },
@@ -136,21 +124,19 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Finance Tracking",
     shortSummary: "Sales invoices, receivables ageing, expense tracking and operational cash-flow indicators.",
     icon: "fas fa-receipt",
-    badge: "Financial Health",
-    flowLabel: "Flow: Billing → Receivables → Ledger",
     color: "indigo",
     fullDetails: {
       title: "Finance Tracking",
-      subtitle: "Keep financial activity visible.",
-      whatItDoes: "Track invoices, receivables, expenses and key cash-flow indicators.",
-      businessValue: "Accelerates customer payment recovery and gives business owners clarity on cash availability.",
+      subtitle: "Keep core financial activity visible and organised.",
+      whatItDoes: "Track billing, receivables, expenses and operational financial indicators.",
       flowText: "Flow: Billing → Receivables → Ledger",
       keyCapabilities: [
-        "Sales invoice generation & delivery",
-        "Customer receivables aging analysis",
-        "Operational expense tracking",
-        "Cash-flow health indicators",
-        "GST tax summaries & ledger views"
+        "Sales invoices",
+        "Receivables",
+        "Expense tracking",
+        "Payment activity",
+        "Cash-flow indicators",
+        "Ledger information"
       ]
     }
   },
@@ -161,21 +147,18 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Business Intelligence",
     shortSummary: "KPI summaries, sales velocity charts, margin indicators and business trends.",
     icon: "fas fa-chart-line",
-    badge: "Decision Intelligence",
-    flowLabel: "Views: Margin & Velocity",
     color: "cyan",
     fullDetails: {
       title: "Business Intelligence",
-      subtitle: "Turn business data into useful views.",
-      whatItDoes: "Review KPIs, sales velocity, margin indicators and operational trends.",
-      businessValue: "Converts transactional data into actionable insights for strategic planning.",
+      subtitle: "Turn operational information into useful business views.",
+      whatItDoes: "Review KPIs and trends to understand business performance.",
       flowText: "Views: Margin & Velocity",
       keyCapabilities: [
-        "Executive KPI summary widgets",
-        "Sales velocity & conversion funnels",
-        "Gross margin & profitability indicators",
-        "Month-over-month trend analytics",
-        "Exportable business intelligence reports"
+        "KPI summaries",
+        "Sales velocity",
+        "Margin indicators",
+        "Business trends",
+        "Management reports"
       ]
     }
   },
@@ -186,21 +169,18 @@ const SCALENOVA_FEATURES = [
     shortTitle: "Mobile Access",
     shortSummary: "Responsive browser-based access for business owners to view KPIs and manage business activity on the go.",
     icon: "fas fa-mobile-screen-button",
-    badge: "Responsive Web",
-    flowLabel: "Access: Responsive Web UI",
     color: "teal",
     fullDetails: {
       title: "Mobile Access",
-      subtitle: "Stay connected from anywhere.",
-      whatItDoes: "Use the responsive web interface to check business information and manage approved activities from a mobile device.",
-      businessValue: "Empowers business leaders to stay updated and approve urgent requests from any smartphone.",
+      subtitle: "Stay connected with your business wherever you work.",
+      whatItDoes: "ScaleNova uses a responsive web interface so authorised users can access important business information from mobile devices.",
       flowText: "Access: Responsive Web UI",
       keyCapabilities: [
-        "100% web-responsive interface",
-        "Mobile KPI summary dashboards",
-        "Quick approval workflows on the go",
-        "Instant notification alerts",
-        "Zero app installation required"
+        "Responsive web interface",
+        "KPI viewing",
+        "Business activity",
+        "Mobile-friendly workflows",
+        "Accessible business information"
       ]
     }
   }
