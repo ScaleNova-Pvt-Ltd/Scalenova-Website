@@ -6,223 +6,134 @@
 const SCALENOVA_FEATURES = [
   {
     id: "crm",
-    slug: "centralized-crm-database",
-    title: "Centralized CRM & Database",
-    shortTitle: "CRM & Database",
-    shortSummary: "Unify leads, customer interactions, and sales pipelines in one workspace. Reduce duplicate records and keep every opportunity moving.",
+    slug: "crm-and-sales",
+    title: "CRM & Sales",
+    shortTitle: "CRM & Sales",
+    shortSummary: "Manage leads, customers and sales pipelines from one connected workspace.",
     icon: "fas fa-database",
-    badge: "Customer Growth Engine",
+    badge: "Sales & Customer Growth",
     color: "brand",
     fullDetails: {
-      headline: "Eliminate Duplicate Records and Accelerate Your Sales Pipeline",
-      whatItDoes: "Centralizes every lead, prospect, customer interaction, deal stage, and follow-up history into one structured, searchable workspace across your entire sales and support teams.",
-      howItWorks: "Inbound enquiries from WhatsApp, website forms, email, and trade portals automatically flow into the CRM. Leads are assigned to sales executives with automated reminder triggers, pipeline stages, and complete activity logs.",
-      problemsSolved: [
-        "Leads getting lost across personal WhatsApp chats, loose notebooks, and disjointed Excel sheets.",
-        "Sales reps failing to follow up on high-value quotation requests in a timely manner.",
-        "Zero visibility for business owners into individual team performance or true pipeline value.",
-        "Duplicate outreach causing confusion and unprofessional customer impressions."
-      ],
-      mainBenefits: [
-        "100% Single Source of Truth for customer contact info and purchase history.",
-        "Visual Kanban Pipeline stages tailored to your business negotiation stages.",
-        "Quick quotation creation and instant customer history lookup on desktop and mobile.",
-        "Enhanced team accountability with clear lead ownership and follow-up trails."
-      ],
-      operationalImpact: "Cuts lead-to-first-response time drastically, improves follow-up consistency across reps, and provides management with instantaneous visibility into revenue in progress.",
-      automationOpportunities: [
-        "Instant WhatsApp & Email acknowledgement when a new lead enquires.",
-        "Automated task creation for reps when a quote remains pending for >48 hours.",
-        "Lead auto-reassignment if unattended within a designated timeframe.",
-        "Triggering welcome onboarding sequence when a deal is marked 'Closed Won'."
-      ],
-      msmeScalingImpact: "As your enquiry volume grows from 10 to 1,000 leads per month, your sales team can handle 3x more deals without adding administrative overhead or misplacing client requirements.",
-      exampleWorkflow: "New website inquiry arrives → Auto-logged into CRM → Assigned to Area Rep → Rep calls and logs notes → System sets follow-up task for 2 days → Quote generated and tracked to closure.",
-      whatToExpect: "Clean, intuitive UI requiring zero coding. Most sales teams master lead tracking and deal updates within their first 60-minute onboarding walkthrough."
+      title: "CRM & Sales",
+      whatItDoes: "Manage leads, customers and sales opportunities from one connected workspace.",
+      businessValue: "Keep your sales process organized and give your team one source of customer information.",
+      keyCapabilities: [
+        "Lead capture & management",
+        "Centralized customer records",
+        "Visual sales pipeline tracking",
+        "Follow-up task reminders",
+        "Complete sales visibility"
+      ]
     }
   },
   {
     id: "erp",
-    slug: "erp-financial-tracking",
-    title: "ERP & Financial Tracking",
-    shortTitle: "ERP & Financials",
-    shortSummary: "Connect inventory, purchasing, invoicing, and core operations in one ledger. Prevent stockouts and track receivables in real time.",
+    slug: "business-operations",
+    title: "Business Operations",
+    shortTitle: "Business Operations",
+    shortSummary: "Run purchasing, inventory, invoicing and daily operations from one system.",
     icon: "fas fa-chart-pie",
-    badge: "Connected Operations",
+    badge: "Operations & Logistics",
     color: "blue",
     fullDetails: {
-      headline: "Connect Inventory, Purchasing, and Invoicing in One Reliable System",
-      whatItDoes: "Unifies inventory management, purchase orders, billing, and core financial transaction tracking so physical goods, supplier orders, and customer billing always stay in sync.",
-      howItWorks: "When sales orders are approved, inventory quantities adjust automatically, purchase requisitions trigger when stock dips below reorder thresholds, and GST-compliant invoices generate directly from delivery challans.",
-      problemsSolved: [
-        "Selling items that are already out of stock due to manual stock register delays.",
-        "Paying high monthly subscriptions for 4-5 different single-purpose software tools.",
-        "Delays in customer billing leading to late payments and strained working capital.",
-        "Human errors when manually re-entering sales data into invoicing or accounting sheets."
-      ],
-      mainBenefits: [
-        "Real-time multi-warehouse and shop-floor inventory visibility.",
-        "GST-ready professional invoicing and delivery documentation.",
-        "Automated low-stock alerts and smart vendor purchase order generation.",
-        "Clear receivables tracking to follow up on outstanding client balances."
-      ],
-      operationalImpact: "Eliminates duplicate data entry between warehouse and billing teams, reduces stock discrepancies, and accelerates the cash collection cycle.",
-      automationOpportunities: [
-        "Automatic purchase order drafting when inventory hits safety stock limits.",
-        "Scheduled invoice payment reminder emails and WhatsApp notifications to clients.",
-        "Real-time margin calculation on quotes based on latest vendor purchase rates.",
-        "Automated stock valuation updates upon receiving goods delivery."
-      ],
-      msmeScalingImpact: "Allows manufacturers, distributors, and traders to manage multiple godowns, thousands of SKUs, and heavy daily billing volumes with complete inventory accuracy and financial control.",
-      exampleWorkflow: "Customer orders 50 units → System checks stock across branches → Reserves items → Creates Delivery Challan → Generates GST Invoice → Updates accounts receivable ledger.",
-      whatToExpect: "Structured stock categories, simple invoice templates, and clear operational dashboards that your warehouse and accounts staff can operate daily without friction."
+      title: "Business Operations",
+      whatItDoes: "Connect purchasing, inventory, GST invoicing and daily business transactions.",
+      businessValue: "Prevent stockouts, reduce manual billing errors and track receivables in real time.",
+      keyCapabilities: [
+        "Real-time stock & inventory management",
+        "Purchase orders & vendor requisitions",
+        "GST-compliant invoicing & challans",
+        "Customer accounts receivable tracking",
+        "Multi-location warehouse coordination"
+      ]
     }
   },
   {
     id: "hr",
-    slug: "hr-employee-management",
-    title: "HR & Employee Management",
-    shortTitle: "HR & Workforce",
-    shortSummary: "Manage employee records, daily attendance, and leave approvals effortlessly. Standardize team coordination across branches.",
+    slug: "people-operations",
+    title: "People Operations",
+    shortTitle: "People Operations",
+    shortSummary: "Manage employees, attendance, leave and team processes in one place.",
     icon: "fas fa-users-gear",
-    badge: "Workforce Efficiency",
+    badge: "Workforce Management",
     color: "emerald",
     fullDetails: {
-      headline: "Structured Team Operations, Attendance, and Leave Workflows",
-      whatItDoes: "Provides a centralized digital workspace for staff records, daily attendance tracking, leave applications and approvals, department structures, and internal employee requests.",
-      howItWorks: "Employees access a simplified portal or mobile interface to mark attendance and request leaves. Supervisors review and approve requests with a single click, automatically updating attendance balances and team calendars.",
-      problemsSolved: [
-        "Disputes over attendance, overtime, or remaining leave balances at month-end.",
-        "Scattered employee documents across physical files, loose emails, and messaging apps.",
-        "Unplanned team absences disrupting shop-floor or client project delivery schedules.",
-        "Excessive time spent by business leadership manually reconciling payroll inputs."
-      ],
-      mainBenefits: [
-        "Secure digital personnel files containing contact info, IDs, and joining records.",
-        "Configurable leave policy rules (Casual, Sick, Earned) with automatic balance deduction.",
-        "Department-wise attendance dashboards for quick supervisor review.",
-        "Clear organizational hierarchy and role-based operational permissions."
-      ],
-      operationalImpact: "Reduces month-end HR reconciliation from days to minutes, improves workplace discipline, and provides staff with a transparent, professional experience.",
-      automationOpportunities: [
-        "Automated leave approval escalation if supervisor does not respond in 24 hours.",
-        "Daily attendance summary notification sent to business owners every morning.",
-        "Automated onboarding checklist for newly joined team members.",
-        "Birthday and work-anniversary team notification triggers."
-      ],
-      msmeScalingImpact: "Enables business owners to scale team headcount from 10 to 100+ employees across multiple branches without hiring dedicated administrative staff merely to track time and paperwork.",
-      exampleWorkflow: "Employee applies for 2 days leave on mobile → Manager receives instant notification → Approves request → System updates team calendar and deducts leave balance automatically.",
-      whatToExpect: "Clean, self-explanatory employee interface with zero unnecessary HR complexity, tailored specifically for Indian workplace workflows."
-    }
-  },
-  {
-    id: "security",
-    slug: "cloud-based-security",
-    title: "Cloud-Based Security",
-    shortTitle: "Cloud Security",
-    shortSummary: "Safeguard business data with role-based access control and encrypted cloud backups. Protect sensitive customer and profit information.",
-    icon: "fas fa-shield-halved",
-    badge: "Data Governance",
-    color: "cyan",
-    fullDetails: {
-      headline: "Role-Based Access Controls and Dependable Cloud Infrastructure",
-      whatItDoes: "Implements strict role-based access permissions, encrypted data transmission, managed cloud hosting, and continuous operational maintenance for your company's proprietary data.",
-      howItWorks: "Administrators assign distinct access levels (e.g., Sales Rep, Warehouse Manager, Accountant, Director). Users only see the exact screens and fields permitted by their profile, protecting confidential financial and client data.",
-      problemsSolved: [
-        "Data loss caused by local computer hard-drive crashes, viruses, or stolen laptops.",
-        "Staff downloading or viewing sensitive customer databases or profit margin data.",
-        "Ex-employees retaining unauthorized access to business records after leaving.",
-        "Costly physical server maintenance, UPS backups, and local IT hardware headaches."
-      ],
-      mainBenefits: [
-        "Granular role-based permissions (View, Edit, Delete, Export restrictions).",
-        "Encrypted SSL/TLS communication protocols for all web and mobile traffic.",
-        "Centralized session management with instant one-click user deactivation.",
-        "Cloud-native reliability with automated system maintenance and infrastructure protection."
-      ],
-      operationalImpact: "Protects your intellectual property and customer lists while ensuring authorized team members can work securely from anywhere without VPN bottlenecks.",
-      automationOpportunities: [
-        "Automated session logout upon extended inactivity.",
-        "Security audit logging recording all critical records created, modified, or exported.",
-        "Automated routine data backups stored in redundant cloud facilities.",
-        "Alert notifications on multiple failed login attempts."
-      ],
-      msmeScalingImpact: "Gives growing businesses the robust data governance, access controls, and operational continuity typically reserved for large corporate enterprises at a fraction of the cost.",
-      exampleWorkflow: "Admin creates new Sales Rep profile → System assigns restricted CRM-only view → Export button hidden → Rep leaves company → Admin deactivates account with 1 click → Access revoked instantly.",
-      whatToExpect: "Peace of mind knowing your customer lists, sales records, and financial numbers are safeguarded in a dedicated, managed cloud environment."
+      title: "People Operations",
+      whatItDoes: "Manage employee records, daily attendance tracking and leave approvals.",
+      businessValue: "Standardize HR workflows and eliminate manual payroll & attendance chaos.",
+      keyCapabilities: [
+        "Digital personnel records",
+        "Daily attendance & shift tracking",
+        "Leave requests & approvals",
+        "Role-based team permissions",
+        "Multi-branch team coordination"
+      ]
     }
   },
   {
     id: "projects",
-    slug: "project-planning-tasks",
-    title: "Project Planning & Tasks",
+    slug: "projects-and-tasks",
+    title: "Projects & Tasks",
     shortTitle: "Projects & Tasks",
-    shortSummary: "Organize deliverables, assign task ownership, and track milestones on visual boards. Keep internal teams aligned to deliver on schedule.",
+    shortSummary: "Plan work, assign ownership and track delivery across your teams.",
     icon: "fas fa-list-check",
     badge: "Execution Clarity",
     color: "purple",
     fullDetails: {
-      headline: "Plan Milestones, Assign Responsibilities, and Deliver on Schedule",
-      whatItDoes: "Enables teams to coordinate complex client deliverables, manufacturing orders, field installations, and internal initiatives with clear ownership, due dates, and milestone tracking.",
-      howItWorks: "Projects are divided into visual milestones and actionable tasks. Team members update task statuses on Kanban boards or task lists, uploading deliverable files and keeping all discussions linked to the task.",
-      problemsSolved: [
-        "Client commitments slipping because tasks were discussed in meetings but never logged.",
-        "Confusion over who is currently responsible for the next stage of a project.",
-        "Project status updates requiring lengthy, unproductive daily coordination meetings.",
-        "Disjointed file attachments scattered across multiple chat threads and email chains."
-      ],
-      mainBenefits: [
-        "Visual Kanban and list views for clear task progression (To Do, In Progress, Completed).",
-        "Milestone tracking tied directly to customer orders and billing phases.",
-        "Centralized task comment threads and document attachments.",
-        "Priority flags and clear due-date calendars across all active projects."
-      ],
-      operationalImpact: "Drives timely project completion, reduces internal status meeting overhead by over 50%, and improves client satisfaction through dependable delivery.",
-      automationOpportunities: [
-        "Automated notifications to assignees when a new task is created or blocked.",
-        "Due-date reminder alerts 24 hours prior to deadline.",
-        "Automatic project status progression when all dependent subtasks are completed.",
-        "Milestone completion notifications sent to relevant managers or accounts team."
-      ],
-      msmeScalingImpact: "Allows service providers, contractors, design firms, and custom manufacturers to handle multiple simultaneous client projects with predictable, high-quality execution.",
-      exampleWorkflow: "New project created → Milestones defined → Tasks assigned to team with deadlines → Team updates progress daily → Manager monitors overall project health from dashboard.",
-      whatToExpect: "A clean, modern task board that team members actually enjoy using, free of bloated unnecessary enterprise project management bloat."
+      title: "Projects & Tasks",
+      whatItDoes: "Organize project deliverables, assign task ownership and track milestones.",
+      businessValue: "Keep internal teams aligned and ensure client projects deliver on schedule.",
+      keyCapabilities: [
+        "Visual Kanban task boards",
+        "Clear task assignment & deadlines",
+        "Milestone tracking for client projects",
+        "Centralized task discussion threads",
+        "Real-time delivery progress tracking"
+      ]
     }
   },
   {
     id: "bi",
-    slug: "executive-bi-dashboards",
-    title: "Executive BI Dashboards",
-    shortTitle: "Executive BI",
-    shortSummary: "Turn operational transactions into clear visual KPI dashboards. Monitor sales velocity and business health from anywhere.",
+    slug: "business-intelligence",
+    title: "Business Intelligence",
+    shortTitle: "Business Intelligence",
+    shortSummary: "Turn business activity into clear KPIs and management insights.",
     icon: "fas fa-chart-line",
     badge: "Decision Intelligence",
     color: "amber",
     fullDetails: {
-      headline: "Actionable Operational Visibility to Make More Informed Decisions",
-      whatItDoes: "Aggregates real-time metrics across sales, inventory, projects, and workforce activity into visual executive dashboards, giving leadership clarity on business health at a glance.",
-      howItWorks: "As transactions and tasks occur in the system, BI widgets calculate key performance indicators automatically, displaying interactive charts, trend comparisons, and operational summaries.",
-      problemsSolved: [
-        "Business owners making strategic decisions based on guesswork rather than facts.",
-        "Waiting until the end of the month or quarter to find out if revenue targets were met.",
-        "Inability to spot sluggish sales regions, slow-moving inventory, or team bottlenecks early.",
-        "Spending hours manually consolidating numbers into summary charts before reviews."
-      ],
-      mainBenefits: [
-        "Real-time executive summary dashboard accessible anytime on laptop or mobile.",
-        "Visual sales funnel, conversion rates, and average deal closing velocity metrics.",
-        "Operational breakdown of pending tasks, inventory movement, and team output.",
-        "Comparative period filters (Today, This Week, This Month, This Quarter, Year-to-Date)."
-      ],
-      operationalImpact: "Helps leadership spot emerging operational issues before they become expensive problems and identify highest-margin growth opportunities quickly.",
-      automationOpportunities: [
-        "Weekly automated KPI summary snapshot delivered via email to business founders.",
-        "Anomaly alerts if sales inquiries drop below baseline thresholds.",
-        "Automated top-performing product and sales executive monthly highlight reports."
-      ],
-      msmeScalingImpact: "Gives MSME founders the operational command and high-level clarity necessary to steer multi-crore business expansions with confidence.",
-      exampleWorkflow: "Owner opens Executive Dashboard on mobile → Reviews today's lead inflows and closed deals → Inspects receivables aging → Identifies top sales rep → Takes action immediately.",
-      whatToExpect: "Clear, beautifully formatted graphical charts designed for busy executives who want fast answers rather than overwhelming spreadsheets."
+      title: "Business Intelligence",
+      whatItDoes: "Convert daily business transactions into real-time visual KPI dashboards.",
+      businessValue: "Monitor sales velocity, receivables and overall business health from anywhere.",
+      keyCapabilities: [
+        "Executive summary KPI dashboards",
+        "Visual sales funnel & conversion metrics",
+        "Receivables aging & financial snapshots",
+        "Operational bottleneck tracking",
+        "Mobile management visibility"
+      ]
+    }
+  },
+  {
+    id: "security",
+    slug: "security-and-control",
+    title: "Security & Control",
+    shortTitle: "Security & Control",
+    shortSummary: "Protect business data with roles, permissions, backups and controlled access.",
+    icon: "fas fa-shield-halved",
+    badge: "Data Governance",
+    color: "cyan",
+    fullDetails: {
+      title: "Security & Control",
+      whatItDoes: "Safeguard proprietary business data with role-based permissions and cloud backups.",
+      businessValue: "Maintain data privacy, prevent unauthorized exports and ensure business continuity.",
+      keyCapabilities: [
+        "Granular role-based permissions",
+        "Encrypted SSL data transmission",
+        "Centralized user access control",
+        "Automated cloud system backups",
+        "Security audit logs & session controls"
+      ]
     }
   }
 ];

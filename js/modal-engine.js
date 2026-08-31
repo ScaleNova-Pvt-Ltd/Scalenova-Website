@@ -809,9 +809,9 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack(\'featureDetailModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
+          <button onclick="ScaleNovaModals.goBack('featureDetailModal')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
-            Home / Features / <strong class="text-slate-900 dark:text-white">${feature.title}</strong>
+            Home / Features / <strong class="text-slate-900 dark:text-white">${feature.fullDetails.title}</strong>
           </span>
         </div>
         
@@ -822,94 +822,49 @@ const ScaleNovaModals = (function() {
 
       <div class="p-5 sm:p-7 space-y-5">
         <!-- Feature Header -->
-        <div class="space-y-1">
-          <div class="flex items-center gap-2.5">
-            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="${feature.icon}"></i>
-            </div>
-            <div>
-              <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">${feature.badge}</span>
-              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.title}</h2>
-            </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
+            <i class="${feature.icon}"></i>
           </div>
-          <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400 mt-1">${feature.fullDetails.headline}</p>
+          <div>
+            <span class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">${feature.badge}</span>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.fullDetails.title}</h2>
+          </div>
         </div>
 
-        <!-- Overview: What It Does & How It Works -->
+        <!-- What It Does & Business Value Callouts -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div class="sn-card p-3.5 sm:p-4 space-y-1">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400">Overview &amp; Scope</h4>
+          <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">What It Does</h4>
             <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whatItDoes}</p>
           </div>
-          <div class="sn-card p-3.5 sm:p-4 space-y-1">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-slate-400">How It Works</h4>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.howItWorks}</p>
+          <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20">
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Business Value</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.businessValue}</p>
           </div>
         </div>
 
-        <!-- Problems Solved -->
-        <div class="space-y-2">
+        <!-- Key Capabilities (3-5 short bullets) -->
+        <div class="space-y-2.5">
           <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-triangle-exclamation text-amber-500"></i> Common Business Problems Solved
-          </h3>
-          <div class="grid grid-cols-1 gap-1.5">
-            ${feature.fullDetails.problemsSolved.map(prob => `
-              <div class="flex items-start gap-2 p-2.5 rounded-xl bg-red-500/5 dark:bg-red-500/10 border border-red-500/20 text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-xmark text-red-500 mt-0.5 text-[11px]"></i>
-                <span>${prob}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Key Benefits -->
-        <div class="space-y-2">
-          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-circle-check text-emerald-500"></i> Key Operational Benefits
+            <i class="fas fa-circle-check text-brand-500"></i> Key Capabilities
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            ${feature.fullDetails.mainBenefits.map(benefit => `
-              <div class="flex items-start gap-2 p-2.5 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-check text-emerald-500 mt-0.5 text-[11px]"></i>
-                <span>${benefit}</span>
+            ${feature.fullDetails.keyCapabilities.map(cap => `
+              <div class="flex items-center gap-2 p-2.5 rounded-xl sn-card text-xs font-semibold text-slate-800 dark:text-slate-200">
+                <i class="fas fa-check text-emerald-500 text-[11px] flex-shrink-0"></i>
+                <span>${cap}</span>
               </div>
             `).join('')}
-          </div>
-        </div>
-
-        <!-- Workflow & Automation -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div class="sn-card p-3.5 space-y-1.5 bg-gradient-to-br from-brand-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400 flex items-center gap-1">
-              <i class="fas fa-bolt"></i> Automation Opportunities
-            </h4>
-            <ul class="space-y-1 text-xs text-slate-600 dark:text-slate-300 font-medium">
-              ${feature.fullDetails.automationOpportunities.map(auto => `
-                <li class="flex items-start gap-1.5">
-                  <i class="fas fa-arrow-right text-[9px] text-brand-500 mt-1"></i>
-                  <span>${auto}</span>
-                </li>
-              `).join('')}
-            </ul>
-          </div>
-
-          <div class="sn-card p-3.5 space-y-1.5 bg-gradient-to-br from-blue-50/40 to-white dark:from-slate-900/90 dark:to-slate-900">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1">
-              <i class="fas fa-chart-line"></i> How It Scales an MSME
-            </h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.msmeScalingImpact}</p>
-            <div class="pt-1 border-t border-slate-200 dark:border-slate-800 text-[10px] text-slate-500 dark:text-slate-400">
-              <strong>Workflow:</strong> ${feature.fullDetails.exampleWorkflow}
-            </div>
           </div>
         </div>
 
         <!-- CTA Footer -->
         <div class="pt-3.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left font-medium">Want to see ${feature.title} in action?</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left font-medium">Ready to streamline your ${feature.title.toLowerCase()}?</span>
           <button onclick="ScaleNovaModals.close('featureDetailModal'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
-            <i class="fas fa-play text-[10px]"></i>
-            <span>Book a Demo</span>
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
           </button>
         </div>
       </div>
