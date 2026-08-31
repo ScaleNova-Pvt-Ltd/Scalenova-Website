@@ -75,7 +75,7 @@ const SCALENOVA_PLANS = [
       "Sales + Accounts Management",
       "HR + Payroll + Employee Attendance Management",
       "Inventory + Purchase + Project Management",
-      "SEO + Social Media + Content Management",
+      "Operations + Workflows + Document Management",
       "Expanded User Access (Up to 25 Users)",
       "2 GB Cloud Database Storage"
     ],
@@ -84,7 +84,7 @@ const SCALENOVA_PLANS = [
       { step: "Phase 1: Architecture & Department Discovery", detail: "Our engineering specialist reviews your inventory structures, billing cycles, leave policies, and sales stages to formulate your customized deployment plan." },
       { step: "Phase 2: Master Data Migration", detail: "Comprehensive migration of item masters, SKU catalogs, supplier details, customer databases, and employee records into your ScaleNova environment." },
       { step: "Phase 3: Multi-Team Departmental Training", detail: "Tailored live training sessions conducted separately for your Sales, Warehouse/Accounts, and HR/Admin teams." },
-      { step: "Phase 4: Go-Live & Post-Launch Support", detail: "Dedicated operational handholding during your initial week of daily transactions to guarantee 100% team adoption." }
+      { step: "Phase 4: Go-Live & Post-Launch Support", detail: "Dedicated operational handholding during your initial week of daily transactions to assist your team adoption." }
     ],
 
     trainingIncluded: "Comprehensive multi-session live training for department heads and operating staff, complete customized workflow SOPs, and ongoing access to interactive adoption guides.",
@@ -117,7 +117,7 @@ const SCALENOVA_PLANS = [
     monthlyPriceFormatted: "₹35,799",
     annualPriceFormatted: "₹3,57,990",
     annualMonthlyEquivalent: "₹29,833",
-    targetAudience: "Established MSMEs, multi-branch corporations, large manufacturing plants, and complex commercial organizations needing complete ERP and enterprise digital growth.",
+    targetAudience: "Established MSMEs, multi-branch corporations, large manufacturing plants, and complex commercial organizations needing complete ERP and enterprise software control.",
     userCapacity: "Up to 100 Users Included • 4 GB+ Cloud Storage",
     isPopular: false,
     colorScheme: "dark",
@@ -126,7 +126,7 @@ const SCALENOVA_PLANS = [
       "Includes Growth OS",
       "Complete ERP + Advanced Business Management",
       "Manufacturing + Assets + Advanced Operations",
-      "Advanced Digital Marketing + SEO + Social Media",
+      "Advanced ERP + Multi-Branch Operations + Custom Dashboards",
       "Business Intelligence + Executive Reports & Analysis",
       "Dedicated Training + Dedicated Support Contact & Account Manager",
       "High-Capacity User Access (Up to 100 Users) & 4 GB+ Storage"
