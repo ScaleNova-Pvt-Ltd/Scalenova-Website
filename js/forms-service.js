@@ -67,12 +67,32 @@ const ScaleNovaForms = (function() {
 
   /**
    * Centralized submit API call to Google Apps Script / Webhook
+  function getUtmMetadata() {
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      return {
+        utmSource: urlParams.get('utm_source') || '',
+        utmMedium: urlParams.get('utm_medium') || '',
+        utmCampaign: urlParams.get('utm_campaign') || '',
+        leadSource: urlParams.get('utm_source') || 'website_direct',
+        campaign: urlParams.get('utm_campaign') || 'organic',
+        referralSource: document.referrer || 'direct',
+        landingPage: window.location.pathname + window.location.search
+      };
+    } catch {
+      return {};
+    }
+  }
+
+  /**
+   * Centralized submit API call to Google Apps Script / Webhook
    */
   async function submitPayload(formType, formData) {
     const payload = {
       formType: formType,
       submittedAt: new Date().toISOString(),
       sourceUrl: window.location.href,
+      ...getUtmMetadata(),
       ...formData
     };
 

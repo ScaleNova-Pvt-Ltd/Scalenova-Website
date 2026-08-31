@@ -9,35 +9,35 @@ const SCALENOVA_PLANS = [
     id: "core",
     name: "Core OS",
     badge: "Essential Starter",
-    headline: "Centralize Leads, Customer Records & Sales Workflows",
-    monthlyPrice: 3299,
-    annualPrice: 32990, // 2 months free equivalent (10 months * 3299)
-    monthlyPriceFormatted: "₹3,299",
-    annualPriceFormatted: "₹32,990",
-    annualMonthlyEquivalent: "₹2,749",
-    targetAudience: "Early-stage businesses, boutique agencies, independent consultants, and single-location traders looking to transition away from scattered spreadsheets and disorganized WhatsApp chats.",
-    userCapacity: "Up to 5 User Seats Included",
+    headline: "Centralize Leads, Customer Records & Core Business Management",
+    monthlyPrice: 4899,
+    annualPrice: 48990, // 2 months free equivalent (10 months * 4899)
+    monthlyPriceFormatted: "₹4,899",
+    annualPriceFormatted: "₹48,990",
+    annualMonthlyEquivalent: "₹4,083",
+    targetAudience: "Startups, small businesses, boutique agencies, independent consultants, and single-location traders looking to organize leads, CRM, and basic business presence.",
+    userCapacity: "Up to 3 Users Included • 1 GB Cloud Storage",
     isPopular: false,
     colorScheme: "blue",
     
     mainIncludedFunctions: [
-      "Centralized Lead Capture & Contact Database",
-      "Visual Kanban Sales Pipeline with Stage Tracking",
-      "Customer Activity Timeline & Interaction Logs",
-      "Standard Quotation & Invoicing Generation",
-      "Role-Based User Permissions (Sales Rep / Admin)",
-      "Daily Cloud System Backups & Managed Infrastructure",
-      "Mobile-Responsive Web App Access for Field Reps"
+      "Premium Website + Lead Capture Experience",
+      "CRM + Centralized Lead Pipeline Tracker",
+      "Customer Database & Contact Interaction History",
+      "Basic SEO + Online Business Presence",
+      "Training, Support + Monthly Operational Reports",
+      "Role-Based User Access (Up to 3 Users)",
+      "Dedicated Cloud Infrastructure (1 GB Database Storage)"
     ],
 
     setupJourney: [
-      { step: "Phase 1: Setup & Data Import", detail: "Our onboarding team configures your secure cloud instance and assists in importing your existing customer and lead contact spreadsheets." },
-      { step: "Phase 2: Pipeline Customization", detail: "We map out your standard sales stages, lead sources, and quotation templates to match your everyday operational workflow." },
-      { step: "Phase 3: Live Staff Orientation", detail: "A dedicated 45-minute live screen walkthrough for your sales team to ensure immediate comfort with lead entry, status updates, and note-taking." }
+      { step: "Phase 1: Discovery & Instance Provisioning", detail: "Our onboarding team provisions your cloud instance and assists in importing your existing customer and lead contact spreadsheets." },
+      { step: "Phase 2: Lead Capture & Pipeline Configuration", detail: "We map out your standard sales stages, lead sources, and quotation templates to match your everyday operational workflow." },
+      { step: "Phase 3: Live Staff Orientation & Training", detail: "A dedicated live screen walkthrough for your team to ensure immediate comfort with lead entry, status updates, and customer management." }
     ],
 
-    trainingIncluded: "1x Live Team Onboarding Walkthrough, guided setup documentation, and recorded feature training modules accessible anytime by your team.",
-    supportIncluded: "Standard email and ticket support with response within regular business hours (Monday to Saturday, 9:30 AM to 6:30 PM IST), plus continuous cloud system updates.",
+    trainingIncluded: "Live team onboarding walkthrough, guided setup documentation, monthly reporting review, and access to recorded feature training modules.",
+    supportIncluded: "Dedicated support contact for your business with assistance during business hours, plus continuous platform updates.",
     
     manualWorkReduction: [
       "Eliminates hours spent copying contact numbers from WhatsApp into Excel.",
@@ -47,39 +47,37 @@ const SCALENOVA_PLANS = [
 
     automationOpportunities: [
       "Instant email and WhatsApp welcome responses on new website inquiries.",
-      "Automated follow-up reminders for reps when deals remain in quotation stage.",
+      "Automated follow-up reminders for sales reps when deals remain pending.",
       "One-click quotation generation populated directly from lead records."
     ],
 
-    scalingUseCases: "Ideal for handling enquiry growth from 20 to 200+ leads per month while keeping your sales pipeline transparent, organized, and responsive.",
-    upgradePath: "As your operations expand to require warehouse inventory tracking, employee attendance, or multi-department project management, you can upgrade seamlessly to Growth OS with zero data migration or system downtime.",
+    scalingUseCases: "Ideal for handling enquiry growth while keeping your sales pipeline transparent, organized, and responsive.",
+    upgradePath: "As your operations expand to require warehouse inventory tracking, employee attendance, or multi-department project management, you can upgrade seamlessly to Growth OS with zero downtime.",
     ctaText: "Book Core OS Walkthrough"
   },
   {
     id: "growth",
     name: "Growth OS",
     badge: "Most Popular",
-    headline: "Unify Sales, Inventory, HR, Projects & Invoicing",
-    monthlyPrice: 11999,
-    annualPrice: 119990, // 2 months free equivalent (10 months * 11999)
-    monthlyPriceFormatted: "₹11,999",
-    annualPriceFormatted: "₹1,19,990",
-    annualMonthlyEquivalent: "₹9,999",
-    targetAudience: "Established MSMEs, manufacturers, wholesale distributors, retail chains, and expanding service firms (10 to 50+ staff) requiring connected operational workflows across multiple departments.",
-    userCapacity: "Up to 25 User Seats Included (Expandable)",
+    headline: "Unify Sales, Accounts, HR, Inventory & Digital Presence",
+    monthlyPrice: 13699,
+    annualPrice: 136990, // 2 months free equivalent (10 months * 13699)
+    monthlyPriceFormatted: "₹13,699",
+    annualPriceFormatted: "₹1,36,990",
+    annualMonthlyEquivalent: "₹11,416",
+    targetAudience: "Growing MSMEs, expanding agencies, wholesale distributors, retail chains, and service firms (10 to 50+ staff) requiring connected operational workflows across departments.",
+    userCapacity: "Up to 25 Users Included • 2 GB Cloud Storage",
     isPopular: true,
     colorScheme: "brand",
 
     mainIncludedFunctions: [
-      "Everything Included in Core OS",
-      "Real-time Inventory & Multi-Godown Stock Management",
-      "Purchasing & Vendor Purchase Orders (PO) Workflows",
-      "Delivery Challans & GST-Compliant Invoicing",
-      "HR Management: Employee Records, Attendance & Leave Approvals",
-      "Project & Task Management with Milestone Tracking",
-      "Operational BI Reports across Sales, Stock, and Tasks",
-      "Automated Workflow Triggers, Email Alerts & Webhooks",
-      "Department-Level Granular Access Permissions"
+      "Includes Core OS",
+      "Sales + Accounts Management",
+      "HR + Payroll + Employee Attendance Management",
+      "Inventory + Purchase + Project Management",
+      "SEO + Social Media + Content Management",
+      "Expanded User Access (Up to 25 Users)",
+      "2 GB Cloud Database Storage"
     ],
 
     setupJourney: [
@@ -90,7 +88,7 @@ const SCALENOVA_PLANS = [
     ],
 
     trainingIncluded: "Comprehensive multi-session live training for department heads and operating staff, complete customized workflow SOPs, and ongoing access to interactive adoption guides.",
-    supportIncluded: "Priority email, WhatsApp coordination channel, and direct ticket resolution during business hours with dedicated onboarding guidance.",
+    supportIncluded: "Dedicated support contact for your business, direct WhatsApp & email coordination channel, and structured monthly performance reviews.",
 
     manualWorkReduction: [
       "Ends duplicate entry between warehouse stock logs and billing spreadsheets.",
@@ -105,35 +103,33 @@ const SCALENOVA_PLANS = [
       "Automated weekly operational progress digest sent to business owners."
     ],
 
-    scalingUseCases: "Powers multi-crore turnover operations with multiple warehouses, 10,000+ SKU catalogs, and active cross-functional teams without operational chaos.",
-    upgradePath: "For multi-company consolidation, custom ERP API integrations (Tally, Logistics, Customs), or dedicated enterprise technical management, seamless upgrade to Elite OS is available at any time.",
+    scalingUseCases: "Powers multi-crore turnover operations with multiple warehouses, extensive SKU catalogs, and active cross-functional teams without operational chaos.",
+    upgradePath: "For multi-company consolidation, custom ERP API integrations, or enterprise manufacturing controls, seamless upgrade to Elite OS is available at any time.",
     ctaText: "Book Growth OS Walkthrough"
   },
   {
     id: "elite",
     name: "Elite OS",
     badge: "Full Enterprise OS",
-    headline: "End-to-End Enterprise Control, Custom APIs & Priority Care",
-    monthlyPrice: 24599,
-    annualPrice: 245990, // 2 months free equivalent (10 months * 24599)
-    monthlyPriceFormatted: "₹24,599",
-    annualPriceFormatted: "₹2,45,990",
-    annualMonthlyEquivalent: "₹20,499",
-    targetAudience: "High-growth enterprises, multi-branch corporations, large manufacturing plants, and complex commercial organizations needing bespoke workflow automations and high-tier technical governance.",
-    userCapacity: "High Capacity / Custom Seat Allocation",
+    headline: "End-to-End Enterprise Control, Advanced BI & Account Care",
+    monthlyPrice: 35799,
+    annualPrice: 357990, // 2 months free equivalent (10 months * 35799)
+    monthlyPriceFormatted: "₹35,799",
+    annualPriceFormatted: "₹3,57,990",
+    annualMonthlyEquivalent: "₹29,833",
+    targetAudience: "Established MSMEs, multi-branch corporations, large manufacturing plants, and complex commercial organizations needing complete ERP and enterprise digital growth.",
+    userCapacity: "Up to 100 Users Included • 4 GB+ Cloud Storage",
     isPopular: false,
     colorScheme: "dark",
 
     mainIncludedFunctions: [
-      "Everything Included in Growth OS",
-      "Executive BI Intelligence & High-Level Trend Dashboards",
-      "Multi-Branch & Multi-Entity Business Management",
-      "Custom Approval Hierarchies for Purchases & Credit Limits",
-      "Dedicated REST API Endpoints & Third-Party System Connectors",
-      "Custom Notification Gateways (WhatsApp Business API, SMS, Webhooks)",
-      "Advanced Audit Logs & Comprehensive Security Governance",
-      "Dedicated Technical Account Manager & Architecture Consultation",
-      "Quarterly Workflow Optimization & Operational Reviews"
+      "Includes Growth OS",
+      "Complete ERP + Advanced Business Management",
+      "Manufacturing + Assets + Advanced Operations",
+      "Advanced Digital Marketing + SEO + Social Media",
+      "Business Intelligence + Executive Reports & Analysis",
+      "Dedicated Training + Dedicated Support Contact & Account Manager",
+      "High-Capacity User Access (Up to 100 Users) & 4 GB+ Storage"
     ],
 
     setupJourney: [
@@ -144,7 +140,7 @@ const SCALENOVA_PLANS = [
     ],
 
     trainingIncluded: "Custom enterprise training program with dedicated live workshops, tailored executive documentation, and recurring training sessions for new organizational hires.",
-    supportIncluded: "Dedicated Technical Account Manager, priority resolution queue, direct technical hotline access, and scheduled quarterly operational workflow reviews.",
+    supportIncluded: "Dedicated Account Manager, priority resolution queue, direct technical hotline access, and scheduled quarterly operational workflow reviews.",
 
     manualWorkReduction: [
       "Eliminates manual inter-branch stock reconciliation and financial consolidations.",

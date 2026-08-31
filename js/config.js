@@ -8,8 +8,8 @@ const SCALENOVA_CONFIG = {
   brand: {
     name: "ScaleNova",
     legalName: "ScaleNova Private Limited",
-    tagline: "One platform for every business need",
-    description: "Unified Business Operating System for growing Indian MSMEs. Centralizing CRM, ERP, HR, Projects, and Financial operations into one seamless cloud workspace.",
+    tagline: "One system every business needs",
+    description: "Unified Business Operating System for growing Indian MSMEs. Bringing website, lead capture, CRM, ERP, HR, operations, and digital growth into one connected workspace.",
     gstin: "37ABUCS4883M1Z5",
     foundedYear: 2026,
     websiteUrl: "https://scalenovasystems.com"
@@ -27,9 +27,7 @@ const SCALENOVA_CONFIG = {
   },
 
   social: {
-    // Official ScaleNova LinkedIn Company Page
     linkedin: "https://www.linkedin.com/company/scalenovasys/",
-    // Official Instagram profile
     instagram: "https://www.instagram.com/scalenovasys/"
   },
 
@@ -41,59 +39,61 @@ const SCALENOVA_CONFIG = {
       core: {
         id: "core",
         name: "Core OS",
-        tagline: "For Startups, Growing Traders & Lean Teams",
-        monthlyPrice: 3299,
-        annualPrice: 32990, // 3299 * 10
+        tagline: "For Startups & Small Businesses",
+        monthlyPrice: 4899,
+        annualPrice: 48990, // 4899 * 10
         badge: "Essential Starter",
         highlight: false,
+        userLimit: "Up to 3 Users",
+        storageLimit: "1 GB Cloud Storage",
         featuresSummary: [
-          "Centralized CRM, Leads & Pipeline Tracker",
-          "Customer Database & Interaction History",
-          "Quotations & Basic Invoicing System",
-          "Role-Based User Permissions (Up to 5 Users)",
-          "Guided Workflow Onboarding & Team Orientation",
-          "Standard Cloud Infrastructure & Data Protection",
-          "Email & Ticket Support during Business Hours"
+          "Premium Website + Lead Capture",
+          "CRM + Core Business Management",
+          "Basic SEO + Online Presence",
+          "Training, Support + Monthly Reports",
+          "Up to 3 Users Included",
+          "1 GB Cloud Database Storage"
         ]
       },
       growth: {
         id: "growth",
         name: "Growth OS",
-        tagline: "For Scaling MSMEs, Agencies & Multi-Team Businesses",
-        monthlyPrice: 11999,
-        annualPrice: 119990, // 11999 * 10
+        tagline: "For Growing MSMEs, Agencies & Teams",
+        monthlyPrice: 13699,
+        annualPrice: 136990, // 13699 * 10
         badge: "Most Popular",
         highlight: true,
+        userLimit: "Up to 25 Users",
+        storageLimit: "2 GB Cloud Storage",
         featuresSummary: [
-          "Includes Everything in Core OS",
-          "ERP & Real-time Inventory & Stock Tracking",
-          "Purchasing, Vendor & Multi-location Orders",
-          "HR & Employee Attendance, Leaves & Payroll Workflows",
-          "Project Planning, Milestones & Task Ownership",
-          "Operational Business Analytics & Reporting",
-          "Automated Notification Triggers & Webhooks",
-          "Expanded User Access (Up to 25 Users)",
-          "Dedicated Onboarding Specialist & Live Team Training"
+          "Includes Core OS",
+          "Sales + Accounts Management",
+          "HR + Payroll + Employee Management",
+          "Inventory + Purchase + Project Management",
+          "SEO + Social Media + Content Management",
+          "Up to 25 Users Included",
+          "2 GB Cloud Database Storage"
         ]
       },
       elite: {
         id: "elite",
         name: "Elite OS",
-        tagline: "For Established Enterprises & Complex Multi-Branch Operations",
-        monthlyPrice: 24599,
-        annualPrice: 245990, // 24599 * 10
+        tagline: "For Established MSMEs & Enterprises",
+        monthlyPrice: 35799,
+        annualPrice: 357990, // 35799 * 10
         badge: "Full Enterprise OS",
         highlight: false,
+        userLimit: "Up to 100 Users",
+        storageLimit: "4 GB+ Cloud Storage",
         featuresSummary: [
-          "Includes Everything in Growth OS",
-          "Full-Suite Executive BI Dashboards & Trend Forecasting",
-          "Multi-Branch & Multi-Entity Financial Consolidation",
-          "Advanced Workflow Automation & Custom Approval Trees",
-          "Custom API Integrations (WhatsApp, Tally, Logistics)",
-          "Unlimited / High-Capacity User Access",
-          "Dedicated Technical Account Manager",
-          "Custom Operational Workflows & Continuous Optimization",
-          "Priority Resolution & Structured Training Reviews"
+          "Includes Growth OS",
+          "Complete ERP + Advanced Business Management",
+          "Manufacturing + Assets + Advanced Operations",
+          "Advanced Digital Marketing + SEO + Social Media",
+          "Business Intelligence + Reports + Analysis",
+          "Dedicated Training + Support + Account Management",
+          "Up to 100 Users Included",
+          "4 GB+ Cloud Database Storage"
         ]
       }
     }
@@ -102,20 +102,15 @@ const SCALENOVA_CONFIG = {
   affiliate: {
     commissionRate: 20, // 20% recurring monthly revenue share
     payoutCycle: "Monthly (Net-30)",
-    minPayout: 1000, // ₹1,000 INR
+    minPayout: 1000,
     cookieDays: 60
   },
 
   backend: {
-    /**
-     * Paste deployed Google Apps Script Web App URL or custom webhook endpoint here.
-     * When left empty or during local testing, forms-service runs in safe development simulation mode.
-     */
     googleAppsScriptUrl: ""
   }
 };
 
-// Freeze configuration in browser environment
 if (typeof Object.freeze === 'function') {
   Object.freeze(SCALENOVA_CONFIG);
 }

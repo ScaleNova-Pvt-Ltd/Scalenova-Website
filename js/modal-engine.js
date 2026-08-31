@@ -102,12 +102,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('careersModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'careersModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / <strong class="text-slate-900 dark:text-white">Careers</strong>
           </span>
@@ -292,12 +287,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('roleDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'roleDetailModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / Careers / <strong class="text-slate-900 dark:text-white">${role.title}</strong>
           </span>
@@ -410,12 +400,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('affiliateFullModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'affiliateFullModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / <strong class="text-slate-900 dark:text-white">Partner Network</strong>
           </span>
@@ -618,12 +603,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('blogAllModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'blogAllModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / <strong class="text-slate-900 dark:text-white">Blog &amp; Insights</strong>
           </span>
@@ -724,12 +704,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('blogArticleModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'blogArticleModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / Blog / <strong class="text-slate-900 dark:text-white">${blog.category}</strong>
           </span>
@@ -834,12 +809,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('featureDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'featureDetailModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / Features / <strong class="text-slate-900 dark:text-white">${feature.title}</strong>
           </span>
@@ -965,12 +935,7 @@ const ScaleNovaModals = (function() {
       <!-- Unified Compact SPA Top Navigation Bar -->
       <div class="sn-spa-navbar">
         <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('planDetailModal')" class="sn-spa-nav-btn" aria-label="Go Back">
-            <i class="fas fa-arrow-left text-xs"></i>
-          </button>
-          <button onclick="ScaleNovaModals.goForward()" class="sn-spa-nav-btn" aria-label="Go Forward">
-            <i class="fas fa-arrow-right text-xs"></i>
-          </button>
+          <button onclick="ScaleNovaModals.goBack(\'planDetailModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
           <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
             Home / Plans / <strong class="text-slate-900 dark:text-white">${plan.name}</strong>
           </span>

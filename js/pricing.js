@@ -9,27 +9,27 @@ const ScaleNovaPricing = (function() {
 
   const plans = {
     core: {
-      monthly: 3299,
-      annual: 32990, // 3,299 * 10 (Save 2 months)
-      annualMonthlyEquiv: 2749,
+      monthly: 4899,
+      annual: 48990, // 4,899 * 10 (Save 2 months)
+      annualMonthlyEquiv: 4083,
       elementIdPrice: 'price-core',
       elementIdSubtext: 'subtext-core',
       elementIdSavings: 'savings-core',
       elementIdBillingNote: 'billing-note-core'
     },
     growth: {
-      monthly: 11999,
-      annual: 119990, // 11,999 * 10 (Save 2 months)
-      annualMonthlyEquiv: 9999,
+      monthly: 13699,
+      annual: 136990, // 13,699 * 10 (Save 2 months)
+      annualMonthlyEquiv: 11416,
       elementIdPrice: 'price-growth',
       elementIdSubtext: 'subtext-growth',
       elementIdSavings: 'savings-growth',
       elementIdBillingNote: 'billing-note-growth'
     },
     elite: {
-      monthly: 24599,
-      annual: 245990, // 24,599 * 10 (Save 2 months)
-      annualMonthlyEquiv: 20499,
+      monthly: 35799,
+      annual: 357990, // 35,799 * 10 (Save 2 months)
+      annualMonthlyEquiv: 29833,
       elementIdPrice: 'price-elite',
       elementIdSubtext: 'subtext-elite',
       elementIdSavings: 'savings-elite',
