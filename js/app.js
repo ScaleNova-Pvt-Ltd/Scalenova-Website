@@ -84,3 +84,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // 4. Network Offline/Online Listener
   window.addEventListener('offline', () => ScaleNovaModals.open('offlineModal'));
 });
+
+// 5. Product Showcase Tab Switcher
+window.switchProductTab = function(tab) {
+  const btnOps = document.getElementById('tabBtnOperations');
+  const btnGrowth = document.getElementById('tabBtnGrowth');
+  const contentOps = document.getElementById('tabContentOperations');
+  const contentGrowth = document.getElementById('tabContentGrowth');
+
+  if (!btnOps || !btnGrowth || !contentOps || !contentGrowth) return;
+
+  if (tab === 'growth') {
+    btnOps.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-2';
+    btnGrowth.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all bg-emerald-600 text-white shadow-md flex items-center gap-2';
+    contentOps.classList.add('hidden');
+    contentGrowth.classList.remove('hidden');
+  } else {
+    btnOps.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all bg-brand-500 text-white shadow-md flex items-center gap-2';
+    btnGrowth.className = 'px-4 py-2 rounded-xl text-xs sm:text-sm font-black transition-all bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-2';
+    contentOps.classList.remove('hidden');
+    contentGrowth.classList.add('hidden');
+  }
+};
