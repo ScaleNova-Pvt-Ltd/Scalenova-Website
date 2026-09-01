@@ -425,15 +425,109 @@ tailwind.config = {
         We are always looking for driven engineers, operations specialists, and storytellers. Send us your resume and tell us what you'd like to build.
       </p>
       <div class="flex justify-center pt-2">
-        <a href="mailto:careers@scalenovasys.com?subject=General%20Application%20-%20ScaleNova" class="px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+        <button onclick="openCareerModal('General Application')" class="px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
           <i class="fas fa-paper-plane"></i>
           <span>Send General Application</span>
-        </a>
+        </button>
       </div>
     </div>
   </section>
 
 </main>
+
+<!-- CAREER CANDIDATE APPLICATION MODAL (FORM 2) -->
+<div id="careerAppModal" class="sn-modal-backdrop" onclick="if(event.target===this)closeCareerModal()" role="dialog" aria-modal="true" aria-labelledby="careerModalTitle">
+  <div class="sn-modal-panel max-w-lg p-5 sm:p-7" id="careerFormContainer">
+    <div class="flex justify-between items-center pb-3.5 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-8 h-8 rounded-lg sn-gradient-bg flex items-center justify-center text-white text-xs">
+          <i class="fas fa-paper-plane"></i>
+        </div>
+        <div>
+          <h3 id="careerModalTitle" class="text-sm sm:text-base font-black text-slate-900 dark:text-white">Apply for Position</h3>
+          <span id="targetRoleBadge" class="text-[10px] font-bold text-brand-500 uppercase">General Application</span>
+        </div>
+      </div>
+      <button onclick="closeCareerModal()" class="px-3 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-800" aria-label="Close Modal">
+        Close
+      </button>
+    </div>
+
+    <form id="careerForm" onsubmit="ScaleNovaForms.handleCareerSubmit(event)" class="overflow-y-auto py-3.5 space-y-3 pr-1 max-h-[68vh]">
+      <input type="hidden" id="appRoleInput" value="General Application">
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="appFullName" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Full Name *</label>
+          <input type="text" id="appFullName" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="appEmail" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Email Address *</label>
+          <input type="email" id="appEmail" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="appPhone" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Phone Number *</label>
+          <input type="tel" id="appPhone" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="appLocation" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Location *</label>
+          <input type="text" id="appLocation" required placeholder="e.g. Remote / Bangalore" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="appPref" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Work Preference *</label>
+          <select id="appPref" required class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-700 dark:text-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+            <option value="Full Time" selected>Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Internship">Internship</option>
+          </select>
+        </div>
+        <div>
+          <label for="appExp" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Experience *</label>
+          <input type="text" id="appExp" required placeholder="e.g. 2 years / Fresher" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div>
+          <label for="appLinkedin" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">LinkedIn Profile</label>
+          <input type="url" id="appLinkedin" placeholder="https://linkedin.com/in/username" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+        <div>
+          <label for="appGithub" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Portfolio / GitHub</label>
+          <input type="url" id="appGithub" placeholder="https://github.com/username" class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none">
+        </div>
+      </div>
+
+      <!-- File Upload with Validation -->
+      <div>
+        <label for="appResume" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Resume (PDF, DOC, DOCX — Max 5 MB) *</label>
+        <input type="file" id="appResume" accept=".pdf,.doc,.docx" required onchange="ScaleNovaForms.validateResumeFile(this, 'fileError')" class="w-full text-xs text-slate-500 file:mr-3 file:py-1.5 file:px-3.5 file:rounded-xl file:border-0 file:text-xs file:font-extrabold file:bg-brand-50 file:text-brand-700 dark:file:bg-slate-800 dark:file:text-brand-300 hover:file:bg-brand-100">
+        <span id="fileError" class="text-[10px] text-red-500 font-bold hidden block mt-1"></span>
+      </div>
+
+      <div>
+        <label for="appIntro" class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Short Introduction *</label>
+        <textarea id="appIntro" rows="2" required placeholder="Briefly describe your skills and why you want to build with ScaleNova..." class="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:outline-none"></textarea>
+      </div>
+
+      <div class="flex items-center space-x-2 pt-1">
+        <input type="checkbox" id="appConsent" required class="rounded text-brand-500 focus:ring-brand-500">
+        <label for="appConsent" class="text-[11px] text-slate-600 dark:text-slate-400">I consent to ScaleNova processing my candidate application data securely.</label>
+      </div>
+
+      <div class="pt-3 border-t border-slate-200 dark:border-slate-800 flex justify-end space-x-2.5">
+        <button type="button" onclick="closeCareerModal()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-500">Cancel</button>
+        <button type="submit" id="submitCareerBtn" class="px-5 py-2 rounded-xl text-xs sn-btn-primary">Submit Application</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <!-- 3-COLUMN GLOBAL FOOTER -->
@@ -484,7 +578,7 @@ tailwind.config = {
           <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="Instagram">
             <i class="fab fa-instagram text-xs"></i>
           </a>
-          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20ScaleNova%20Business%20OS%20and%20your%20services." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="WhatsApp">
+          <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20Business%20OS%20and%20services." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="WhatsApp">
             <i class="fab fa-whatsapp text-xs"></i>
           </a>
         </div>
@@ -499,14 +593,36 @@ tailwind.config = {
   </footer>
 
 <script src="../js/careers-data.js"></script>
+<script src="../js/forms-service.js"></script>
 <script>
+function openCareerModal(roleTitle) {
+  const modal = document.getElementById('careerAppModal');
+  const roleInput = document.getElementById('appRoleInput');
+  const roleBadge = document.getElementById('targetRoleBadge');
+  if (!modal) return;
+  const title = roleTitle || 'General Application';
+  if (roleInput) roleInput.value = title;
+  if (roleBadge) roleBadge.textContent = title;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCareerModal() {
+  const modal = document.getElementById('careerAppModal');
+  if (!modal) return;
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
 function renderCareers() {
   const container = document.getElementById('careersGrid');
   const careers = (typeof SCALENOVA_CAREERS !== 'undefined') ? SCALENOVA_CAREERS : (window.SCALENOVA_CAREERS || null);
   if (!container || !careers || !careers.roles) return;
 
   const roles = careers.roles;
-  container.innerHTML = roles.map(r => `
+  container.innerHTML = roles.map(r => {
+    const escapedTitle = r.title.replace(/'/g, "\\'");
+    return `
     <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
       <div class="space-y-3">
         <div class="flex items-center justify-between gap-2">
@@ -529,19 +645,33 @@ function renderCareers() {
 
       <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
         <span class="text-slate-500 font-semibold text-[11px]">${r.department || 'ScaleNova'}</span>
-        <a href="mailto:careers@scalenovasys.com?subject=Application%20for%20${encodeURIComponent(r.title)}" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5">
+        <button onclick="openCareerModal('${escapedTitle}')" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5">
           <span>Apply Now</span>
           <i class="fas fa-arrow-right text-[10px]"></i>
-        </a>
+        </button>
       </div>
     </div>
-  `).join('');
+  `;
+  }).join('');
 }
 
 // Execute immediately and on DOM load
 renderCareers();
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', renderCareers);
+  document.addEventListener('DOMContentLoaded', () => {
+    renderCareers();
+    const urlParams = new URLSearchParams(window.location.search);
+    const roleParam = urlParams.get('role');
+    if (roleParam || window.location.hash === '#apply') {
+      openCareerModal(roleParam || 'General Application');
+    }
+  });
+} else {
+  const urlParams = new URLSearchParams(window.location.search);
+  const roleParam = urlParams.get('role');
+  if (roleParam || window.location.hash === '#apply') {
+    openCareerModal(roleParam || 'General Application');
+  }
 }
 
 function toggleMobileSidebar() {
@@ -582,7 +712,7 @@ if (themeBtn) {
 
 
 <!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/917801049178?text=Hi%20ScaleNova%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20Business%20OS%20and%20services.%20Please%20help%20me%20understand%20how%20it%20could%20fit%20my%20business." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-2xl sm:text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Connect on WhatsApp">
+<a href="https://wa.me/917801049178?text=Hi%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20Business%20OS%20and%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-2xl sm:text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Connect on WhatsApp">
   <i class="fab fa-whatsapp" aria-hidden="true"></i>
 </a>
 
