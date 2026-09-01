@@ -1,223 +1,334 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en-IN" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growth OS — ScaleNova Business OS</title>
-  <meta name="description" content="Website, Leads, Sales, Accounts, HR, Payroll, Inventory & Projects">
-  <link rel="canonical" href="https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/growth-os/">
+  <title>Growth OS Details | ScaleNova Business OS</title>
+  <meta name="description" content="Operate sales, HR, stock, billing and digital marketing from one system.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="../../assets/logo.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
             brand: {
-              50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd', 300: '#7cc8fc',
-              400: '#36b0fa', 500: '#0c96eb', 600: '#0077cd', 700: '#005fa7',
-              800: '#045189', 900: '#0a4371', 950: '#072b4c'
+              50: '#f0f5ff', 100: '#e0ebff', 200: '#c7d7fe', 300: '#a4bcfd', 400: '#7c98fb',
+              500: '#5364f7', 600: '#3b43ee', 700: '#2d30d8', 800: '#2729af', 900: '#25288a', 950: '#171854',
             }
           }
         }
       }
     }
   </script>
-  <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/components.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../../css/styles.css">
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
   <!-- HEADER NAVIGATION -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+  <header class="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="../../" class="flex items-center space-x-2">
-        <img src="../../assets/logo.png" alt="ScaleNova Logo" class="h-7 w-auto object-contain">
+      <a href="../../index.html" class="flex items-center space-x-2">
+        <img src="../../assets/logo.png" alt="ScaleNova Logo" class="h-7 w-auto object-contain bg-transparent">
         <span class="text-lg font-black tracking-tight sn-gradient-text">ScaleNova</span>
       </a>
-      <nav class="hidden md:flex items-center space-x-6 text-xs font-bold text-slate-600">
-        <a href="../../" class="hover:text-brand-600 transition">Home</a>
-        <a href="../../features/" class="hover:text-brand-600 transition">Features</a>
-        <a href="../../plans/" class="text-brand-600 transition">Plans</a>
-        <a href="../../blog/" class="hover:text-brand-600 transition">Blog</a>
-        <a href="../../careers/" class="hover:text-brand-600 transition">Careers</a>
-        <a href="../../affiliate/" class="hover:text-brand-600 transition">Affiliate</a>
-        <a href="../../contact/" class="hover:text-brand-600 transition">Contact</a>
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-bold text-slate-600 dark:text-slate-300">
+        <a href="../../index.html" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Home</a>
+        <a href="../../features/" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Features</a>
+        <a href="../../plans/" class="text-brand-600 dark:text-brand-400 font-extrabold">Plans</a>
+        <a href="../../blog/" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Blog</a>
+        <a href="../../careers/" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Careers</a>
+        <a href="../../affiliate/" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Affiliate</a>
+        <a href="../../contact/" class="hover:text-brand-600 dark:hover:text-brand-400 transition">Contact</a>
       </nav>
       <div class="flex items-center space-x-3">
-        <a href="../../contact/" class="hidden sm:inline-flex px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-xs">
-          Book Demo
+        <button id="themeToggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105" aria-label="Toggle Theme Mode">
+          <i class="fas fa-sun text-xs"></i>
+        </button>
+        <a href="../../contact/" class="hidden sm:inline-flex px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center space-x-2">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book a Demo</span>
         </a>
+        <button onclick="toggleMobileSidebar()" class="md:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 flex items-center justify-center transition-all" aria-label="Open Navigation">
+          <i class="fas fa-bars text-sm"></i>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- MOBILE MENU DRAWER OVERLAY -->
+  <div id="mobileSidebarOverlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 md:hidden"></div>
+  <div id="mobileSidebar" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white dark:bg-slate-900 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-between p-6 border-l border-slate-200 dark:border-slate-800">
+    <div class="space-y-6">
+      <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+        <div class="flex items-center space-x-2">
+          <img src="../../assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent">
+          <span class="text-sm font-black sn-gradient-text">ScaleNova</span>
+        </div>
+        <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500">
+          <i class="fas fa-times text-xs"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
+        <a href="../../" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
+        <a href="../../features/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-layer-group text-brand-500 w-5"></i><span>Features</span></a>
+        <a href="../../plans/" class="flex items-center space-x-3 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400"><i class="fas fa-tags text-brand-500 w-5"></i><span>OS Plans</span></a>
+        <a href="../../blog/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-newspaper text-brand-500 w-5"></i><span>Blog / Insights</span></a>
+        <a href="../../careers/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-briefcase text-brand-500 w-5"></i><span>Careers</span></a>
+        <a href="../../affiliate/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-handshake text-brand-500 w-5"></i><span>Affiliate Programme</span></a>
+        <a href="../../contact/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-headset text-brand-500 w-5"></i><span>Contact</span></a>
+      </nav>
+    </div>
+    <a href="../../contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+      <i class="fas fa-calendar-check"></i>
+      <span>Book a Demo</span>
+    </a>
+  </div>
+
   <!-- MAIN CONTENT -->
   <main class="flex-grow">
     
-    <!-- BREADCRUMB & HERO -->
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-6" aria-label="Breadcrumb">
-        <a href="../../" class="hover:text-brand-600 transition">Home</a>
-        <i class="fas fa-chevron-right text-[10px] text-slate-300"></i>
-        <a href="../../plans/" class="hover:text-brand-600 transition">Plans</a>
-        <i class="fas fa-chevron-right text-[10px] text-slate-300"></i>
-        <span class="text-slate-900 font-bold">Growth OS</span>
-      </nav>
+    <!-- Hero Section -->
+    <section class="pt-8 sm:pt-12 pb-12 sm:pb-16 px-4 md:px-8 bg-gradient-to-b from-slate-50/80 via-white to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-7xl mx-auto space-y-6">
+        
+        <!-- Breadcrumb -->
+        <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
+          <a href="../../" class="hover:text-brand-500">Home</a>
+          <span>/</span>
+          <a href="../../plans/" class="hover:text-brand-500">Plans</a>
+          <span>/</span>
+          <span class="text-slate-900 dark:text-white font-bold">Growth OS</span>
+        </div>
 
-      <div class="bg-white rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-xs relative overflow-hidden">
-        <div class="max-w-3xl">
-          <span class="px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-bold uppercase tracking-wider inline-block mb-4">
-            For Growing MSMEs, Agencies & Teams
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
+          
+          <!-- Left Info Column -->
+          <div class="lg:col-span-7 space-y-5">
+            <span class="px-3.5 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
+              For Growing MSMEs, Agencies & Teams
+            </span>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+              Growth OS Details
+            </h1>
+
+            <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
+              Operate sales, HR, stock, billing and digital marketing from one system.
+            </p>
+
+            <!-- Capacity Badges -->
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">Included Capacity Limits</span>
+              <div class="flex items-center flex-wrap gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300">
+                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Up to 25 Users</span>
+                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">2 GB Business Data</span>
+                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">5 GB File Storage</span>
+              </div>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="../../contact/?plan=Growth OS" class="px-6 py-3 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-md">
+                <i class="fas fa-calendar-check"></i>
+                <span>Book a Live Demo</span>
+              </a>
+              <a href="../../plans/" class="px-5 py-3 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                Compare All 3 Plans →
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Pricing Preview Card -->
+          <div class="lg:col-span-5">
+            <div class="sn-card border-2 border-brand-500/30 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 space-y-5 shadow-xl relative overflow-hidden">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
+                <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">MOST POPULAR</span>
+                <span class="text-xs font-bold text-slate-400">Monthly Commitment</span>
+              </div>
+
+              <div class="space-y-2">
+                <div class="flex items-baseline space-x-2">
+                  <span class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white">₹13,699</span>
+                  <span class="text-xs font-bold text-slate-500">+ GST / month</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Annual option available: 12 months for the price of 10.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 space-y-2 text-xs font-medium text-slate-700 dark:text-slate-300">
+                <div class="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 font-bold">
+                  <i class="fas fa-circle-check"></i>
+                  <span>Everything Included In One Fee</span>
+                </div>
+                <p>Software, managed cloud hosting, administrator setup, employee onboarding, and ongoing support.</p>
+              </div>
+
+              <a href="../../contact/?plan=Growth OS" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2 shadow-md">
+                <i class="fas fa-calendar-check"></i>
+                <span>Select Growth OS</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Plan Deliverables Section -->
+    <section class="py-12 sm:py-16 px-4 md:px-8 bg-slate-50/60 dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto space-y-8">
+        
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
+            <i class="fas fa-boxes-packing mr-1 text-brand-500"></i>Included Features
           </span>
-          <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
-            Growth OS
-          </h1>
-          <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed mb-6">
-            Website, Leads, Sales, Accounts, HR, Payroll, Inventory & Projects
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+            What Is Included in Growth OS
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
+            Core functional deliverables included in your monthly subscription.
           </p>
+        </div>
 
-          <!-- Pricing & Capacity Badge -->
-          <div class="flex flex-wrap items-center gap-4 mb-8">
-            <div class="px-4 py-2.5 rounded-2xl bg-slate-900 text-white text-sm font-black">
-              ₹13,699 <span class="text-xs font-normal text-slate-400">/ month</span>
-            </div>
-            <div class="px-4 py-2.5 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-bold">
-              Billed Annually at ₹11,416 / mo (Save 2 Months)
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
           </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Website, Leads & Customer Management</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Centralize all sales leads, inquiries, and customer communication.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Sales, Accounts & Payments</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Manage invoices, payment receipts, expenses, and GST ledgers.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">HR, Attendance, Leaves & Payroll</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Track employee attendance, leave workflows, and salary slips.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Inventory & Supplier Purchasing</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Track real-time stock levels, purchase orders, and GRN receipts.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Projects & Task Kanban Boards</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Organize team work, client deliverables, and due dates.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">SEO + Social Media Content Calendar</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Drive digital growth with ongoing SEO and social media publishing.</p>
+        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
+            <i class="fas fa-check-circle"></i>
+            <span>Included Deliverable</span>
+          </div>
+          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Biweekly Business Review & Reports</h3>
+          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Review biweekly performance insights with your account manager.</p>
+        </div>
+        </div>
 
-          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200/60 mb-8">
-            <span class="text-[10px] uppercase font-black tracking-wider text-slate-400 block mb-1">Included Limits & Capacity</span>
-            <p class="text-xs font-bold text-slate-800">25 Users · 2 GB Business Data · 5 GB File Storage</p>
-          </div>
+      </div>
+    </section>
 
-          <div class="flex flex-wrap gap-4">
-            <a href="../../contact/" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-md shadow-brand-500/20">
-              Book Growth OS Demo
-            </a>
-            <a href="../../plans/" class="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition">
-              Compare All Plans
-            </a>
+    <!-- Implementation Roadmap -->
+    <section class="py-12 sm:py-16 px-4 md:px-8 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-4xl mx-auto space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+            Expected Implementation Journey
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
+            A structured, hands-on onboarding process to make your transition smooth.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+            01
           </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Full System Setup</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Deploy CRM, inventory, HR, and accounts workflows.</p>
+          </div>
+        </div><div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+            02
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Data Import & Migration</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Import existing customer lists, stock items, and employee data.</p>
+          </div>
+        </div><div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+            03
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Department Training</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Train sales, HR, and ops teams on connected daily workflows.</p>
+          </div>
+        </div><div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
+          <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+            04
+          </div>
+          <div class="space-y-1">
+            <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Ongoing Optimization</h4>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Biweekly review meetings to optimize system usage and growth.</p>
+          </div>
+        </div>
         </div>
       </div>
     </section>
 
-    <!-- WHO IT IS FOR & INCLUSIONS -->
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
-      
-      <!-- Target Audience -->
-      <div class="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-xs">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">Who This Plan Is For</h2>
-        <p class="text-xs text-slate-600 leading-relaxed font-medium">
-          Growing MSMEs, expanding agencies, wholesale distributors, retail chains, and service firms (10 to 50+ staff) requiring connected operational workflows across departments.
+    <!-- Pre-Footer CTA Banner Section -->
+    <section class="py-12 sm:py-16 px-4 md:px-8 bg-slate-50/60 dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800/80">
+      <div class="max-w-4xl mx-auto text-center space-y-5">
+        <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
+          Get Started Today
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+          Ready to Modernize Your Operations with Growth OS?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium max-w-xl mx-auto leading-relaxed">
+          Book a live demo to inspect the system, review your requirements, and plan your business onboarding.
         </p>
-      </div>
-
-      <!-- Inclusions -->
-      <div>
-        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-6">What Is Included</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">Website, Leads & Customer Management</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">Sales, Accounts & Payments</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">HR, Payroll, Inventory & Projects</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">Automation + Document Management</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">SEO, Digital Marketing & Social Media</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">Training + Ongoing Support</span>
-        </div>
-        <div class="flex items-start space-x-3 p-4 rounded-xl bg-slate-50 border border-slate-200/60">
-          <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs mt-0.5 shrink-0">
-            <i class="fas fa-check"></i>
-          </div>
-          <span class="text-xs font-bold text-slate-800 leading-snug">Biweekly Business Review & Reports</span>
-        </div>
-        </div>
-      </div>
-
-      <!-- Workflow Pipeline -->
-      <div class="p-8 rounded-3xl bg-white border border-slate-200/80 shadow-xs">
-        <h2 class="text-xl font-bold text-slate-900 mb-2">Typical Service Workflow</h2>
-        <p class="text-xs text-slate-600 leading-relaxed font-medium mb-6">
-          How ScaleNova operates seamlessly to support your team from day one.
-        </p>
-        <div class="flex flex-wrap items-center gap-2">
-          
-        <div class="flex items-center space-x-2">
-          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
-            Lead Capture
-          </div>
-          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
-            Sales & Accounts
-          </div>
-          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
-            HR & Inventory
-          </div>
-          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
-            Projects & Workflows
-          </div>
-          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
-        </div>
-        <div class="flex items-center space-x-2">
-          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
-            Biweekly Insights
-          </div>
-          
-        </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- BOTTOM CTA BANNER -->
-    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="p-8 md:p-12 rounded-3xl bg-slate-900 text-white text-center space-y-4 relative overflow-hidden">
-        <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Ready to get started with Growth OS?</h2>
-        <p class="text-sm text-slate-300 max-w-xl mx-auto font-medium leading-relaxed">
-          Book a 20-minute live demonstration to see how ScaleNova fits your exact business needs.
-        </p>
-        <div class="pt-2 flex justify-center space-x-4">
-          <a href="../../contact/" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold transition shadow-lg shadow-brand-500/30">
-            Book a Live Demo
+        <div class="flex flex-wrap justify-center gap-3 pt-2">
+          <a href="../../contact/?plan=Growth OS" class="px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-md">
+            <i class="fas fa-calendar-check"></i>
+            <span>Book a Live Demo</span>
+          </a>
+          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Growth OS%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition flex items-center space-x-2">
+            <i class="fab fa-whatsapp text-sm"></i>
+            <span>Talk to ScaleNova</span>
           </a>
         </div>
       </div>
@@ -225,7 +336,6 @@
 
   </main>
 
-  <!-- 3-COLUMN FOOTER -->
   <!-- 3-COLUMN GLOBAL FOOTER -->
   <footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-10 px-4 md:px-8 mt-auto text-xs">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800/80">
@@ -288,10 +398,44 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP FAB BUTTON (SHORT PRE-FILLED MESSAGE) -->
-  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20ScaleNova%20Business%20OS%20and%20your%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-2xl sm:text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Connect on WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  <!-- Floating WhatsApp CTA -->
+  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Growth OS%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" aria-label="Contact ScaleNova on WhatsApp">
+    <i class="fab fa-whatsapp text-2xl"></i>
   </a>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMobileSidebar() {
+      const overlay = document.getElementById('mobileSidebarOverlay');
+      const sidebar = document.getElementById('mobileSidebar');
+      if (!sidebar) return;
+      const isOpen = sidebar.classList.contains('translate-x-0');
+      if (isOpen) {
+        sidebar.classList.remove('translate-x-0');
+        sidebar.classList.add('translate-x-full');
+        if (overlay) {
+          overlay.classList.remove('opacity-100', 'pointer-events-auto');
+          overlay.classList.add('opacity-0', 'pointer-events-none');
+        }
+      } else {
+        sidebar.classList.remove('translate-x-full');
+        sidebar.classList.add('translate-x-0');
+        if (overlay) {
+          overlay.classList.remove('opacity-0', 'pointer-events-none');
+          overlay.classList.add('opacity-100', 'pointer-events-auto');
+        }
+      }
+    }
+
+    const themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeBtn.innerHTML = isDark ? '<i class="fas fa-sun text-xs"></i>' : '<i class="fas fa-moon text-xs"></i>';
+      });
+    }
+  </script>
 
 </body>
 </html>
