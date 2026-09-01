@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Finance Tracking | ScaleNova Business OS</title>
-  <meta name="description" content="Keep billing, receivables and everyday financial activity organised.">
+  <title>Finance &amp; Accounts Tracking | ScaleNova Business OS</title>
+  <meta name="description" content="GST invoicing, payment gateway reconciliation, overdue receivables tracking, and automated financial statements.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../../assets/logo.png">
+  <link rel="apple-touch-icon" href="../../assets/logo.png">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Tailwind CSS -->
@@ -25,8 +26,17 @@
           fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
             brand: {
-              50: '#f0f5ff', 100: '#e0ebff', 200: '#c7d7fe', 300: '#a4bcfd', 400: '#7c98fb',
-              500: '#5364f7', 600: '#3b43ee', 700: '#2d30d8', 800: '#2729af', 900: '#25288a', 950: '#171854',
+              50: '#f5f0ff',
+              100: '#ebdfff',
+              200: '#d6bfff',
+              300: '#b88dff',
+              400: '#9b5cf6',
+              500: '#7F00FF',
+              600: '#6600cc',
+              700: '#4682B4',
+              800: '#2c5a80',
+              900: '#0B0F19',
+              950: '#030712'
             }
           }
         }
@@ -34,7 +44,8 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/components.css">
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
@@ -111,7 +122,7 @@
         </button>
       </div>
       <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
-        <a href="../../" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
+        <a href="../../index.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
         <a href="../../features/" class="flex items-center space-x-3 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400"><i class="fas fa-layer-group text-brand-500 w-5"></i><span>Features</span></a>
         <a href="../../plans/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-tags text-brand-500 w-5"></i><span>OS Plans</span></a>
         <a href="../../blog/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-newspaper text-brand-500 w-5"></i><span>Blog / Insights</span></a>
@@ -135,11 +146,11 @@
         
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
-          <a href="../../" class="hover:text-brand-500">Home</a>
+          <a href="../../index.html" class="hover:text-brand-500">Home</a>
           <span>/</span>
           <a href="../../features/" class="hover:text-brand-500">Features</a>
           <span>/</span>
-          <span class="text-slate-900 dark:text-white font-bold">Finance Tracking</span>
+          <span class="text-slate-900 dark:text-white font-bold">Finance &amp; Tracking</span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2">
@@ -147,8 +158,8 @@
           <!-- Left Info Column -->
           <div class="lg:col-span-7 space-y-5">
             <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
-                <i class="fas fa-receipt"></i>
+              <div class="w-12 h-12 rounded-2xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
+                <i class="fas fa-file-invoice-dollar"></i>
               </div>
               <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
                 ScaleNova Connected Module
@@ -156,18 +167,24 @@
             </div>
 
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-              Finance Tracking
+              Finance &amp; Accounts Tracking
             </h1>
 
             <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
-              Keep billing, receivables and everyday financial activity organised.
+              Send GST-compliant invoices, track overdue payments, record expenses, and maintain real-time ledgers.
             </p>
 
             <!-- Operational Workflow Pipeline -->
             <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
               <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">Operational Workflow Pipeline</span>
               <div class="flex items-center flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Billing</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Receivables</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Expenses</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Accounts</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Billing</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Receivables</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Expenses</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Accounts</span>
               </div>
             </div>
 
@@ -178,41 +195,41 @@
                 <span>Book a Live Demo</span>
               </a>
               <a href="../../features/" class="px-5 py-3 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-                Explore All 8 Modules →
+                ← Back to Features
               </a>
             </div>
           </div>
 
-          <!-- Right Dashboard Feature Card -->
+          <!-- Right Feature Preview Card -->
           <div class="lg:col-span-5">
             <div class="sn-card border-2 border-brand-500/20 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 space-y-5 shadow-xl relative overflow-hidden">
               <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
                 <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">Live System Preview</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-rose-500 animate-pulse"></span>
+                  <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">Live Finance Engine</span>
                 </div>
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 uppercase tracking-wider">ScaleNova OS</span>
               </div>
 
               <div class="space-y-4">
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 space-y-1">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Clean Accounting & GST Invoicing</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Payment Collection Velocity</span>
                   <div class="flex items-baseline space-x-2">
-                    <span class="text-3xl font-black text-slate-900 dark:text-white">100%</span>
-                    <span class="text-xs font-bold text-emerald-500"><i class="fas fa-arrow-up text-[10px]"></i> Operational Efficiency</span>
+                    <span class="text-3xl font-black text-slate-900 dark:text-white">42%</span>
+                    <span class="text-xs font-bold text-emerald-500"><i class="fas fa-arrow-down text-[10px]"></i> Faster Receivables Clearance</span>
                   </div>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Core Impact</span>
                   <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                    Manages core financial transactions cleanly. Generate compliant GST invoices, track payment receipts, record business expenses, monitor customer receivables aging, and export ledger summaries.
+                    Eliminate cashflow leaks with automated payment reminders, instant UPI payment links on GST invoices, and live bank reconciliation.
                   </p>
                 </div>
 
-                <div class="p-3.5 rounded-xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-semibold space-y-1">
-                  <span class="text-[10px] font-black uppercase tracking-wider block text-emerald-600 dark:text-emerald-400">Why Business Owners Choose ScaleNova</span>
-                  <p>Keeps your financial records audit-ready, improves collection speeds, and gives you real-time profitability figures.</p>
+                <div class="p-3.5 rounded-xl bg-rose-500/10 text-rose-700 dark:text-rose-300 text-xs font-semibold space-y-1">
+                  <span class="text-[10px] font-black uppercase tracking-wider block text-rose-600 dark:text-rose-400">CA-Ready Reports</span>
+                  <p>Generate GSTR-1, GSTR-3B, Profit &amp; Loss, and Balance Sheet statements in one click.</p>
                 </div>
               </div>
 
@@ -236,7 +253,7 @@
             <i class="fas fa-circle-check mr-1 text-emerald-500"></i>Key Capabilities
           </span>
           <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-            What You Can Do with Finance Tracking
+            What You Can Do with Finance &amp; Accounts Tracking
           </h2>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
             Streamline your operations with powerful tools built specifically for growing Indian MSMEs.
@@ -245,66 +262,76 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-file-invoice text-emerald-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+            <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-base">
+              <i class="fas fa-file-invoice"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">GST-Compliant Invoicing</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Issue clean B2B and B2C tax invoices with accurate HSN/SAC codes, CGST/SGST/IGST breakdown, and e-Way bills.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">GST Compliant Invoicing</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Create customized GST invoices, debit/credit notes, and proforma bills with automatic tax calculation.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base">
+              <i class="fas fa-hand-holding-dollar"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Overdue Receivables &amp; Aging Reports</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Track aging slabs (0-30, 31-60, 60+ days) and automate polite WhatsApp payment reminders to clients.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-hand-holding-dollar text-purple-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-base">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Expense Tracking &amp; Vendor Payments</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Log recurring utility bills, vendor liabilities, operational costs, and petty cash expenses accurately.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Customer Receivables Management</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Track unpaid invoices by due date and send automated payment reminder notices via email and WhatsApp.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-base">
+              <i class="fas fa-building-columns"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Bank Reconciliation &amp; Statements</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Match bank statement transactions against system sales invoices and purchase bills effortlessly.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-receipt text-amber-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Real-Time P&amp;L and Balance Sheet</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Live view of Gross Profit, Operating Margins, Net Income, Assets, Liabilities, and Cash on Hand.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Operational Expense Recording</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Categorize daily business expenditures, supplier bills, and utility costs with receipt attachments.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-base">
+              <i class="fas fa-qrcode"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">UPI QR Code &amp; Payment Gateway Links</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Print dynamic UPI QR codes and embedded payment gateway checkout links directly on PDF invoices.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-building-columns text-blue-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Bank Reconciliation Support</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Match bank statement transactions against internal invoice receipts and supplier payments.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-chart-pie text-cyan-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Profit & Loss Overview</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Review instant income vs expense summaries and monitor monthly gross and net profit margins.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-file-export text-indigo-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">CA & Audit Export Pack</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Export organized financial ledgers, GST summaries, and trial balances for your Chartered Accountant.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div>
         </div>
 
       </div>
@@ -314,20 +341,20 @@
     <section class="py-12 sm:py-16 px-4 md:px-8 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800/80">
       <div class="max-w-4xl mx-auto text-center space-y-5">
         <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-          Get Started Today
+          Experience the Difference
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-          Ready to Transform Your Operations with ScaleNova?
+          Ready for Crystal-Clear Financial Visibility?
         </h2>
         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium max-w-xl mx-auto leading-relaxed">
-          Get your custom managed business operating system set up with hands-on team onboarding training and ongoing operational support.
+          Book a personalized live walkthrough to see how Finance &amp; Accounts Tracking secures your cashflow and billing.
         </p>
         <div class="flex flex-wrap justify-center gap-3 pt-2">
           <a href="../../contact/?requirement=finance-tracking" class="px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-md">
             <i class="fas fa-calendar-check"></i>
             <span>Book a Live Demo</span>
           </a>
-          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Finance Tracking%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition flex items-center space-x-2">
+          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Finance%20%26%20Tracking%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition flex items-center space-x-2">
             <i class="fab fa-whatsapp text-sm"></i>
             <span>Talk to ScaleNova</span>
           </a>
@@ -400,7 +427,7 @@
   </footer>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Finance Tracking%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" aria-label="Contact ScaleNova on WhatsApp">
+  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Finance%20%26%20Tracking%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" aria-label="Contact ScaleNova on WhatsApp">
     <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 

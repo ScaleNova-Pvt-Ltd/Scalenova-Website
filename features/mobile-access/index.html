@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Access | ScaleNova Business OS</title>
-  <meta name="description" content="Access core business reports, approvals and customer details on any device.">
+  <title>Mobile Access &amp; Management | ScaleNova Business OS</title>
+  <meta name="description" content="Manage your entire business on mobile. One-tap approval chains, live sales notifications, and offline-ready access.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="../../assets/logo.png">
+  <link rel="apple-touch-icon" href="../../assets/logo.png">
 
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Tailwind CSS -->
@@ -25,8 +26,17 @@
           fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
           colors: {
             brand: {
-              50: '#f0f5ff', 100: '#e0ebff', 200: '#c7d7fe', 300: '#a4bcfd', 400: '#7c98fb',
-              500: '#5364f7', 600: '#3b43ee', 700: '#2d30d8', 800: '#2729af', 900: '#25288a', 950: '#171854',
+              50: '#f5f0ff',
+              100: '#ebdfff',
+              200: '#d6bfff',
+              300: '#b88dff',
+              400: '#9b5cf6',
+              500: '#7F00FF',
+              600: '#6600cc',
+              700: '#4682B4',
+              800: '#2c5a80',
+              900: '#0B0F19',
+              950: '#030712'
             }
           }
         }
@@ -34,7 +44,8 @@
     }
   </script>
 
-  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/components.css">
 </head>
 <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
@@ -111,7 +122,7 @@
         </button>
       </div>
       <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
-        <a href="../../" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
+        <a href="../../index.html" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
         <a href="../../features/" class="flex items-center space-x-3 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400"><i class="fas fa-layer-group text-brand-500 w-5"></i><span>Features</span></a>
         <a href="../../plans/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-tags text-brand-500 w-5"></i><span>OS Plans</span></a>
         <a href="../../blog/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-newspaper text-brand-500 w-5"></i><span>Blog / Insights</span></a>
@@ -135,7 +146,7 @@
         
         <!-- Breadcrumb -->
         <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
-          <a href="../../" class="hover:text-brand-500">Home</a>
+          <a href="../../index.html" class="hover:text-brand-500">Home</a>
           <span>/</span>
           <a href="../../features/" class="hover:text-brand-500">Features</a>
           <span>/</span>
@@ -156,18 +167,24 @@
             </div>
 
             <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-              Mobile Access
+              Mobile Access &amp; Management
             </h1>
 
             <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl">
-              Access core business reports, approvals and customer details on any device.
+              Stay connected to your business wherever you are with responsive mobile access, real-time push notifications, and one-tap approvals.
             </p>
 
             <!-- Operational Workflow Pipeline -->
             <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
               <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">Operational Workflow Pipeline</span>
               <div class="flex items-center flex-wrap gap-1.5">
-                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Open</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Review</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Approve</span><i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i><span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Manage</span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Open</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Review</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Approve</span>
+                <i class="fas fa-chevron-right text-[10px] mx-1 text-slate-400"></i>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700">Manage</span>
               </div>
             </div>
 
@@ -178,41 +195,41 @@
                 <span>Book a Live Demo</span>
               </a>
               <a href="../../features/" class="px-5 py-3 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-                Explore All 8 Modules →
+                ← Back to Features
               </a>
             </div>
           </div>
 
-          <!-- Right Dashboard Feature Card -->
+          <!-- Right Feature Preview Card -->
           <div class="lg:col-span-5">
             <div class="sn-card border-2 border-brand-500/20 bg-white dark:bg-slate-900 rounded-3xl p-6 sm:p-7 space-y-5 shadow-xl relative overflow-hidden">
               <div class="flex items-center justify-between pb-4 border-b border-slate-200 dark:border-slate-800">
                 <div class="flex items-center space-x-2">
-                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">Live System Preview</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-500 animate-pulse"></span>
+                  <span class="text-xs font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">Live Mobile Portal</span>
                 </div>
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20 uppercase tracking-wider">ScaleNova OS</span>
               </div>
 
               <div class="space-y-4">
                 <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 space-y-1">
-                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">On-The-Go Business Control</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Mobile Management Uptime</span>
                   <div class="flex items-baseline space-x-2">
                     <span class="text-3xl font-black text-slate-900 dark:text-white">24/7</span>
-                    <span class="text-xs font-bold text-emerald-500"><i class="fas fa-arrow-up text-[10px]"></i> Operational Efficiency</span>
+                    <span class="text-xs font-bold text-emerald-500"><i class="fas fa-signal text-[10px]"></i> Anywhere Cloud Access</span>
                   </div>
                 </div>
 
                 <div class="space-y-2">
                   <span class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Core Impact</span>
                   <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-                    Provides responsive, secure mobile access to your business operating system. Review pending approvals, check customer records, inspect daily sales numbers, and message team members from your phone.
+                    Approve purchase orders, check daily sales figures, and review customer inquiries directly from your mobile smartphone without needing your laptop.
                   </p>
                 </div>
 
-                <div class="p-3.5 rounded-xl bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-semibold space-y-1">
-                  <span class="text-[10px] font-black uppercase tracking-wider block text-emerald-600 dark:text-emerald-400">Why Business Owners Choose ScaleNova</span>
-                  <p>Keeps business owners and field staff connected to core operations from anywhere, anytime.</p>
+                <div class="p-3.5 rounded-xl bg-indigo-500/10 text-indigo-700 dark:text-indigo-300 text-xs font-semibold space-y-1">
+                  <span class="text-[10px] font-black uppercase tracking-wider block text-indigo-600 dark:text-indigo-400">Instant Push Alerts</span>
+                  <p>Get instant WhatsApp and push alerts when high-value leads arrive or invoices are settled.</p>
                 </div>
               </div>
 
@@ -236,7 +253,7 @@
             <i class="fas fa-circle-check mr-1 text-emerald-500"></i>Key Capabilities
           </span>
           <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
-            What You Can Do with Mobile Access
+            What You Can Do with Mobile Access &amp; Management
           </h2>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 font-medium">
             Streamline your operations with powerful tools built specifically for growing Indian MSMEs.
@@ -245,66 +262,76 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-mobile-screen text-indigo-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-base">
+              <i class="fas fa-circle-check"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">One-Tap Approval Workflows</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Approve purchase orders, quotations, employee leaves, and payment requisitions with one tap on mobile.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">100% Mobile Responsive Interface</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Optimized interface works smoothly across smartphones, tablets, laptops, and desktop computers.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Real-Time Mobile Notifications</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Receive instant push notifications and WhatsApp pings for new leads, urgent client tickets, and low-stock alerts.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-check-double text-emerald-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-base">
+              <i class="fas fa-location-dot"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Field Staff Geo-Check In</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Allow sales reps and field technicians to check in with geotagged locations, client visit logs, and photos.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">On-The-Go Approval Workflow</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Approve purchase orders, leave requests, and pending quotations instantly from your phone.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base">
+              <i class="fas fa-camera"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Camera &amp; Receipt Scanning</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Upload vendor bills, fuel slips, and dispatch documents directly using your phone's camera.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-address-card text-blue-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-base">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Biometric App Security</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Protect confidential business numbers and employee data with FaceID and fingerprint authentication.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Mobile Lead & Customer Lookup</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Access customer contacts, deal status, and notes while meeting clients outside the office.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
+
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-base">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Progressive Web App (PWA)</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Install ScaleNova OS as a lightweight app on iOS and Android home screens without app store downloads.</p>
+            <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
+              <i class="fas fa-check-circle text-xs"></i>
+              <span>Included in ScaleNova Business OS</span>
+            </div>
           </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-bell text-amber-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Real-Time Push Notifications</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Receive immediate alerts for new website leads, urgent customer inquiries, and payment receipts.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-shield-cat text-purple-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Role-Based Mobile Security</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Strict permission controls ensure employees access only the information relevant to their role.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div><div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3">
-          <div class="w-10 h-10 rounded-xl fa-rotate-by text-cyan-500 flex items-center justify-center text-base">
-            <i class="fas"></i>
-          </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Fast Offline Data Sync</h3>
-          <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">View recent business summaries and cached reports even during temporary network connectivity drops.</p>
-          <div class="pt-1 flex items-center gap-1.5 text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-            <i class="fas fa-check-circle text-xs"></i>
-            <span>Included in ScaleNova Business OS</span>
-          </div>
-        </div>
         </div>
 
       </div>
@@ -314,20 +341,20 @@
     <section class="py-12 sm:py-16 px-4 md:px-8 bg-white dark:bg-slate-900 border-t border-slate-200/80 dark:border-slate-800/80">
       <div class="max-w-4xl mx-auto text-center space-y-5">
         <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-          Get Started Today
+          Experience the Difference
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
-          Ready to Transform Your Operations with ScaleNova?
+          Ready to Run Your Business from Anywhere?
         </h2>
         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium max-w-xl mx-auto leading-relaxed">
-          Get your custom managed business operating system set up with hands-on team onboarding training and ongoing operational support.
+          Book a personalized live walkthrough to see how Mobile Access puts complete executive control in your pocket.
         </p>
         <div class="flex flex-wrap justify-center gap-3 pt-2">
           <a href="../../contact/?requirement=mobile-access" class="px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-md">
             <i class="fas fa-calendar-check"></i>
             <span>Book a Live Demo</span>
           </a>
-          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Mobile Access%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition flex items-center space-x-2">
+          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Mobile%20Access%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-xl text-xs font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 transition flex items-center space-x-2">
             <i class="fab fa-whatsapp text-sm"></i>
             <span>Talk to ScaleNova</span>
           </a>
@@ -400,7 +427,7 @@
   </footer>
 
   <!-- Floating WhatsApp CTA -->
-  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Mobile Access%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" aria-label="Contact ScaleNova on WhatsApp">
+  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20Mobile%20Access%20and%20ScaleNova%20Business%20OS." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-emerald-500 text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform" aria-label="Contact ScaleNova on WhatsApp">
     <i class="fab fa-whatsapp text-2xl"></i>
   </a>
 
