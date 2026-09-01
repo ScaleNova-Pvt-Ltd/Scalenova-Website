@@ -73,37 +73,41 @@ jobs:
       - name: 🔗 Step 3: Verify Asset References in index.html
         run: |
           echo "Verifying local script and stylesheet links in index.html..."
-          for asset in $(grep -oE '(href|src)="[^"]+"' index.html | cut -d'"' -f2 | grep -v '^http' | grep -v '^#' | grep -v '^mailto:' | grep -v '^tel:'); do
-            if [ ! -f "$asset" ] && [ ! -d "$asset" ]; then
-              echo "::warning file=index.html::Referenced asset '$asset' not found locally."
+          for raw_asset in $(grep -oE '(href|src)="[^"]+"' index.html | cut -d'"' -f2 | grep -v '^http' | grep -v '^#' | grep -v '^mailto:' | grep -v '^tel:'); do
+            clean_asset=$(echo "$raw_asset" | cut -d'?' -f1)
+            if [ ! -f "$clean_asset" ] && [ ! -d "$clean_asset" ]; then
+              echo "::warning file=index.html::Referenced asset '$clean_asset' (from '$raw_asset') not found locally."
             else
-              echo "  ✓ Linked asset exists: $asset"
+              echo "  ✓ Linked asset exists: $clean_asset"
             fi
           done
 
-      - name: 🛡️ Step 4: Check GitHub Secrets Configuration
-        id: check-secrets
+      - name: 🛡️ Step 4: Verify Deployment Configuration Secrets
         run: |
-          if [ -z "${{ secrets.ORANGEHOST_FTP_SERVER }}" ]; then
-            echo "::error title=Configuration Required::GitHub Secret 'ORANGEHOST_FTP_SERVER' is empty or not set. Please add it in repository Settings -> Secrets and variables -> Actions."
-            echo "secrets_configured=false" >> $GITHUB_OUTPUT
+          if [ -z "${{ secrets.FTP_HOST }}" ]; then
+            echo "::error title=Missing Secret::GitHub Secret 'FTP_HOST' is empty or not set."
             exit 1
-          else
-            echo "secrets_configured=true" >> $GITHUB_OUTPUT
-            echo "✓ Deployment secrets verified."
           fi
+          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then
+            echo "::error title=Missing Secret::GitHub Secret 'FTP_USERNAME' is empty or not set."
+            exit 1
+          fi
+          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then
+            echo "::error title=Missing Secret::GitHub Secret 'FTP_PASSWORD' is empty or not set."
+            exit 1
+          fi
+          echo "✓ Required FTP secrets are configured."
 
-      - name: 🚀 Step 5: Sync to OrangeHost public_html (FTPS / FTP)
-        if: steps.check-secrets.outputs.secrets_configured == 'true'
+      - name: 🚀 Step 5: Deploy to OrangeHost public_html (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.ORANGEHOST_FTP_SERVER }}
-          username: ${{ secrets.ORANGEHOST_FTP_USERNAME }}
-          password: ${{ secrets.ORANGEHOST_FTP_PASSWORD }}
-          port: ${{ secrets.ORANGEHOST_FTP_PORT || '21' }}
-          protocol: ${{ secrets.ORANGEHOST_FTP_PROTOCOL || 'ftps' }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT || '21' }}
           local-dir: ./
-          server-dir: ${{ secrets.ORANGEHOST_SERVER_DIR || 'public_html/' }}
+          server-dir: /
+          dangerous-clean-slate: false
           exclude: |
             **/.git*
             **/.git*/**
@@ -111,3 +115,4 @@ jobs:
             **/docs/**
             **/README.md
             **/.gitignore
+            **/.DS_Store

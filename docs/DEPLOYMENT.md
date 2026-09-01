@@ -1,6 +1,6 @@
 # ScaleNova Website — OrangeHost Automated CI/CD Deployment Guide
 
-This document explains the automated deployment architecture connecting the **GitHub Repository** to **OrangeHost Web Hosting (`public_html`)**.
+This document explains the automated deployment architecture connecting the **GitHub Repository** (`https://github.com/ScaleNova-Pvt-Ltd/Scalenova-Website`) to **OrangeHost Web Hosting (`/home/scalenov/public_html`)**.
 
 ---
 
@@ -17,71 +17,61 @@ This document explains the automated deployment architecture connecting the **Gi
     ├── Step 1: Verify Essential Website Files Exist
     ├── Step 2: Validate JavaScript Syntax Across All Modules (node -c)
     ├── Step 3: Verify Asset References in index.html
-    ├── Step 4: Check GitHub Secrets Configuration
-    └── Step 5: Sync Files to OrangeHost public_html (FTPS/FTP)
+    ├── Step 4: Verify Deployment Configuration Secrets
+    └── Step 5: Sync Files to OrangeHost public_html (FTP / FTPS)
          │
          ▼
-[OrangeHost Production Server]
+[OrangeHost FTP Server: ftp.scalenovasys.com]
          │
-         └── public_html/ (Serves live website)
+         └── / (restricted to /home/scalenov/public_html) ──► https://scalenovasys.com
 ```
 
 ---
 
-## 2. Required GitHub Repository Secrets
+## 2. Configured GitHub Repository Secrets
 
-To enable automated deployments, navigate to your GitHub Repository:
-**Settings → Secrets and variables → Actions → New repository secret**
+The repository utilizes encrypted GitHub Actions Secrets configured under **Settings → Secrets and variables → Actions**:
 
-Configure the following secrets using the credentials obtained from your OrangeHost account or cPanel:
-
-| Secret Name | Description | Where to Find in OrangeHost / cPanel | Example Value |
-| :--- | :--- | :--- | :--- |
-| `ORANGEHOST_FTP_SERVER` | FTP Hostname / IP address | OrangeHost Welcome Email or cPanel **FTP Accounts** | `ftp.scalenovasystems.com` or `cpanelXX.orangehost.com` |
-| `ORANGEHOST_FTP_USERNAME` | FTP Account Username | cPanel **FTP Accounts** (e.g. `deployer@scalenovasystems.com` or main cPanel user) | `deployer@scalenovasystems.com` |
-| `ORANGEHOST_FTP_PASSWORD` | FTP Account Password | Created when creating the FTP Account in cPanel | *(Your secure password)* |
-| `ORANGEHOST_FTP_PORT` *(Optional)* | FTP Connection Port | Default is `21` for FTPS | `21` |
-| `ORANGEHOST_FTP_PROTOCOL` *(Optional)* | Transfer Protocol | Default is `ftps` (FTPS with TLS/SSL) | `ftps` |
-| `ORANGEHOST_SERVER_DIR` *(Optional)* | Remote Server Directory | Default is `public_html/` (or `./` if FTP user root is already set to `public_html`) | `public_html/` or `./` |
+| Secret Name | Description | Value / Purpose |
+| :--- | :--- | :--- |
+| `FTP_HOST` | FTP Server Hostname | `ftp.scalenovasys.com` |
+| `FTP_USERNAME` | Restricted FTP Account Username | `githubdeploy@scalenovasys.com` |
+| `FTP_PASSWORD` | Restricted FTP Account Password | *(Secure encrypted credential)* |
+| `FTP_PORT` | FTP Port Number | `21` |
 
 > [!SECURITY NOTICE]
-> Never hardcode or commit FTP passwords, hostnames, or credentials directly into code or documentation. GitHub Secrets keep your production credentials encrypted.
+> Passwords and credentials are never hardcoded in source code or output to GitHub Actions logs. GitHub Secrets ensure end-to-end encrypted pipeline execution.
 
 ---
 
-## 3. How to Create a Dedicated Deployment FTP Account in cPanel
+## 3. Directory Mapping
 
-1. Log in to your **OrangeHost cPanel**.
-2. Go to **Files → FTP Accounts**.
-3. Under **Add FTP Account**:
-   - **Log in**: `deployer`
-   - **Domain**: `scalenovasystems.com`
-   - **Password**: Generate a strong, secure password (copy this).
-   - **Directory**: 
-     - If you set directory to `public_html`, set secret `ORANGEHOST_SERVER_DIR` to `./`.
-     - If directory defaults to `/home/username/public_html`, set secret `ORANGEHOST_SERVER_DIR` to `public_html/`.
-4. Click **Create FTP Account**.
-5. Add the **Server**, **Username**, and **Password** into GitHub Secrets.
+The dedicated FTP user `githubdeploy@scalenovasys.com` is configured with its home directory set to:
+`/home/scalenov/public_html`
+
+Therefore, the GitHub Action deploys into `server-dir: /`, which directly synchronizes the repository website files into the live document root.
 
 ---
 
 ## 4. Pre-Deployment Validation
 
 Before attempting to sync files via FTP, GitHub Actions automatically executes:
-1. **File Verification**: Ensures `index.html`, CSS, JS modules, `sitemap.xml`, and `robots.txt` are present.
+1. **File Verification**: Ensures `index.html`, CSS, JS modules, subpages, `sitemap.xml`, and `robots.txt` are present.
 2. **Syntax Compilation**: Compiles all 11 JavaScript modules via `node -c` to ensure zero runtime syntax breaks.
 3. **Link Verification**: Checks that all local stylesheets and scripts referenced in `index.html` resolve to actual files.
-4. **Secret Guarding**: Checks that `ORANGEHOST_FTP_SERVER` is defined before attempting to connect.
+4. **Secret Guarding**: Checks that `FTP_HOST`, `FTP_USERNAME`, and `FTP_PASSWORD` are present before attempting to connect.
 
 ---
 
 ## 5. Excluded Development Artifacts
 
 The deployment step explicitly excludes non-production files from being synced to `public_html`:
-- `.git/` & `.gitignore`
+- `.git/` & `.git*`
 - `.github/` workflows
 - `docs/` documentation
 - `README.md`
+- `.gitignore`
+- `.DS_Store`
 
 ---
 
@@ -92,4 +82,4 @@ If a change needs to be reverted:
 git revert HEAD
 git push origin main
 ```
-GitHub Actions will automatically validate the previous commit and restore the stable files to `public_html` within ~45 seconds.
+GitHub Actions will automatically validate the previous commit and restore the stable files to OrangeHost within ~45 seconds.
