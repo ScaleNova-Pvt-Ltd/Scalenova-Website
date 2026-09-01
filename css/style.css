@@ -57,6 +57,14 @@ html.dark {
   box-sizing: border-box;
 }
 
+/* Base Typography & Word-Wrap Reset */
+body, h1, h2, h3, h4, h5, h6, p, span, a, button {
+  hyphens: manual;
+  -webkit-hyphens: manual;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
 html {
   font-family: var(--sn-font-sans);
   scroll-behavior: smooth;

@@ -20,7 +20,7 @@ const SCALENOVA_CONFIG = {
     phoneDisplay: "+91 78010 49178",
     officialEmail: "info@scalenovasys.com",
     whatsAppNumber: "917801049178",
-    whatsAppDefaultMessage: "Hi ScaleNova team, I would like to schedule a personalized live demo of the ScaleNova Business OS.",
+    whatsAppDefaultMessage: "Hi ScaleNova, I would like to learn more about your Business OS and services. Please help me understand how it could fit my business.",
     get whatsAppLink() {
       return `https://wa.me/${this.whatsAppNumber}?text=${encodeURIComponent(this.whatsAppDefaultMessage)}`;
     }

@@ -69,9 +69,9 @@
 .sn-modal-backdrop {
   position: fixed;
   inset: 0;
-  background-color: rgba(3, 7, 18, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 100;
   display: flex;
   align-items: center;
