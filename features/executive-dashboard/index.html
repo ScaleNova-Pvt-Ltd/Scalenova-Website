@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Dashboard — ScaleNova Business OS</title>
+  <meta name="description" content="See the important parts of your business in one place.">
+  <link rel="canonical" href="https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/executive-dashboard/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd', 300: '#7cc8fc',
+              400: '#36b0fa', 500: '#0c96eb', 600: '#0077cd', 700: '#005fa7',
+              800: '#045189', 900: '#0a4371', 950: '#072b4c'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col">
+
+  <!-- HEADER NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="../../" class="flex items-center space-x-2">
+        <img src="../../assets/logo.png" alt="ScaleNova Logo" class="h-7 w-auto object-contain">
+        <span class="text-lg font-black tracking-tight sn-gradient-text">ScaleNova</span>
+      </a>
+      <nav class="hidden md:flex items-center space-x-6 text-xs font-bold text-slate-600">
+        <a href="../../" class="hover:text-brand-600 transition">Home</a>
+        <a href="../../features/" class="text-brand-600 transition">Features</a>
+        <a href="../../plans/" class="hover:text-brand-600 transition">Plans</a>
+        <a href="../../blog/" class="hover:text-brand-600 transition">Blog</a>
+        <a href="../../careers/" class="hover:text-brand-600 transition">Careers</a>
+        <a href="../../affiliate/" class="hover:text-brand-600 transition">Affiliate</a>
+        <a href="../../contact/" class="hover:text-brand-600 transition">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-3">
+        <a href="../../contact/" class="hidden sm:inline-flex px-4 py-2 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-xs">
+          Book Demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+    
+    <!-- BREADCRUMB & HERO -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500 mb-6" aria-label="Breadcrumb">
+        <a href="../../" class="hover:text-brand-600 transition">Home</a>
+        <i class="fas fa-chevron-right text-[10px] text-slate-300"></i>
+        <a href="../../features/" class="hover:text-brand-600 transition">Features</a>
+        <i class="fas fa-chevron-right text-[10px] text-slate-300"></i>
+        <span class="text-slate-900 font-bold">Executive Dashboard</span>
+      </nav>
+
+      <div class="bg-white rounded-3xl border border-slate-200/80 p-8 md:p-12 shadow-xs relative overflow-hidden">
+        <div class="max-w-3xl">
+          <div class="w-14 h-14 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center text-2xl mb-6 shadow-xs">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h1 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
+            Executive Dashboard
+          </h1>
+          <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed mb-8">
+            See the important parts of your business in one place.
+          </p>
+
+          <!-- Visual Workflow Pipeline -->
+          <div class="mb-8 p-4 rounded-2xl bg-slate-50 border border-slate-200/60 inline-block">
+            <span class="text-[10px] uppercase font-black tracking-wider text-slate-400 block mb-2">Operational Workflow</span>
+            <div class="flex flex-wrap items-center gap-2">
+              
+        <div class="flex items-center space-x-2">
+          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
+            Sales
+          </div>
+          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
+            Revenue
+          </div>
+          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
+            Receivables
+          </div>
+          <i class="fas fa-arrow-right text-slate-400 text-xs px-1"></i>
+        </div>
+        <div class="flex items-center space-x-2">
+          <div class="px-4 py-2 rounded-xl bg-brand-50 border border-brand-200 text-brand-700 text-xs font-bold shadow-xs">
+            Business Overview
+          </div>
+          
+        </div>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="../../contact/" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold transition shadow-md shadow-brand-500/20">
+              Book a Live Demo
+            </a>
+            <a href="../../features/" class="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition">
+              Explore All 8 Modules
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU CAN DO SECTION -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-slate-900 tracking-tight mb-2">What You Can Do</h2>
+        <p class="text-sm text-slate-600 max-w-2xl leading-relaxed">
+          Explain that business owners can get a quick view of important business activity without checking multiple records. Track sales performance, outstanding customer receivables, and key operational indicators from one central executive dashboard.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg mb-4">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Revenue Overview</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Track real-time billing and revenue figures across all business channels.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Sales Performance</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Monitor team sales velocity, lead conversion rates, and monthly targets.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg mb-4">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Outstanding Receivables</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Keep total visibility on customer dues and ageing payment ledgers.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg mb-4">
+            <i class="fas fa-gauge-high"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Key Business Indicators</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Review essential daily operational numbers in an easy-to-scan overview.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-xs hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center text-lg mb-4">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-1">Management Summaries</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">Get automated executive summaries designed for fast decision-making.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA BANNER -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="p-8 md:p-12 rounded-3xl bg-slate-900 text-white text-center space-y-4 relative overflow-hidden">
+        <h2 class="text-2xl sm:text-3xl font-black tracking-tight">Ready to explore ScaleNova Business OS?</h2>
+        <p class="text-sm text-slate-300 max-w-xl mx-auto font-medium leading-relaxed">
+          Connect your website, CRM, inventory, accounts, and teams in one managed system.
+        </p>
+        <div class="pt-2 flex justify-center space-x-4">
+          <a href="../../contact/" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-white text-xs font-bold transition shadow-lg shadow-brand-500/30">
+            Book a Live Demo
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 3-COLUMN FOOTER -->
+  <footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-10 px-4 md:px-8 mt-auto text-xs">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800/80">
+      
+      <!-- Column 1: ScaleNova Corporate -->
+      <div class="space-y-3">
+        <div class="flex items-center space-x-2">
+          <img src="../../assets/logo.png" alt="ScaleNova Logo" class="h-7 w-auto object-contain bg-transparent">
+          <span class="text-base font-black tracking-tight sn-gradient-text">ScaleNova Business OS</span>
+        </div>
+        <p class="text-slate-400 font-medium leading-relaxed max-w-sm">
+          Managed Business Operating System for growing Indian MSMEs. Website, CRM, Operations, Digital Marketing, Team Training, Ongoing Support &amp; Business Growth.
+        </p>
+        <div class="text-[11px] text-slate-500 font-medium space-y-0.5 pt-1">
+          <p class="text-slate-300 font-bold">ScaleNova Private Limited</p>
+          <p>Mon–Sat, 9:30 AM – 6:30 PM IST</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Solutions & Explore -->
+      <div class="space-y-2.5">
+        <span class="text-xs font-black uppercase tracking-wider text-white block mb-1">Explore &amp; Solutions</span>
+        <ul class="space-y-1.5 font-bold text-slate-400">
+          <li><a href="../../features/" class="hover:text-brand-400 transition">Connected Business Modules</a></li>
+          <li><a href="../../plans/" class="hover:text-brand-400 transition">OS Service Plans</a></li>
+          <li><a href="../../blog/" class="hover:text-brand-400 transition">Blog &amp; Knowledge Centre</a></li>
+          <li><a href="../../careers/" class="hover:text-brand-400 transition">Careers Portal</a></li>
+          <li><a href="../../affiliate/" class="hover:text-brand-400 transition">Partner Programme</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support & Legal -->
+      <div class="space-y-3">
+        <span class="text-xs font-black uppercase tracking-wider text-white block mb-1">Support &amp; Legal</span>
+        <ul class="space-y-1.5 font-bold text-slate-400">
+          <li><a href="../../contact/" class="hover:text-brand-400 transition">Book a Live Demo</a></li>
+          <li><a href="../../privacy/" class="hover:text-brand-400 transition">Privacy Policy</a></li>
+          <li><a href="../../terms/" class="hover:text-brand-400 transition">Terms of Service</a></li>
+          <li><a href="../../refunds/" class="hover:text-brand-400 transition">Refund Policy</a></li>
+        </ul>
+
+        <div class="pt-2 flex items-center space-x-2.5">
+          <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in text-xs"></i>
+          </a>
+          <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="Instagram">
+            <i class="fab fa-instagram text-xs"></i>
+          </a>
+          <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20ScaleNova%20Business%20OS%20and%20your%20services." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-4 flex flex-col sm:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-500 gap-2 text-center sm:text-left">
+      <span>&copy; 2026 ScaleNova Private Limited. All Rights Reserved.</span>
+      <span>One System Every Business Needs.</span>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP FAB BUTTON (SHORT PRE-FILLED MESSAGE) -->
+  <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%20Team%2C%20I%20would%20like%20to%20learn%20more%20about%20ScaleNova%20Business%20OS%20and%20your%20services." target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-white shadow-2xl shadow-emerald-500/40 flex items-center justify-center text-2xl sm:text-3xl hover:scale-110 transition-transform animate-bounce" aria-label="Connect on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+</body>
+</html>

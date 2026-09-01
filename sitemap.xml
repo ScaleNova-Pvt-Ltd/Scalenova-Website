@@ -1,62 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Independent Navigation Pages -->
+  <!-- Core Navigation Pages -->
   <url>
-    <loc>https://scalenovasystems.com/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/features/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/plans/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
+
+  <!-- 8 Dedicated Feature Detail Pages -->
   <url>
-    <loc>https://scalenovasystems.com/blog/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/careers/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/affiliate/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/contact/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/executive-dashboard/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/privacy/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/crm-sales/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/business-operations/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/people-operations/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/projects-tasks/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/finance-tracking/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/business-intelligence/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/mobile-access/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- 3 Dedicated Plan Detail Pages -->
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/core-os/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/growth-os/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/elite-os/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Other Site Pages -->
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/blog/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/careers/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/affiliate/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/contact/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/privacy/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/terms/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/terms/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/refunds/</loc>
+    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/refunds/</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>

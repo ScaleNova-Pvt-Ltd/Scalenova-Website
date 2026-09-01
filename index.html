@@ -461,14 +461,50 @@ tailwind.config = {
   <section id="technology" class="py-10 sm:py-14 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/40">
     <div class="max-w-4xl mx-auto text-center space-y-4">
       <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-        <i class="fas fa-microchip mr-1" aria-hidden="true"></i>Enterprise Technology
+        <i class="fas fa-layer-group mr-1" aria-hidden="true"></i>Managed Business Platform
       </span>
       <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-        Built on Trusted Business Technology
+        Technology That Works Around Your Business
       </h3>
-      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-        ScaleNova uses established Frappe and ERPNext open-source technology as the underlying business management platform, configured and managed by our team around each business's requirements.
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
+        ScaleNova brings business management, website services, digital presence, reporting, training and ongoing support together in one managed system.
       </p>
+
+      <!-- Customer-Facing Business Capabilities Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 pt-4 text-left">
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-globe text-brand-500 text-xs"></i>
+          <span>Website &amp; Lead Capture</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-users text-blue-500 text-xs"></i>
+          <span>Customer Management</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-file-invoice text-emerald-500 text-xs"></i>
+          <span>Sales &amp; Invoicing</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-gears text-purple-500 text-xs"></i>
+          <span>Business Operations</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-id-card text-amber-500 text-xs"></i>
+          <span>People Management</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-list-check text-indigo-500 text-xs"></i>
+          <span>Projects &amp; Tasks</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-chart-pie text-cyan-500 text-xs"></i>
+          <span>Business Reporting</span>
+        </div>
+        <div class="p-3 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-xs font-bold text-slate-700 dark:text-slate-300 flex items-center space-x-2">
+          <i class="fas fa-bullhorn text-rose-500 text-xs"></i>
+          <span>Digital Marketing &amp; SEO</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -522,9 +558,9 @@ tailwind.config = {
           <div class="space-y-3.5">
             <div class="flex items-center justify-between">
               <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Core OS</h3>
-              <button onclick="ScaleNovaModals.openPlanDetail('core')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Core OS Details">
-                <span>ⓘ View Details</span>
-              </button>
+              <a href="plans/core-os/" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                <span>View Full Plan →</span>
+              </a>
             </div>
             
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Startups &amp; Small Businesses</p>
@@ -539,21 +575,27 @@ tailwind.config = {
             </div>
 
             <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Premium Website + Lead Capture</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>CRM + Core Business Management</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Basic SEO + Online Presence</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Training, Support + Monthly Reports</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 3 Users • 1 GB Database Storage</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Professional Website + Lead Capture</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Customers, Leads, Sales &amp; Invoicing</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Basic SEO &amp; Online Presence</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Training + Ongoing Support</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Monthly Business Review &amp; Reports</span></li>
             </ul>
+
+            <div class="pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-[11px] font-bold text-slate-600 dark:text-slate-300 block">
+                3 Users · 1 GB Business Data · 2.5 GB File Storage
+              </span>
+            </div>
           </div>
 
           <div class="space-y-2 pt-2">
             <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs font-extrabold text-center text-brand-700 dark:text-brand-300 border-2 border-brand-500/40 hover:border-brand-500 hover:bg-brand-50 dark:hover:bg-slate-800 transition-all">
               Book a Live Demo
             </button>
-            <button onclick="ScaleNovaModals.openPlanDetail('core')" class="w-full text-center text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white font-bold py-1">
+            <a href="plans/core-os/" class="block w-full text-center text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white font-bold py-1">
               View Full Plan Details →
-            </button>
+            </a>
           </div>
         </div>
 
@@ -566,9 +608,9 @@ tailwind.config = {
           <div class="space-y-3.5 pt-1">
             <div class="flex items-center justify-between">
               <h3 class="text-xl sm:text-2xl font-black sn-gradient-text">Growth OS</h3>
-              <button onclick="ScaleNovaModals.openPlanDetail('growth')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Growth OS Details">
-                <span>ⓘ View Details</span>
-              </button>
+              <a href="plans/growth-os/" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                <span>View Full Plan →</span>
+              </a>
             </div>
 
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Growing MSMEs, Agencies &amp; Teams</p>
@@ -583,22 +625,29 @@ tailwind.config = {
             </div>
 
             <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Includes Core OS</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Sales + Accounts Management</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>HR + Payroll + Employee Management</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Inventory + Purchase + Projects</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Operations + Workflows + Document Management</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 25 Users • 2 GB Database Storage</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Website, Leads &amp; Customer Management</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Sales, Accounts &amp; Payments</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>HR, Payroll, Inventory &amp; Projects</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Automation + Document Management</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>SEO, Digital Marketing &amp; Social Media</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Training + Ongoing Support</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Biweekly Business Review &amp; Reports</span></li>
             </ul>
+
+            <div class="pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 text-[11px] font-bold text-brand-700 dark:text-brand-300 block">
+                25 Users · 2 GB Business Data · 5 GB File Storage
+              </span>
+            </div>
           </div>
 
           <div class="space-y-2 pt-2">
             <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs sn-btn-primary">
               Book a Live Demo
             </button>
-            <button onclick="ScaleNovaModals.openPlanDetail('growth')" class="w-full text-center text-[11px] text-brand-600 dark:text-brand-400 font-bold py-1">
+            <a href="plans/growth-os/" class="block w-full text-center text-[11px] text-brand-600 dark:text-brand-400 font-bold py-1">
               View Full Plan Details →
-            </button>
+            </a>
           </div>
         </div>
 
@@ -607,10 +656,49 @@ tailwind.config = {
           <div class="space-y-3.5">
             <div class="flex items-center justify-between">
               <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Elite OS</h3>
-              <button onclick="ScaleNovaModals.openPlanDetail('elite')" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1" aria-label="View Elite OS Details">
-                <span>ⓘ View Details</span>
-              </button>
+              <a href="plans/elite-os/" class="text-xs font-bold text-brand-600 dark:text-brand-400 hover:underline flex items-center gap-1">
+                <span>View Full Plan →</span>
+              </a>
             </div>
+
+            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Established MSMEs &amp; Enterprises</p>
+            
+            <div class="py-3 border-y border-slate-200 dark:border-slate-800">
+              <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
+                <span id="price-elite" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white transition-all duration-200">₹35,799</span>
+                <span id="subtext-elite" class="text-xs font-extrabold text-slate-500 dark:text-slate-400 transition-colors duration-200"> + GST / month</span>
+                <span id="savings-elite" style="display: none;" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 whitespace-nowrap uppercase tracking-wider transition-all duration-200">Save ₹71,598</span>
+              </div>
+              <p id="billing-note-elite" class="text-[10px] sm:text-[11px] text-slate-400 mt-1 font-medium">Billed monthly. Cancel anytime.</p>
+            </div>
+
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Complete Website, CRM, Sales &amp; Accounts</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>HR, Payroll, Inventory &amp; Projects</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Manufacturing &amp; Asset Management</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Advanced Operations + Automation</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>SEO, Digital Marketing &amp; Social Media</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Business Insights &amp; Performance Reports</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Dedicated Support + Training</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Weekly Business Review &amp; Reports</span></li>
+            </ul>
+
+            <div class="pt-2">
+              <span class="px-2.5 py-1 rounded-lg bg-slate-200/80 dark:bg-slate-800 text-[11px] font-bold text-slate-700 dark:text-slate-300 block">
+                100 Users · 4 GB+ Business Data · 25 GB File Storage
+              </span>
+            </div>
+          </div>
+
+          <div class="space-y-2 pt-2">
+            <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs font-extrabold text-center text-slate-800 dark:text-slate-200 border-2 border-slate-700 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-all">
+              Book a Live Demo
+            </button>
+            <a href="plans/elite-os/" class="block w-full text-center text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white font-bold py-1">
+              View Full Plan Details →
+            </a>
+          </div>
+        </div>
 
             <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">For Established MSMEs &amp; Enterprises</p>
             
@@ -648,114 +736,7 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- 3.5 TESTIMONIALS SECTION (WHAT BUSINESS OWNERS ARE SAYING) -->
-  <section id="testimonials" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/30">
-    <div class="max-w-7xl mx-auto space-y-8 sm:space-y-10">
-      
-      <div class="text-center max-w-2xl mx-auto space-y-2">
-        <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
-          <i class="fas fa-quote-left mr-1" aria-hidden="true"></i>Customer Feedback
-        </span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-          What Business Owners Are Saying
-        </h2>
-        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">
-          Operational feedback from MSME leaders using ScaleNova Business OS.
-        </p>
-      </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-        
-        <!-- Testimonial 1: Business Owner -->
-        <div class="sn-card p-5 space-y-3 flex flex-col justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-xs gap-1">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 uppercase tracking-wider">ORGANISATION</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
-              "Having sales, customer records and daily operations in one place makes our team much more organised."
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div>
-              <h4 class="text-xs font-black text-slate-900 dark:text-white">Business Owner</h4>
-              <p class="text-[10px] font-bold text-slate-500">Commercial Enterprise</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 2: Operations Manager -->
-        <div class="sn-card p-5 space-y-3 flex flex-col justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-xs gap-1">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 uppercase tracking-wider">CLARITY</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
-              "The system is simple to understand, and our team can see what needs attention without switching between multiple tools."
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div>
-              <h4 class="text-xs font-black text-slate-900 dark:text-white">Operations Manager</h4>
-              <p class="text-[10px] font-bold text-slate-500">Supply &amp; Distribution</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 3: Founder -->
-        <div class="sn-card p-5 space-y-3 flex flex-col justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-xs gap-1">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 uppercase tracking-wider">VISIBILITY</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
-              "The dashboard gives me a quick view of what is happening across the business."
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div>
-              <h4 class="text-xs font-black text-slate-900 dark:text-white">Founder</h4>
-              <p class="text-[10px] font-bold text-slate-500">Growing MSME</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial 4: Business Operations Lead -->
-        <div class="sn-card p-5 space-y-3 flex flex-col justify-between bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-md">
-          <div class="space-y-2">
-            <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-xs gap-1">
-                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-              </div>
-              <span class="px-2 py-0.5 rounded text-[9px] font-bold bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 uppercase tracking-wider">ONBOARDING</span>
-            </div>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed italic">
-              "The onboarding process was clear, and the team helped us structure our workflows properly."
-            </p>
-          </div>
-          <div class="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-            <div>
-              <h4 class="text-xs font-black text-slate-900 dark:text-white">Business Operations Lead</h4>
-              <p class="text-[10px] font-bold text-slate-500">Services Firm</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-    </div>
-  </section>
 
   <!-- 4. CAREERS & PARTNER NETWORK (COMPACT 2-COLUMN HOMEPAGE TEASERS -> DEDICATED FULL SPA PAGES) -->
   <section id="careers-and-partners" class="py-10 sm:py-14 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80">
