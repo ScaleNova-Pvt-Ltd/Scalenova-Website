@@ -43,6 +43,7 @@ jobs:
             "js/app.js"
             "sitemap.xml"
             "robots.txt"
+            "404.html"
           )
           for file in "${REQUIRED_FILES[@]}"; do
             if [ ! -f "$file" ]; then

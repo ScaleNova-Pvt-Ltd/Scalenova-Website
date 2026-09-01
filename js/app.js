@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initialize theme from storage or default to dark
-  if (localStorage.theme === 'light') {
-    applyTheme('light');
-  } else {
+  // Initialize theme from storage or default to light
+  if (localStorage.theme === 'dark') {
     applyTheme('dark');
+  } else {
+    applyTheme('light');
   }
 
   if (themeToggleBtn) {
