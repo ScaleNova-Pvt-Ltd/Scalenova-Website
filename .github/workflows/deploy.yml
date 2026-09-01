@@ -11,10 +11,10 @@ jobs:
     name: Validate & Deploy to OrangeHost
     runs-on: ubuntu-latest
     steps:
-      - name: 🚚 Checkout Repository Source
+      - name: Checkout Repository Source
         uses: actions/checkout@v4
 
-      - name: 🔍 Step 1: Verify Essential Website Files Exist
+      - name: Verify Essential Website Files Exist
         run: |
           echo "Checking essential production files..."
           REQUIRED_FILES=(
@@ -54,7 +54,7 @@ jobs:
           done
           echo "All essential files present."
 
-      - name: 🧪 Step 2: Validate JavaScript Syntax
+      - name: Validate JavaScript Syntax
         run: |
           echo "Validating JavaScript syntax across all modules..."
           node -c js/config.js
@@ -70,7 +70,7 @@ jobs:
           node -c js/app.js
           echo "All JavaScript modules verified with 0 syntax errors."
 
-      - name: 🔗 Step 3: Verify Asset References in index.html
+      - name: Verify Asset References in index.html
         run: |
           echo "Verifying local script and stylesheet links in index.html..."
           for raw_asset in $(grep -oE '(href|src)="[^"]+"' index.html | cut -d'"' -f2 | grep -v '^http' | grep -v '^#' | grep -v '^mailto:' | grep -v '^tel:'); do
@@ -82,7 +82,7 @@ jobs:
             fi
           done
 
-      - name: 🛡️ Step 4: Verify Deployment Configuration Secrets
+      - name: Verify Deployment Configuration Secrets
         run: |
           if [ -z "${{ secrets.FTP_HOST }}" ]; then
             echo "::error title=Missing Secret::GitHub Secret 'FTP_HOST' is empty or not set."
@@ -98,7 +98,7 @@ jobs:
           fi
           echo "✓ Required FTP secrets are configured."
 
-      - name: 🚀 Step 5: Deploy to OrangeHost public_html (FTP)
+      - name: Deploy to OrangeHost public_html (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
