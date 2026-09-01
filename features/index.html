@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connected Business Modules & Capabilities | ScaleNova Business OS</title>
+<meta name="description" content="Explore ScaleNova's 8 connected business modules: Executive Dashboard, CRM & Sales, Business Operations, People Operations, Projects & Tasks, Finance Tracking, BI, and Mobile Access.">
+<meta name="keywords" content="ScaleNova modules, MSME business OS, CRM, ERP, HR attendance, projects, finance tracking, business intelligence">
+<meta name="author" content="ScaleNova Private Limited">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://scalenovasystems.com/features/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scalenovasystems.com/features/">
+<meta property="og:title" content="Connected Business Modules & Capabilities | ScaleNova Business OS">
+<meta property="og:description" content="Explore ScaleNova's 8 connected business modules designed for growing Indian MSMEs.">
+<meta property="og:image" content="https://scalenovasystems.com/assets/logo.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connected Business Modules | ScaleNova Business OS">
+<meta name="twitter:description" content="Explore ScaleNova's 8 connected business modules for MSMEs.">
+<meta name="twitter:image" content="https://scalenovasystems.com/assets/logo.png">
+
+<link rel="icon" type="image/png" href="../assets/logo.png">
+<link rel="apple-touch-icon" href="../assets/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f5f0ff',
+          100: '#ebdfff',
+          200: '#d6bfff',
+          300: '#b88dff',
+          400: '#9b5cf6',
+          500: '#7F00FF',
+          600: '#6600cc',
+          700: '#4682B4',
+          800: '#2c5a80',
+          900: '#0B0F19',
+          950: '#030712'
+        }
+      },
+      fontFamily: {
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+
+<!-- STICKY NAVBAR -->
+<header class="sticky top-0 z-40 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md px-4 md:px-8 py-3.5 flex justify-between items-center transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/60" aria-label="Main Navigation">
+  <a href="../" class="flex items-center space-x-3 group" aria-label="ScaleNova Home">
+    <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-8 sm:h-9 w-auto object-contain bg-transparent border-none shadow-none group-hover:scale-105 transition-transform" onerror="this.onerror=null; this.src='../files/Logo (1).jpg';">
+    <div class="flex flex-col">
+      <span class="text-base sm:text-lg font-black tracking-tight sn-gradient-text leading-none">ScaleNova</span>
+      <span class="text-[8px] font-extrabold tracking-widest text-slate-500 dark:text-slate-400 uppercase mt-0.5">BUSINESS OS</span>
+    </div>
+  </a>
+
+  <nav class="hidden lg:flex items-center space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
+    <a href="../" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-home text-xs opacity-70"></i>
+      <span>Home</span>
+    </a>
+    <a href="../features/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-brand-500 text-white dark:text-white transition-all flex items-center space-x-1.5 shadow-sm">
+      <i class="fas fa-layer-group text-xs"></i>
+      <span>Features</span>
+    </a>
+    <a href="../plans/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-tags text-xs opacity-70"></i>
+      <span>Plans</span>
+    </a>
+    <a href="../blog/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-newspaper text-xs opacity-70"></i>
+      <span>Blog</span>
+    </a>
+    <a href="../careers/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-briefcase text-xs opacity-70"></i>
+      <span>Careers</span>
+    </a>
+    <a href="../affiliate/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-handshake text-xs opacity-70"></i>
+      <span>Affiliate</span>
+    </a>
+    <a href="../contact/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-headset text-xs opacity-70"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
+
+  <div class="flex items-center space-x-2.5 sm:space-x-3">
+    <button id="themeToggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105" aria-label="Toggle Theme Mode">
+      <i class="fas fa-sun text-xs"></i>
+    </button>
+    <a href="../contact/" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2">
+      <i class="fas fa-calendar-check"></i>
+      <span>Book a Demo</span>
+    </a>
+    <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all" aria-label="Open Navigation">
+      <i class="fas fa-bars text-sm"></i>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileSidebarOverlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+<div id="mobileSidebar" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white dark:bg-slate-900 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-6 border-l border-slate-200 dark:border-slate-800">
+  <div class="space-y-6">
+    <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
+      <div class="flex items-center space-x-2">
+        <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent">
+        <span class="text-sm font-black sn-gradient-text">ScaleNova</span>
+      </div>
+      <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500">
+        <i class="fas fa-times text-xs"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
+      <a href="../" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-home text-brand-500 w-5"></i><span>Home</span></a>
+      <a href="../features/" class="flex items-center space-x-3 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400"><i class="fas fa-layer-group text-brand-500 w-5"></i><span>Features</span></a>
+      <a href="../plans/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-tags text-brand-500 w-5"></i><span>OS Plans</span></a>
+      <a href="../blog/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-newspaper text-brand-500 w-5"></i><span>Blog / Insights</span></a>
+      <a href="../careers/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-briefcase text-brand-500 w-5"></i><span>Careers</span></a>
+      <a href="../affiliate/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-handshake text-brand-500 w-5"></i><span>Affiliate Programme</span></a>
+      <a href="../contact/" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800"><i class="fas fa-headset text-brand-500 w-5"></i><span>Contact</span></a>
+    </nav>
+  </div>
+  <a href="../contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+    <i class="fas fa-calendar-check"></i>
+    <span>Book a Demo</span>
+  </a>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="flex-grow">
+  
+  <!-- Breadcrumb & Hero -->
+  <section class="pt-10 sm:pt-14 pb-10 px-4 md:px-8 bg-gradient-to-b from-slate-50/80 via-white to-white dark:from-slate-950 dark:via-slate-950 dark:to-slate-950 border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-7xl mx-auto space-y-4">
+      <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
+        <a href="../" class="hover:text-brand-500">Home</a>
+        <span>/</span>
+        <span class="text-slate-900 dark:text-white font-bold">Features</span>
+      </div>
+      <div class="max-w-3xl space-y-3">
+        <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
+          <i class="fas fa-cubes mr-1"></i>Connected Business Modules
+        </span>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
+          Eight Connected Modules. One Unified Business OS.
+        </h1>
+        <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base font-medium leading-relaxed">
+          ScaleNova connects your everyday business activities so you stop jumping between fragmented apps, WhatsApp chats, and disconnected spreadsheets.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 Modules Deep Dive Grid -->
+  <section class="py-12 sm:py-16 px-4 md:px-8 bg-slate-50/50 dark:bg-slate-900/30">
+    <div class="max-w-7xl mx-auto space-y-12">
+
+      <!-- Module 1: Executive Dashboard -->
+      <div id="executive-dashboard" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Executive Dashboard</h2>
+              <p class="text-xs sm:text-sm font-bold text-brand-600 dark:text-brand-400">See the important parts of your business in one place.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            View: Executive Summary
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Monitor sales, revenue, receivables and important operational indicators from a central dashboard.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Get a quick view of business performance without checking multiple systems.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-brand-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Revenue overview</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Sales performance</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Outstanding receivables</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Business KPIs</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Executive summaries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your executive dashboard?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 2: CRM & Sales -->
+      <div id="crm-and-sales" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-database"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">CRM & Sales</h2>
+              <p class="text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400">Keep customer and sales activity organised.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Flow: Lead → Quote → Customer
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Capture inquiries, manage deal stages and follow the customer journey from first contact to conversion.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Prevent lost inquiries and give your sales team clear follow-up visibility.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-blue-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Inbound lead capture</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Customer contact histories</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Visual deal stages</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Quotation generator</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Follow-up reminders</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Conversion tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your CRM & sales?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 3: Business Operations -->
+      <div id="business-operations" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-gears"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Business Operations</h2>
+              <p class="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400">Connect everyday operational activity in one workspace.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Flow: Requisition → PO → Invoice
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Manage inventory, vendor purchase orders, GST billing, and everyday business workflows.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Eliminate spreadsheet errors and keep stock, purchasing, and billing synchronized.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-emerald-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Real-time stock registers</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Purchase orders & vendor records</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Automated GST invoices</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Delivery notes</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Operational activity logs</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Warehouse tracking</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your business operations?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 4: People Operations -->
+      <div id="people-operations" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-users"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">People Operations</h2>
+              <p class="text-xs sm:text-sm font-bold text-purple-600 dark:text-purple-400">Keep employee information and routine people processes organised.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Flow: Attendance → Leaves → Staff
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-purple-600 dark:text-purple-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Manage staff directories, daily attendance, leave applications, and role-based access.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Save administrative time and maintain clear team records in one place.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-purple-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Digital employee directory</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Daily attendance tracking</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Leave approval workflows</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Staff document storage</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Role-based permissions</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Basic payroll summaries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your people operations?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 5: Projects & Tasks -->
+      <div id="projects-and-tasks" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-list-check"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Projects & Tasks</h2>
+              <p class="text-xs sm:text-sm font-bold text-amber-600 dark:text-amber-400">Keep work organised from planning to completion.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Flow: Plan → In Progress → Done
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-amber-600 dark:text-amber-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Assign responsibilities, track milestones and monitor deliverables from one workspace.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Keep your team clear on what needs to be done, who owns it and when it is due.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-amber-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Project planning</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Task assignment</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Kanban boards</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Milestone tracking</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Due dates</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Deliverable monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your projects & tasks?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 6: Finance Tracking -->
+      <div id="finance-tracking" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Finance Tracking</h2>
+              <p class="text-xs sm:text-sm font-bold text-indigo-600 dark:text-indigo-400">Keep core financial activity visible and organised.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Flow: Billing → Receivables → Ledger
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-indigo-600 dark:text-indigo-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Track billing, receivables, operational expenses, and everyday accounting records.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Know what is earned, what is owed, and keep accounts current without manual bookkeeping.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-indigo-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Sales invoices & receipts</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Overdue receivables tracking</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Expense recording</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Payment status monitoring</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Operational cash-flow views</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Standard ledger entries</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your finance tracking?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 7: Business Intelligence -->
+      <div id="business-intelligence" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Business Intelligence</h2>
+              <p class="text-xs sm:text-sm font-bold text-cyan-600 dark:text-cyan-400">Turn operational information into useful business views.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Views: Margin & Velocity
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-cyan-600 dark:text-cyan-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Review KPI trends, sales velocities, and operational performance summaries.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Make informed business decisions based on real facts instead of guesswork.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-cyan-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Executive KPI summaries</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Sales velocity analytics</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Profit & margin indicators</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Operational trend reports</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Performance digests</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Management exports</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your business intelligence?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Module 8: Mobile Access -->
+      <div id="mobile-access" class="sn-card p-6 sm:p-8 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-3xl shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-200 dark:border-slate-800">
+          <div class="flex items-center gap-3.5">
+            <div class="w-12 h-12 rounded-2xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl flex-shrink-0">
+              <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <div>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">Mobile Access</h2>
+              <p class="text-xs sm:text-sm font-bold text-teal-600 dark:text-teal-400">Stay connected with your business wherever you work.</p>
+            </div>
+          </div>
+          <span class="inline-flex px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
+            Access: Responsive Web UI
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-teal-600 dark:text-teal-400">What It Does</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Access your dashboard, check inquiries, and review operations securely on any mobile device.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20 space-y-1.5">
+            <h4 class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+              Check important business updates and stay in control on the go without waiting to reach a desk.
+            </p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-2">
+            <i class="fas fa-circle-check text-teal-500"></i> Key Capabilities
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Mobile-responsive interface</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>On-the-go KPI checks</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Mobile inquiry alerts</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Quick quotation review</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Secure browser login</span>
+            </div>
+            <div class="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 dark:bg-slate-950/40 border border-slate-200/70 dark:border-slate-800 text-xs font-semibold text-slate-800 dark:text-slate-200">
+              <i class="fas fa-check text-emerald-500 flex-shrink-0"></i>
+              <span>Real-time status updates</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Ready to streamline your mobile access?</span>
+          <a href="../contact/" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
+            <i class="fas fa-calendar-check text-[10px]"></i>
+            <span>Book a Live Demo</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-12 sm:py-16 px-4 md:px-8 bg-white dark:bg-slate-950 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto text-center space-y-5">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
+        See How ScaleNova Fits Your Business
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium max-w-xl mx-auto leading-relaxed">
+        Book a 20-minute live demo to explore your exact operational flow and how connected modules simplify everyday management.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+        <a href="../contact/" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+          <i class="fas fa-calendar-check"></i>
+          <span>Book a Live Demo</span>
+        </a>
+        <a href="../plans/" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2">
+          <i class="fas fa-tags text-brand-500"></i>
+          <span>View OS Plans</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-slate-100/70 dark:bg-slate-900/60 border-t border-slate-200/80 dark:border-slate-800/80 pt-12 pb-8 px-4 md:px-8 text-slate-600 dark:text-slate-400">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-slate-200 dark:border-slate-800 text-xs">
+    <div class="lg:col-span-2 space-y-3">
+      <div class="flex items-center space-x-3">
+        <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-8 w-auto object-contain bg-transparent">
+        <span class="text-base font-black sn-gradient-text">ScaleNova Business OS</span>
+      </div>
+      <p class="text-slate-500 dark:text-slate-400 font-medium leading-relaxed max-w-sm">
+        Managed Business Operating System for growing Indian MSMEs. Website, CRM, Operations, Digital Marketing, Team Training &amp; Support.
+      </p>
+      <div class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+        <p><strong>ScaleNova Private Limited</strong></p>
+        <p>CIN: U62013AP2026PTC120462 • GSTIN: 37ABUCS4883M1Z5</p>
+      </div>
+    </div>
+
+    <div class="space-y-2">
+      <span class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Modules</span>
+      <ul class="space-y-1.5 font-semibold">
+        <li><a href="#executive-dashboard" class="hover:text-brand-500">Executive Dashboard</a></li>
+        <li><a href="#crm-and-sales" class="hover:text-brand-500">CRM &amp; Sales</a></li>
+        <li><a href="#business-operations" class="hover:text-brand-500">Business Operations</a></li>
+        <li><a href="#people-operations" class="hover:text-brand-500">People Operations</a></li>
+        <li><a href="#projects-and-tasks" class="hover:text-brand-500">Projects &amp; Tasks</a></li>
+        <li><a href="#finance-tracking" class="hover:text-brand-500">Finance Tracking</a></li>
+        <li><a href="#business-intelligence" class="hover:text-brand-500">Business Intelligence</a></li>
+        <li><a href="#mobile-access" class="hover:text-brand-500">Mobile Access</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-2">
+      <span class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">OS Plans</span>
+      <ul class="space-y-1.5 font-semibold">
+        <li><a href="../plans/#core" class="hover:text-brand-500">Core OS (₹4,899/mo)</a></li>
+        <li><a href="../plans/#growth" class="hover:text-brand-500">Growth OS (₹13,699/mo)</a></li>
+        <li><a href="../plans/#elite" class="hover:text-brand-500">Elite OS (₹35,799/mo)</a></li>
+      </ul>
+    </div>
+
+    <div class="space-y-2">
+      <span class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">Company</span>
+      <ul class="space-y-1.5 font-semibold">
+        <li><a href="../careers/" class="hover:text-brand-500">Careers</a></li>
+        <li><a href="../affiliate/" class="hover:text-brand-500">Affiliate Programme</a></li>
+        <li><a href="../blog/" class="hover:text-brand-500">Blog / Insights</a></li>
+        <li><a href="../contact/" class="hover:text-brand-500">Contact &amp; Demos</a></li>
+        <li><a href="../privacy/" class="hover:text-brand-500">Privacy Policy</a></li>
+        <li><a href="../terms/" class="hover:text-brand-500">Terms of Service</a></li>
+        <li><a href="../refunds/" class="hover:text-brand-500">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] font-medium text-slate-500 dark:text-slate-400 gap-3">
+    <p>© 2026 ScaleNova Private Limited. All rights reserved.</p>
+    <div class="flex items-center space-x-4">
+      <a href="../privacy/" class="hover:text-brand-500">Privacy</a>
+      <a href="../terms/" class="hover:text-brand-500">Terms</a>
+      <a href="../refunds/" class="hover:text-brand-500">Refunds</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileSidebar() {
+  const overlay = document.getElementById('mobileSidebarOverlay');
+  const sidebar = document.getElementById('mobileSidebar');
+  if (!sidebar) return;
+  const isOpen = sidebar.classList.contains('translate-x-0');
+  if (isOpen) {
+    sidebar.classList.remove('translate-x-0');
+    sidebar.classList.add('translate-x-full');
+    if (overlay) {
+      overlay.classList.remove('opacity-100', 'pointer-events-auto');
+      overlay.classList.add('opacity-0', 'pointer-events-none');
+    }
+  } else {
+    sidebar.classList.remove('translate-x-full');
+    sidebar.classList.add('translate-x-0');
+    if (overlay) {
+      overlay.classList.remove('opacity-0', 'pointer-events-none');
+      overlay.classList.add('opacity-100', 'pointer-events-auto');
+    }
+  }
+}
+
+// Theme toggle
+const themeBtn = document.getElementById('themeToggle');
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('sn_theme', isDark ? 'dark' : 'light');
+    const icon = themeBtn.querySelector('i');
+    if (icon) {
+      icon.className = isDark ? 'fas fa-sun text-xs' : 'fas fa-moon text-xs';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

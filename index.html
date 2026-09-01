@@ -107,37 +107,36 @@ tailwind.config = {
     </div>
   </a>
 
-  <!-- Desktop Navigation Links (Unified SPA Triggers) -->
+  <!-- Desktop Navigation Links -->
   <nav class="hidden lg:flex items-center space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
     <a href="#hero" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-home text-xs opacity-70" aria-hidden="true"></i>
       <span>Home</span>
     </a>
-    <a href="#solutions" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="features/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-layer-group text-xs opacity-70" aria-hidden="true"></i>
       <span>Features</span>
     </a>
-
-    <a href="#pricing" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="plans/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-tags text-xs opacity-70" aria-hidden="true"></i>
       <span>Plans</span>
     </a>
-    <button onclick="ScaleNovaModals.openBlogAllArticles()" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5 focus:outline-none">
+    <a href="blog/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-newspaper text-xs opacity-70" aria-hidden="true"></i>
       <span>Blog</span>
-    </button>
-    <button onclick="ScaleNovaModals.openCareersPage()" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5 focus:outline-none">
+    </a>
+    <a href="careers/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-briefcase text-xs opacity-70" aria-hidden="true"></i>
       <span>Careers</span>
-    </button>
-    <button onclick="ScaleNovaModals.openAffiliatePage()" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5 focus:outline-none">
+    </a>
+    <a href="affiliate/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-handshake text-xs opacity-70" aria-hidden="true"></i>
       <span>Affiliate</span>
-    </button>
-    <button onclick="ScaleNovaModals.openContactPage()" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5 focus:outline-none">
+    </a>
+    <a href="contact/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-headset text-xs opacity-70" aria-hidden="true"></i>
       <span>Contact</span>
-    </button>
+    </a>
   </nav>
 
   <!-- Actions (Theme Toggle & Primary CTA & Mobile Toggle) -->
@@ -148,10 +147,10 @@ tailwind.config = {
     </button>
 
     <!-- OFFICIAL PRIMARY CTA -->
-    <button onclick="ScaleNovaModals.openContactPage('demo')" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2">
+    <a href="contact/" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2">
       <i class="fas fa-calendar-check" aria-hidden="true"></i>
       <span>Book a Demo</span>
-    </button>
+    </a>
 
     <!-- Mobile Hamburger Button -->
     <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="Open Mobile Navigation Menu">
@@ -176,12 +175,12 @@ tailwind.config = {
     
     <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
       <a href="#hero" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-home text-brand-500 w-5" aria-hidden="true"></i><span>Home</span></a>
-      <a href="#solutions" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-layer-group text-brand-500 w-5" aria-hidden="true"></i><span>Features</span></a>
-      <a href="#pricing" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-tags text-brand-500 w-5" aria-hidden="true"></i><span>OS Plans</span></a>
-      <button onclick="toggleMobileSidebar(); ScaleNovaModals.openBlogAllArticles();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-newspaper text-brand-500 w-5" aria-hidden="true"></i><span>Blog / Insights</span></button>
-      <button onclick="toggleMobileSidebar(); ScaleNovaModals.openCareersPage();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-briefcase text-brand-500 w-5" aria-hidden="true"></i><span>Careers</span></button>
-      <button onclick="toggleMobileSidebar(); ScaleNovaModals.openAffiliatePage();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-handshake text-brand-500 w-5" aria-hidden="true"></i><span>Affiliate Programme</span></button>
-      <button onclick="toggleMobileSidebar(); ScaleNovaModals.openContactPage();" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-headset text-brand-500 w-5" aria-hidden="true"></i><span>Contact</span></button>
+      <a href="features/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-layer-group text-brand-500 w-5" aria-hidden="true"></i><span>Features</span></a>
+      <a href="plans/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-tags text-brand-500 w-5" aria-hidden="true"></i><span>OS Plans</span></a>
+      <a href="blog/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-newspaper text-brand-500 w-5" aria-hidden="true"></i><span>Blog / Insights</span></a>
+      <a href="careers/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-briefcase text-brand-500 w-5" aria-hidden="true"></i><span>Careers</span></a>
+      <a href="affiliate/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-handshake text-brand-500 w-5" aria-hidden="true"></i><span>Affiliate Programme</span></a>
+      <a href="contact/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition text-left w-full"><i class="fas fa-headset text-brand-500 w-5" aria-hidden="true"></i><span>Contact</span></a>
     </nav>
   </div>
 
@@ -324,56 +323,11 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- 2.2 PRODUCT SHOWCASE SECTION (SEE SCALENOVA IN ACTION) -->
-  <section id="product-showcase" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-950">
+  <!-- 2.5 THE SCALENOVA SHIFT: DISCONNECTED VS CONNECTED -->
+  <section id="transformation" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-950">
     <div class="max-w-7xl mx-auto space-y-8 sm:space-y-10">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto space-y-3">
-        <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
-          <i class="fas fa-desktop mr-1" aria-hidden="true"></i>Product Preview
-        </span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-          See ScaleNova in Action
-        </h2>
-        <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium leading-relaxed max-w-2xl mx-auto">
-          One connected workspace for sales, operations, people, finance, projects and business intelligence.
-        </p>
-      </div>
-
-      <!-- SINGLE LAPTOP PRODUCT PREVIEW VISUAL (CLEAN LIGHT/WHITE BACKGROUND) -->
-      <div class="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-xl bg-white dark:bg-slate-900 p-3 sm:p-5 lg:p-6 space-y-3">
-        
-        <!-- Header Banner -->
-        <div class="flex items-center justify-between gap-2 flex-wrap">
-          <span class="px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-[10px] sm:text-xs font-black border border-slate-200 dark:border-slate-700">
-            One Workspace. One View of Your Business.
-          </span>
-          <span class="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-            Enterprise Management Dashboard
-          </span>
-        </div>
-
-        <!-- Single Laptop Visual Container -->
-        <div class="relative w-full rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-md bg-slate-950">
-          <img src="assets/scalenova-business-os-dashboard.jpg" alt="ScaleNova Business OS executive dashboard displayed on a laptop screen." class="w-full h-auto object-cover max-h-[540px] rounded-xl" loading="lazy">
-        </div>
-
-        <!-- Caption -->
-        <div class="pt-2 border-t border-slate-200/80 dark:border-slate-800 flex items-center justify-between text-[10px] sm:text-xs text-slate-500 dark:text-slate-400 font-medium">
-          <div class="flex items-center gap-2">
-            <i class="fas fa-laptop text-brand-500"></i>
-            <span>ScaleNova Business OS Executive Dashboard</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- 2.5 BEFORE VS AFTER BUSINESS OS TRANSFORMATION -->
-  <section id="transformation" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-950">
-    <div class="max-w-7xl mx-auto space-y-8">
       <div class="text-center max-w-2xl mx-auto space-y-2">
         <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-900 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-800 uppercase tracking-wider">
           <i class="fas fa-right-left mr-1" aria-hidden="true"></i>The ScaleNova Shift
@@ -382,88 +336,117 @@ tailwind.config = {
           From Fragmented Tools to One Managed Business OS
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">
-          See how Indian MSMEs transition from scattered operational chaos to a single managed workflow.
+          See how Indian MSMEs can move from scattered business activities to a more connected workflow.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-        <!-- BEFORE CARD -->
-        <div class="sn-card p-6 sm:p-7 space-y-4 bg-red-500/5 dark:bg-red-950/20 border-2 border-red-500/20 rounded-2xl flex flex-col justify-between">
+      <!-- Before / Pipeline / After Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+        
+        <!-- BEFORE CARD (5 cols on lg) -->
+        <div class="lg:col-span-5 sn-card p-6 sm:p-7 space-y-4 bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200/90 dark:border-slate-800 rounded-2xl flex flex-col justify-between shadow-sm">
           <div class="space-y-3">
-            <div class="flex items-center justify-between pb-3 border-b border-red-500/20">
-              <span class="text-xs font-black uppercase tracking-wider text-red-600 dark:text-red-400 flex items-center gap-1.5">
-                <i class="fas fa-xmark text-sm"></i> BEFORE SCALENOVA
+            <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
+              <span class="text-xs font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                <i class="fas fa-folder-tree text-amber-500 text-sm"></i> BEFORE SCALENOVA
               </span>
-              <span class="text-[10px] font-extrabold text-red-500">SCATTERED OPERATIONS</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 uppercase tracking-wider">SCATTERED OPERATIONS</span>
             </div>
 
             <ul class="space-y-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2">
-                <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Website but no proper lead capture or CRM integration</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Website and leads handled separately</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Leads scattered across WhatsApp, email, and Excel sheets</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Customer records spread across different tools</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Missed sales follow-ups and lost customer records</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Follow-ups can be missed</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>Unconnected stock, billing, and accounting records</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Stock, billing and accounting can become disconnected</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-xmark text-red-500 text-xs flex-shrink-0"></i>
-                <span>No executive reporting or dedicated technical support</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Limited central business visibility</span>
               </li>
             </ul>
           </div>
 
-          <div class="pt-3 border-t border-red-500/20 text-center">
-            <span class="text-xs font-extrabold text-red-600 dark:text-red-400">Result: Lost revenue, operational friction &amp; chaos</span>
+          <div class="pt-3 border-t border-slate-200 dark:border-slate-800 text-center">
+            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Result: More manual work and less visibility</span>
           </div>
         </div>
 
-        <!-- AFTER CARD -->
-        <div class="sn-card p-6 sm:p-7 space-y-4 bg-emerald-500/5 dark:bg-emerald-950/20 border-2 border-emerald-500/30 rounded-2xl flex flex-col justify-between">
+        <!-- CENTRAL TRANSITION PIPELINE (2 cols on lg) -->
+        <div class="lg:col-span-2 flex flex-col items-center justify-center py-4 lg:py-0 space-y-3 text-center">
+          <div class="hidden lg:flex flex-col items-center space-y-2 w-full">
+            <span class="text-[9px] font-extrabold uppercase tracking-widest text-slate-400">Disconnected</span>
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs border border-slate-200 dark:border-slate-700">
+              <i class="fas fa-arrow-down text-brand-500 animate-bounce"></i>
+            </div>
+            <div class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-700 text-white text-[11px] font-black shadow-md">
+              ScaleNova
+            </div>
+            <div class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 text-xs border border-slate-200 dark:border-slate-700">
+              <i class="fas fa-arrow-down text-emerald-500"></i>
+            </div>
+            <span class="text-[9px] font-extrabold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Connected</span>
+          </div>
+
+          <!-- Mobile horizontal connector -->
+          <div class="flex lg:hidden items-center justify-center gap-3 w-full">
+            <div class="h-px bg-slate-200 dark:bg-slate-800 flex-1"></div>
+            <span class="px-3 py-1 rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-black border border-brand-500/20">
+              ScaleNova Shift ➔
+            </span>
+            <div class="h-px bg-slate-200 dark:bg-slate-800 flex-1"></div>
+          </div>
+        </div>
+
+        <!-- AFTER CARD (5 cols on lg) -->
+        <div class="lg:col-span-5 sn-card p-6 sm:p-7 space-y-4 bg-emerald-500/5 dark:bg-emerald-950/20 border-2 border-emerald-500/30 rounded-2xl flex flex-col justify-between shadow-sm">
           <div class="space-y-3">
             <div class="flex items-center justify-between pb-3 border-b border-emerald-500/20">
               <span class="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5">
-                <i class="fas fa-check text-sm"></i> AFTER SCALENOVA
+                <i class="fas fa-circle-nodes text-emerald-500 text-sm"></i> AFTER SCALENOVA
               </span>
-              <span class="text-[10px] font-extrabold text-emerald-500">ONE MANAGED WORKFLOW</span>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 uppercase tracking-wider">ONE MANAGED WORKFLOW</span>
             </div>
 
             <ul class="space-y-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center gap-2">
-                <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Premium website connected directly to central CRM</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Website and lead capture connected</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Automated lead capture &amp; visual Kanban sales pipeline</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Customer history organised in one place</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Centralised customer history &amp; follow-up tracking</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Sales follow-ups easier to manage</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Integrated stock, billing, and accounting workflows</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Connected stock, billing and accounting workflows</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fas fa-check text-emerald-500 text-xs flex-shrink-0"></i>
-                <span>Executive summary dashboards &amp; managed onboarding support</span>
+              <li class="flex items-start gap-2.5">
+                <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
+                <span>Executive business visibility</span>
               </li>
             </ul>
           </div>
 
           <div class="pt-3 border-t border-emerald-500/20 text-center">
-            <span class="text-xs font-extrabold text-emerald-600 dark:text-emerald-400">Result: One connected system managing your growth</span>
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: One connected system for everyday business operations</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -833,9 +816,9 @@ tailwind.config = {
 
         <div class="pt-2 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
           <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">Engineering, Sales &amp; Internships</span>
-          <button onclick="ScaleNovaModals.openCareersPage()" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5" aria-label="View Careers">
+          <a href="careers/" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5" aria-label="View Careers">
             <span>View Careers →</span>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -879,9 +862,9 @@ tailwind.config = {
 
         <div class="pt-2 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center justify-between">
           <span class="text-xs font-semibold text-slate-500 dark:text-slate-400">For CAs, Consultants &amp; Agencies</span>
-          <button onclick="ScaleNovaModals.openAffiliatePage()" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5" aria-label="View Partner Programme">
+          <a href="affiliate/" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex items-center gap-1.5" aria-label="View Partner Programme">
             <span>View Partner Programme →</span>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -901,14 +884,14 @@ tailwind.config = {
         See how connected business operations can simplify your daily workflows. Connect with our team or schedule a customized walkthrough.
       </p>
       <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-        <button onclick="ScaleNovaModals.openContactPage()" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+        <a href="contact/" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
           <i class="fas fa-headset" aria-hidden="true"></i>
           <span>Talk to ScaleNova →</span>
-        </button>
-        <button onclick="ScaleNovaModals.openContactPage('demo')" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
+        </a>
+        <a href="contact/?topic=demo" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
           <i class="fas fa-calendar-check text-brand-500" aria-hidden="true"></i>
           <span>Request Demo</span>
-        </button>
+        </a>
       </div>
     </div>
   </section>
@@ -932,15 +915,15 @@ tailwind.config = {
 
     <!-- Quick Links Navigation -->
     <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-slate-400">
-      <a href="#solutions" class="hover:text-white transition">Features</a>
-      <a href="#pricing" class="hover:text-white transition">Plans</a>
-      <button onclick="ScaleNovaModals.openBlogAllArticles()" class="hover:text-white transition">Blog</button>
-      <button onclick="ScaleNovaModals.openCareersPage()" class="hover:text-white transition">Careers</button>
-      <button onclick="ScaleNovaModals.openAffiliatePage()" class="hover:text-white transition">Affiliate</button>
-      <button onclick="ScaleNovaModals.openContactPage()" class="hover:text-white transition">Contact</button>
-      <button onclick="ScaleNovaModals.open('privacyModal')" class="hover:text-white transition">Privacy</button>
-      <button onclick="ScaleNovaModals.open('termsModal')" class="hover:text-white transition">Terms</button>
-      <button onclick="ScaleNovaModals.open('refundModal')" class="hover:text-white transition">Refunds</button>
+      <a href="features/" class="hover:text-white transition">Features</a>
+      <a href="plans/" class="hover:text-white transition">Plans</a>
+      <a href="blog/" class="hover:text-white transition">Blog</a>
+      <a href="careers/" class="hover:text-white transition">Careers</a>
+      <a href="affiliate/" class="hover:text-white transition">Affiliate</a>
+      <a href="contact/" class="hover:text-white transition">Contact</a>
+      <a href="privacy/" class="hover:text-white transition">Privacy</a>
+      <a href="terms/" class="hover:text-white transition">Terms</a>
+      <a href="refunds/" class="hover:text-white transition">Refunds</a>
     </div>
 
     <!-- Icon-First Social Connect -->

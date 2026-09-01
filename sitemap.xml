@@ -1,96 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core Navigation URLs -->
+  <!-- Core Independent Navigation Pages -->
   <url>
     <loc>https://scalenovasystems.com/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#solutions</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/#pricing</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/features/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#blog</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/plans/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#careers</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://scalenovasystems.com/blog/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#affiliate</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/careers/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#contact</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/affiliate/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- 8 High-Value MSME Blog Article Deep Links -->
-  <url>
-    <loc>https://scalenovasystems.com/#blog/how-indian-msmes-stop-lead-leakage</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#blog/erp-vs-excel-spreadsheets-msme-comparison</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://scalenovasystems.com/contact/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#blog/5-operational-bottlenecks-slowing-business-growth</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/privacy/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#blog/working-capital-optimization-inventory-receivables-guide</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/terms/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenovasystems.com/#blog/modern-attendance-leave-tracking-indian-workplace</loc>
-    <lastmod>2026-08-27</lastmod>
+    <loc>https://scalenovasystems.com/refunds/</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/#blog/msme-digital-transformation-without-expensive-it-teams</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/#blog/scaling-from-10-to-100-employees-business-systems-blueprint</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://scalenovasystems.com/#blog/executive-bi-dashboards-every-indian-founder-needs</loc>
-    <lastmod>2026-08-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.50</priority>
   </url>
 </urlset>

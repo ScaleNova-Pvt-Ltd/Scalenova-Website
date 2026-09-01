@@ -837,15 +837,15 @@ const ScaleNovaModals = (function() {
           </span>
         </div>
 
-        <!-- What It Does & Business Value Callouts -->
+        <!-- What It Does & Why It Helps Callouts -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
             <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">What It Does</h4>
             <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whatItDoes}</p>
           </div>
           <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Business Value</h4>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.businessValue}</p>
+            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
+            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whyItHelps}</p>
           </div>
         </div>
 
