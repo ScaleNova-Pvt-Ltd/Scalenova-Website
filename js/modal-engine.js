@@ -374,13 +374,17 @@ const ScaleNovaModals = (function() {
     open('roleDetailModal');
   }
 
-  // Open Career Candidate Application Form
+  // Open Career Candidate Application Mailto
   function openCareerApp(roleTitle = "General Application") {
-    const targetBadge = document.getElementById('targetRoleBadge');
-    const roleInput = document.getElementById('appRoleInput');
-    if (targetBadge) targetBadge.textContent = roleTitle;
-    if (roleInput) roleInput.value = roleTitle;
-    open('careerAppModal', true, 'careers-apply');
+    const subject = encodeURIComponent("ScaleNova Career Enquiry - " + roleTitle);
+    const body = encodeURIComponent("Hello ScaleNova Team,\n\nI am interested in exploring career opportunities for " + roleTitle + " with ScaleNova.\n\nPlease share the next steps.\n\nRegards,");
+    window.location.href = `mailto:careers@scalenovasys.com?subject=${subject}&body=${body}`;
+  }
+
+  function openAffiliateApp() {
+    const subject = encodeURIComponent("ScaleNova Partner Programme Enquiry");
+    const body = encodeURIComponent("Hello ScaleNova Team,\n\nI am interested in learning more about the ScaleNova Partner Programme.\n\nPlease share the next steps.\n\nRegards,");
+    window.location.href = `mailto:affiliate@scalenovasys.com?subject=${subject}&body=${body}`;
   }
 
   /* ==========================================================================
@@ -1072,6 +1076,7 @@ const ScaleNovaModals = (function() {
     openCareersPage,
     openRoleDetail,
     openCareerApp,
+    openAffiliateApp,
     openAffiliatePage,
     openBlogAllArticles,
     openBlogArticle,
