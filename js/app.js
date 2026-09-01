@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     featuresContainer.innerHTML = SCALENOVA_FEATURES.map(f => {
       const workflowItems = (f.workflow || []).map((step, idx) => `
         <span class="inline-flex items-center">
-          <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/60">${step}</span>
+          <span class="whitespace-nowrap px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700/60">${step}</span>
           ${idx < f.workflow.length - 1 ? '<i class="fas fa-chevron-right text-[8px] mx-1 text-slate-400"></i>' : ''}
         </span>
       `).join('');

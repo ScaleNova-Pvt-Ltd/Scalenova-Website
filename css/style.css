@@ -206,6 +206,15 @@ body {
   box-shadow: var(--sn-shadow-hover);
 }
 
+/* Utility: Hide Scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Accessibility: Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
@@ -215,3 +224,4 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
