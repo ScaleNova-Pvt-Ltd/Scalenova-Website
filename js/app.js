@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `).join('');
 
       return `
-        <div class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group cursor-pointer bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 ${f.borderClass || ''}" onclick="ScaleNovaModals.openFeatureDetail('${f.id}')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')ScaleNovaModals.openFeatureDetail('${f.id}')" aria-label="View ${f.title} Details">
+        <a href="features/${f.slug}/" class="sn-card sn-card-hover p-4 sm:p-5 flex flex-col justify-between group bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 ${f.borderClass || ''}" aria-label="View ${f.title} Details">
           <div class="space-y-3">
             <div class="flex items-center gap-3">
               <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${f.bgClass || 'bg-brand-500/10 text-brand-500'} flex items-center justify-center text-sm sm:text-base flex-shrink-0 group-hover:scale-105 transition-transform">
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <span>View Details</span>
             <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
           </div>
-        </div>
+        </a>
       `;
     }).join('');
   }

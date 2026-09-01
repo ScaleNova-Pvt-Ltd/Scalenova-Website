@@ -793,201 +793,31 @@ const ScaleNovaModals = (function() {
   }
 
   /* ==========================================================================
-     6. CENTERED FEATURE DETAIL MODAL
+     6. CENTERED FEATURE DETAIL PAGE NAVIGATOR
      ========================================================================== */
   function openFeatureDetail(featureId) {
-    const feature = SCALENOVA_FEATURES.find(f => f.id === featureId);
+    const feature = SCALENOVA_FEATURES.find(f => f.id === featureId || f.slug === featureId);
     if (!feature) return;
-
-    const modal = document.getElementById('featureDetailModal');
-    const contentContainer = document.getElementById('featureDetailContent');
-    if (!modal || !contentContainer) return;
-
-    modal.dataset.hash = `feature/${feature.slug}`;
-
-    contentContainer.innerHTML = `
-      <!-- Unified Compact SPA Top Navigation Bar -->
-      <div class="sn-spa-navbar">
-        <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack('featureDetailModal')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
-          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
-            Home / Features / <strong class="text-slate-900 dark:text-white">${feature.fullDetails.title}</strong>
-          </span>
-        </div>
-        
-        <button onclick="ScaleNovaModals.close('featureDetailModal'); ScaleNovaModals.openDemoModal();" class="px-3 py-1 rounded-xl text-xs sn-btn-primary">
-          Book a Demo
-        </button>
-      </div>
-
-      <div class="p-5 sm:p-7 space-y-5">
-        <!-- Feature Header -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-200 dark:border-slate-800">
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-lg flex-shrink-0">
-              <i class="${feature.icon}"></i>
-            </div>
-            <div>
-              <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${feature.fullDetails.title}</h2>
-              <p class="text-xs sm:text-sm font-bold text-brand-600 dark:text-brand-400">${feature.fullDetails.subtitle}</p>
-            </div>
-          </div>
-          <span class="inline-flex px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/80 dark:border-slate-700 self-start sm:self-center">
-            ${feature.fullDetails.flowText || feature.flowLabel}
-          </span>
-        </div>
-
-        <!-- What It Does & Why It Helps Callouts -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">What It Does</h4>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whatItDoes}</p>
-          </div>
-          <div class="sn-card p-3.5 sm:p-4 space-y-1 bg-emerald-500/5 dark:bg-emerald-950/20 border border-emerald-500/20">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Why It Helps</h4>
-            <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${feature.fullDetails.whyItHelps}</p>
-          </div>
-        </div>
-
-        <!-- Key Capabilities -->
-        <div class="space-y-2.5">
-          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-circle-check text-brand-500"></i> Key Capabilities
-          </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            ${feature.fullDetails.keyCapabilities.map(cap => `
-              <div class="flex items-center gap-2 p-2.5 rounded-xl sn-card text-xs font-semibold text-slate-800 dark:text-slate-200">
-                <i class="fas fa-check text-emerald-500 text-[11px] flex-shrink-0"></i>
-                <span>${cap}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- CTA Footer -->
-        <div class="pt-3.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span class="text-xs text-slate-500 dark:text-slate-400 text-center sm:text-left font-medium">Ready to streamline your ${feature.title.toLowerCase()}?</span>
-          <button onclick="ScaleNovaModals.close('featureDetailModal'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
-            <i class="fas fa-calendar-check text-[10px]"></i>
-            <span>Book a Live Demo</span>
-          </button>
-        </div>
-      </div>
-    `;
-
-    open('featureDetailModal');
+    const path = window.location.pathname;
+    let target = 'features/' + feature.slug + '/';
+    if (path.includes('/features/') || path.includes('/plans/') || path.includes('/blog/') || path.includes('/careers/') || path.includes('/affiliate/') || path.includes('/contact/') || path.includes('/privacy/') || path.includes('/terms/') || path.includes('/refunds/')) {
+      target = '../../features/' + feature.slug + '/';
+    }
+    window.location.href = target;
   }
 
   /* ==========================================================================
-     7. CENTERED PLAN DETAIL MODAL
+     7. CENTERED PLAN DETAIL PAGE NAVIGATOR
      ========================================================================== */
   function openPlanDetail(planId) {
-    const plan = SCALENOVA_PLANS.find(p => p.id === planId);
+    const plan = SCALENOVA_PLANS.find(p => p.id === planId || p.slug === planId);
     if (!plan) return;
-
-    const modal = document.getElementById('planDetailModal');
-    const contentContainer = document.getElementById('planDetailContent');
-    if (!modal || !contentContainer) return;
-
-    modal.dataset.hash = `plan/${plan.id}`;
-
-    contentContainer.innerHTML = `
-      <!-- Unified Compact SPA Top Navigation Bar -->
-      <div class="sn-spa-navbar">
-        <div class="flex items-center gap-2">
-          <button onclick="ScaleNovaModals.goBack(\'planDetailModal\')" class="sn-spa-nav-btn flex items-center gap-1.5 px-3 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition" aria-label="Back to Home"><i class="fas fa-arrow-left text-xs"></i><span class="text-xs font-bold">Back</span></button>
-          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 ml-1">
-            Home / Plans / <strong class="text-slate-900 dark:text-white">${plan.name}</strong>
-          </span>
-        </div>
-        
-        <button onclick="ScaleNovaModals.close('planDetailModal'); ScaleNovaModals.openDemoModal();" class="px-3 py-1 rounded-xl text-xs sn-btn-primary">
-          Book a Demo
-        </button>
-      </div>
-
-      <div class="p-5 sm:p-7 space-y-5">
-        <!-- Header -->
-        <div class="space-y-1">
-          <div class="flex items-baseline gap-2">
-            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">${plan.name}</h2>
-            <span class="text-sm sm:text-base font-black text-brand-600 dark:text-brand-400">${plan.monthlyPriceFormatted} <span class="text-[10px] font-normal text-slate-500">+ GST / mo</span></span>
-          </div>
-          <p class="text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-400">${plan.headline}</p>
-        </div>
-
-        <!-- Target Business Profile -->
-        <div class="sn-card p-3.5 space-y-1 bg-gradient-to-r from-brand-50/40 via-white to-white dark:from-slate-900 dark:via-slate-900 dark:to-slate-900">
-          <div class="flex items-center justify-between">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-brand-600 dark:text-brand-400">Target Business Profile</h4>
-            <span class="px-2 py-0.5 rounded-full text-[9px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400">${plan.userCapacity}</span>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">${plan.targetAudience}</p>
-        </div>
-
-        <!-- Included Functions -->
-        <div class="space-y-2">
-          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-layer-group text-brand-500"></i> Main Included Functions
-          </h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            ${plan.mainIncludedFunctions.map(func => `
-              <div class="flex items-start gap-2 p-2.5 rounded-xl sn-card text-xs font-medium text-slate-700 dark:text-slate-300">
-                <i class="fas fa-check text-emerald-500 mt-0.5 text-[11px]"></i>
-                <span>${func}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Onboarding Roadmap -->
-        <div class="space-y-2">
-          <h3 class="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white flex items-center gap-1.5">
-            <i class="fas fa-route text-blue-500"></i> Expected Setup Journey
-          </h3>
-          <div class="space-y-1.5">
-            ${plan.setupJourney.map((step, idx) => `
-              <div class="flex items-start gap-2.5 p-2.5 rounded-xl sn-card">
-                <div class="w-5 h-5 rounded-md sn-gradient-bg text-white font-black text-[10px] flex items-center justify-center flex-shrink-0">
-                  ${idx + 1}
-                </div>
-                <div class="space-y-0.5">
-                  <h4 class="text-xs font-extrabold text-slate-900 dark:text-white">${step.step}</h4>
-                  <p class="text-[11px] sm:text-xs text-slate-600 dark:text-slate-400 leading-relaxed">${step.detail}</p>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-
-        <!-- Training & Support -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          <div class="sn-card p-3.5 space-y-1">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400 flex items-center gap-1">
-              <i class="fas fa-graduation-cap"></i> Training Included
-            </h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${plan.trainingIncluded}</p>
-          </div>
-          <div class="sn-card p-3.5 space-y-1">
-            <h4 class="text-[10px] font-black uppercase tracking-wider text-blue-600 dark:text-blue-400 flex items-center gap-1">
-              <i class="fas fa-headset"></i> Support Scope
-            </h4>
-            <p class="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">${plan.supportIncluded}</p>
-          </div>
-        </div>
-
-        <!-- CTA Footer -->
-        <div class="pt-3.5 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">Annual option: 12 months for price of 10</span>
-          <button onclick="ScaleNovaModals.close('planDetailModal'); ScaleNovaModals.openDemoModal();" class="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center gap-2">
-            <i class="fas fa-calendar-check"></i>
-            <span>Book a Demo</span>
-          </button>
-        </div>
-      </div>
-    `;
-
-    open('planDetailModal');
+    const path = window.location.pathname;
+    let target = 'plans/' + plan.slug + '/';
+    if (path.includes('/features/') || path.includes('/plans/') || path.includes('/blog/') || path.includes('/careers/') || path.includes('/affiliate/') || path.includes('/contact/') || path.includes('/privacy/') || path.includes('/terms/') || path.includes('/refunds/')) {
+      target = '../../plans/' + plan.slug + '/';
+    }
+    window.location.href = target;
   }
 
   /* ==========================================================================
