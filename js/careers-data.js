@@ -200,6 +200,11 @@ const SCALENOVA_CAREERS = {
   ]
 };
 
+// Attach to window for browser global accessibility
+if (typeof window !== 'undefined') {
+  window.SCALENOVA_CAREERS = SCALENOVA_CAREERS;
+}
+
 // Freeze careers dataset
 if (typeof Object.freeze === 'function') {
   Object.freeze(SCALENOVA_CAREERS);

@@ -337,6 +337,11 @@ When leadership operates with real-time operational visibility, strategic decisi
   }
 ];
 
+// Attach to window for browser global accessibility
+if (typeof window !== 'undefined') {
+  window.SCALENOVA_BLOGS = SCALENOVA_BLOGS;
+}
+
 // Freeze blogs dataset
 if (typeof Object.freeze === 'function') {
   Object.freeze(SCALENOVA_BLOGS);
