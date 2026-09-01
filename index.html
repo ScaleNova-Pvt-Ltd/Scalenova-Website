@@ -880,51 +880,66 @@ tailwind.config = {
 
 </main>
 
-<!-- COMPACT, PREMIUM FOOTER -->
-<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-8 px-4 md:px-8 mt-auto">
-  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-800/80 text-center md:text-left">
+<!-- COMPACT, PREMIUM 3-COLUMN FOOTER -->
+<footer class="bg-slate-950 text-slate-300 border-t border-slate-800 py-10 px-4 md:px-8 mt-auto text-xs">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800/80">
     
-    <!-- Brand Info -->
-    <div class="space-y-1">
-      <div class="flex items-center justify-center md:justify-start space-x-2">
-        <img src="assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent border-none shadow-none" onerror="this.onerror=null; this.src='files/Logo (1).jpg';">
-        <span class="text-sm font-black tracking-tight sn-gradient-text">ScaleNova</span>
+    <!-- Column 1: ScaleNova Corporate -->
+    <div class="space-y-3">
+      <div class="flex items-center space-x-2">
+        <img src="assets/logo.png" alt="ScaleNova Logo" class="h-7 w-auto object-contain bg-transparent">
+        <span class="text-base font-black tracking-tight sn-gradient-text">ScaleNova Business OS</span>
       </div>
-      <p class="text-xs text-slate-400 font-medium">
-        Business Operating System for growing businesses.
+      <p class="text-slate-400 font-medium leading-relaxed max-w-sm">
+        Managed Business Operating System for growing Indian MSMEs. Website, CRM, Operations, Digital Marketing, Team Training &amp; Support.
       </p>
+      <div class="text-[11px] text-slate-500 font-medium space-y-0.5 pt-1">
+        <p class="text-slate-300 font-bold">ScaleNova Private Limited</p>
+        <p>Mon–Sat, 9:30 AM – 6:30 PM IST</p>
+      </div>
     </div>
 
-    <!-- Quick Links Navigation -->
-    <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs font-bold text-slate-400">
-      <a href="features/" class="hover:text-white transition">Features</a>
-      <a href="plans/" class="hover:text-white transition">Plans</a>
-      <a href="blog/" class="hover:text-white transition">Blog</a>
-      <a href="careers/" class="hover:text-white transition">Careers</a>
-      <a href="affiliate/" class="hover:text-white transition">Affiliate</a>
-      <a href="contact/" class="hover:text-white transition">Contact</a>
-      <a href="privacy/" class="hover:text-white transition">Privacy</a>
-      <a href="terms/" class="hover:text-white transition">Terms</a>
-      <a href="refunds/" class="hover:text-white transition">Refunds</a>
+    <!-- Column 2: Solutions & Explore -->
+    <div class="space-y-2.5">
+      <span class="text-xs font-black uppercase tracking-wider text-white block mb-1">Explore &amp; Solutions</span>
+      <ul class="space-y-1.5 font-bold text-slate-400">
+        <li><a href="features/" class="hover:text-brand-400 transition">Connected Business Modules</a></li>
+        <li><a href="plans/" class="hover:text-brand-400 transition">OS Service Plans</a></li>
+        <li><a href="blog/" class="hover:text-brand-400 transition">Blog &amp; Knowledge Centre</a></li>
+        <li><a href="careers/" class="hover:text-brand-400 transition">Careers Portal</a></li>
+        <li><a href="affiliate/" class="hover:text-brand-400 transition">Partner Programme</a></li>
+      </ul>
     </div>
 
-    <!-- Icon-First Social Connect -->
-    <div class="flex items-center space-x-2.5">
-      <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on LinkedIn">
-        <i class="fab fa-linkedin-in text-xs"></i>
-      </a>
-      <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-pink-500 hover:to-purple-600 hover:text-white text-slate-400 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on Instagram">
-        <i class="fab fa-instagram text-xs"></i>
-      </a>
-      <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20Business%20OS%20and%20services.%20Please%20help%20me%20understand%20how%20it%20could%20fit%20my%20business." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500" aria-label="ScaleNova on WhatsApp">
-        <i class="fab fa-whatsapp text-xs"></i>
-      </a>
+    <!-- Column 3: Support, Legal & Social Connect -->
+    <div class="space-y-3">
+      <span class="text-xs font-black uppercase tracking-wider text-white block mb-1">Support &amp; Legal</span>
+      <ul class="space-y-1.5 font-bold text-slate-400">
+        <li><a href="contact/" class="hover:text-brand-400 transition">Book a Live Demo</a></li>
+        <li><a href="privacy/" class="hover:text-brand-400 transition">Privacy Policy</a></li>
+        <li><a href="terms/" class="hover:text-brand-400 transition">Terms of Service</a></li>
+        <li><a href="refunds/" class="hover:text-brand-400 transition">Refund Policy</a></li>
+      </ul>
+
+      <!-- Social Connections -->
+      <div class="pt-2 flex items-center space-x-2.5">
+        <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105" aria-label="ScaleNova on LinkedIn">
+          <i class="fab fa-linkedin-in text-xs"></i>
+        </a>
+        <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105" aria-label="ScaleNova on Instagram">
+          <i class="fab fa-instagram text-xs"></i>
+        </a>
+        <a href="https://wa.me/917801049178?text=Hi%20ScaleNova%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20Business%20OS%20and%20services.%20Please%20help%20me%20understand%20how%20it%20could%20fit%20my%20business." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-all hover:scale-105" aria-label="ScaleNova on WhatsApp">
+          <i class="fab fa-whatsapp text-xs"></i>
+        </a>
+      </div>
     </div>
+
   </div>
 
   <div class="max-w-7xl mx-auto pt-4 flex flex-col sm:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-wider text-slate-500 gap-2 text-center sm:text-left">
     <span>&copy; 2026 ScaleNova Private Limited. All Rights Reserved.</span>
-    <span>GSTIN: 37ABUCS4883M1Z5</span>
+    <span>One System Every Business Needs.</span>
   </div>
 </footer>
 
