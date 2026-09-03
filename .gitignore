@@ -21,3 +21,6 @@ yarn-error.log*
 *.pem
 *.key
 credentials.json
+
+# Local automation scripts
+scripts/

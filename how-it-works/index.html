@@ -88,8 +88,10 @@ tailwind.config = {
 <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
 <!-- STICKY GLASSMORPHISM NAVBAR -->
+<!-- STICKY GLASSMORPHISM NAVBAR -->
 <header class="sticky top-0 z-40 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md px-4 md:px-8 py-3.5 flex justify-between items-center transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/60" aria-label="Main Navigation">
   
+  <!-- ScaleNova Official Logo Artwork -->
   <a href="../" class="flex items-center space-x-3 group" aria-label="ScaleNova Home">
     <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-8 sm:h-9 w-auto object-contain bg-transparent border-none shadow-none group-hover:scale-105 transition-transform">
     <div class="flex flex-col">
@@ -98,106 +100,118 @@ tailwind.config = {
     </div>
   </a>
 
-  <!-- Desktop Navigation Links -->
-  <nav class="hidden lg:flex items-center space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
-    <a href="../" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+  <!-- Desktop Navigation Links inside Pill Container -->
+  <nav class="hidden lg:flex items-center space-x-0.5 xl:space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
+    <a href="../" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-home text-xs opacity-70" aria-hidden="true"></i>
       <span>Home</span>
     </a>
-    <a href="../what-we-manage/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="../what-we-manage/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-cubes text-xs opacity-70" aria-hidden="true"></i>
       <span>What We Manage</span>
     </a>
-    <a href="./" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold text-brand-500 bg-white dark:bg-slate-800 shadow-xs transition-all flex items-center space-x-1.5">
+    <a href="../how-it-works/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-extrabold text-brand-500 bg-white dark:bg-slate-800 shadow-xs transition-all flex items-center space-x-1.5">
       <i class="fas fa-route text-xs opacity-70" aria-hidden="true"></i>
       <span>How It Works</span>
     </a>
-    <a href="../plans/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="../plans/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-tags text-xs opacity-70" aria-hidden="true"></i>
       <span>Plans</span>
     </a>
-    <a href="../about/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="../about/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-info-circle text-xs opacity-70" aria-hidden="true"></i>
       <span>About</span>
     </a>
-    <a href="../blog/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="../blog/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-newspaper text-xs opacity-70" aria-hidden="true"></i>
       <span>Blog</span>
     </a>
-    <a href="../contact/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="../careers/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-briefcase text-xs opacity-70" aria-hidden="true"></i>
+      <span>Careers</span>
+    </a>
+    <a href="../affiliate/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-handshake text-xs opacity-70" aria-hidden="true"></i>
+      <span>Affiliate</span>
+    </a>
+    <a href="../contact/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-headset text-xs opacity-70" aria-hidden="true"></i>
       <span>Contact</span>
     </a>
   </nav>
 
-  <!-- Right Actions -->
-  <div class="flex items-center space-x-2.5 sm:space-x-3">
+  <!-- Right Actions (Theme Toggle + Book a Live Demo CTA) -->
+  <div class="flex items-center space-x-2 sm:space-x-2.5">
     <button id="themeToggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105" aria-label="Toggle Theme Mode">
-      <i class="fas fa-moon text-xs"></i>
+      <i class="fas fa-moon text-xs" aria-hidden="true"></i>
     </button>
-    <a href="../contact/" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-xs">
-      <i class="fas fa-calendar-check text-xs"></i>
+    <a href="../contact/" class="hidden sm:inline-flex px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-xs whitespace-nowrap">
+      <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
       <span>Book a Live Demo</span>
     </a>
     <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all" aria-label="Open Navigation">
-      <i class="fas fa-bars text-sm"></i>
+      <i class="fas fa-bars text-sm" aria-hidden="true"></i>
     </button>
   </div>
 </header>
 
-<!-- MOBILE MENU -->
+<!-- SLIDING MOBILE SIDE-PANEL MENU -->
 <div id="mobileSidebarOverlay" onclick="toggleMobileSidebar()" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
 <div id="mobileSidebar" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white dark:bg-slate-900 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col justify-between p-6 border-l border-slate-200 dark:border-slate-800">
   <div class="space-y-6">
     <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
       <div class="flex items-center space-x-2">
-        <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent">
+        <img src="../assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent border-none shadow-none">
         <span class="text-sm font-black sn-gradient-text">ScaleNova</span>
       </div>
-      <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500">
-        <i class="fas fa-times text-xs"></i>
+      <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-slate-800 dark:hover:text-slate-200" aria-label="Close Menu">
+        <i class="fas fa-times text-xs" aria-hidden="true"></i>
       </button>
     </div>
-
-    <nav class="space-y-1.5 font-bold text-xs text-slate-700 dark:text-slate-300">
-      <a href="../" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-home w-4 text-center text-slate-400"></i>
+    
+    <nav class="flex flex-col space-y-1.5 font-bold text-xs">
+      <a href="../" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-home w-4 text-center text-slate-400" aria-hidden="true"></i>
         <span>Home</span>
       </a>
-      <a href="../what-we-manage/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-cubes w-4 text-center text-slate-400"></i>
+      <a href="../what-we-manage/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-cubes w-4 text-center text-slate-400" aria-hidden="true"></i>
         <span>What We Manage</span>
       </a>
-      <a href="./" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400">
-        <i class="fas fa-route w-4 text-center text-brand-500"></i>
+      <a href="../how-it-works/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 font-extrabold">
+        <i class="fas fa-route w-4 text-center text-brand-500" aria-hidden="true"></i>
         <span>How It Works</span>
       </a>
-      <a href="../plans/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-tags w-4 text-center text-slate-400"></i>
-        <span>Plans &amp; Pricing</span>
+      <a href="../plans/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-tags w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Plans</span>
       </a>
-      <a href="../about/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-info-circle w-4 text-center text-slate-400"></i>
-        <span>About ScaleNova</span>
+      <a href="../about/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-info-circle w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>About</span>
       </a>
-      <a href="../blog/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-newspaper w-4 text-center text-slate-400"></i>
-        <span>Blog &amp; Insights</span>
+      <a href="../blog/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-newspaper w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Blog</span>
       </a>
-      <a href="../careers/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-briefcase w-4 text-center text-slate-400"></i>
+      <a href="../careers/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-briefcase w-4 text-center text-slate-400" aria-hidden="true"></i>
         <span>Careers</span>
       </a>
-      <a href="../contact/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition">
-        <i class="fas fa-headset w-4 text-center text-slate-400"></i>
-        <span>Contact &amp; Discovery</span>
+      <a href="../affiliate/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-handshake w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Affiliate</span>
+      </a>
+      <a href="../contact/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-headset w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Contact</span>
       </a>
     </nav>
   </div>
 
   <div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-3">
     <a href="../contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
-      <i class="fas fa-calendar-check text-xs"></i>
+      <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
       <span>Book a Live Demo</span>
     </a>
   </div>
@@ -206,14 +220,14 @@ tailwind.config = {
 <main class="flex-grow">
   
   <!-- HERO SECTION -->
-  <section class="py-14 sm:py-20 px-4 md:px-8 border-b border-slate-200/80 dark:border-slate-800/80 bg-gradient-to-b from-brand-50/40 via-white to-white dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950">
-    <div class="max-w-5xl mx-auto text-center space-y-5">
+  <section class="py-8 sm:py-14 md:py-20 px-4 md:px-8 border-b border-slate-200/80 dark:border-slate-800/80 bg-gradient-to-b from-brand-50/40 via-white to-white dark:from-slate-900/60 dark:via-slate-950 dark:to-slate-950">
+    <div class="max-w-5xl mx-auto text-center space-y-3.5 sm:space-y-5">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-black bg-brand-100/60 dark:bg-brand-950/80 text-brand-700 dark:text-brand-300 border border-brand-200/80 dark:border-brand-500/30 uppercase tracking-widest">
-        <i class="fas fa-route text-brand-500"></i>
+        <i class="fas fa-route text-brand-500" aria-hidden="true"></i>
         <span>The 8-Step Operating Lifecycle</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
+      <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight max-w-3xl mx-auto">
         How ScaleNova Delivers <span class="sn-gradient-text">Calm &amp; Structure</span>
       </h1>
 
@@ -221,9 +235,9 @@ tailwind.config = {
         We do not hand you a complex software login and leave you to figure it out. ScaleNova guides your business through a disciplined, hands-on 8-stage operating lifecycle.
       </p>
 
-      <div class="flex flex-wrap items-center justify-center gap-3 pt-3">
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2 sm:pt-3">
         <a href="../contact/" class="px-6 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-md">
-          <i class="fas fa-calendar-check"></i>
+          <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
           <span>Book a Live Demo</span>
         </a>
         <a href="../plans/" class="px-6 py-3.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
@@ -234,165 +248,165 @@ tailwind.config = {
   </section>
 
   <!-- 8-STEP TIMELINE SECTION -->
-  <section class="py-16 sm:py-24 px-4 md:px-8">
-    <div class="max-w-4xl mx-auto space-y-12">
+  <section class="py-8 sm:py-14 md:py-20 px-4 md:px-8">
+    <div class="max-w-4xl mx-auto space-y-4 sm:space-y-6 md:space-y-8">
 
       <!-- STEP 1: UNDERSTAND -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-brand-500 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-brand-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brand-500 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-brand-500/30 mt-0.5 sm:mt-0">
           01
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Understand</h2>
-            <span class="text-[11px] font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 1</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Understand</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 1</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Find the gaps. We meet with business leadership to conduct an operational intake: analyzing current bottlenecks, cataloging spreadsheets, examining lead sources, and identifying where handoffs are failing.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Verified Operational Blueprint &amp; System Roadmap
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Verified Operational Blueprint &amp; System Roadmap</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 2: PLAN -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-indigo-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-indigo-500/30 mt-0.5 sm:mt-0">
           02
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Plan</h2>
-            <span class="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 2</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Plan</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 2</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Choose what matters. We prioritize the high-impact operational areas for your business, define core modules, establish realistic implementation timelines, and set clear ownership boundaries.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Prioritized Implementation Scope &amp; Clear Deliverables
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Prioritized Implementation Scope &amp; Clear Deliverables</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 3: SET UP -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-blue-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-blue-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-blue-500/30 mt-0.5 sm:mt-0">
           03
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Set Up</h2>
-            <span class="text-[11px] font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 3</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Set Up</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full shrink-0">Phase 3</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Prepare your systems. ScaleNova provisions your secure private cloud workspace, sets up SSL certificates, configures company domain DNS, and onboards current active operational data (customers, vendors, items, opening balances).
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Secure Cloud Instance &amp; Clean Master Data Registers
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Secure Cloud Instance &amp; Clean Master Data Registers</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 4: CONNECT -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-emerald-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-emerald-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-emerald-500/30 mt-0.5 sm:mt-0">
           04
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Connect</h2>
-            <span class="text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 4</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Connect</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 4</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Link the workflows. We interconnect front-facing touchpoints with back-office operations: website inquiry forms route into CRM stages, quotation templates link to billing registers, and inventory ties into purchasing.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Connected and Organized Business Flow
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Connected and Organized Business Flow</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 5: TRAIN -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-purple-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-purple-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-purple-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-purple-500/30 mt-0.5 sm:mt-0">
           05
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Train</h2>
-            <span class="text-[11px] font-bold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 5</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Train</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 5</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Teach your team. Software fails when employees don't know how to use it. ScaleNova conducts live 90-minute orientation workshops tailored by role, teaching sales how to log leads and accounts how to record receipts.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Confident, Trained Team Members and Standardized SOPs
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Confident, Trained Team Members and Standardized SOPs</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 6: MANAGE -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-amber-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-amber-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-amber-500/30 mt-0.5 sm:mt-0">
           06
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Manage</h2>
-            <span class="text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 6</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Manage</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 6</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Keep things moving. We stay actively involved: updating web copy, fixing broken links, maintaining local directory listings, creating monthly social graphics, maintaining backups, and answering staff questions.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Ongoing Operational Peace of Mind without Hiring IT Staff
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Ongoing Operational Peace of Mind without Hiring IT Staff</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 7: REVIEW -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-rose-600 text-white flex items-center justify-center font-black text-lg shrink-0 shadow-lg shadow-rose-500/30">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-rose-600 text-white flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg shadow-rose-500/30 mt-0.5 sm:mt-0">
           07
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Review</h2>
-            <span class="text-[11px] font-bold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 7</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Review</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 7</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Check what is working. We meet with the business owner on a disciplined schedule (Monthly, Biweekly, or Weekly) to review lead volume, conversion bottlenecks, invoice aging, and stock status.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: Disciplined Accountability &amp; Executive Operational Visibility
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: Disciplined Accountability &amp; Executive Operational Visibility</span>
           </div>
         </div>
       </div>
 
       <!-- STEP 8: IMPROVE -->
-      <div class="flex flex-col sm:flex-row gap-6 items-start">
-        <div class="w-12 h-12 rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 flex items-center justify-center font-black text-lg shrink-0 shadow-lg">
+      <div class="flex flex-row gap-3.5 sm:gap-6 items-start">
+        <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 flex items-center justify-center font-black text-xs sm:text-lg shrink-0 shadow-md sm:shadow-lg mt-0.5 sm:mt-0">
           08
         </div>
-        <div class="sn-card p-6 sm:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-3">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 dark:text-white">Improve</h2>
-            <span class="text-[11px] font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2.5 py-0.5 rounded-full">Phase 8</span>
+        <div class="sn-card p-4 sm:p-6 md:p-8 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-2xl shadow-xs flex-grow space-y-2 sm:space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-slate-900 dark:text-white">Improve</h2>
+            <span class="text-[10px] sm:text-[11px] font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 px-2 sm:px-2.5 py-0.5 rounded-full shrink-0">Phase 8</span>
           </div>
           <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
             Make it better. As your sales team grows or new branches open, ScaleNova adjusts your operating system: expanding pipeline stages, adding automated reorder triggers, and refining reporting.
           </p>
-          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-1">
-            <i class="fas fa-circle-check text-emerald-500 mr-1.5"></i>
-            Outcome: A Business Operating System That Scales With Your Enterprise
+          <div class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 pt-0.5 flex items-center gap-1.5">
+            <i class="fas fa-circle-check text-emerald-500 text-xs flex-shrink-0" aria-hidden="true"></i>
+            <span>Outcome: A Business Operating System That Scales With Your Enterprise</span>
           </div>
         </div>
       </div>
@@ -401,8 +415,8 @@ tailwind.config = {
   </section>
 
   <!-- CTA SECTION -->
-  <section class="py-16 sm:py-20 px-4 md:px-8 bg-slate-50/60 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
-    <div class="max-w-4xl mx-auto text-center space-y-6">
+  <section class="py-10 sm:py-16 px-4 md:px-8 bg-slate-50/60 dark:bg-slate-900/40 border-t border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto text-center space-y-4 sm:space-y-6">
       <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
         Ready to Experience Structured Business Operations?
       </h2>
@@ -411,11 +425,11 @@ tailwind.config = {
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
         <a href="../contact/" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
-          <i class="fas fa-calendar-check"></i>
+          <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
           <span>Book a Live Demo</span>
         </a>
         <a href="../plans/" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition flex items-center justify-center space-x-2">
-          <i class="fas fa-tags"></i>
+          <i class="fas fa-tags text-xs" aria-hidden="true"></i>
           <span>View Plans</span>
         </a>
       </div>
@@ -469,13 +483,13 @@ tailwind.config = {
 
       <div class="pt-2 flex items-center space-x-2.5">
         <a href="https://www.linkedin.com/company/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-brand-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in text-xs"></i>
+          <i class="fab fa-linkedin-in text-xs" aria-hidden="true"></i>
         </a>
         <a href="https://www.instagram.com/scalenovasys/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-pink-600 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="Instagram">
-          <i class="fab fa-instagram text-xs"></i>
+          <i class="fab fa-instagram text-xs" aria-hidden="true"></i>
         </a>
         <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 hover:bg-emerald-500 hover:text-white text-slate-400 flex items-center justify-center transition-all" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp text-xs"></i>
+          <i class="fab fa-whatsapp text-xs" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -488,11 +502,7 @@ tailwind.config = {
   </div>
 </footer>
 
-<!-- FLOATING WHATSAPP CTA -->
-<a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="sn-whatsapp-fab" aria-label="Talk to ScaleNova on WhatsApp">
-  <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-  <span class="sn-whatsapp-text">Talk to ScaleNova</span>
-</a>
+
 
 <script>
 // Theme Toggle Logic
@@ -533,6 +543,12 @@ function toggleMobileSidebar() {
   }
 }
 </script>
+
+<!-- FLOATING WHATSAPP CTA -->
+<a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="sn-whatsapp-fab" aria-label="Talk to ScaleNova on WhatsApp">
+  <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  <span class="sn-whatsapp-text">Talk to ScaleNova</span>
+</a>
 
 </body>
 </html>

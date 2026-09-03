@@ -96,6 +96,7 @@ tailwind.config = {
 <body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
 
 <!-- STICKY GLASSMORPHISM NAVBAR -->
+<!-- STICKY GLASSMORPHISM NAVBAR -->
 <header class="sticky top-0 z-40 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md px-4 md:px-8 py-3.5 flex justify-between items-center transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/60" aria-label="Main Navigation">
   
   <!-- ScaleNova Official Logo Artwork -->
@@ -108,48 +109,56 @@ tailwind.config = {
   </a>
 
   <!-- Desktop Navigation Links inside Pill Container -->
-  <nav class="hidden lg:flex items-center space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
-    <a href="index.html" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-brand-500 font-extrabold transition-all flex items-center space-x-1.5 bg-white dark:bg-slate-800 shadow-xs">
+  <nav class="hidden lg:flex items-center space-x-0.5 xl:space-x-1 bg-slate-100/80 dark:bg-slate-900/60 p-1.5 rounded-2xl border border-slate-200/80 dark:border-slate-800/60">
+    <a href="index.html" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-extrabold text-brand-500 bg-white dark:bg-slate-800 shadow-xs transition-all flex items-center space-x-1.5">
       <i class="fas fa-home text-xs opacity-70" aria-hidden="true"></i>
       <span>Home</span>
     </a>
-    <a href="what-we-manage/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="what-we-manage/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-cubes text-xs opacity-70" aria-hidden="true"></i>
       <span>What We Manage</span>
     </a>
-    <a href="how-it-works/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="how-it-works/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-route text-xs opacity-70" aria-hidden="true"></i>
       <span>How It Works</span>
     </a>
-    <a href="plans/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="plans/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-tags text-xs opacity-70" aria-hidden="true"></i>
       <span>Plans</span>
     </a>
-    <a href="about/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="about/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-info-circle text-xs opacity-70" aria-hidden="true"></i>
       <span>About</span>
     </a>
-    <a href="blog/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="blog/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-newspaper text-xs opacity-70" aria-hidden="true"></i>
       <span>Blog</span>
     </a>
-    <a href="contact/" class="px-3.5 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+    <a href="careers/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-briefcase text-xs opacity-70" aria-hidden="true"></i>
+      <span>Careers</span>
+    </a>
+    <a href="affiliate/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
+      <i class="fas fa-handshake text-xs opacity-70" aria-hidden="true"></i>
+      <span>Affiliate</span>
+    </a>
+    <a href="contact/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-headset text-xs opacity-70" aria-hidden="true"></i>
       <span>Contact</span>
     </a>
   </nav>
 
   <!-- Right Actions (Theme Toggle + Book a Live Demo CTA) -->
-  <div class="flex items-center space-x-2.5 sm:space-x-3">
+  <div class="flex items-center space-x-2 sm:space-x-2.5">
     <button id="themeToggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105" aria-label="Toggle Theme Mode">
-      <i class="fas fa-moon text-xs"></i>
+      <i class="fas fa-moon text-xs" aria-hidden="true"></i>
     </button>
-    <a href="contact/" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-xs">
-      <i class="fas fa-calendar-check text-xs"></i>
+    <a href="contact/" class="hidden sm:inline-flex px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-xs whitespace-nowrap">
+      <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
       <span>Book a Live Demo</span>
     </a>
     <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all" aria-label="Open Navigation">
-      <i class="fas fa-bars text-sm"></i>
+      <i class="fas fa-bars text-sm" aria-hidden="true"></i>
     </button>
   </div>
 </header>
@@ -160,7 +169,7 @@ tailwind.config = {
   <div class="space-y-6">
     <div class="flex justify-between items-center pb-4 border-b border-slate-200 dark:border-slate-800">
       <div class="flex items-center space-x-2">
-        <img src="assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent border-none shadow-none" onerror="this.onerror=null; this.src='files/Logo (1).jpg';">
+        <img src="assets/logo.png" alt="ScaleNova Logo" class="h-6 w-auto object-contain bg-transparent border-none shadow-none">
         <span class="text-sm font-black sn-gradient-text">ScaleNova</span>
       </div>
       <button onclick="toggleMobileSidebar()" class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-500 hover:text-slate-800 dark:hover:text-slate-200" aria-label="Close Menu">
@@ -168,26 +177,54 @@ tailwind.config = {
       </button>
     </div>
     
-    <nav class="flex flex-col space-y-1.5 font-bold text-xs text-slate-800 dark:text-slate-200">
-      <a href="index.html" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 transition"><i class="fas fa-home text-brand-500 w-5" aria-hidden="true"></i><span>Home</span></a>
-      <a href="what-we-manage/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-cubes text-slate-400 w-5" aria-hidden="true"></i><span>What We Manage</span></a>
-      <a href="how-it-works/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-route text-slate-400 w-5" aria-hidden="true"></i><span>How It Works</span></a>
-      <a href="plans/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-tags text-slate-400 w-5" aria-hidden="true"></i><span>Plans &amp; Pricing</span></a>
-      <a href="about/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-info-circle text-slate-400 w-5" aria-hidden="true"></i><span>About ScaleNova</span></a>
-      <a href="blog/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-newspaper text-slate-400 w-5" aria-hidden="true"></i><span>Blog &amp; Insights</span></a>
-      <a href="careers/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-briefcase text-slate-400 w-5" aria-hidden="true"></i><span>Careers</span></a>
-      <a href="affiliate/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-handshake text-slate-400 w-5" aria-hidden="true"></i><span>Affiliate Programme</span></a>
-      <a href="contact/" onclick="toggleMobileSidebar()" class="flex items-center space-x-3 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition"><i class="fas fa-headset text-slate-400 w-5" aria-hidden="true"></i><span>Contact</span></a>
+    <nav class="flex flex-col space-y-1.5 font-bold text-xs">
+      <a href="index.html" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-brand-400 font-extrabold">
+        <i class="fas fa-home w-4 text-center text-brand-500" aria-hidden="true"></i>
+        <span>Home</span>
+      </a>
+      <a href="what-we-manage/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-cubes w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>What We Manage</span>
+      </a>
+      <a href="how-it-works/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-route w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>How It Works</span>
+      </a>
+      <a href="plans/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-tags w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Plans</span>
+      </a>
+      <a href="about/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-info-circle w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>About</span>
+      </a>
+      <a href="blog/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-newspaper w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Blog</span>
+      </a>
+      <a href="careers/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-briefcase w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Careers</span>
+      </a>
+      <a href="affiliate/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-handshake w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Affiliate</span>
+      </a>
+      <a href="contact/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
+        <i class="fas fa-headset w-4 text-center text-slate-400" aria-hidden="true"></i>
+        <span>Contact</span>
+      </a>
     </nav>
   </div>
 
-  <a href="contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
-    <i class="fas fa-calendar-check" aria-hidden="true"></i>
-    <span>Book a Live Demo</span>
-  </a>
+  <div class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-3">
+    <a href="contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
+      <i class="fas fa-calendar-check text-xs" aria-hidden="true"></i>
+      <span>Book a Live Demo</span>
+    </a>
+  </div>
 </div>
 
-<!-- MAIN CONTENT AREA -->
 <main class="flex-grow" id="main-content">
 
   <!-- 1. HERO SECTION WITH 3D CANVAS & CONCISE VALUE PROPOSITION -->
@@ -756,12 +793,10 @@ tailwind.config = {
         <!-- CARD 1: CORE OS -->
         <div class="sn-card sn-card-hover p-5 sm:p-7 space-y-5 flex flex-col justify-between bg-gradient-to-b from-brand-50/60 via-white to-white dark:from-brand-950/30 dark:via-slate-900 dark:to-slate-900 border border-brand-200/80 dark:border-brand-500/30 shadow-md">
           <div class="space-y-3.5">
-            <div class="flex items-center justify-between">
+            <div>
               <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Core OS</h3>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">Monthly Review</span>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Start with the Essentials</p>
             </div>
-            
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Start with the Essentials</p>
             
             <div class="py-3 border-y border-brand-200/60 dark:border-slate-800">
               <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
@@ -774,19 +809,13 @@ tailwind.config = {
             </div>
 
             <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>1-Page Landing Website (Essential Presence)</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Single Lead Capture Connected to CRM</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>1-Page Business Website</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Lead Capture Connected to CRM</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Customer Interaction History &amp; Quotations</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Essential Current Master Data Onboarding</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Essential Master Data Onboarding</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>1 × 90-Min Live Team Orientation</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Monthly Business Systems Review</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Monthly Business Review &amp; Support</span></li>
             </ul>
-
-            <div class="pt-2">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-[11px] font-bold text-slate-600 dark:text-slate-300 block">
-                1-Page Website · 1 Form · Monthly Review
-              </span>
-            </div>
           </div>
 
           <div class="space-y-2 pt-2">
@@ -806,13 +835,11 @@ tailwind.config = {
           </div>
 
           <div class="space-y-3.5 pt-1">
-            <div class="flex items-center justify-between">
+            <div>
               <h3 class="text-xl sm:text-2xl font-black sn-gradient-text">Growth OS</h3>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-brand-500/10 text-brand-600 dark:text-brand-400 border border-brand-500/20">Biweekly Review</span>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Build a Stronger Business Growth Engine</p>
             </div>
 
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Build a Stronger Business Growth Engine</p>
-            
             <div class="py-3 border-y border-brand-200/50 dark:border-slate-800">
               <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
                 <span id="price-growth" class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white transition-all duration-200">₹13,699</span>
@@ -824,20 +851,14 @@ tailwind.config = {
             </div>
 
             <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 5-Page Premium Business Website</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Multiple Lead Capture Touchpoints + WhatsApp</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 5-Page Premium Website</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Multiple Lead Touchpoints + WhatsApp</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Connected Invoicing, Inventory &amp; HRMS</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>4 Branded Social Posts / Month across Channels</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>4 Branded Social Posts / Month</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 4 Managed Directory Listings</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>3 × 90-Min Departmental Training Sessions</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Biweekly Business Reviews &amp; Reports</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Bi-weekly Business Review &amp; Support</span></li>
             </ul>
-
-            <div class="pt-2">
-              <span class="px-2.5 py-1 rounded-lg bg-brand-500/10 text-[11px] font-bold text-brand-700 dark:text-brand-300 block">
-                Up to 5 Pages · 4 Posts/Mo · Biweekly Review
-              </span>
-            </div>
           </div>
 
           <div class="space-y-2 pt-2">
@@ -853,12 +874,10 @@ tailwind.config = {
         <!-- CARD 3: ELITE OS -->
         <div class="sn-card sn-card-hover p-5 sm:p-7 space-y-5 flex flex-col justify-between bg-gradient-to-b from-slate-100/80 via-white to-white dark:from-slate-900/90 dark:via-slate-900 dark:to-slate-950 border border-slate-300 dark:border-slate-700 shadow-md">
           <div class="space-y-3.5">
-            <div class="flex items-center justify-between">
+            <div>
               <h3 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">Elite OS</h3>
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-slate-800 text-slate-300 border border-slate-700">Weekly Review</span>
+              <p class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5">Complete Managed Systems &amp; Operations</p>
             </div>
-
-            <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Complete Managed Systems &amp; Operations</p>
             
             <div class="py-3 border-y border-slate-200 dark:border-slate-800">
               <div class="flex items-center flex-wrap gap-x-2 gap-y-1">
@@ -871,20 +890,14 @@ tailwind.config = {
             </div>
 
             <ul class="space-y-2 text-xs font-semibold text-slate-700 dark:text-slate-300">
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 10-Page Tailored Web Architecture</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Complete Commercial ERP, BOMs &amp; Fixed Assets</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 10-Page Custom Web Architecture</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Commercial ERP, BOMs &amp; Fixed Assets</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Executive BI Dashboards &amp; Margin Analytics</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>8 Branded Social Posts / Month across Channels</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>8 Branded Social Posts / Month</span></li>
               <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Up to 10 Managed Directory Listings</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>5 × 90-Min Role-Based Workshop Sessions</span></li>
-              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Weekly Executive Business Reviews</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>5 × 90-Min Role-Based Training Sessions</span></li>
+              <li class="flex items-center"><i class="fas fa-check text-emerald-500 mr-2 text-xs" aria-hidden="true"></i><span>Weekly Executive Business Review &amp; Support</span></li>
             </ul>
-
-            <div class="pt-2">
-              <span class="px-2.5 py-1 rounded-lg bg-slate-200/80 dark:bg-slate-800 text-[11px] font-bold text-slate-700 dark:text-slate-300 block">
-                Up to 10 Pages · 8 Posts/Mo · Weekly Review
-              </span>
-            </div>
           </div>
 
           <div class="space-y-2 pt-2">
@@ -1110,11 +1123,7 @@ tailwind.config = {
     </div>
   </footer>
 
-<!-- FLOATING WHATSAPP CTA WITH EXPANDING TOOLTIP -->
-<a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="sn-whatsapp-fab" aria-label="Talk to ScaleNova on WhatsApp">
-  <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-  <span class="sn-whatsapp-text">Talk to ScaleNova</span>
-</a>
+
 
 <!-- ======================================================================= -->
 <!-- FULL SPA PAGE VIEWS & INTERACTIVE OVERLAYS                              -->
@@ -1410,6 +1419,12 @@ tailwind.config = {
 <script src="js/forms-service.js?v=2.0"></script>
 <script src="js/3d-hero.js?v=2.0" defer></script>
 <script src="js/app.js?v=2.0"></script>
+
+<!-- FLOATING WHATSAPP CTA -->
+<a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="sn-whatsapp-fab" aria-label="Talk to ScaleNova on WhatsApp">
+  <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
+  <span class="sn-whatsapp-text">Talk to ScaleNova</span>
+</a>
 
 </body>
 </html>

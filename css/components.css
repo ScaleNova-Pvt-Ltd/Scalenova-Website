@@ -409,11 +409,16 @@ details.sn-accordion summary {
 .sn-whatsapp-fab {
   position: fixed;
   bottom: 1.25rem;
+  bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
   right: 1.25rem;
-  z-index: 45;
+  right: calc(1.25rem + env(safe-area-inset-right, 0px));
+  z-index: 48;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  min-width: 3.25rem;
+  min-height: 3.25rem;
   background-color: #10b981;
   color: #ffffff !important;
   padding: 0.75rem;
@@ -421,6 +426,9 @@ details.sn-accordion summary {
   box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4), 0 8px 10px -6px rgba(16, 185, 129, 0.2);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  cursor: pointer;
 }
 
 .sn-whatsapp-fab:hover {
@@ -440,7 +448,9 @@ details.sn-accordion summary {
 
 @media (min-width: 640px) {
   .sn-whatsapp-fab {
-    padding: 0.65rem 1.1rem 0.65rem 0.9rem;
+    min-width: auto;
+    min-height: auto;
+    padding: 0.65rem 1.15rem 0.65rem 0.95rem;
   }
   .sn-whatsapp-fab .sn-whatsapp-text {
     display: inline-block;
