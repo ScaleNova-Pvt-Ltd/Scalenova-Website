@@ -8,7 +8,13 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://scalenovasys.com/features/</loc>
+    <loc>https://scalenovasys.com/what-we-manage/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/how-it-works/</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
@@ -18,6 +24,18 @@
     <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/about/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/features/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- 8 Dedicated Feature Detail Pages -->

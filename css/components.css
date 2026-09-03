@@ -402,3 +402,57 @@ details.sn-accordion summary {
   color: var(--sn-text-primary);
   font-weight: 800;
 }
+
+/* ==========================================================================
+   9. GLOBAL FLOATING WHATSAPP CTA & ACCESSIBILITY
+   ========================================================================== */
+.sn-whatsapp-fab {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 45;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #10b981;
+  color: #ffffff !important;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4), 0 8px 10px -6px rgba(16, 185, 129, 0.2);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.sn-whatsapp-fab:hover {
+  background-color: #059669;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 14px 28px -5px rgba(16, 185, 129, 0.5);
+  color: #ffffff !important;
+}
+
+.sn-whatsapp-fab .sn-whatsapp-text {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .sn-whatsapp-fab {
+    padding: 0.65rem 1.1rem 0.65rem 0.9rem;
+  }
+  .sn-whatsapp-fab .sn-whatsapp-text {
+    display: inline-block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sn-whatsapp-fab,
+  .sn-glow-pulse,
+  .sn-card-hover {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
