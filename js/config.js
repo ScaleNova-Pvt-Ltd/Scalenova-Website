@@ -32,70 +32,84 @@ const SCALENOVA_CONFIG = {
   },
 
   pricing: {
-    gstRate: 0.18, // 18% standard GST in India
-    gstLabel: "+ GST",
     annualDiscountMonths: 2, // Pay for 10 months, get 12 months (2 months free)
     plans: {
       core: {
         id: "core",
         name: "Core OS",
         tagline: "Start with the Essentials",
+        setupPrice: 4899,
         monthlyPrice: 4899,
         annualPrice: 48990, // 4899 * 10
         badge: "Essential Starter",
         highlight: false,
-        userLimit: "Up to 3 Users",
-        storageLimit: "1 GB Cloud Storage",
+        websitePageLimit: "1 Landing Page",
+        leadCaptureCount: "1 Structured Form",
+        socialPostsPerMonth: 0,
+        directoryListings: "Basic Profile Setup",
+        trainingSessions: "1 × 90-Minute Orientation",
         reviewFrequency: "Monthly Business Review",
+        supportSLA: "Initial contact < 24 business hours",
         featuresSummary: [
-          "Managed Website + Lead Capture",
-          "Organized CRM & Customer Records",
-          "Search Engine Indexing & Online Presence",
-          "Hands-on Team Onboarding & Training",
-          "Monthly Business Systems Review",
-          "24-Hour Support Response SLA"
+          "1-Page High-Converting Landing Website",
+          "Single Lead Capture Connected to CRM",
+          "Basic Customer Records & Quotation Flow",
+          "Essential Master Data Onboarding Included",
+          "1 × 90-Minute Live Team Orientation",
+          "Monthly Business Systems Review"
         ]
       },
       growth: {
         id: "growth",
         name: "Growth OS",
         tagline: "Build a Stronger Business Growth Engine",
+        setupPrice: 13699,
         monthlyPrice: 13699,
         annualPrice: 136990, // 13699 * 10
         badge: "Most Popular",
         highlight: true,
-        userLimit: "Up to 25 Users",
-        storageLimit: "2 GB Cloud Storage",
+        websitePageLimit: "Up to 5 Pages",
+        leadCaptureCount: "Multiple Forms + WhatsApp",
+        socialPostsPerMonth: 4,
+        directoryListings: "Up to 4 Managed Listings",
+        trainingSessions: "3 × 90-Minute Sessions",
         reviewFrequency: "Biweekly Business Review",
+        supportSLA: "Initial contact < 24 business hours",
         featuresSummary: [
           "Includes Core OS Capabilities",
-          "Multi-Page Website & Multi-Form Capture",
-          "Connected Sales, Invoicing & GST Billing",
-          "Inventory, Purchasing & People Operations",
-          "Managed SEO & Social Media Content",
-          "Biweekly Operational Reviews & Reports",
-          "Dedicated Support Contact"
+          "Up to 5-Page Premium Business Website",
+          "Connected Invoicing, Inventory & HRMS",
+          "4 Branded Social Posts / Month",
+          "Up to 4 Managed Business Directory Listings",
+          "3 × 90-Minute Departmental Training Sessions",
+          "Biweekly Business Reviews & Reports"
         ]
       },
       elite: {
         id: "elite",
         name: "Elite OS",
         tagline: "Complete Managed Systems & Digital Operations",
+        setupPrice: 35799,
         monthlyPrice: 35799,
         annualPrice: 357990, // 35799 * 10
         badge: "Complete Managed OS",
         highlight: false,
-        userLimit: "Up to 100 Users",
-        storageLimit: "4 GB+ Cloud Storage",
+        websitePageLimit: "Up to 10 Pages",
+        leadCaptureCount: "Advanced Routing Pipelines",
+        socialPostsPerMonth: 8,
+        directoryListings: "Up to 10 Managed Listings",
+        trainingSessions: "5 × 90-Minute Role-Based Workshops",
         reviewFrequency: "Weekly Executive Review",
+        supportSLA: "Priority contact < 24 business hours",
         featuresSummary: [
           "Includes Growth OS Capabilities",
-          "Complete ERP, Production & Asset Operations",
-          "Executive Dashboards & Business Intelligence",
-          "Official Business Documentation & Templates",
-          "Advanced Search Visibility & Content Management",
-          "Weekly Executive Reviews & Optimization",
-          "Priority Support Queue & Account Manager"
+          "Up to 10-Page Tailored Web Architecture",
+          "Complete Commercial ERP, BOMs & Fixed Assets",
+          "Executive BI Dashboards & Margin Insights",
+          "8 Branded Social Posts / Month",
+          "Up to 10 Managed Business Directory Listings",
+          "5 × 90-Minute Role-Based Workshop Sessions",
+          "Weekly Executive Business Reviews"
         ]
       }
     }

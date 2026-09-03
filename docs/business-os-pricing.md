@@ -2,11 +2,11 @@
 
 ## 1. Plan Structure & Pricing Tiers
 
-| Plan Name | Monthly Price (+ GST) | Annual Price (+ GST) | Target Audience | User Capacity | Storage |
+| Plan Name | One-Time Setup Fee | Monthly Price | Annual Price | Target Audience | Scope & Reviews |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Core OS** | **Rs 4,899 / mo** | Rs 48,990 / yr (2 mos free) | Startups & Small Businesses | Up to 3 Users | 1 GB Cloud Storage |
-| **Growth OS** | **Rs 13,699 / mo** | Rs 1,36,990 / yr (2 mos free) | Growing MSMEs, Agencies & Teams | Up to 25 Users | 2 GB Cloud Storage |
-| **Elite OS** | **Rs 35,799 / mo** | Rs 3,57,990 / yr (2 mos free) | Established MSMEs & Enterprises | Up to 100 Users | 4 GB+ Cloud Storage |
+| **Core OS** | **₹4,899** | **₹4,899 / mo** | ₹48,990 / yr (2 mos free) | Startups & Small Businesses | 1-Page Site · 1 Form · Monthly Review |
+| **Growth OS** | **₹13,699** | **₹13,699 / mo** | ₹1,36,990 / yr (2 mos free) | Growing MSMEs & Teams | Up to 5 Pages · 4 Posts/mo · Biweekly Review |
+| **Elite OS** | **₹35,799** | **₹35,799 / mo** | ₹3,57,990 / yr (2 mos free) | Established MSMEs & Enterprises | Up to 10 Pages · 8 Posts/mo · Weekly Review |
 
 ---
 

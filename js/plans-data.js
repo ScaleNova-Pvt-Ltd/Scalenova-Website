@@ -10,23 +10,31 @@ const SCALENOVA_PLANS = [
     name: "Core OS",
     badge: "Start with the Essentials",
     headline: "Managed Website, Lead Capture & Customer CRM Foundation",
+    setupPrice: 4899,
+    setupPriceFormatted: "₹4,899",
     monthlyPrice: 4899,
     annualPrice: 48990,
     monthlyPriceFormatted: "₹4,899",
     annualPriceFormatted: "₹48,990",
     annualMonthlyEquivalent: "₹4,083",
-    targetAudience: "Startups and small businesses looking to establish a professional digital presence and organize customer sales records without operational complexity.",
-    userCapacity: "3 Users · 1 GB Business Data · 2.5 GB File Storage",
+    targetAudience: "Startups, sole proprietors, and small businesses looking to establish a professional digital presence and organize customer sales records without operational complexity.",
+    websiteScope: "1-Page Landing Website",
+    leadCaptureCount: "1 Structured Form",
+    socialContent: "No recurring social content",
+    directoryListings: "Basic Business Profile",
+    dataMigration: "Current operational data & opening balances included",
+    trainingIncluded: "1 × 90-Minute live orientation session covering system usage, lead management & quotation flow.",
     reviewFrequency: "Monthly Business Review",
+    supportIncluded: "Standard business-hours support via WhatsApp & Email with initial contact within 24 business hours.",
     isPopular: false,
     colorScheme: "blue",
     
     mainIncludedFunctions: [
-      "Managed Landing Page / Business Website",
-      "Lead Capture Connected to CRM Records",
-      "Customer History & Quotation Workflows",
-      "Search Engine Indexing & Online Presence",
-      "Hands-on Team Onboarding & Training",
+      "1-Page High-Converting Landing Website",
+      "Single Lead Capture Connected to CRM Records",
+      "Customer Interaction History & Quotations",
+      "Essential Master Data Onboarding Included",
+      "1 × 90-Minute Live Team Orientation",
       "Monthly Business Systems Review"
     ],
 
@@ -36,8 +44,6 @@ const SCALENOVA_PLANS = [
       { step: "Phase 3: Team Walkthrough & Launch", detail: "Live orientation for your team to manage incoming leads, quotes, and customer records." }
     ],
 
-    trainingIncluded: "Live team onboarding walkthrough, custom workflow reference guides, and monthly reporting review.",
-    supportIncluded: "Standard support assistance via WhatsApp & Email with 24 business hour initial contact SLA and monthly reviews.",
     ctaText: "Book Core OS Walkthrough"
   },
   {
@@ -46,36 +52,43 @@ const SCALENOVA_PLANS = [
     name: "Growth OS",
     badge: "Build a Stronger Business Growth Engine",
     headline: "Managed Website, Connected CRM, Operations, Invoicing, HR, Inventory & Marketing",
+    setupPrice: 13699,
+    setupPriceFormatted: "₹13,699",
     monthlyPrice: 13699,
     annualPrice: 136990,
     monthlyPriceFormatted: "₹13,699",
     annualPriceFormatted: "₹1,36,990",
     annualMonthlyEquivalent: "₹11,416",
     targetAudience: "Growing MSMEs, trading businesses, and service agencies needing connected workflows across departments.",
-    userCapacity: "25 Users · 2 GB Business Data · 5 GB File Storage",
+    websiteScope: "Up to 5 Pages",
+    leadCaptureCount: "Multiple Forms + WhatsApp",
+    socialContent: "4 Branded Posts / Month",
+    directoryListings: "Up to 4 Managed Listings",
+    dataMigration: "Current operational data & opening balances included (Historical migration custom)",
+    trainingIncluded: "3 × 90-Minute structured sessions for Sales & CRM, Invoicing & Operations, and Daily workflows.",
     reviewFrequency: "Biweekly Business Review",
+    supportIncluded: "Dedicated support contact with direct WhatsApp assistance with initial contact within 24 business hours.",
     isPopular: true,
     colorScheme: "brand",
 
     mainIncludedFunctions: [
       "Includes Core OS Capabilities",
-      "Multi-Page Website & Multi-Form Capture",
-      "Connected Sales Invoicing, GST Billing & Accounts",
-      "Inventory, Purchasing & Stock Management",
-      "People Operations: HR, Attendance & Payroll",
-      "Managed SEO & Social Media Content",
+      "Up to 5-Page Premium Business Website",
+      "Connected Sales Invoicing, Accounts & Receivables",
+      "Inventory, Purchasing & People Operations (HRMS)",
+      "4 Branded Social Posts / Month across Channels",
+      "Up to 4 Managed Business Directory Listings",
+      "3 × 90-Minute Departmental Training Sessions",
       "Biweekly Business Reviews & Reports"
     ],
 
     setupJourney: [
       { step: "Phase 1: Operational Discovery", detail: "Map out multi-department sales, inventory, purchasing, and billing workflows." },
-      { step: "Phase 2: Master Data Migration", detail: "Import existing customer, inventory, supplier, and employee records into your system." },
+      { step: "Phase 2: Master Data Migration", detail: "Import existing active customer, inventory, supplier, and employee records into your system." },
       { step: "Phase 3: Departmental Training", detail: "Hands-on live workshops for Sales, Operations, and Accounts teams." },
       { step: "Phase 4: Monitored Go-Live", detail: "Operational handholding and monitoring during initial transaction weeks." }
     ],
 
-    trainingIncluded: "Multi-session live training for department leads, workflow SOPs, and ongoing operational guides.",
-    supportIncluded: "Dedicated support contact, direct WhatsApp channel, 24 business hour SLA, and biweekly business reviews.",
     ctaText: "Book Growth OS Walkthrough"
   },
   {
@@ -84,25 +97,34 @@ const SCALENOVA_PLANS = [
     name: "Elite OS",
     badge: "Complete Managed Systems & Digital Operations",
     headline: "Complete ERP, Manufacturing, Asset Control, Advanced Automation, BI & Documentation",
+    setupPrice: 35799,
+    setupPriceFormatted: "₹35,799",
     monthlyPrice: 35799,
     annualPrice: 357990,
     monthlyPriceFormatted: "₹35,799",
     annualPriceFormatted: "₹3,57,990",
     annualMonthlyEquivalent: "₹29,833",
     targetAudience: "Established MSMEs, manufacturing units, and multi-branch enterprises needing an extended systems and operations partner.",
-    userCapacity: "100 Users · 4 GB+ Business Data · 25 GB File Storage",
+    websiteScope: "Up to 10 Pages",
+    leadCaptureCount: "Advanced Routing Pipelines",
+    socialContent: "8 Branded Posts / Month",
+    directoryListings: "Up to 10 Managed Listings",
+    dataMigration: "Current operational data & opening balances included (Historical migration custom)",
+    trainingIncluded: "5 × 90-Minute role-based workshops for Sales, Finance, Operations, ERP & Executive BI.",
     reviewFrequency: "Weekly Executive Review",
+    supportIncluded: "Dedicated Account Manager with priority resolution queue and initial contact within 24 business hours.",
     isPopular: false,
     colorScheme: "dark",
 
     mainIncludedFunctions: [
       "Includes Growth OS Capabilities",
-      "Advanced Multi-Page Web Presence & Lead Routing",
-      "Complete ERP, Manufacturing BOM & Asset Lifecycle",
+      "Up to 10-Page Tailored Web Architecture",
+      "Complete Commercial ERP, BOMs & Fixed Assets",
       "Internal Departmental Helpdesk & Automation",
       "Executive BI Dashboards & Margin Analytics",
-      "Business Documentation & Branded Templates",
-      "Proactive Search Visibility & Content Management",
+      "8 Branded Social Posts / Month across Channels",
+      "Up to 10 Managed Business Directory Listings",
+      "5 × 90-Minute Role-Based Workshop Sessions",
       "Weekly Executive Business Reviews"
     ],
 
@@ -113,8 +135,6 @@ const SCALENOVA_PLANS = [
       { step: "Phase 4: Full Supervised Deployment", detail: "Complete go-live execution with real-time operational supervision and support." }
     ],
 
-    trainingIncluded: "Custom enterprise training program with dedicated live workshops, executive SOPs, and ongoing optimization.",
-    supportIncluded: "Dedicated Account Manager, priority resolution queue, direct hotline, 24 business hour SLA, and weekly executive reviews.",
     ctaText: "Book Elite OS Walkthrough"
   }
 ];

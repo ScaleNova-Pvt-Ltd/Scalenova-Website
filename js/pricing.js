@@ -92,7 +92,7 @@ const ScaleNovaPricing = (function() {
             // MONTHLY STATE
             priceElem.textContent = formatRupees(plan.monthly);
             priceElem.classList.remove('price-annual-green');
-            if (subtextElem) subtextElem.textContent = ' + GST / month';
+            if (subtextElem) subtextElem.textContent = ' / month';
             if (savingsElem) {
               savingsElem.style.display = 'none';
             }
@@ -104,13 +104,13 @@ const ScaleNovaPricing = (function() {
             
             priceElem.textContent = formatRupees(plan.annual);
             priceElem.classList.add('price-annual-green');
-            if (subtextElem) subtextElem.textContent = ' + GST / year';
+            if (subtextElem) subtextElem.textContent = ' / year';
             if (savingsElem) {
               savingsElem.textContent = `Save ${formatRupees(savingsAmount)}`;
               savingsElem.style.display = 'inline-flex';
               savingsElem.style.opacity = '1';
             }
-            if (noteElem) noteElem.textContent = `Billed annually at ${formatRupees(plan.annual)} + GST (Save 2 Months)`;
+            if (noteElem) noteElem.textContent = `Billed annually at ${formatRupees(plan.annual)} (Save 2 Months)`;
           }
 
           priceElem.style.opacity = '1';

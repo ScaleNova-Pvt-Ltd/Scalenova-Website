@@ -51,9 +51,9 @@ Scalenova-Website/
 * **3D Visual Experience**: Lightweight, performant Three.js cybernetic data lattice with mouse parallax, adaptive mobile density, and `prefers-reduced-motion` compliance.
 * **Interactive 6 Feature Drawers**: Expandable right-hand SPA drawers for CRM, ERP, HR, Cloud Security, Projects, and Executive BI with workflows, problem breakdowns, and automation triggers.
 * **Reactive Pricing Engine**: Dynamic Monthly / Annual toggle:
-  * **Core OS**: ₹3,299/mo + GST (₹32,990/yr — 2 Months Free)
-  * **Growth OS**: ₹11,999/mo + GST (₹1,19,990/yr — 2 Months Free)
-  * **Elite OS**: ₹24,599/mo + GST (₹2,45,990/yr — 2 Months Free)
+  * **Core OS**: One-time setup ₹4,899 + ₹4,899/month (₹48,990/yr — 2 Months Free)
+  * **Growth OS**: One-time setup ₹13,699 + ₹13,699/month (₹1,36,990/yr — 2 Months Free)
+  * **Elite OS**: One-time setup ₹35,799 + ₹35,799/month (₹3,57,990/yr — 2 Months Free)
 * **Dedicated OS Plans Breakdown**: Comprehensive comparison detailing target audience, setup journeys, training & support scopes, and upgrade paths.
 * **Careers Portal**: Remote-first culture, company perks, 5 job specs, and interactive application drawer with client-side resume validation (PDF/DOC/DOCX, max 5 MB).
 * **Affiliate Programme**: 20% recurring monthly revenue share with no revenue cap, 4-step roadmap, earnings examples, and partner application form.
