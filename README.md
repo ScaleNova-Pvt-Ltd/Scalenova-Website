@@ -3,7 +3,7 @@
 > **ScaleNova Private Limited** — *One platform for every business need.*
 > Unified Business Operating System (CRM, ERP, HR, Projects, Finance) for Growing Indian MSMEs.
 
-Official Website: [https://scalenovasystems.com](https://scalenovasystems.com)
+Official Website: [https://scalenovasys.com](https://scalenovasys.com)
 
 ---
 

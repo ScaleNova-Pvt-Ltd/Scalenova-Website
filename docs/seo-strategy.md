@@ -13,7 +13,7 @@
 ## 2. Technical SEO Checklist
 
 - [x] Semantic HTML5 layout (<header>, <main>, <section>, <footer>).
-- [x] Canonical URL tag pointing to https://scalenovasystems.com.
+- [x] Canonical URL tag pointing to https://scalenovasys.com.
 - [x] OpenGraph and Twitter Card metadata tags.
 - [x] Structured Schema.org JSON-LD data for Organization.
 - [x] Optimized sitemap.xml and robots.txt files.

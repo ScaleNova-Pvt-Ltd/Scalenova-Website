@@ -8,11 +8,11 @@ const SCALENOVA_CONFIG = {
   brand: {
     name: "ScaleNova",
     legalName: "ScaleNova Private Limited",
-    tagline: "One system every business needs",
-    description: "Unified Business Operating System for growing Indian MSMEs. Bringing website, lead capture, CRM, ERP, HR, operations, and digital growth into one connected workspace.",
+    tagline: "You focus on your business. We manage the systems behind it.",
+    description: "Managed business systems and digital operations company for MSMEs. From website and lead capture to operational workflows, billing, digital presence, and ongoing support — we manage the systems behind your business.",
     gstin: "37ABUCS4883M1Z5",
     foundedYear: 2026,
-    websiteUrl: "https://scalenovasystems.com"
+    websiteUrl: "https://scalenovasys.com"
   },
   
   contact: {
@@ -20,7 +20,7 @@ const SCALENOVA_CONFIG = {
     phoneDisplay: "+91 78010 49178",
     officialEmail: "info@scalenovasys.com",
     whatsAppNumber: "917801049178",
-    whatsAppDefaultMessage: "Hello ScaleNova Team, I would like to learn more about ScaleNova Business OS and your services.",
+    whatsAppDefaultMessage: "Hello ScaleNova Team, I would like to learn more about your managed business systems and operations services.",
     get whatsAppLink() {
       return `https://wa.me/${this.whatsAppNumber}?text=${encodeURIComponent(this.whatsAppDefaultMessage)}`;
     }
@@ -39,61 +39,63 @@ const SCALENOVA_CONFIG = {
       core: {
         id: "core",
         name: "Core OS",
-        tagline: "For Startups & Small Businesses",
+        tagline: "Start with the Essentials",
         monthlyPrice: 4899,
         annualPrice: 48990, // 4899 * 10
         badge: "Essential Starter",
         highlight: false,
         userLimit: "Up to 3 Users",
         storageLimit: "1 GB Cloud Storage",
+        reviewFrequency: "Monthly Business Review",
         featuresSummary: [
-          "Premium Website + Lead Capture",
-          "CRM + Core Business Management",
-          "Basic SEO + Online Presence",
-          "Training, Support + Monthly Reports",
-          "Up to 3 Users Included",
-          "1 GB Cloud Database Storage"
+          "Managed Website + Lead Capture",
+          "Organized CRM & Customer Records",
+          "Search Engine Indexing & Online Presence",
+          "Hands-on Team Onboarding & Training",
+          "Monthly Business Systems Review",
+          "24-Hour Support Response SLA"
         ]
       },
       growth: {
         id: "growth",
         name: "Growth OS",
-        tagline: "For Growing MSMEs, Agencies & Teams",
+        tagline: "Build a Stronger Business Growth Engine",
         monthlyPrice: 13699,
         annualPrice: 136990, // 13699 * 10
         badge: "Most Popular",
         highlight: true,
         userLimit: "Up to 25 Users",
         storageLimit: "2 GB Cloud Storage",
+        reviewFrequency: "Biweekly Business Review",
         featuresSummary: [
-          "Includes Core OS",
-          "Sales + Accounts Management",
-          "HR + Payroll + Employee Management",
-          "Inventory + Purchase + Project Management",
-          "SEO + Social Media + Content Management",
-          "Up to 25 Users Included",
-          "2 GB Cloud Database Storage"
+          "Includes Core OS Capabilities",
+          "Multi-Page Website & Multi-Form Capture",
+          "Connected Sales, Invoicing & GST Billing",
+          "Inventory, Purchasing & People Operations",
+          "Managed SEO & Social Media Content",
+          "Biweekly Operational Reviews & Reports",
+          "Dedicated Support Contact"
         ]
       },
       elite: {
         id: "elite",
         name: "Elite OS",
-        tagline: "For Established MSMEs & Enterprises",
+        tagline: "Complete Managed Systems & Digital Operations",
         monthlyPrice: 35799,
         annualPrice: 357990, // 35799 * 10
-        badge: "Full Enterprise OS",
+        badge: "Complete Managed OS",
         highlight: false,
         userLimit: "Up to 100 Users",
         storageLimit: "4 GB+ Cloud Storage",
+        reviewFrequency: "Weekly Executive Review",
         featuresSummary: [
-          "Includes Growth OS",
-          "Complete ERP + Advanced Business Management",
-          "Manufacturing + Assets + Advanced Operations",
-          "Advanced Digital Marketing + SEO + Social Media",
-          "Business Intelligence + Reports + Analysis",
-          "Dedicated Training + Support + Account Management",
-          "Up to 100 Users Included",
-          "4 GB+ Cloud Database Storage"
+          "Includes Growth OS Capabilities",
+          "Complete ERP, Production & Asset Operations",
+          "Executive Dashboards & Business Intelligence",
+          "Official Business Documentation & Templates",
+          "Advanced Search Visibility & Content Management",
+          "Weekly Executive Reviews & Optimization",
+          "Priority Support Queue & Account Manager"
         ]
       }
     }

@@ -2,134 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Navigation Pages -->
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/plans/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <!-- 8 Dedicated Feature Detail Pages -->
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/executive-dashboard/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/executive-dashboard/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/crm-sales/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/crm-sales/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/business-operations/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/business-operations/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/people-operations/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/people-operations/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/projects-tasks/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/projects-tasks/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/finance-tracking/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/finance-tracking/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/business-intelligence/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/business-intelligence/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/features/mobile-access/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/features/mobile-access/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- 3 Dedicated Plan Detail Pages -->
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/core-os/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/plans/core-os/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/growth-os/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/plans/growth-os/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/plans/elite-os/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/plans/elite-os/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
-  <!-- Other Site Pages -->
+  <!-- Blog Hub & Articles -->
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/blog/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/blog/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/careers/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/blog/how-indian-msmes-stop-lead-leakage/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/affiliate/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/blog/5-business-workflows-msmes-should-automate/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/contact/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/blog/simplifying-employee-attendance-leave-tracking/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/blog/overcoming-operational-bottlenecks-msme-expansion/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/blog/why-business-owners-need-executive-bi-dashboards/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/blog/practical-digital-transformation-indian-msmes/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/blog/running-inventory-on-excel-stifles-growth/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/blog/mastering-cash-flow-visibility-unified-invoicing/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Other Site Pages -->
+  <url>
+    <loc>https://scalenovasys.com/careers/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/affiliate/</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://scalenovasys.com/contact/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/privacy/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/privacy/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/terms/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/terms/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://scalenova-pvt-ltd.github.io/Scalenova-Website/refunds/</loc>
-    <lastmod>2026-09-01</lastmod>
+    <loc>https://scalenovasys.com/refunds/</loc>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
