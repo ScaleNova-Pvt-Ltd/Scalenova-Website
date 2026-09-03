@@ -61,6 +61,7 @@
 
   <!-- STICKY GLASSMORPHISM NAVBAR -->
 <!-- STICKY GLASSMORPHISM NAVBAR -->
+<!-- STICKY GLASSMORPHISM NAVBAR -->
 <header class="sticky top-0 z-40 bg-white/85 dark:bg-slate-950/85 backdrop-blur-md px-4 md:px-8 py-3.5 flex justify-between items-center transition-all duration-300 border-b border-slate-200/80 dark:border-slate-800/60" aria-label="Main Navigation">
   
   <!-- ScaleNova Official Logo Artwork -->
@@ -89,10 +90,6 @@
     <a href="../../plans/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-extrabold text-brand-500 bg-white dark:bg-slate-800 shadow-xs transition-all flex items-center space-x-1.5">
       <i class="fas fa-tags text-xs opacity-70" aria-hidden="true"></i>
       <span>Plans</span>
-    </a>
-    <a href="../../about/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
-      <i class="fas fa-info-circle text-xs opacity-70" aria-hidden="true"></i>
-      <span>About</span>
     </a>
     <a href="../../blog/" class="px-2.5 xl:px-3 py-1.5 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 hover:text-brand-500 transition-all flex items-center space-x-1.5">
       <i class="fas fa-newspaper text-xs opacity-70" aria-hidden="true"></i>
@@ -158,10 +155,6 @@
         <i class="fas fa-tags w-4 text-center text-brand-500" aria-hidden="true"></i>
         <span>Plans</span>
       </a>
-      <a href="../../about/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
-        <i class="fas fa-info-circle w-4 text-center text-slate-400" aria-hidden="true"></i>
-        <span>About</span>
-      </a>
       <a href="../../blog/" class="flex items-center space-x-3 px-3.5 py-2.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition font-bold text-slate-800 dark:text-slate-200">
         <i class="fas fa-newspaper w-4 text-center text-slate-400" aria-hidden="true"></i>
         <span>Blog</span>
@@ -221,12 +214,21 @@
             </p>
 
             <!-- Capacity Badges -->
-            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+            <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2.5 shadow-xs">
               <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block">Included Capacity Limits</span>
-              <div class="flex items-center flex-wrap gap-2 text-xs font-extrabold text-slate-700 dark:text-slate-300">
-                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">3 Users</span>
-                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">1 GB Business Data</span>
-                <span class="px-3 py-1.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">2.5 GB File Storage</span>
+              <div class="flex items-center flex-wrap gap-2.5 text-xs font-extrabold text-slate-800 dark:text-slate-200">
+                <span class="px-3 py-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                  <i class="fas fa-users text-brand-500 text-xs" aria-hidden="true"></i>
+                  <span>25 Users</span>
+                </span>
+                <span class="px-3 py-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                  <i class="fas fa-database text-brand-500 text-xs" aria-hidden="true"></i>
+                  <span>2 GB Business Data</span>
+                </span>
+                <span class="px-3 py-2 rounded-xl bg-slate-100/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex items-center gap-2">
+                  <i class="fas fa-hard-drive text-brand-500 text-xs" aria-hidden="true"></i>
+                  <span>5 GB File Storage</span>
+                </span>
               </div>
             </div>
 
@@ -295,58 +297,112 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 1: Digital Presence</span>
+          <!-- Card 1 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                01 · Digital Presence
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-brand-500/10 text-brand-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-globe" aria-hidden="true"></i>
+                </span>
+                <span>Managed Landing Page / Website</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Professional business web presence hosted, secured, and maintained by ScaleNova without freelancer chaos.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Managed Landing Page / Website</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Professional business web presence hosted, secured, and maintained by ScaleNova without freelancer chaos.</p>
           </div>
 
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 2: Leads &amp; CRM</span>
+          <!-- Card 2 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                02 · Leads &amp; CRM
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-users-rays" aria-hidden="true"></i>
+                </span>
+                <span>Lead Capture Connected to CRM</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Website and inquiry channels routed straight into customer records so zero buyer inquiries slip through.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Lead Capture Connected to CRM</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Website and inquiry channels routed straight into customer records so zero buyer inquiries slip through.</p>
           </div>
 
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 3: Business Operations</span>
+          <!-- Card 3 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                03 · Business Operations
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-file-invoice-dollar" aria-hidden="true"></i>
+                </span>
+                <span>Customer History &amp; Quotations</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Maintain complete customer transaction logs, follow-up status, and send professional quotation records.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Customer History &amp; Quotations</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Maintain complete customer transaction logs, follow-up status, and send professional quotation records.</p>
           </div>
 
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 4: Digital Visibility</span>
+          <!-- Card 4 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                04 · Discovery
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                </span>
+                <span>Search Indexing &amp; Online Discovery</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Search engine verification, Google Business profile presence, and baseline local search optimization.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Search Indexing &amp; Online Discovery</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Search engine verification, Google Business profile presence, and baseline local search optimization.</p>
           </div>
 
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 6: Support &amp; Training</span>
+          <!-- Card 5 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                05 · Onboarding
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-chalkboard-user" aria-hidden="true"></i>
+                </span>
+                <span>Hands-on Team Onboarding &amp; Training</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Direct walkthroughs for your team members on daily lead management, follow-ups, and quotation workflows.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Hands-on Team Onboarding &amp; Training</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Direct walkthroughs for your team members on daily lead management, follow-ups, and quotation workflows.</p>
           </div>
 
-          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-2">
-            <div class="flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-extrabold text-xs">
-              <i class="fas fa-check-circle"></i>
-              <span>Managed Pillar 6: Reviews</span>
+          <!-- Card 6 -->
+          <div class="sn-card sn-card-hover p-6 bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-sm hover:shadow-lg transition-all duration-200 space-y-3 flex flex-col justify-between">
+            <div class="space-y-2.5">
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-slate-800 px-2.5 py-0.5 rounded-full inline-block">
+                06 · Reviews
+              </span>
+              <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-lg bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-sm shrink-0">
+                  <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </span>
+                <span>Monthly Business Systems Review</span>
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                Scheduled monthly review meeting to evaluate operational health, review lead conversion, and tune systems.
+              </p>
             </div>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white tracking-tight">Monthly Business Systems Review</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Scheduled monthly review meeting to evaluate operational health, review lead conversion, and tune systems.</p>
           </div>
         </div>
 
@@ -366,56 +422,72 @@
         </div>
 
         <div class="space-y-4">
-          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4 shadow-xs">
             <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
               01
             </div>
             <div class="space-y-1">
-              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Business Discovery &amp; Master Archive</h4>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fas fa-clipboard-list text-brand-500 text-xs" aria-hidden="true"></i>
+                <span>Business Discovery &amp; Master Archive</span>
+              </h4>
               <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Gather business details, logo, contact channels, and initialize your structured Client Master Archive.</p>
             </div>
           </div>
 
-          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
-            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4 shadow-xs">
+            <div class="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-500 font-black flex items-center justify-center text-xs flex-shrink-0">
               02
             </div>
             <div class="space-y-1">
-              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Web Presence &amp; Lead Routing Setup</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Design and deploy your business landing page, connect inquiry capture forms, and test email/WhatsApp notifications.</p>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fas fa-globe text-blue-500 text-xs" aria-hidden="true"></i>
+                <span>Web Presence &amp; Lead Routing Setup</span>
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Publish essential business landing website and configure lead forms routing straight into your CRM.</p>
             </div>
           </div>
 
-          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
-            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4 shadow-xs">
+            <div class="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-500 font-black flex items-center justify-center text-xs flex-shrink-0">
               03
             </div>
             <div class="space-y-1">
-              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">CRM Stages &amp; Quotation Flow</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Configure customer status pipelines, quotation templates, and sales interaction histories.</p>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fas fa-file-invoice-dollar text-emerald-500 text-xs" aria-hidden="true"></i>
+                <span>CRM Stages &amp; Quotation Flow</span>
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Organize customer registers, setup pipeline stages, and establish standardized quotation templates.</p>
             </div>
           </div>
 
-          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
-            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4 shadow-xs">
+            <div class="w-8 h-8 rounded-xl bg-purple-500/10 text-purple-500 font-black flex items-center justify-center text-xs flex-shrink-0">
               04
             </div>
             <div class="space-y-1">
-              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Hands-on Team Onboarding &amp; Launch</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Train your team members on daily lead management, verify system access, and take systems live.</p>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fas fa-users-gear text-purple-500 text-xs" aria-hidden="true"></i>
+                <span>Hands-on Team Onboarding &amp; Launch</span>
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Conduct a live 90-minute orientation workshop ensuring your team confidently uses daily workflows.</p>
             </div>
           </div>
 
-          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4">
-            <div class="w-8 h-8 rounded-xl bg-brand-500/10 text-brand-500 font-black flex items-center justify-center text-xs flex-shrink-0">
+          <div class="sn-card p-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-start space-x-4 shadow-xs">
+            <div class="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-500 font-black flex items-center justify-center text-xs flex-shrink-0">
               05
             </div>
             <div class="space-y-1">
-              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white">Monthly Business Systems Review</h4>
-              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Conduct your scheduled monthly review meeting to evaluate operational health, review metrics, and implement adjustments.</p>
+              <h4 class="text-sm font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+                <i class="fas fa-chart-line text-indigo-500 text-xs" aria-hidden="true"></i>
+                <span>Monthly Business Systems Review</span>
+              </h4>
+              <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">Hold your first monthly operations review session to examine conversion rates and fine-tune systems.</p>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -472,7 +544,6 @@
           <li><a href="../../what-we-manage/" class="hover:text-brand-400 transition">What We Manage</a></li>
           <li><a href="../../how-it-works/" class="hover:text-brand-400 transition">How It Works</a></li>
           <li><a href="../../plans/" class="hover:text-brand-400 transition">Managed Operating Plans</a></li>
-          <li><a href="../../about/" class="hover:text-brand-400 transition">About ScaleNova</a></li>
           <li><a href="../../blog/" class="hover:text-brand-400 transition">Blog &amp; Knowledge Centre</a></li>
           <li><a href="../../careers/" class="hover:text-brand-400 transition">Careers Portal</a></li>
           <li><a href="../../affiliate/" class="hover:text-brand-400 transition">Partner Programme</a></li>
@@ -550,7 +621,6 @@
 <!-- FLOATING WHATSAPP CTA -->
 <a href="https://wa.me/917801049178?text=Hello%20ScaleNova%2C%20I%27d%20like%20to%20learn%20more%20about%20your%20managed%20business%20systems%20and%20operations." target="_blank" rel="noopener noreferrer" class="sn-whatsapp-fab" aria-label="Talk to ScaleNova on WhatsApp">
   <i class="fab fa-whatsapp text-2xl" aria-hidden="true"></i>
-  <span class="sn-whatsapp-text">Talk to ScaleNova</span>
 </a>
 
 </body>
