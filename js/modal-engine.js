@@ -784,7 +784,7 @@ const ScaleNovaModals = (function() {
               <p class="text-[11px] text-slate-600 dark:text-slate-400">Discover how ScaleNova unifies CRM, ERP, and operations into one connected system.</p>
             </div>
             <button onclick="ScaleNovaModals.close('blogArticleModal'); ScaleNovaModals.openDemoModal();" class="px-4 py-2 rounded-xl text-xs sn-btn-primary flex-shrink-0">
-              Book a Demo
+              Book a Live Demo
             </button>
           </div>
 

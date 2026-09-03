@@ -139,14 +139,14 @@ tailwind.config = {
     </a>
   </nav>
 
-  <!-- Right Actions (Theme Toggle + Book a Demo CTA) -->
+  <!-- Right Actions (Theme Toggle + Book a Live Demo CTA) -->
   <div class="flex items-center space-x-2.5 sm:space-x-3">
     <button id="themeToggle" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 flex items-center justify-center transition-all hover:scale-105" aria-label="Toggle Theme Mode">
       <i class="fas fa-moon text-xs"></i>
     </button>
     <a href="contact/" class="hidden sm:inline-flex px-4 sm:px-5 py-2.5 rounded-xl text-xs sn-btn-primary flex items-center space-x-2 shadow-xs">
       <i class="fas fa-calendar-check text-xs"></i>
-      <span>Book a Demo</span>
+      <span>Book a Live Demo</span>
     </a>
     <button onclick="toggleMobileSidebar()" class="lg:hidden w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-300 flex items-center justify-center transition-all" aria-label="Open Navigation">
       <i class="fas fa-bars text-sm"></i>
@@ -183,7 +183,7 @@ tailwind.config = {
 
   <a href="contact/" class="w-full py-3 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
     <i class="fas fa-calendar-check" aria-hidden="true"></i>
-    <span>Book a Walkthrough</span>
+    <span>Book a Live Demo</span>
   </a>
 </div>
 
@@ -218,17 +218,17 @@ tailwind.config = {
         </div>
 
         <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm md:text-base font-medium max-w-xl mx-auto lg:mx-0 leading-relaxed">
-          From your business website and organized lead capture to operational workflows, billing, search presence, and ongoing reviews — ScaleNova manages your digital operations so you can focus on serving customers and growing.
+          From your website and lead capture to daily workflows, billing, search presence and regular reviews, ScaleNova manages the systems behind your business so you can focus on your customers.
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-1">
           <button onclick="ScaleNovaModals.openDemoModal()" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
             <i class="fas fa-calendar-check" aria-hidden="true"></i>
-            <span>Book a Discovery Walkthrough</span>
+            <span>Book a Live Demo</span>
           </button>
           <a href="#pricing" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
             <i class="fas fa-th-large text-brand-500" aria-hidden="true"></i>
-            <span>Explore Managed Plans</span>
+            <span>View Plans</span>
           </a>
         </div>
       </div>
@@ -291,100 +291,112 @@ tailwind.config = {
           What ScaleNova Manages For You
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium leading-relaxed">
-          You don't need five different software subscriptions or multiple unaligned freelancers. We manage your complete business operational backbone.
+          One partner for the systems and everyday work behind your business.
         </p>
       </div>
 
-      <!-- 6 Pillars Bento Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+      <!-- 6 Pillars Bento Grid (Compact horizontal icon + title layout) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         
         <!-- Pillar 1: Digital Presence -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-brand-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base">
-            <i class="fas fa-globe" aria-hidden="true"></i>
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-brand-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-globe" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Digital Presence</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Digital Presence</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            We design, build, host, and continuously maintain your business website and landing pages with mobile responsiveness and SSL security.
+            Your website stays professional, mobile friendly and up to date.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand-500 text-[10px]"></i> Managed website &amp; landing pages</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand-500 text-[10px]"></i> Domain, DNS &amp; cloud maintenance</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand-500 text-[10px]"></i> Website &amp; landing pages</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-brand-500 text-[10px]"></i> Domain &amp; cloud management</li>
           </ul>
         </div>
 
-        <!-- Pillar 2: Lead Capture & CRM -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-blue-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-base">
-            <i class="fas fa-users-gear" aria-hidden="true"></i>
+        <!-- Pillar 2: Leads & CRM -->
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-blue-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-users-gear" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Leads &amp; CRM</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Lead Capture &amp; CRM</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            Inquiries never get lost. We connect website lead forms directly into structured sales pipelines with clear follow-up stages.
+            Keep enquiries organised and follow up without losing customer history.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-blue-500 text-[10px]"></i> Automated lead routing to CRM</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-blue-500 text-[10px]"></i> Customer interaction &amp; quote history</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-blue-500 text-[10px]"></i> Lead capture &amp; follow ups</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-blue-500 text-[10px]"></i> Customer &amp; quote records</li>
           </ul>
         </div>
 
         <!-- Pillar 3: Business Operations -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-emerald-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base">
-            <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-emerald-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Business Operations</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Business Operations</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            We configure and manage day-to-day operations — sales invoicing, GST billing, inventory registers, purchasing, and payroll.
+            Keep sales, billing, stock and everyday records organised.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-500 text-[10px]"></i> Sales, GST billing &amp; customer ledgers</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-500 text-[10px]"></i> Stock, vendor purchasing &amp; staff records</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-500 text-[10px]"></i> Sales &amp; billing</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-emerald-500 text-[10px]"></i> Stock &amp; purchasing</li>
           </ul>
         </div>
 
-        <!-- Pillar 4: Digital Visibility & SEO -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-amber-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base">
-            <i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>
+        <!-- Pillar 4: Digital Visibility -->
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-amber-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Digital Visibility</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Digital Visibility &amp; SEO</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            We ensure your business is easily discoverable by managing search engine indexing, local directories, and business profiles.
+            Help customers find and verify your business online.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-amber-500 text-[10px]"></i> Search engine presence &amp; indexing</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-amber-500 text-[10px]"></i> Local business directory management</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-amber-500 text-[10px]"></i> Search &amp; business profiles</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-amber-500 text-[10px]"></i> Local directory management</li>
           </ul>
         </div>
 
-        <!-- Pillar 5: Content & Business Documents -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-purple-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-base">
-            <i class="fas fa-file-signature" aria-hidden="true"></i>
+        <!-- Pillar 5: Content & Documents -->
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-purple-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-file-signature" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Content &amp; Documents</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Content &amp; Business Documents</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            We prepare branded document templates, official proposals, and create regular business content for your brand channels.
+            Keep your business documents and brand content professional and consistent.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-purple-500 text-[10px]"></i> Branded proposals &amp; invoice stationery</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-purple-500 text-[10px]"></i> Regular social media business content</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-purple-500 text-[10px]"></i> Proposals &amp; business documents</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-purple-500 text-[10px]"></i> Social content</li>
           </ul>
         </div>
 
-        <!-- Pillar 6: Support & Regular Reviews -->
-        <div class="sn-card p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-3 shadow-xs hover:border-cyan-500/50 transition-all">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-base">
-            <i class="fas fa-headset" aria-hidden="true"></i>
+        <!-- Pillar 6: Support & Reviews -->
+        <div class="sn-card p-5 sm:p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl space-y-2.5 shadow-xs hover:border-cyan-500/50 transition-all">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center text-base shrink-0">
+              <i class="fas fa-headset" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Support &amp; Reviews</h3>
           </div>
-          <h3 class="text-base font-extrabold text-slate-900 dark:text-white">Support &amp; Regular Reviews</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-            Hands-on onboarding, 24-hour response SLA, and scheduled operational reviews (Monthly, Biweekly, or Weekly) to keep systems healthy.
+            We stay involved, help your team and review the systems regularly.
           </p>
-          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-1">
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Initial contact within 24 business hours</li>
-            <li class="flex items-center gap-1.5"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Scheduled reviews &amp; executive reports</li>
+          <ul class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 space-y-1 pt-0.5">
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Team support &amp; training</li>
+            <li class="flex items-center gap-1.5"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Monthly, bi weekly or weekly reviews</li>
           </ul>
         </div>
 
@@ -406,7 +418,7 @@ tailwind.config = {
           Managed Capabilities
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium leading-relaxed">
-          Explore the core areas connected through ScaleNova Business OS.
+          The core areas we connect and manage for your business.
         </p>
       </div>
 
@@ -418,7 +430,7 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- 2.5 THE SCALENOVA SHIFT: DISCONNECTED VS MANAGED -->
+  <!-- 2.5 THE SCALENOVA SHIFT: FROM SCATTERED WORK TO ONE MANAGED PARTNER -->
   <section id="transformation" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-950">
     <div class="max-w-7xl mx-auto space-y-8 sm:space-y-10">
       
@@ -428,11 +440,27 @@ tailwind.config = {
           <i class="fas fa-right-left mr-1" aria-hidden="true"></i>The ScaleNova Shift
         </span>
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
-          From Fragmented Tools to One Managed Partner
+          From Scattered Work to One Managed Partner
         </h2>
         <p class="text-slate-600 dark:text-slate-400 text-xs sm:text-sm font-medium">
-          See how growing businesses eliminate lost leads and administrative friction with an extended operations team.
+          We bring websites, leads, business records and recurring work into one managed system.
         </p>
+      </div>
+
+      <!-- Prominent 5-Word Workflow Banner -->
+      <div class="max-w-3xl mx-auto bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 rounded-2xl p-3 sm:p-4 text-center shadow-xs">
+        <span class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-slate-500 block mb-2">The 5-Step Operating Flow</span>
+        <div class="flex items-center justify-center flex-wrap gap-2 text-xs sm:text-sm font-black text-slate-800 dark:text-slate-200">
+          <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Capture</span>
+          <i class="fas fa-arrow-right text-[10px] text-brand-500"></i>
+          <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Connect</span>
+          <i class="fas fa-arrow-right text-[10px] text-brand-500"></i>
+          <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Manage</span>
+          <i class="fas fa-arrow-right text-[10px] text-brand-500"></i>
+          <span class="px-2.5 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Review</span>
+          <i class="fas fa-arrow-right text-[10px] text-brand-500"></i>
+          <span class="px-2.5 py-1 rounded-lg bg-brand-500 text-white shadow-xs">Improve</span>
+        </div>
       </div>
 
       <!-- Before / After Grid -->
@@ -451,29 +479,29 @@ tailwind.config = {
             <ul class="space-y-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Website and customer enquiries handled separately</span>
+                <span>Website and enquiries handled separately</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Leads spread across WhatsApp, emails, and lost notebooks</span>
+                <span>Leads spread across WhatsApp, email and notebooks</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Follow-ups delayed; customer history impossible to find</span>
+                <span>Follow ups get missed</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Billing, inventory, and accounts managed on disconnected sheets</span>
+                <span>Billing and stock sit in separate files</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-xmark text-slate-400 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Multiple freelancers and software vendors blaming each other</span>
+                <span>Multiple vendors handle different pieces</span>
               </li>
             </ul>
 
             <!-- Visual Pipeline Stream -->
             <div class="pt-2">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Scattered Fragmented Reality</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">Scattered Workflow</span>
               <div class="flex items-center flex-wrap gap-1.5 text-[10px] font-bold text-slate-500">
                 <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Website</span>
                 <i class="fas fa-arrow-right text-[8px] text-slate-300"></i>
@@ -483,15 +511,15 @@ tailwind.config = {
                 <i class="fas fa-arrow-right text-[8px] text-slate-300"></i>
                 <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Notebook</span>
                 <i class="fas fa-arrow-right text-[8px] text-slate-300"></i>
-                <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Accounting Software</span>
+                <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Accounting</span>
                 <i class="fas fa-arrow-right text-[8px] text-slate-300"></i>
-                <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Freelancers</span>
+                <span class="px-2 py-1 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">Vendors</span>
               </div>
             </div>
           </div>
 
           <div class="pt-3 border-t border-slate-200 dark:border-slate-800 text-center">
-            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Result: Disconnected tools, lost leads, delayed billing, and owner burnout</span>
+            <span class="text-xs font-bold text-slate-500 dark:text-slate-400">Result: Scattered work and too much owner involvement.</span>
           </div>
         </div>
 
@@ -508,29 +536,29 @@ tailwind.config = {
             <ul class="space-y-2.5 text-xs font-semibold text-slate-700 dark:text-slate-300">
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Website enquiries routed directly into organized CRM records</span>
+                <span>Website enquiries reach organised customer records</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Structured follow-up stages and full customer interaction history</span>
+                <span>Follow ups have clear stages</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Invoicing, billing registers, and inventory synchronized across teams</span>
+                <span>Billing and stock records stay connected</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>Regular scheduled reviews (Monthly, Biweekly, or Weekly)</span>
+                <span>Regular reviews keep work moving</span>
               </li>
               <li class="flex items-start gap-2.5">
                 <i class="fas fa-circle-check text-emerald-500 text-xs mt-0.5 flex-shrink-0"></i>
-                <span>One accountable partner managing your business systems</span>
+                <span>One partner manages the systems</span>
               </li>
             </ul>
 
             <!-- Visual Pipeline Stream -->
             <div class="pt-2">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block mb-2">Connected ScaleNova Operations</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 block mb-2">Connected Operations</span>
               <div class="flex items-center flex-wrap gap-1.5 text-[10px] font-bold text-emerald-700 dark:text-emerald-300">
                 <span class="px-2 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-900/40 border border-emerald-500/30">Website</span>
                 <i class="fas fa-arrow-right text-[8px] text-emerald-500"></i>
@@ -548,7 +576,7 @@ tailwind.config = {
           </div>
 
           <div class="pt-3 border-t border-emerald-500/20 text-center">
-            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Connected business operations, clear accountability, and regular reviews</span>
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Result: Clearer operations and one accountable partner.</span>
           </div>
         </div>
 
@@ -556,9 +584,9 @@ tailwind.config = {
     </div>
   </section>
 
-  <!-- 2.6 THE 7-STEP OPERATING LIFECYCLE (HOW IT WORKS) -->
+  <!-- 2.6 THE 8-STEP OPERATING LIFECYCLE (HOW IT WORKS) -->
   <section id="how-it-works" class="py-12 sm:py-16 px-4 md:px-8 border-t border-slate-200/80 dark:border-slate-800/80 bg-slate-50/50 dark:bg-slate-900/40">
-    <div class="max-w-5xl mx-auto text-center space-y-6">
+    <div class="max-w-6xl mx-auto text-center space-y-6">
       <span class="px-3 py-1 rounded-full text-[11px] font-extrabold bg-brand-50 dark:bg-slate-800 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-slate-700 uppercase tracking-wider">
         <i class="fas fa-route mr-1" aria-hidden="true"></i>The ScaleNova Lifecycle
       </span>
@@ -566,72 +594,108 @@ tailwind.config = {
         How ScaleNova Works With Your Business
       </h3>
       <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl mx-auto">
-        We do not just hand you software credentials and disappear. ScaleNova operates as your active partner through seven structured stages to bring lasting order to your business.
+        We do not just hand you software and disappear. ScaleNova sets up, connects, trains your team and stays involved to keep your operations running smoothly.
       </p>
 
-      <!-- 7 Steps Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 pt-4 text-left">
+      <!-- Visual Flow Indicator -->
+      <div class="hidden md:flex items-center justify-center flex-wrap gap-2 text-[11px] font-bold text-slate-600 dark:text-slate-300 pt-1">
+        <span>Understand</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Plan</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Set Up</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Connect</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Train</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Manage</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span>Review</span>
+        <i class="fas fa-arrow-right text-[9px] text-brand-500"></i>
+        <span class="text-brand-600 dark:text-brand-400 font-black">Improve</span>
+      </div>
+
+      <!-- 8 Steps Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-4 text-left">
+        <!-- 01 Understand -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-brand-600 dark:text-brand-400">01</span>
             <i class="fas fa-search text-xs text-slate-400"></i>
           </div>
           <h4 class="text-xs font-black text-slate-900 dark:text-white">Understand</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Review current bottlenecks, spreadsheets, and lead sources.</p>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Find the gaps.</p>
         </div>
 
+        <!-- 02 Plan -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-blue-600 dark:text-blue-400">02</span>
-            <i class="fas fa-server text-xs text-slate-400"></i>
+            <i class="fas fa-clipboard-list text-xs text-slate-400"></i>
           </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white">Set Up</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Provision secure cloud workspace and Client Master Archive.</p>
+          <h4 class="text-xs font-black text-slate-900 dark:text-white">Plan</h4>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Choose what matters.</p>
         </div>
 
+        <!-- 03 Set Up -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-emerald-600 dark:text-emerald-400">03</span>
-            <i class="fas fa-link text-xs text-slate-400"></i>
+            <i class="fas fa-server text-xs text-slate-400"></i>
           </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white">Connect</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Link website forms to CRM and quotes to billing registers.</p>
+          <h4 class="text-xs font-black text-slate-900 dark:text-white">Set Up</h4>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Prepare your systems.</p>
         </div>
 
+        <!-- 04 Connect -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-purple-600 dark:text-purple-400">04</span>
-            <i class="fas fa-chalkboard-user text-xs text-slate-400"></i>
+            <i class="fas fa-link text-xs text-slate-400"></i>
           </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white">Train</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Live 90-minute orientation workshops for your team.</p>
+          <h4 class="text-xs font-black text-slate-900 dark:text-white">Connect</h4>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Link the workflows.</p>
         </div>
 
+        <!-- 05 Train -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-amber-600 dark:text-amber-400">05</span>
-            <i class="fas fa-gears text-xs text-slate-400"></i>
+            <i class="fas fa-chalkboard-user text-xs text-slate-400"></i>
           </div>
-          <h4 class="text-xs font-black text-slate-900 dark:text-white">Manage</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Ongoing web updates, directory upkeep, and helpdesk.</p>
+          <h4 class="text-xs font-black text-slate-900 dark:text-white">Train</h4>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Teach your team.</p>
         </div>
 
+        <!-- 06 Manage -->
         <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
             <span class="text-xs font-black text-indigo-600 dark:text-indigo-400">06</span>
+            <i class="fas fa-gears text-xs text-slate-400"></i>
+          </div>
+          <h4 class="text-xs font-black text-slate-900 dark:text-white">Manage</h4>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Keep things moving.</p>
+        </div>
+
+        <!-- 07 Review -->
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black text-rose-600 dark:text-rose-400">07</span>
             <i class="fas fa-calendar-check text-xs text-slate-400"></i>
           </div>
           <h4 class="text-xs font-black text-slate-900 dark:text-white">Review</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Scheduled operational reviews with business owners.</p>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Check what is working.</p>
         </div>
 
-        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs col-span-2 sm:col-span-1 lg:col-span-2">
+        <!-- 08 Improve -->
+        <div class="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-1.5 shadow-xs">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-black text-rose-600 dark:text-rose-400">07</span>
+            <span class="text-xs font-black text-cyan-600 dark:text-cyan-400">08</span>
             <i class="fas fa-arrow-trend-up text-xs text-slate-400"></i>
           </div>
           <h4 class="text-xs font-black text-slate-900 dark:text-white">Improve</h4>
-          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Continuous optimization of workflows, dashboards, and registers.</p>
+          <p class="text-[11px] text-slate-500 dark:text-slate-400 font-medium">Make it better.</p>
         </div>
       </div>
 
@@ -727,7 +791,7 @@ tailwind.config = {
 
           <div class="space-y-2 pt-2">
             <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs font-extrabold text-center text-brand-700 dark:text-brand-300 border-2 border-brand-500/40 hover:border-brand-500 hover:bg-brand-50 dark:hover:bg-slate-800 transition-all">
-              Book a Discovery Walkthrough
+              Book a Live Demo
             </button>
             <a href="plans/core-os/" class="block w-full text-center text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white font-bold py-1">
               View Full Plan Details →
@@ -778,7 +842,7 @@ tailwind.config = {
 
           <div class="space-y-2 pt-2">
             <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs sn-btn-primary">
-              Book a Discovery Walkthrough
+              Book a Live Demo
             </button>
             <a href="plans/growth-os/" class="block w-full text-center text-[11px] text-brand-600 dark:text-brand-400 font-bold py-1">
               View Full Plan Details →
@@ -825,7 +889,7 @@ tailwind.config = {
 
           <div class="space-y-2 pt-2">
             <button onclick="ScaleNovaModals.openDemoModal()" class="w-full py-3 rounded-xl text-xs font-extrabold text-center text-slate-800 dark:text-slate-200 border-2 border-slate-700 hover:bg-slate-900 hover:text-white dark:hover:bg-slate-100 dark:hover:text-slate-900 transition-all">
-              Book a Discovery Walkthrough
+              Book a Live Demo
             </button>
             <a href="plans/elite-os/" class="block w-full text-center text-[11px] text-slate-500 hover:text-slate-900 dark:hover:text-white font-bold py-1">
               View Full Plan Details →
@@ -848,8 +912,8 @@ tailwind.config = {
           </p>
         </div>
         <button onclick="ScaleNovaModals.openDemoModal()" class="px-6 py-3 rounded-xl text-xs sn-btn-primary whitespace-nowrap shrink-0 flex items-center gap-2">
-          <i class="fas fa-comments"></i>
-          <span>Talk to ScaleNova</span>
+          <i class="fas fa-calendar-check"></i>
+          <span>Book a Live Demo</span>
         </button>
       </div>
 
@@ -968,12 +1032,12 @@ tailwind.config = {
       </p>
       <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
         <a href="contact/" class="w-full sm:w-auto px-7 py-3.5 rounded-xl text-xs sn-btn-primary flex items-center justify-center space-x-2">
-          <i class="fas fa-headset" aria-hidden="true"></i>
-          <span>Talk to ScaleNova →</span>
+          <i class="fas fa-calendar-check" aria-hidden="true"></i>
+          <span>Book a Live Demo</span>
         </a>
-        <a href="contact/?topic=demo" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
-          <i class="fas fa-calendar-check text-brand-500" aria-hidden="true"></i>
-          <span>Request Demo</span>
+        <a href="#pricing" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-extrabold text-slate-800 dark:text-slate-200 bg-white dark:bg-slate-900 border border-slate-300/80 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all flex items-center justify-center space-x-2 shadow-sm">
+          <i class="fas fa-th-large text-brand-500" aria-hidden="true"></i>
+          <span>View Plans</span>
         </a>
       </div>
     </div>
@@ -1019,7 +1083,7 @@ tailwind.config = {
       <div class="space-y-3">
         <span class="text-xs font-black uppercase tracking-wider text-white block mb-1">Support &amp; Legal</span>
         <ul class="space-y-1.5 font-bold text-slate-400">
-          <li><a href="contact/" class="hover:text-brand-400 transition">Book a Discovery Walkthrough</a></li>
+          <li><a href="contact/" class="hover:text-brand-400 transition">Book a Live Demo</a></li>
           <li><a href="privacy/" class="hover:text-brand-400 transition">Privacy Policy</a></li>
           <li><a href="terms/" class="hover:text-brand-400 transition">Terms of Service</a></li>
           <li><a href="refunds/" class="hover:text-brand-400 transition">Refund Policy</a></li>
